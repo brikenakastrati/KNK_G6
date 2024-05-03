@@ -1,18 +1,17 @@
-package service;
+package database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnector {
+public class DatabaseUtil {
     private static String URL = "jdbc:mysql://localhost:3306/knk2024";
     private static String USER = "root";
-    //Qetu duhet me e bo n mysql krejt passwordin root puna qe mos me na ra me ndrru saher t punon najkush
-    private static String PASSWORD = "afrimymeri12";
+    private static String PASSWORD = "afrimymeri12"; //qeta duhet me ndrru krejt me bo root
     private static Connection connection = null;
 
-    public static Connection getConnection() {
-        if (connection == null) {
+    public static Connection getConnection(){
+        if(connection == null){
             try {
                 connection = DriverManager.getConnection(
                         URL, USER, PASSWORD
