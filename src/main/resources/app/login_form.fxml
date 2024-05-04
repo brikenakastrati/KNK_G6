@@ -1,20 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
     <children>
-        <Label layoutX="151.0" layoutY="118.0" text="Email" />
-        <Label layoutX="131.0" layoutY="174.0" text="Password" />
-        <TextField fx:id="txtEmail" layoutX="220.0" layoutY="114.0" />
-        <PasswordField fx:id="pwdPassword" layoutX="219.0" layoutY="169.0" />
-        <Button layoutX="220.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleLoginClick" text="Login" />
-        <Button layoutX="312.0" layoutY="243.0" mnemonicParsing="false" onAction="#handleCancelClick" text="Cancel" />
-        <Label layoutX="238.0" layoutY="207.0" onMouseClicked="#handleCreateAccountClick" text="Create new account" textFill="#2f0fe4" underline="true" />
+        <Label layoutX="170.0" layoutY="167.0" prefHeight="26.0" prefWidth="81.0" text="Username:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+        <Label layoutX="175.0" layoutY="214.0" text="Password:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Label>
+        <TextField fx:id="txtEmail" layoutX="255.0" layoutY="167.0" promptText="Username" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
+        <PasswordField fx:id="pwdPassword" layoutX="255.0" layoutY="212.0" promptText="Password" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
+        <Button layoutX="188.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black;" text="Login">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label layoutX="402.0" layoutY="270.0" />
+      <Button layoutX="312.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleCreateAccountClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 10;" text="Sign Up" textFill="RED" underline="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="217.0" fitWidth="208.0" layoutX="196.0">
+          <image>
+              <Image url="@../Images/2.png" />
+          </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="209.0">
+         <image>
+            <Image url="@../Images/lock-6-128.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="135.0" layoutY="167.0">
+         <image>
+            <Image url="@../Images/Profile-user (2).png" />
+         </image>
+      </ImageView>
     </children>
+   <cursor>
+      <Cursor fx:constant="S_RESIZE" />
+   </cursor>
 </AnchorPane>

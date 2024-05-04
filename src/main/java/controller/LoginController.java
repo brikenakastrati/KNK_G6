@@ -42,8 +42,8 @@ public class LoginController {
     }
 
     @FXML
-    private void handleCreateAccountClick(MouseEvent me){
-        Navigator.navigate(me, Navigator.CREATE_ACCOUNT_PAGE);
+    private void handleCreateAccountClick(ActionEvent ae){
+        Navigator.navigate(ae, Navigator.CREATE_ACCOUNT_PAGE);
     }
 
 }
