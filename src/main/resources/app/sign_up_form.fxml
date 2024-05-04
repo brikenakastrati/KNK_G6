@@ -40,8 +40,11 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
     <children>
@@ -84,20 +87,42 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS">
             <children>
-                <Label layoutX="158.0" layoutY="59.0" text="First name" />
-                <Label layoutX="158.0" layoutY="103.0" text="Last name" />
-                <Label layoutX="161.0" layoutY="149.0" text="Email" />
-                <Label layoutX="161.0" layoutY="191.0" text="Password" />
-                <Label layoutX="161.0" layoutY="237.0" text="Confirm Password" />
-                <TextField fx:id="txtFirstName" layoutX="281.0" layoutY="55.0" />
-                <TextField fx:id="txtLastName" layoutX="282.0" layoutY="99.0" />
-                <TextField fx:id="txtEmail" layoutX="282.0" layoutY="145.0" />
-                <PasswordField fx:id="pwdPassword" layoutX="283.0" layoutY="187.0" />
-                <PasswordField fx:id="pwdConfirmPassword" layoutX="284.0" layoutY="232.0" />
-                <Button layoutX="286.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleSignUp" text="Sign Up" />
-                <Button layoutX="386.0" layoutY="290.0" mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
+            <AnchorPane layoutX="305.0" layoutY="-1.0" prefHeight="375.0" prefWidth="334.0">
+               <children>
+                      <TextField fx:id="txtFirstName" layoutX="171.0" layoutY="70.0" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <TextField fx:id="txtLastName" layoutX="171.0" layoutY="116.0" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <TextField fx:id="txtEmail" layoutX="171.0" layoutY="162.0" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <PasswordField fx:id="pwdPassword" layoutX="171.0" layoutY="210.0" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <PasswordField fx:id="pwdConfirmPassword" layoutX="171.0" layoutY="260.0" style="-fx-background-color: transparent; -fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <Button layoutX="182.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: red; -fx-border-radius: 10; -fx-background-color: black; -fx-border-width: 2;" text="Cancel" textFill="#fa0303">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                      <Button layoutX="31.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; -fx-border-width: 2; -fx-background-color: red;" text="Sign Up">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Button>
+                      <Label layoutX="67.0" layoutY="74.0" text="First name" />
+                      <Label layoutX="68.0" layoutY="120.0" text="Last name" />
+                      <Label layoutX="80.0" layoutY="166.0" text="Email" />
+                      <Label layoutX="70.0" layoutY="214.0" text="Password" />
+                      <Label layoutX="47.0" layoutY="264.0" text="Confirm Password" />
+                  <Label layoutX="123.0" layoutY="24.0" prefHeight="18.0" prefWidth="96.0" text="Register" textAlignment="CENTER">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <ImageView fitHeight="312.0" fitWidth="284.0" layoutX="21.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/2.png" />
+               </image>
+            </ImageView>
             </children>
         </AnchorPane>
     </children>
