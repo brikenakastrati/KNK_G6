@@ -3,6 +3,7 @@ package controller;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
@@ -24,9 +25,14 @@ public class LoginController {
         boolean isLogin = UserService.login(loginUserData);
 
         if(!isLogin){
-//            ....
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Login error");
+            alert.setHeaderText(null);
+            alert.setContentText("Incorrect email or password.");
+            alert.showAndWait();
+        }else{
+         Navigator.navigate(ae, Navigator.HOME_PAGE);
         }
-//        ....
 
     }
 
