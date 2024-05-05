@@ -3,10 +3,18 @@ package controller;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import model.dto.UserDto;
 import service.UserService;
+
+import java.io.IOException;
+import java.util.Objects;
 
 public class SignUpController {
     @FXML
@@ -19,7 +27,8 @@ public class SignUpController {
     private PasswordField pwdPassword;
     @FXML
     private PasswordField pwdConfirmPassword;
-
+    private Stage stage;
+    private Scene scene;
     @FXML
     private void handleSignUp(ActionEvent ae){
         UserDto userSignUpData = new UserDto(
@@ -39,7 +48,12 @@ public class SignUpController {
     }
 
     @FXML
-    private void handleCancel(ActionEvent ae){
+    private void handleCancel(ActionEvent ae) throws IOException {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/app/login_form.fxml")));
+            stage = (Stage)((Node)ae.getSource()).getScene().getWindow();
+            scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
 
     }
 }
