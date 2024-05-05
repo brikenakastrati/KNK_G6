@@ -12,7 +12,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
     <children>
-        <Label layoutX="170.0" layoutY="167.0" prefHeight="26.0" prefWidth="81.0" text="Username:">
+        <Label layoutX="180.0" layoutY="168.0" prefHeight="26.0" prefWidth="46.0" text="Email:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
@@ -22,31 +22,35 @@
          </font></Label>
         <TextField fx:id="txtEmail" layoutX="255.0" layoutY="167.0" promptText="Username" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
         <PasswordField fx:id="pwdPassword" layoutX="255.0" layoutY="212.0" promptText="Password" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
-        <Button layoutX="188.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black;" text="Login">
+        <Button layoutX="194.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black;" text="Login">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <Label layoutX="402.0" layoutY="270.0" />
-      <Button layoutX="312.0" layoutY="272.0" mnemonicParsing="false" onAction="#handleCreateAccountClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 10;" text="Sign Up" textFill="RED" underline="true">
+      <Button layoutX="323.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #e0e0e0; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 10;" text="Login as Admin" textFill="RED" underline="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView fitHeight="217.0" fitWidth="208.0" layoutX="196.0">
-          <image>
-              <Image url="@../Images/2.png" />
-          </image>
+      <ImageView fitHeight="217.0" fitWidth="208.0" layoutX="203.0">
+         <image>
+            <Image url="@../Images/2.png" />
+         </image>
       </ImageView>
       <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="209.0">
          <image>
             <Image url="@../Images/lock-6-128.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="135.0" layoutY="167.0">
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="166.0">
          <image>
-            <Image url="@../Images/Profile-user (2).png" />
+            <Image url="@../Images/Profile-user%20(2).png" />
          </image>
       </ImageView>
+      <Label layoutX="253.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="Create new account" textFill="#2f0fe4" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
     </children>
    <cursor>
       <Cursor fx:constant="S_RESIZE" />
