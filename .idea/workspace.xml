@@ -4,18 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="AdminDashboard Edit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/LoginResult.java" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="ClientDashboar Edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +186,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714945966329</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ClientDashboar Edited">
+      <option name="closed" value="true" />
+      <created>1714953253264</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1714953253264</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -219,7 +218,8 @@
     <MESSAGE value="Login and register page design" />
     <MESSAGE value="Admin Dashboard Created Sign up Controller fixed" />
     <MESSAGE value="AdminDashboard Edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminDashboard Edit" />
+    <MESSAGE value="ClientDashboar Edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="ClientDashboar Edited" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
