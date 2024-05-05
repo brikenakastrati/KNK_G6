@@ -27,24 +27,28 @@ public class UserService {
                 userData.getEmail(),
                 salt,
                 passwordHash
+
         );
 
         return UserRepository.create(createUserData);
     }
 
-    public static boolean login(LoginUserDto loginData){
-        User user = UserRepository.getByEmail(loginData.getEmail());
-        if(user == null){
-            return false;
-        }
 
-        String password = loginData.getPassword();
-        String salt = user.getSalt();
-        String passwordHash = user.getPasswordHash();
+        public static LoginResult login(LoginUserDto loginData) {
+            User user = UserRepository.getByEmail(loginData.getEmail());
+            if (user == null) {
+                return new LoginResult(false, false);
+            }
 
-        return PasswordHasher.compareSaltedHash(
-                password, salt, passwordHash
-        );
+            String password = loginData.getPassword();
+            String salt = user.getSalt();
+            String passwordHash = user.getPasswordHash();
+
+            boolean passwordMatches = PasswordHasher.compareSaltedHash(password, salt, passwordHash);
+            return new LoginResult(passwordMatches, passwordMatches && user.isAdmin());
+
     }
 
+
 }
+

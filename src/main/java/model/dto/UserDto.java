@@ -7,12 +7,14 @@ public class UserDto {
     private String password;
     private String confirmPassword;
 
+
     public UserDto(String firstName, String lastName, String email, String password, String confirmPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.confirmPassword = confirmPassword;
+
     }
 
     public String getFirstName() {
@@ -34,4 +36,6 @@ public class UserDto {
     public String getConfirmPassword() {
         return confirmPassword;
     }
+
+
 }

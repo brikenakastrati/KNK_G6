@@ -8,13 +8,16 @@ public class User {
     private String salt;
     private String passwordHash;
 
-    public User(int id, String firstName, String lastName, String email, String salt, String passwordHash) {
+    private boolean isAdmin;  // New field
+
+    public User(int id, String firstName, String lastName, String email, String salt, String passwordHash,boolean isAdmin) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.salt = salt;
         this.passwordHash = passwordHash;
+        this.isAdmin=isAdmin;
     }
 
     public int getId() {
@@ -39,5 +42,9 @@ public class User {
 
     public String getPasswordHash() {
         return passwordHash;
+    }
+
+    public boolean isAdmin() {
+        return isAdmin;
     }
 }

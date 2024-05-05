@@ -32,7 +32,7 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView fitHeight="217.0" fitWidth="208.0" layoutX="203.0">
+      <ImageView fitHeight="116.0" fitWidth="183.0" layoutX="209.0" layoutY="26.0">
          <image>
             <Image url="@../Images/2.png" />
          </image>
@@ -44,7 +44,7 @@
       </ImageView>
       <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="166.0">
          <image>
-            <Image url="@../Images/Profile-user%20(2).png" />
+            <Image url="@../Images/Profile-user (2).png" />
          </image>
       </ImageView>
       <Label layoutX="253.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="Create new account" textFill="#2f0fe4" underline="true">
@@ -53,6 +53,6 @@
          </font></Label>
     </children>
    <cursor>
-      <Cursor fx:constant="S_RESIZE" />
+      <Cursor fx:constant="DEFAULT" />
    </cursor>
 </AnchorPane>

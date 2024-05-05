@@ -14,8 +14,8 @@ public class UserRepository {
     public static boolean create(CreateUserDto userData){
         Connection conn = DBConnector.getConnection();
         String query = """
-                INSERT INTO USER (firstName, lastName, email, salt, passwordHash)
-                VALUE (?, ?, ?, ?, ?)
+                INSERT INTO USER (firstName, lastName, email, salt, passwordHash,isAdmin)
+                VALUE (?, ?, ?, ?, ?,?)
                 """;
         //String query = "INSERT INTO USER VALUE (?, ?, ?, ?, ?)";
         try{
@@ -25,6 +25,7 @@ public class UserRepository {
             pst.setString(3, userData.getEmail());
             pst.setString(4, userData.getSalt());
             pst.setString(5, userData.getPasswordHash());
+            pst.setBoolean(6,userData.get_admin_status());
             pst.execute();
             pst.close();
             conn.close();
@@ -60,8 +61,9 @@ public class UserRepository {
             String email = result.getString("email");
             String salt = result.getString("salt");
             String passwordHash = result.getString("passwordHash");
+            boolean isAdmin=result.getBoolean("isAdmin");
             return new User(
-                    id, firstName, lastName, email, salt, passwordHash
+                    id, firstName, lastName, email, salt, passwordHash,isAdmin
             );
         }catch (Exception e){
             return null;
