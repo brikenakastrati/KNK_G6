@@ -10,5 +10,7 @@ module com.example.knk_g6 {
     exports com.example.knk_g6;
     exports app;
     opens controller to javafx.fxml;
+    opens controller.AdminController to javafx.fxml;
+    opens controller.ClientController to javafx.fxml;
 
 }

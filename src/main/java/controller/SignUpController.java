@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -42,6 +43,11 @@ public class SignUpController {
         boolean response = UserService.signUp(userSignUpData);
 
         if(response){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Register Information");
+            alert.setHeaderText("MotorEmpire");
+            alert.setContentText("User Created Succesfully!");
+            alert.showAndWait();
             Navigator.navigate(ae, Navigator.LOGIN_PAGE);
         }
 
@@ -49,11 +55,7 @@ public class SignUpController {
 
     @FXML
     private void handleCancel(ActionEvent ae) throws IOException {
-            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("/app/login_form.fxml")));
-            stage = (Stage)((Node)ae.getSource()).getScene().getWindow();
-            scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
 
     }
 }
