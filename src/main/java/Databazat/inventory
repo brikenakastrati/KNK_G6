@@ -1,5 +1,4 @@
 create table inventory(
-id int auto_increment primary key,
 carid varchar(100),
 carname varchar(100),
 cartype varchar(100),

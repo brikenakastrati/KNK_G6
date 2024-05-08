@@ -4,28 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="AdminDashboard Edit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/data.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/carInventory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_1.xml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added Insert Function">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databazat/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databazat/inventory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/LoginUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/LoginUserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/carInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/carInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,7 +225,8 @@
     <MESSAGE value="Login and register page design" />
     <MESSAGE value="Admin Dashboard Created Sign up Controller fixed" />
     <MESSAGE value="AdminDashboard Edit" />
-    <option name="LAST_COMMIT_MESSAGE" value="AdminDashboard Edit" />
+    <MESSAGE value="Added Insert Function" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Insert Function" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

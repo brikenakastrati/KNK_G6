@@ -1,5 +1,6 @@
 package Repository;
 
+import database.DatabaseUtil;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -36,46 +37,55 @@ public class inventoryRepository {
     @FXML
     private TableView<carInventory> inventoryTable;
 
-    public ObservableList<carInventory> inventoryCarList()  {
-        ObservableList<carInventory> listData= FXCollections.observableArrayList();
-        String query="SELECT * FROM inventory";
-        Connection connection = DBConnector.getConnection();
-        try{
-            PreparedStatement pst = connection.prepareStatement(query);
+    public ObservableList<carInventory> inventoryCarList() throws SQLException {
+        ObservableList<carInventory> listData = FXCollections.observableArrayList();
+    Connection connection = DBConnector.getConnection();
+
+            PreparedStatement pst = connection.prepareStatement("SELECT * FROM inventory");
             ResultSet result = pst.executeQuery();
-            carInventory carInv;
-            while(result.next()){
-                carInv=new carInventory(result.getInt("id"),result.getString("carid"),
+            while (result.next()) {
+                carInventory carInv = new carInventory(
+                        result.getString("carid"),
                         result.getString("carname"),
                         result.getString("cartype"),
                         result.getInt("carstock"),
                         result.getDouble("carprice"),
-
-
                         result.getString("carstatus"),
-
                         result.getString("carimage"));
-listData.add(carInv);
+                listData.add(carInv);
             }
-        }
-        catch (SQLException e){
-e.printStackTrace();
-        }
+
+
         return listData;
     }
-    public ObservableList<carInventory> inventoryListData;
-    public void inventoryShowData(){
-        inventoryListData=inventoryCarList();
-        invColCarID.setCellValueFactory(new PropertyValueFactory<>("carid"));
-        invColCarName.setCellValueFactory(new PropertyValueFactory<>("carname"));
-        invColCarType.setCellValueFactory(new PropertyValueFactory<>("cartype"));
-        invColStock.setCellValueFactory(new PropertyValueFactory<>("carstock"));
-        invColPrice.setCellValueFactory(new PropertyValueFactory<>("carprice"));
 
-        invColStatus.setCellValueFactory(new PropertyValueFactory<>("carstatus"));
-        inventoryTable.setItems(inventoryListData);
+
+
+    public ObservableList<carInventory> inventoryListData;
+
+
+
+
+    public void addCar(carInventory newCar) {
+        Connection connection = DBConnector.getConnection();
+
+            String query = "INSERT INTO inventory (carid, carname, cartype, carstock, carprice, carstatus, carimage) " +
+                    "VALUES (?, ?, ?, ?, ?, ?, ?)";
+            try {
+                PreparedStatement pst = connection.prepareStatement(query);
+                pst.setString(1, newCar.getCarid());
+                pst.setString(2, newCar.getCarname());
+                pst.setString(3, newCar.getCartype());
+                pst.setInt(4, newCar.getCarstock());
+                pst.setDouble(5, newCar.getCarprice());
+                pst.setString(6, newCar.getCarstatus());
+                pst.setString(7, newCar.getCarimage());
+
+            pst.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }
-
 
 

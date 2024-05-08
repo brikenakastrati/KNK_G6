@@ -1,7 +1,7 @@
 package model;
 
 public class carInventory {
-    private Integer id;
+
     private String carid;
     private String carname;
     private Integer carstock;
@@ -10,8 +10,8 @@ public class carInventory {
     private String carimage;
     private String carstatus;
 
-    public carInventory(Integer id, String carid, String carname, String cartype ,Integer carstock, double carprice, String carstatus ,String carimage) {
-        this.id = id;
+    public carInventory( String carid, String carname, String cartype ,Integer carstock, double carprice, String carstatus ,String carimage) {
+
         this.carid = carid;
         this.carname = carname;
         this.cartype=cartype;
@@ -22,9 +22,7 @@ public class carInventory {
 
     }
 
-    public Integer getId() {
-        return id;
-    }
+
 
     public String getCarid() {
         return carid;

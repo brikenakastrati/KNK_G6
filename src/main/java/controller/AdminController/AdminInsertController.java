@@ -7,97 +7,125 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.FileChooser;
 import model.carInventory;
 
+import java.io.File;
+import java.sql.SQLException;
+
 public class AdminInsertController {
-        @FXML
-        private Button btnClients;
+    @FXML private Button btnClients, btnDashboard, btnInsert, btnLogout;
+    @FXML private TableColumn<carInventory, String> invColCarID, invColCarName, invColCarType, invColStatus;
+    @FXML private TableColumn<carInventory, Double> invColPrice;
+    @FXML private TableColumn<carInventory, Integer> invColStock;
+    @FXML private TableView<carInventory> inventoryTable;
+    @FXML private Label lblimagepath, lblStatus;
+    @FXML private TextField txtCarID, txtCarName, txtCarStock, txtCarPrice;
+    @FXML private ComboBox<String> comboType, comboStatus;
 
-        @FXML
-        private Button btnDashboard;
+    private inventoryRepository repo = new inventoryRepository();
 
-        @FXML
-        private Button btnInsert;
+    public void initialize() throws SQLException {
+        setupTableColumns();
+        loadTableData();
+        setupComboBoxes();
+    }
 
-        @FXML
-        private Button btnLogout;
+    private void setupTableColumns() {
+        invColCarID.setCellValueFactory(new PropertyValueFactory<>("carid"));
+        invColCarName.setCellValueFactory(new PropertyValueFactory<>("carname"));
+        invColCarType.setCellValueFactory(new PropertyValueFactory<>("cartype"));
+        invColStock.setCellValueFactory(new PropertyValueFactory<>("carstock"));
+        invColPrice.setCellValueFactory(new PropertyValueFactory<>("carprice"));
+        invColStatus.setCellValueFactory(new PropertyValueFactory<>("carstatus"));
+    }
 
-        @FXML
-        private TableColumn<carInventory, String> invColCarID;
-        @FXML
-        private TableColumn<carInventory, String> invColCarName;
-        @FXML
-        private TableColumn<carInventory, String> invColCarType;
-        @FXML
-        private TableColumn<carInventory, Double> invColPrice;
-        @FXML
-        private TableColumn<carInventory, String> invColStatus;
-        @FXML
-        private TableColumn<carInventory, Integer> invColStock;
-        @FXML
-        private TableView<carInventory> inventoryTable;
+    private void loadTableData() throws SQLException {
+        ObservableList<carInventory> inventoryData = repo.inventoryCarList();
+        inventoryTable.setItems(inventoryData);
+    }
 
-        @FXML
-        private TextField txtCarID;
+    private void setupComboBoxes() {
+        comboType.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
+        comboStatus.getItems().addAll("Available", "Sold", "Out of Stock");
+    }
 
-        @FXML
-        private TextField txtCarName;
+    @FXML
+    private void handleImportImageClick(ActionEvent event) {
+        FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Image Files", "*.jpg", "*.png");
+        fileChooser.getExtensionFilters().add(imageFilter);
+        File file = fileChooser.showOpenDialog(null);
 
-        @FXML
-        void handleClientsClick(ActionEvent event) {
-
+        if (file != null) {
+            lblimagepath.setText(file.getAbsolutePath());
+        } else {
+            lblimagepath.setText("No image selected");
         }
+    }
 
-        @FXML
-        void handleDashboardClick(ActionEvent event) {
+    @FXML
+    public void handleAddClick(ActionEvent ae) {
+        try {
+            String carID = txtCarID.getText();
+            String carName = txtCarName.getText();
+            String carType = comboType.getValue();
+            int carStock = Integer.parseInt(txtCarStock.getText().trim());
+            double carPrice = Double.parseDouble(txtCarPrice.getText().trim());
+            String carStatus = comboStatus.getValue();
+            String carImage = lblimagepath.getText();
 
+            if (carID.isEmpty() || carName.isEmpty() || carType == null || carStatus == null || carImage.isEmpty()) {
+                lblStatus.setText("Please fill all fields and select an image.");
+                return;
+            }
+
+            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, carImage);
+            repo.addCar(newCar);
+            loadTableData();
+            clearFields();
+            lblStatus.setText("New car added successfully!");
+        } catch (NumberFormatException e) {
+            lblStatus.setText("Invalid number format in stock or price.");
+        } catch (Exception e) {
+            lblStatus.setText("Error adding car: " + e.getMessage());
         }
+    }
 
-       @FXML
+    private void clearFields() {
+        txtCarID.clear();
+        txtCarName.clear();
+        comboType.getSelectionModel().clearSelection();
+        txtCarStock.clear();
+        txtCarPrice.clear();
+        comboStatus.getSelectionModel().clearSelection();
+        lblimagepath.setText("No image selected");
+        lblStatus.setText("");
+    }
 
-       void handleInsertClick(ActionEvent ae) {}
+    @FXML
+    void handleLogoutClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
+    }
 
+    @FXML
+    void handleDeleteClick(ActionEvent ae) {
+        // Delete logic to be implemented
+    }
 
-        @FXML
-        void handleLogoutClick(ActionEvent ae) {
-                Navigator.navigate(ae,Navigator.LOGIN_PAGE);
-        }
+    @FXML
+    void handleClientsClick(ActionEvent event) {
+        // Clients page navigation
+    }
 
+    @FXML
+    void handleDashboardClick(ActionEvent event) {
+        // Dashboard navigation
+    }
 
-
-        private inventoryRepository repo = new inventoryRepository();
-
-        public void initialize() {
-                setupTableColumns();
-                loadTableData();
-        }
-
-        private void setupTableColumns() {
-                invColCarID.setCellValueFactory(new PropertyValueFactory<>("carid"));
-                invColCarName.setCellValueFactory(new PropertyValueFactory<>("carname"));
-                invColCarType.setCellValueFactory(new PropertyValueFactory<>("cartype"));
-            invColStock.setCellValueFactory(new PropertyValueFactory<>("carstock"));
-                invColPrice.setCellValueFactory(new PropertyValueFactory<>("carprice"));
-                invColStatus.setCellValueFactory(new PropertyValueFactory<>("carstatus"));
-
-        }
-
-        private void loadTableData() {
-                ObservableList<carInventory> inventoryData = repo.inventoryCarList();
-                inventoryTable.setItems(inventoryData);
-        }
-
-        public void handleDeleteClick(ActionEvent ae) {
-        }
-
-        public void handleAddClick(ActionEvent ae) {
-        }
+    public void handleInsertClick(ActionEvent actionEvent) {
+        // Handle insert click if needed
+    }
 }
-
-
-

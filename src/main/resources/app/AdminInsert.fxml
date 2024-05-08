@@ -74,7 +74,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <ComboBox layoutX="132.0" layoutY="623.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
+      <ComboBox fx:id="comboType" layoutX="132.0" layoutY="623.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
       <Label layoutX="335.0" layoutY="536.0" prefHeight="28.0" prefWidth="80.0" text="Car Stock:">
          <font>
             <Font size="18.0" />
@@ -110,11 +110,12 @@
             <ImageView fitHeight="153.0" fitWidth="169.0" layoutX="18.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <Button layoutX="677.0" layoutY="705.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="103.0" text="Import">
+      <Button fx:id="btnImportImage" layoutX="677.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleImportImageClick" prefHeight="32.0" prefWidth="103.0" text="Import">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <ComboBox layoutX="415.0" layoutY="625.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
+      <ComboBox fx:id="comboStatus" layoutX="415.0" layoutY="625.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
+      <Label fx:id="lblimagepath" layoutX="618.0" layoutY="761.0" prefHeight="18.0" prefWidth="197.0" />
    </children>
 </AnchorPane>
