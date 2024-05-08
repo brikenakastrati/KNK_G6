@@ -1,11 +1,25 @@
 package controller.AdminController;
 
 import app.Navigator;
+import controller.data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.Label;
+
 
 public class AdminDashboardController {
+    @FXML
+    public Label admUsername;
+    public void initialize() {
+       UsernameDisplay();
+    }
+
+        private void UsernameDisplay() {
+
+                String user = data.getUsername();
+                admUsername.setText(user.substring(0, 1).toUpperCase() + user.substring(1));
+            }
+
     @FXML
     private void handleClientsClick(){
 
@@ -23,4 +37,5 @@ public class AdminDashboardController {
    private void handleDashboardClick(){
 
     }
+
 }

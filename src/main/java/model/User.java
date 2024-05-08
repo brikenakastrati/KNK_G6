@@ -2,18 +2,17 @@ package model;
 
 public class User {
     private int id;
-    private String firstName;
-    private String lastName;
+    private String username;
     private String email;
     private String salt;
     private String passwordHash;
 
     private boolean isAdmin;  // New field
 
-    public User(int id, String firstName, String lastName, String email, String salt, String passwordHash,boolean isAdmin) {
+    public User(int id, String username, String email, String salt, String passwordHash,boolean isAdmin) {
         this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.username = username;
+
         this.email = email;
         this.salt = salt;
         this.passwordHash = passwordHash;
@@ -24,13 +23,10 @@ public class User {
         return id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getUsername() {
+        return username;
     }
 
-    public String getLastName() {
-        return lastName;
-    }
 
     public String getEmail() {
         return email;

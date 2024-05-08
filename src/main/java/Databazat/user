@@ -1,0 +1,9 @@
+CREATE TABLE user (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    salt VARCHAR(255) NOT NULL,
+    passwordHash VARCHAR(255) NOT NULL,
+    isadmin boolean-- 0 for false, 1 for true
+
+);

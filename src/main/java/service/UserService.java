@@ -22,8 +22,7 @@ public class UserService {
         );
 
         CreateUserDto createUserData = new CreateUserDto(
-                userData.getFirstName(),
-                userData.getLastName(),
+                userData.getUsername(),
                 userData.getEmail(),
                 salt,
                 passwordHash
@@ -35,7 +34,7 @@ public class UserService {
 
 
         public static LoginResult login(LoginUserDto loginData) {
-            User user = UserRepository.getByEmail(loginData.getEmail());
+            User user = UserRepository.getByUsername(loginData.getUsername());
             if (user == null) {
                 return new LoginResult(false, false);
             }

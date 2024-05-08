@@ -14,18 +14,17 @@ public class UserRepository {
     public static boolean create(CreateUserDto userData){
         Connection conn = DBConnector.getConnection();
         String query = """
-                INSERT INTO USER (firstName, lastName, email, salt, passwordHash,isAdmin)
-                VALUE (?, ?, ?, ?, ?,?)
+                INSERT INTO USER (username, email, salt, passwordHash,isAdmin)
+                VALUE (?, ?, ?, ?,?)
                 """;
         //String query = "INSERT INTO USER VALUE (?, ?, ?, ?, ?)";
         try{
             PreparedStatement pst = conn.prepareStatement(query);
-            pst.setString(1, userData.getFirstName());
-            pst.setString(2, userData.getLastName());
-            pst.setString(3, userData.getEmail());
-            pst.setString(4, userData.getSalt());
-            pst.setString(5, userData.getPasswordHash());
-            pst.setBoolean(6,userData.get_admin_status());
+            pst.setString(1, userData.getUsername());
+            pst.setString(2, userData.getEmail());
+            pst.setString(3, userData.getSalt());
+            pst.setString(4, userData.getPasswordHash());
+            pst.setBoolean(5,userData.get_admin_status());
             pst.execute();
             pst.close();
             conn.close();
@@ -37,12 +36,12 @@ public class UserRepository {
     }
 
 
-    public static User getByEmail(String email){
-        String query = "SELECT * FROM USER WHERE email = ? LIMIT 1";
+    public static User getByUsername(String username){
+        String query = "SELECT * FROM USER WHERE username = ? LIMIT 1";
         Connection connection = DBConnector.getConnection();
         try{
             PreparedStatement pst = connection.prepareStatement(query);
-            pst.setString(1, email);
+            pst.setString(1, username);
             ResultSet result = pst.executeQuery();
             if(result.next()){
                 return getFromResultSet(result);
@@ -56,14 +55,13 @@ public class UserRepository {
     private static User getFromResultSet(ResultSet result){
         try{
             int id = result.getInt("id");
-            String firstName = result.getString("firstName");
-            String lastName = result.getString("lastName");
+            String username = result.getString("username");
             String email = result.getString("email");
             String salt = result.getString("salt");
             String passwordHash = result.getString("passwordHash");
             boolean isAdmin=result.getBoolean("isAdmin");
             return new User(
-                    id, firstName, lastName, email, salt, passwordHash,isAdmin
+                    id, username, email, salt, passwordHash,isAdmin
             );
         }catch (Exception e){
             return null;

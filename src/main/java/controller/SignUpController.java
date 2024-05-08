@@ -19,9 +19,7 @@ import java.util.Objects;
 
 public class SignUpController {
     @FXML
-    private TextField txtFirstName;
-    @FXML
-    private TextField txtLastName;
+    private TextField txtUserName;
     @FXML
     private TextField txtEmail;
     @FXML
@@ -33,8 +31,7 @@ public class SignUpController {
     @FXML
     private void handleSignUp(ActionEvent ae){
         UserDto userSignUpData = new UserDto(
-                this.txtFirstName.getText(),
-                this.txtLastName.getText(),
+                this.txtUserName.getText(),
                 this.txtEmail.getText(),
                 this.pwdPassword.getText(),
                 this.pwdConfirmPassword.getText()
@@ -49,6 +46,13 @@ public class SignUpController {
             alert.setContentText("User Created Succesfully!");
             alert.showAndWait();
             Navigator.navigate(ae, Navigator.LOGIN_PAGE);
+        }
+        else {
+            Alert alert =new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Register Information");
+            alert.setHeaderText("MotorEmpire");
+            alert.setContentText("Error while creating user");
+            alert.showAndWait();
         }
 
     }

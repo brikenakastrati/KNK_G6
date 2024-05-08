@@ -7,6 +7,7 @@ module com.example.knk_g6 {
 
     opens com.example.knk_g6 to javafx.fxml;
 
+    opens model to javafx.base, javafx.fxml;
     exports com.example.knk_g6;
     exports app;
     opens controller to javafx.fxml;

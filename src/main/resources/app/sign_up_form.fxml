@@ -91,32 +91,27 @@
             <children>
             <AnchorPane layoutX="305.0" layoutY="-1.0" prefHeight="375.0" prefWidth="334.0" style="-fx-background-color: #e0e0e0;">
                <children>
-                      <TextField fx:id="txtFirstName" layoutX="171.0" layoutY="70.0" promptText="First Name" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <TextField fx:id="txtLastName" layoutX="171.0" layoutY="116.0" promptText="Last name" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <TextField fx:id="txtEmail" layoutX="171.0" layoutY="162.0" promptText="Email" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <PasswordField fx:id="pwdPassword" layoutX="171.0" layoutY="210.0" promptText="Password" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <PasswordField fx:id="pwdConfirmPassword" layoutX="171.0" layoutY="260.0" promptText="Confirm Password" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <Button layoutX="182.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #c6c6c6; -fx-border-width: 2;" text="Cancel" textFill="#fa0303">
+                      <TextField fx:id="txtUserName" layoutX="171.0" layoutY="70.0" promptText="Username" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <TextField fx:id="txtEmail" layoutX="169.0" layoutY="111.0" promptText="Email" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <PasswordField fx:id="pwdPassword" layoutX="169.0" layoutY="159.0" promptText="Password" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <PasswordField fx:id="pwdConfirmPassword" layoutX="169.0" layoutY="209.0" promptText="Confirm Password" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
+                      <Button layoutX="191.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #c6c6c6; -fx-border-width: 2;" text="Cancel" textFill="#fa0303">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                      <Button layoutX="31.0" layoutY="330.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; -fx-border-width: 2; -fx-background-color: #c6c6c6;" text="Sign Up">
+                      <Button layoutX="40.0" layoutY="255.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; -fx-border-width: 2; -fx-background-color: #c6c6c6;" text="Sign Up">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                      <Label layoutX="81.0" layoutY="75.0" text="First Name:">
+                      <Label layoutX="81.0" layoutY="75.0" text="Username:">
                      <font>
                         <Font size="13.0" />
                      </font></Label>
-                      <Label layoutX="81.0" layoutY="121.0" text="Last Name:">
-                     <font>
-                        <Font size="13.0" />
-                     </font></Label>
-                      <Label layoutX="107.0" layoutY="167.0" text="Email:" />
-                      <Label layoutX="85.0" layoutY="215.0" text="Password:" />
-                      <Label layoutX="48.0" layoutY="265.0" text="Confirm Password:" />
+                      <Label layoutX="105.0" layoutY="116.0" text="Email:" />
+                      <Label layoutX="83.0" layoutY="164.0" text="Password:" />
+                      <Label layoutX="46.0" layoutY="214.0" text="Confirm Password:" />
                   <Label layoutX="123.0" layoutY="24.0" prefHeight="18.0" prefWidth="96.0" text="Register" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="24.0" />

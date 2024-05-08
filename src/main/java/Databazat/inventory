@@ -1,0 +1,9 @@
+create table inventory(
+id int auto_increment primary key,
+carid varchar(100),
+carname varchar(100),
+cartype varchar(100),
+carstock int,
+carprice varchar(100),
+carstatus varchar(100),
+carimage varchar(100));
