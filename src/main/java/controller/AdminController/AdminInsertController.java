@@ -9,6 +9,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
 import model.carInventory;
 
@@ -24,6 +26,7 @@ public class AdminInsertController {
     @FXML private Label lblimagepath, lblStatus;
     @FXML private TextField txtCarID, txtCarName, txtCarStock, txtCarPrice;
     @FXML private ComboBox<String> comboType, comboStatus;
+    @FXML private ImageView imageview;
 
     private inventoryRepository repo = new inventoryRepository();
 
@@ -60,6 +63,8 @@ public class AdminInsertController {
         File file = fileChooser.showOpenDialog(null);
 
         if (file != null) {
+            Image image = new Image(file.toURI().toString());
+            imageview.setImage(image);
             lblimagepath.setText(file.getAbsolutePath());
         } else {
             lblimagepath.setText("No image selected");
@@ -81,7 +86,7 @@ public class AdminInsertController {
                 lblStatus.setText("Please fill all fields and select an image.");
                 return;
             }
-
+imageview.setImage(null);
             carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, carImage);
             repo.addCar(newCar);
             loadTableData();

@@ -107,7 +107,7 @@
             <DropShadow height="46.73" radius="22.865" width="46.73" />
          </effect>
          <children>
-            <ImageView fitHeight="153.0" fitWidth="169.0" layoutX="18.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageview" fitHeight="153.0" fitWidth="169.0" layoutX="18.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
       <Button fx:id="btnImportImage" layoutX="677.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleImportImageClick" prefHeight="32.0" prefWidth="103.0" text="Import">
@@ -117,5 +117,10 @@
       </Button>
       <ComboBox fx:id="comboStatus" layoutX="415.0" layoutY="625.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
       <Label fx:id="lblimagepath" layoutX="618.0" layoutY="761.0" prefHeight="18.0" prefWidth="197.0" />
+      <Label fx:id="lblStatus" layoutX="215.0" layoutY="494.0" prefHeight="28.0" prefWidth="342.0">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
