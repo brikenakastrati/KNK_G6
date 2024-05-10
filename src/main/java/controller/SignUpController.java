@@ -31,6 +31,26 @@ public class SignUpController {
     private Scene scene;
     @FXML
     private void handleSignUp(ActionEvent ae){
+
+        if (txtUserName.getText().isEmpty() || txtEmail.getText().isEmpty() || pwdPassword.getText().isEmpty() ||
+                pwdConfirmPassword.getText().isEmpty()) {
+            showAlert(Alert.AlertType.ERROR, "Registration error", "Please fill in all the fields");
+            return;
+        }
+
+        if (!txtEmail.getText().matches("^[a-zA-Z0-9_+&*-]+(?:\\.[a-zA-Z0-9_+&*-]+)*@(?:[a-zA-Z0-9-]+\\.)+[a-zA-Z]{2,7}$")) {
+            showAlert(Alert.AlertType.ERROR, "Registration error", "Please enter a valid email address");
+            return;
+        }
+        if (!pwdPassword.getText().equals(pwdConfirmPassword.getText())) {
+            showAlert(Alert.AlertType.ERROR, "Registration error", "Passwords do not match");
+            return;
+        }
+        if (pwdPassword.getText().length() < 8) {
+            showAlert(Alert.AlertType.ERROR, "Registration error", "Password must be at least 8 characters long");
+            return;
+        }
+
         UserDto userSignUpData = new UserDto(
                 this.txtUserName.getText(),
                 this.txtEmail.getText(),
@@ -41,19 +61,11 @@ public class SignUpController {
         boolean response = UserService.signUp(userSignUpData);
 
         if(response){
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Register Information");
-            alert.setHeaderText("MotorEmpire");
-            alert.setContentText("User Created Succesfully!");
-            alert.showAndWait();
+            showAlert(Alert.AlertType.INFORMATION, "Registered Successfully", "User was created successfully");
             Navigator.navigate(ae, Navigator.LOGIN_PAGE);
         }
         else {
-            Alert alert =new Alert(Alert.AlertType.ERROR);
-            alert.setTitle("Register Information");
-            alert.setHeaderText("MotorEmpire");
-            alert.setContentText("Error while creating user");
-            alert.showAndWait();
+            showAlert(Alert.AlertType.ERROR, "Register Error", "Error while creating user");
         }
 
     }
@@ -68,5 +80,11 @@ public class SignUpController {
         Navigator.navigate(me, Navigator.LOGIN_PAGE);
     }
 
-
+    private void showAlert(Alert.AlertType alertType, String title, String content) {
+        Alert alert = new Alert(alertType);
+        alert.setTitle(title);
+        alert.setHeaderText(title);
+        alert.setContentText(content);
+        alert.showAndWait();
+    }
 }

@@ -40,7 +40,7 @@ public class LoginController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Login Error");
             alert.setHeaderText(null);
-            alert.setContentText("Incorrect email or password.");
+            alert.setContentText("Incorrect username or password.");
             alert.showAndWait();
         } else {
                 // Navigate to the home page for regular users

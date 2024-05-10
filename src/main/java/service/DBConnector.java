@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class DBConnector {
     private static String URL = "jdbc:mysql://localhost:3306/knk2024";
-    private static String USER = "Brilant";
+    private static String USER = "root";
     //Qetu duhet me e bo n mysql krejt passwordin root puna qe mos me na ra me ndrru saher t punon najkush
-    private static String PASSWORD = "1234";
+    private static String PASSWORD = "afrimymeri12";
     private static Connection connection = null;
 
     public static Connection getConnection() {
