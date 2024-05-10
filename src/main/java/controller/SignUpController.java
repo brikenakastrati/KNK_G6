@@ -56,7 +56,7 @@ public class SignUpController {
         if (user != null) {
             showAlert(Alert.AlertType.ERROR, "Registration error", "Username is already taken try another one");
         }
-        User user2 = UserRepository.getByUsername(this.txtEmail.getText());
+        User user2 = UserRepository.getByEmail(this.txtEmail.getText());
         if (user2 != null) {
             showAlert(Alert.AlertType.ERROR, "Registration error", "Email address is already taken try another one");
         }

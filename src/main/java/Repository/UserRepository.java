@@ -52,6 +52,23 @@ public class UserRepository {
         }
     }
 
+    public static User getByEmail(String email){
+        String query = "SELECT * FROM USER WHERE email = ? LIMIT 1";
+        Connection connection = DBConnector.getConnection();
+        try{
+            PreparedStatement pst = connection.prepareStatement(query);
+            pst.setString(1, email);
+            ResultSet result = pst.executeQuery();
+            if(result.next()){
+                return getFromResultSet(result);
+            }
+            return null;
+        }catch (Exception e){
+            return null;
+        }
+    }
+
+
     private static User getFromResultSet(ResultSet result){
         try{
             int id = result.getInt("id");

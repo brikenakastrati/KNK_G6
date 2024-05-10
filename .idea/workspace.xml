@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Changed login controller, added validity check (-database controling if user already exists)">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="+database controlling if user already exists(with username only)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -132,7 +133,7 @@
       <workItem from="1714860201981" duration="2709000" />
       <workItem from="1715042237080" duration="115000" />
       <workItem from="1715365369336" duration="2301000" />
-      <workItem from="1715382151028" duration="1420000" />
+      <workItem from="1715382151028" duration="2030000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -214,7 +215,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715382516470</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="+database controlling if user already exists(with username only)">
+      <option name="closed" value="true" />
+      <created>1715383882134</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1715383882134</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -240,7 +249,8 @@
     <MESSAGE value="AdminDashboard Edit" />
     <MESSAGE value="Added Insert Function" />
     <MESSAGE value="Changed login controller, added validity check (-database controling if user already exists)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed login controller, added validity check (-database controling if user already exists)" />
+    <MESSAGE value="+database controlling if user already exists(with username only)" />
+    <option name="LAST_COMMIT_MESSAGE" value="+database controlling if user already exists(with username only)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
