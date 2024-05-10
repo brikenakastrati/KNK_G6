@@ -1,5 +1,6 @@
 package controller;
 
+import Repository.UserRepository;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -12,6 +13,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import model.User;
 import model.dto.UserDto;
 import service.UserService;
 
@@ -49,6 +51,14 @@ public class SignUpController {
         if (pwdPassword.getText().length() < 8) {
             showAlert(Alert.AlertType.ERROR, "Registration error", "Password must be at least 8 characters long");
             return;
+        }
+        User user = UserRepository.getByUsername(this.txtUserName.getText());
+        if (user != null) {
+            showAlert(Alert.AlertType.ERROR, "Registration error", "Username is already taken try another one");
+        }
+        User user2 = UserRepository.getByUsername(this.txtEmail.getText());
+        if (user2 != null) {
+            showAlert(Alert.AlertType.ERROR, "Registration error", "Email address is already taken try another one");
         }
 
         UserDto userSignUpData = new UserDto(
