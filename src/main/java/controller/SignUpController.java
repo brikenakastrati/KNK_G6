@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.dto.UserDto;
 import service.UserService;
@@ -62,4 +63,10 @@ public class SignUpController {
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
 
     }
+    @FXML
+    private void handleLoginAccountClick(MouseEvent me) {
+        Navigator.navigate(me, Navigator.LOGIN_PAGE);
+    }
+
+
 }

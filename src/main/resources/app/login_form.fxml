@@ -12,42 +12,42 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
     <children>
-        <Label layoutX="171.0" layoutY="168.0" prefHeight="26.0" prefWidth="78.0" text="Username:">
+        <Label layoutX="194.0" layoutY="168.0" prefHeight="26.0" prefWidth="78.0" text="Username:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-        <Label layoutX="173.0" layoutY="215.0" text="Password:">
+        <Label layoutX="197.0" layoutY="215.0" text="Password:">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-        <TextField fx:id="txtUserName" layoutX="255.0" layoutY="167.0" promptText="Username" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
-        <PasswordField fx:id="pwdPassword" layoutX="255.0" layoutY="212.0" promptText="Password" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
-        <Button layoutX="194.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black;" text="Login">
+        <TextField fx:id="txtUserName" layoutX="288.0" layoutY="167.0" promptText="Username" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
+        <PasswordField fx:id="pwdPassword" layoutX="288.0" layoutY="212.0" promptText="Password" style="-fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
+        <Button layoutX="189.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: #e0e0e0; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black;" text="Login">
          <font>
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <Label layoutX="402.0" layoutY="270.0" />
-      <Button layoutX="323.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #e0e0e0; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 10;" text="Login as Admin" textFill="RED" underline="true">
+      <Button layoutX="322.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: #e0e0e0; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 10;" text="Login as Admin" textFill="RED" underline="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <ImageView fitHeight="116.0" fitWidth="183.0" layoutX="209.0" layoutY="26.0">
+      <ImageView fitHeight="116.0" fitWidth="183.0" layoutX="209.0" layoutY="31.0">
          <image>
             <Image url="@../Images/2.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="209.0">
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="156.0" layoutY="211.0">
          <image>
             <Image url="@../Images/lock-6-128.png" />
          </image>
       </ImageView>
-      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="134.0" layoutY="166.0">
+      <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="156.0" layoutY="166.0">
          <image>
             <Image url="@../Images/Profile-user (2).png" />
          </image>
       </ImageView>
-      <Label layoutX="253.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="Create new account" textFill="#2f0fe4" underline="true">
+      <Label layoutX="241.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="Create new account" textFill="#2f0fe4" underline="true">
          <font>
             <Font size="14.0" />
          </font></Label>
