@@ -21,8 +21,8 @@ public class AdminDashboardController {
             }
 
     @FXML
-    private void handleClientsClick(){
-
+    private void handleClientsClick(ActionEvent ae){
+        Navigator.navigate(ae,Navigator.AdminClients_page);
     }
     @FXML
     private void handleLogoutClick(ActionEvent ae){

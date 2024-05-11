@@ -47,8 +47,7 @@ public class LoginController {
                 Navigator.navigate(ae, Navigator.HOME_PAGE);
 
         }
-        }
-
+    }
 
 
     @FXML
