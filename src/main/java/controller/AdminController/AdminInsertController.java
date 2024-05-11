@@ -86,7 +86,7 @@ public class AdminInsertController {
                 lblStatus.setText("Please fill all fields and select an image.");
                 return;
             }
-imageview.setImage(null);
+            imageview.setImage(null);
             carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, carImage);
             repo.addCar(newCar);
             loadTableData();
@@ -127,7 +127,8 @@ imageview.setImage(null);
 
     @FXML
     void handleDashboardClick(ActionEvent event) {
-        // Dashboard navigation
+        Navigator.navigate(event, Navigator.AdminDashboard_Page);
+
     }
 
     public void handleInsertClick(ActionEvent actionEvent) {

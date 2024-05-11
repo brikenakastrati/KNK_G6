@@ -17,6 +17,8 @@ public class LoginController {
     @FXML
     public Label admUsername; //Prej fxml t admindashboard vyn per me shfaq username
     @FXML
+    public Label clientUsername;
+    @FXML
     private TextField txtUserName;
     @FXML
     private PasswordField pwdPassword;
@@ -33,9 +35,6 @@ public class LoginController {
 
         // Check login success
         if (!result.isSuccess()) {
-            //To display the username of the admin on the admin page
-
-
             //To show an error when there is one
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Login Error");
@@ -44,8 +43,10 @@ public class LoginController {
             alert.showAndWait();
         } else {
                 // Navigate to the home page for regular users
+                data.setUsername(this.txtUserName.getText());
                 Navigator.navigate(ae, Navigator.HOME_PAGE);
-            }
+
+        }
         }
 
 
@@ -65,7 +66,6 @@ public class LoginController {
         if (result.isSuccess() && result.isAdmin()) {
 
             data.setUsername(this.txtUserName.getText());
-
             Navigator.navigate(me, Navigator.AdminDashboard_Page);
 
 
