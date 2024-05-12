@@ -91,11 +91,11 @@
             <children>
             <AnchorPane layoutX="305.0" layoutY="-1.0" prefHeight="375.0" prefWidth="334.0" style="-fx-background-color: #e0e0e0;">
                <children>
-                      <TextField fx:id="txtUserName" layoutX="171.0" layoutY="70.0" promptText="Username" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <TextField fx:id="txtEmail" layoutX="169.0" layoutY="111.0" promptText="Email" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <PasswordField fx:id="pwdPassword" layoutX="169.0" layoutY="159.0" promptText="Password" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <PasswordField fx:id="pwdConfirmPassword" layoutX="169.0" layoutY="209.0" promptText="Confirm Password" style="-fx-border-color: #ff0000; -fx-border-width: 0px 0px 2px 0px;" />
-                      <Button layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #c6c6c6; -fx-border-width: 2;" text="Cancel" textFill="#fa0303">
+                      <TextField fx:id="txtUserName" layoutX="171.0" layoutY="70.0" promptText="Username" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
+                      <TextField fx:id="txtEmail" layoutX="169.0" layoutY="111.0" promptText="Email" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
+                      <PasswordField fx:id="pwdPassword" layoutX="169.0" layoutY="159.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
+                      <PasswordField fx:id="pwdConfirmPassword" layoutX="169.0" layoutY="209.0" promptText="Confirm Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
+                      <Button layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #c6c6c6; -fx-border-width: 2;" text="Cancel" textFill="#1e1f22">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
