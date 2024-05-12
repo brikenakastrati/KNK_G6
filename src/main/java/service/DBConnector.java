@@ -5,21 +5,20 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBConnector {
-    private static String URL = "jdbc:mysql://localhost:3306/knk2024";
-    private static String USER = "root";
-    //Qetu duhet me e bo n mysql krejt passwordin root puna qe mos me na ra me ndrru saher t punon najkush
-    private static String PASSWORD = "afrimymeri12";
+    private static final String URL = "jdbc:mysql://localhost:3306/knk2024";
+    private static final String USER = "Brilant";
+    private static final String PASSWORD = "1234";
     private static Connection connection = null;
 
     public static Connection getConnection() {
-        if (connection == null) {
-            try {
-                connection = DriverManager.getConnection(
-                        URL, USER, PASSWORD
-                );
-            } catch (SQLException e) {
-                throw new RuntimeException(e);
+        try {
+            // Check if connection is null or closed, and (re)establish it if necessary
+            if (connection == null || connection.isClosed()) {
+                connection = DriverManager.getConnection(URL, USER, PASSWORD);
             }
+        } catch (SQLException e) {
+            // Consider logging this exception more gracefully or rethrowing a custom exception
+            throw new RuntimeException("Failed to connect to the database", e);
         }
         return connection;
     }
