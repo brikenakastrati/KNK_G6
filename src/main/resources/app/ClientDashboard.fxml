@@ -63,12 +63,12 @@
       </TableView>
       <AnchorPane layoutX="-8.0" layoutY="-6.0" prefHeight="111.0" prefWidth="1166.0" style="-fx-background-color: #d3d3d3; -fx-border-color: black;">
          <children>
-            <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="Customize">
+            <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="Contact">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="RED">
+            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="#384a80">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>

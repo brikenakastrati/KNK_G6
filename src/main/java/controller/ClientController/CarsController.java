@@ -24,8 +24,8 @@ public class CarsController {
     Navigator.navigate(ae, Navigator.HOME_PAGE);
     }
 
-    public void handleCustomizeClick() {
-
+    public void handleCustomizeClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.Costumize_page);
     }
     public void handleLogoutClick(ActionEvent ae) {
         Navigator.navigate(ae,Navigator.LOGIN_PAGE);

@@ -9,6 +9,7 @@ import javafx.scene.control.Label;
 public class ClientDashboardController {
     @FXML
     public Label clientUsername;
+
     public void initialize() {
         UsernameDisplay();
     }
@@ -21,7 +22,7 @@ public class ClientDashboardController {
 
 
     public void handleLogoutClick(ActionEvent ae) {
-        Navigator.navigate(ae,Navigator.LOGIN_PAGE);
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
     public void handleCarsClick(ActionEvent ae) {
@@ -31,6 +32,7 @@ public class ClientDashboardController {
     public void handleDashboardClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.HOME_PAGE);
     }
+
     public void handleCustomizeClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.Costumize_page);
     }
