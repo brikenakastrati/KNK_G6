@@ -55,7 +55,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </ImageView>
-            <TextField layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="152.0" style="-fx-background-color: transparent;" text="Numri i klienteve: ">
+            <TextField layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Numri i klienteve: ">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -90,7 +90,7 @@
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
          <children>
-            <TextField layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Makinat ne stock">
+            <TextField layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Makinat ne stock:">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
