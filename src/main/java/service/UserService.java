@@ -32,6 +32,30 @@ public class UserService {
         return UserRepository.create(createUserData);
     }
 
+    public static boolean createclientbutton(UserDto UserCreateClientData){
+        String password = UserCreateClientData.getPassword();
+        String confirmPassword = UserCreateClientData.getConfirmPassword();
+
+        if(!password.equals(confirmPassword)){
+            return false;
+        }
+
+        String salt = PasswordHasher.generateSalt();
+        String passwordHash = PasswordHasher.generateSaltedHash(
+                password, salt
+        );
+
+        CreateUserDto createUserData = new CreateUserDto(
+                UserCreateClientData.getUsername(),
+                UserCreateClientData.getEmail(),
+                salt,
+                passwordHash
+
+        );
+
+        return UserRepository.create(createUserData);
+    }
+
 
         public static LoginResult login(LoginUserDto loginData) {
             User user = UserRepository.getByUsername(loginData.getUsername());

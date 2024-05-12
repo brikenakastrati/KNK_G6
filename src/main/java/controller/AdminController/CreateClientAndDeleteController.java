@@ -1,24 +1,19 @@
 package controller.AdminController;
 
 import app.Navigator;
-import controller.data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 
-
-public class AdminDashboardController {
+public class CreateClientAndDeleteController {
     @FXML
-    public Label admUsername;
-    public void initialize() {
-       UsernameDisplay();
-    }
-
-        private void UsernameDisplay() {
-
-                String user = data.getUsername();
-                admUsername.setText(user.substring(0, 1).toUpperCase() + user.substring(1));
-            }
+    private TextField txtusername, txtemail;
+    @FXML
+    private PasswordField txtpassword, txtconfirmpassword;
+    @FXML
+    private TableView usertable;
 
     @FXML
     private void handleClientsClick(ActionEvent ae) {
@@ -31,10 +26,9 @@ public class AdminDashboardController {
     @FXML
     private void handleInsertClick(ActionEvent ae){
         Navigator.navigate(ae,Navigator.AdminInsert_page);
-
     }
     @FXML
-   private void handleDashboardClick(){
-
+    private void handleDashboardClick(ActionEvent ae){
+        Navigator.navigate(ae, Navigator.AdminDashboard_Page);
     }
 }

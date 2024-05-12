@@ -20,16 +20,18 @@ public class ClientDashboardController {
     }
 
 
-    public void handleCustomizeClick(ActionEvent ae) {
-    }
-
     public void handleLogoutClick(ActionEvent ae) {
         Navigator.navigate(ae,Navigator.LOGIN_PAGE);
     }
 
-    public void handleBuynowClick(ActionEvent ae) {
+    public void handleCarsClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.Cars_page);
     }
 
     public void handleDashboardClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.HOME_PAGE);
+    }
+    public void handleCustomizeClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.Costumize_page);
     }
 }

@@ -8,7 +8,7 @@ public class DBConnector {
     private static String URL = "jdbc:mysql://localhost:3306/knk2024";
     private static String USER = "root";
     //Qetu duhet me e bo n mysql krejt passwordin root puna qe mos me na ra me ndrru saher t punon najkush
-    private static String PASSWORD = "Agnesa.010704";
+    private static String PASSWORD = "afrimymeri12";
     private static Connection connection = null;
 
     public static Connection getConnection() {

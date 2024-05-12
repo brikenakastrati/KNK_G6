@@ -19,4 +19,8 @@ public class CarsController {
     public void handleLogoutClick(ActionEvent ae) {
         Navigator.navigate(ae,Navigator.LOGIN_PAGE);
     }
+
+    public void handleCarsClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.Cars_page);
+    }
 }
