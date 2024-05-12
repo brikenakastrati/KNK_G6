@@ -95,12 +95,12 @@
                       <TextField fx:id="txtEmail" layoutX="169.0" layoutY="111.0" promptText="Email" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
                       <PasswordField fx:id="pwdPassword" layoutX="169.0" layoutY="159.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
                       <PasswordField fx:id="pwdConfirmPassword" layoutX="169.0" layoutY="209.0" promptText="Confirm Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
-                      <Button layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: #c6c6c6; -fx-border-width: 2;" text="Cancel" textFill="#1e1f22">
+                      <Button layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: black; -fx-border-width: 2;" text="Cancel" textFill="white">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                      <Button layoutX="41.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; -fx-border-width: 2; -fx-background-color: #c6c6c6;" text="Sign Up">
+                      <Button layoutX="41.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; -fx-border-width: 2; -fx-background-color: black;" text="Sign Up" textFill="white">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
