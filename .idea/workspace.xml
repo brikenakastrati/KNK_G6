@@ -4,21 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Displaying username on homepage as client">
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/app/costumize.fxml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="navigate cars fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminClientsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,28 +52,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.app.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Lenovo/Documents/Car-Management-System-JavaFX-GUI-main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.app.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Lenovo/Documents/Car-Management-System-JavaFX-GUI-main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "inlay.hints",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.app.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Database.Main" />
@@ -215,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1714953253264</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="navigate cars fix">
+      <option name="closed" value="true" />
+      <created>1715524201935</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715524201935</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +239,8 @@
     <MESSAGE value="AdminDashboard Edit" />
     <MESSAGE value="ClientDashboar Edited" />
     <MESSAGE value="Cars Created and Edited, ClientDashboard Edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cars Created and Edited, ClientDashboard Edited" />
+    <MESSAGE value="navigate cars fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="navigate cars fix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
