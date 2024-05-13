@@ -3,10 +3,7 @@ package controller;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.input.MouseEvent;
 import model.dto.LoginUserDto;
 import model.dto.UserDto;
@@ -14,6 +11,7 @@ import service.LoginResult;
 import service.UserService;
 
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class LoginController {
     @FXML
@@ -87,7 +85,6 @@ public class LoginController {
         }
 
     }
-
 
     @FXML
     private void handleCreateAccountClick(MouseEvent me) {

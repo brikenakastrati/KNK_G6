@@ -15,14 +15,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminInsertController">
    <children>
-      <AnchorPane layoutX="-2.0" layoutY="-6.0" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #d3d3d3; -fx-border-color: black;">
+      <AnchorPane layoutX="-2.0" layoutY="-6.0" opacity="0.95" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #29465B; -fx-border-color: black;">
          <children>
             <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="#1e1f22" style ="-fx-background-color: #384a80;">
+            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #708090;" text="LogOut" textFill="#1e1f22">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>

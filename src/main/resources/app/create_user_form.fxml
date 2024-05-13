@@ -90,7 +90,7 @@
                 <Label layoutX="158.0" layoutY="103.0" text="%lblLastName" />
                 <Label layoutX="161.0" layoutY="149.0" text="%lblEmail" />
                 <Label layoutX="161.0" layoutY="191.0" text="%lblPassword" />
-                <Label layoutX="161.0" layoutY="237.0" text="Confirm Password" />
+                <Label layoutX="161.0" layoutY="237.0" text="%lblConfirmPassword" />
                 <TextField fx:id="txtFirstName" layoutX="281.0" layoutY="55.0" />
                 <TextField fx:id="txtLastName" layoutX="282.0" layoutY="99.0" />
                 <TextField fx:id="txtEmail" layoutX="282.0" layoutY="145.0" />

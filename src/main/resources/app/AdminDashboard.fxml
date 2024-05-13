@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.*?>
-<?import javafx.scene.chart.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.effect.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminDashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminDashboardController">
    <children>
-      <AnchorPane layoutX="-1.0" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #d3d3d3; -fx-border-color: #1e1f22;">
+      <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #29465B; -fx-border-color: #1e1f22;">
          <children>
             <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="#1e1f22">
+            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #708090;" text="LogOut" textFill="#1e1f22">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
@@ -55,7 +61,7 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </ImageView>
-            <TextField layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Numri i klienteve: ">
+            <TextField layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%clientnr">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -72,7 +78,7 @@
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
          <children>
-            <TextField layoutX="84.0" layoutY="107.0" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: transparent;" text="Welcome">
+            <TextField layoutX="84.0" layoutY="107.0" prefHeight="44.0" prefWidth="101.0" style="-fx-background-color: transparent;" text="%lblWelcome">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -90,7 +96,7 @@
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
          <children>
-            <TextField layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="Makinat ne stock:">
+            <TextField layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%lblmakinat">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -109,7 +115,7 @@
       </AnchorPane>
       <AnchorPane layoutX="549.0" layoutY="380.0" prefHeight="330.0" prefWidth="402.0" style="-fx-background-color: #d3d3d3; -fx-border-color: black;">
          <children>
-            <TextField layoutX="27.0" layoutY="1.0" prefHeight="50.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="Makinat e shitura sot">
+            <TextField layoutX="27.0" layoutY="1.0" prefHeight="50.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="%lblmakinatsot">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
@@ -126,7 +132,7 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </LineChart>
-            <TextField layoutX="72.0" layoutY="1.0" prefHeight="50.0" prefWidth="224.0" style="-fx-background-color: transparent;" text="Grafiku i shitjeve">
+            <TextField layoutX="72.0" layoutY="1.0" prefHeight="50.0" prefWidth="224.0" style="-fx-background-color: transparent;" text="%lblgrafiku">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
