@@ -15,8 +15,6 @@ import service.UserService;
 
 import java.util.Locale;
 
-import static app.Navigator.navigate;
-
 public class LoginController {
     @FXML
     public Label admUsername; //Prej fxml t admindashboard vyn per me shfaq username
@@ -46,12 +44,14 @@ public class LoginController {
             alert.setContentText("Incorrect username or password.");
             alert.showAndWait();
         } else {
-            // Navigate to the home page for regular users
-            data.setUsername(this.txtUserName.getText());
-            navigate(ae, Navigator.HOME_PAGE);
+                // Navigate to the home page for regular users
+                data.setUsername(this.txtUserName.getText());
+                Navigator.navigate(ae, Navigator.HOME_PAGE);
 
         }
     }
+
+
     @FXML
     private void handleLoginAsAdmin(ActionEvent me) {
         LoginUserDto loginUserData = new LoginUserDto(
@@ -67,7 +67,7 @@ public class LoginController {
         if (result.isSuccess() && result.isAdmin()) {
 
             data.setUsername(this.txtUserName.getText());
-            navigate(me, Navigator.AdminDashboard_Page);
+            Navigator.navigate(me, Navigator.ADMIN_DASHBOARD_PAGE);
 
 
 
@@ -85,12 +85,14 @@ public class LoginController {
             }
             alert.showAndWait();
         }
+
     }
+
+
     @FXML
     private void handleCreateAccountClick(MouseEvent me) {
         Navigator.navigate(me, Navigator.CREATE_ACCOUNT_PAGE);
     }
-
     @FXML
     private void handleENClick(ActionEvent ae) {
         Locale.setDefault(Locale.ENGLISH);
@@ -99,5 +101,10 @@ public class LoginController {
     @FXML
     private void handleSQClick(ActionEvent ae) {
         Locale.setDefault(new Locale("sq"));
+    }
+
+
 }
-}
+
+
+

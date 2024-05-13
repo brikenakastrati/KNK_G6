@@ -25,13 +25,13 @@ public class CarsController {
     }
 
     public void handleCustomizeClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.Costumize_page);
+        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
     }
     public void handleLogoutClick(ActionEvent ae) {
         Navigator.navigate(ae,Navigator.LOGIN_PAGE);
     }
 
     public void handleCarsClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.Cars_page);
+        Navigator.navigate(ae, Navigator.CARS_PAGE);
     }
 }

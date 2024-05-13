@@ -127,7 +127,7 @@ public class AdminInsertController {
 
     @FXML
     void handleDashboardClick(ActionEvent event) {
-        Navigator.navigate(event, Navigator.AdminDashboard_Page);
+        Navigator.navigate(event, Navigator.ADMIN_DASHBOARD_PAGE);
 
     }
 

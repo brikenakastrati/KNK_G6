@@ -63,7 +63,7 @@ public class CreateClientAndDeleteController {
 
         if(response){
             showAlert(Alert.AlertType.INFORMATION, "New client created", "New client created successfully");
-            Navigator.navigate(ae, Navigator.AdminClients_page);
+            Navigator.navigate(ae, Navigator.ADMIN_CLIENTS_PAGE);
         }
         else {
             showAlert(Alert.AlertType.ERROR, "Creating client error", "Error while creating new client");
@@ -74,7 +74,7 @@ public class CreateClientAndDeleteController {
 
     @FXML
     private void handleClientsClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.AdminClients_page);
+        Navigator.navigate(ae, Navigator.ADMIN_CLIENTS_PAGE);
     }
     @FXML
     private void handleLogoutClick(ActionEvent ae){
@@ -82,11 +82,11 @@ public class CreateClientAndDeleteController {
     }
     @FXML
     private void handleInsertClick(ActionEvent ae){
-        Navigator.navigate(ae,Navigator.AdminInsert_page);
+        Navigator.navigate(ae,Navigator.ADMIN_INSERT_PAGE);
     }
     @FXML
     private void handleDashboardClick(ActionEvent ae){
-        Navigator.navigate(ae, Navigator.AdminDashboard_Page);
+        Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);
     }
 
     private void showAlert(Alert.AlertType alertType, String title, String content) {

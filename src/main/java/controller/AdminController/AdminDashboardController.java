@@ -22,7 +22,7 @@ public class AdminDashboardController {
 
     @FXML
     private void handleClientsClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.AdminClients_page);
+        Navigator.navigate(ae, Navigator.ADMIN_CLIENTS_PAGE);
     }
     @FXML
     private void handleLogoutClick(ActionEvent ae){
@@ -30,7 +30,7 @@ public class AdminDashboardController {
     }
     @FXML
     private void handleInsertClick(ActionEvent ae){
-        Navigator.navigate(ae,Navigator.AdminInsert_page);
+        Navigator.navigate(ae,Navigator.ADMIN_INSERT_PAGE);
 
     }
     @FXML
