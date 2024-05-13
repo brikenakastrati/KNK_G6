@@ -1,5 +1,6 @@
 package app;
 
+
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -8,6 +9,8 @@ import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 public class Navigator {
     public final static String LOGIN_PAGE = "login_form.fxml";
@@ -31,7 +34,6 @@ public class Navigator {
         stage.setScene(newScene);
         stage.show();
     }
-
     public static void navigate(Pane pane, String form){
         Pane formPane = loadPane(form);
         pane.getChildren().clear();
@@ -39,13 +41,17 @@ public class Navigator {
     }
 
     private static Pane loadPane(String form){
+
+        ResourceBundle bundle= ResourceBundle.getBundle(
+                "Translations.content", Locale.getDefault()
+        );
         FXMLLoader loader = new FXMLLoader(
-                Navigator.class.getResource(form)
+                Navigator.class.getResource(form), bundle
         );
         try {
             return loader.load();
         }catch (IOException ioe){
             return null;
-        }
-    }
+}
+}
 }
