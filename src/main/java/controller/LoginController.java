@@ -81,7 +81,7 @@ public class LoginController {
 
 
         } else {
-            // Display error or access denied message
+
             Alert alert = new Alert(Alert.AlertType.ERROR);
             if (!result.isSuccess()) {
                 alert.setTitle("Login Error");

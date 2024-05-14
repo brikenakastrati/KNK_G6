@@ -45,7 +45,6 @@
                     </image>
                 </ImageView>
             </children>
-
         </AnchorPane>
         <VBox alignment="CENTER" layoutX="50.0" layoutY="140.0" spacing="10">
             <Label text="Do not hesitate to send us a message." />
@@ -68,5 +67,4 @@
             <Button onAction="#sendMessage" text="Send" />
         </VBox>
     </children>
-
 </AnchorPane>
