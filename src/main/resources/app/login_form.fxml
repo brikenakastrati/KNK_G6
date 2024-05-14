@@ -22,11 +22,11 @@
                 <Font name="System Bold" size="12.0" />
             </font>
         </Button>
-        <Label layoutX="194.0" layoutY="154.0" prefHeight="26.0" prefWidth="78.0" text="%lblUsername" textFill="#faf8f8">
+        <Label layoutX="204.0" layoutY="155.0" prefHeight="26.0" prefWidth="78.0" text="%lblUsername" textFill="#faf8f8">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font></Label>
-        <Label layoutX="192.0" layoutY="215.0" text="%lblPassword" textFill="#f7f4f4">
+        <Label layoutX="204.0" layoutY="215.0" text="%lblPassword" textFill="#f7f4f4">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font></Label>
