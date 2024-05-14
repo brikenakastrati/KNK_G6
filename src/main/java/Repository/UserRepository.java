@@ -1,6 +1,8 @@
 package Repository;
 
+import Repository.Interface.UserRepositoryInterface;
 import database.DatabaseUtil;
+import javafx.scene.control.TableView;
 import model.User;
 import model.dto.CreateUserDto;
 import service.DBConnector;
@@ -8,8 +10,9 @@ import service.DBConnector;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 
-public class UserRepository {
+public class UserRepository implements UserRepositoryInterface {
 
     public static boolean create(CreateUserDto userData){
         Connection conn = DBConnector.getConnection();
@@ -84,5 +87,39 @@ public class UserRepository {
             return null;
         }
     }
-
+    @Override
+    public User getAllUsers(TableView<User> tbl, Boolean is_admin) throws SQLException{
+        String sql ="Select * from user where isadmin = ?";
+        try(Connection connection = DBConnector.getConnection();
+        PreparedStatement stm = connection.prepareStatement(sql)){
+            stm.setBoolean(1,is_admin);
+            ResultSet resultSet = stm.executeQuery();
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String username = resultSet.getString("username");
+                String email = resultSet.getString("email");
+                String salt = resultSet.getString("salt");
+                String passwordHash = resultSet.getString("passwordHash");
+                Boolean is_admins = resultSet.getBoolean("isadmin");
+                User user =new User(id, username,email,salt,passwordHash, is_admins);
+                tbl.getItems().add(user);
+            }
+        }catch (SQLException e) {
+            System.out.println("Error" + e.getMessage());
+        }
+        return null;
+    }
+    @Override
+    public void deleteUser(int id) throws SQLException{
+        String sql = "Delete * from user where id = ?";
+        try(Connection connection = DBConnector.getConnection();
+        PreparedStatement pst = connection.prepareStatement(sql);)
+        {
+            pst.setInt(1,id);
+            pst.executeUpdate();
+        }catch (SQLException se) {
+            System.out.println(se.getMessage());
+        }
+        return;
+    }
 }

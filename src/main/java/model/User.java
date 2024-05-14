@@ -12,7 +12,6 @@ public class User {
     public User(int id, String username, String email, String salt, String passwordHash,boolean isAdmin) {
         this.id = id;
         this.username = username;
-
         this.email = email;
         this.salt = salt;
         this.passwordHash = passwordHash;

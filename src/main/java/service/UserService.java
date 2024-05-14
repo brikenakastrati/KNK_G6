@@ -1,13 +1,22 @@
 package service;
 
+import Repository.Interface.UserRepositoryInterface;
+import javafx.scene.control.TableView;
 import model.User;
 import model.dto.ChangeUserPasswordDto;
 import model.dto.CreateUserDto;
 import model.dto.LoginUserDto;
 import model.dto.UserDto;
 import Repository.UserRepository;
+import service.Interface.UserServiceInterface;
 
-public class UserService {
+import java.sql.SQLException;
+
+public class UserService implements UserServiceInterface {
+    private UserRepositoryInterface userRepository;
+    public UserService(){
+    this.userRepository = new UserRepository();
+    }
     public static boolean signUp(UserDto userData){
         String password = userData.getPassword();
         String confirmPassword = userData.getConfirmPassword();
@@ -72,6 +81,9 @@ public class UserService {
 
     }
 
-
+    @Override
+    public void fillUserTable(TableView<User> tbl, Boolean is_admin) throws SQLException {
+        this.userRepository.getAllUsers(tbl, is_admin);
+    }
 }
 

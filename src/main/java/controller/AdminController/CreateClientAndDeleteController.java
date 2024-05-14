@@ -2,15 +2,25 @@ package controller.AdminController;
 
 import Repository.UserRepository;
 import app.Navigator;
-import controller.SignUpController;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.User;
 import model.dto.UserDto;
+import service.Interface.UserServiceInterface;
 import service.UserService;
 
-public class CreateClientAndDeleteController {
+import java.net.URL;
+import java.sql.SQLException;
+import java.util.ResourceBundle;
+
+public class CreateClientAndDeleteController implements Initializable{
+    private UserServiceInterface userService;
+    private ObservableList<User> userlist;
+
     @FXML
     private TextField txtusername, txtemail;
     @FXML
@@ -19,7 +29,16 @@ public class CreateClientAndDeleteController {
     private Button deleteBtn, createclientbutton;
     @FXML
     private TableView usertable;
+    @FXML
+    private TableColumn<User, Integer> id;
+    @FXML
+    private TableColumn<User, String> username;
+    @FXML
+    private TableColumn<User, String> salt;
 
+    public CreateClientAndDeleteController() {
+        this.userService = new UserService();
+    }
     @FXML
     private void handleCreateClient(ActionEvent ae){
 
@@ -70,8 +89,6 @@ public class CreateClientAndDeleteController {
         }
 
     }
-
-
     @FXML
     private void handleClientsClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.ADMIN_CLIENTS_PAGE);
@@ -95,5 +112,21 @@ public class CreateClientAndDeleteController {
         alert.setHeaderText(title);
         alert.setContentText(content);
         alert.showAndWait();
+    }
+    @Override
+public void initialize(URL url, ResourceBundle resourceBundle) {
+        this.id.setCellValueFactory(new PropertyValueFactory<User, Integer>("id"));
+        this.username.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
+        this.salt.setCellValueFactory(new PropertyValueFactory<User, String>("salt"));
+        try {
+            this.userService.fillUserTable(this.usertable, false);
+            this.userlist = this.usertable.getItems();
+
+            for (User u : userlist) {
+                System.out.println(u.getUsername()+ " - " +u.getPasswordHash());
+            }
+        }catch (SQLException se) {
+            System.out.println(se.getMessage());
+        }
     }
 }
