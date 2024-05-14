@@ -8,10 +8,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
    <children>
-      <AnchorPane prefHeight="109.0" prefWidth="1168.0" style="-fx-background-color: #d3d3d3; -fx-border-color: black;">
+      <AnchorPane prefHeight="109.0" prefWidth="1168.0" style="-fx-background-color: #29465B; -fx-border-color: black;">
          <children>
             <Button fx:id="btnClients" layoutX="376.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="Contact">
                <effect>

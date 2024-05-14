@@ -10,34 +10,34 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgba(30,31,34,0.32);" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
-    <children>
-        <Button layoutX="481.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleENClick" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: black; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black; -fx-text-fill: white;" text="EN">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #29465B;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
+<children>
+        <Button layoutX="481.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="EN">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
         </Button>
-        <Button layoutX="538.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleSQClick" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: black; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black; -fx-text-fill: white;" text="SQ">
+        <Button layoutX="538.0" layoutY="19.0" mnemonicParsing="false" onAction="#handleSQClick" opacity="0.8" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="SQ">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
         </Button>
-        <Label layoutX="194.0" layoutY="168.0" prefHeight="26.0" prefWidth="78.0" text="%lblUsername">
+        <Label layoutX="194.0" layoutY="154.0" prefHeight="26.0" prefWidth="78.0" text="%lblUsername" textFill="#faf8f8">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font></Label>
-        <Label layoutX="197.0" layoutY="215.0" text="%lblPassword">
+        <Label layoutX="192.0" layoutY="215.0" text="%lblPassword" textFill="#f7f4f4">
             <font>
                 <Font name="System Bold" size="15.0" />
             </font></Label>
-        <TextField fx:id="txtUserName" layoutX="288.0" layoutY="167.0" promptText="Username" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
-        <PasswordField fx:id="pwdPassword" layoutX="288.0" layoutY="212.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
-        <Button fx:id="login_btn" layoutX="189.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="30.0" prefWidth="103.0" style="-fx-background-color: black; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: black; -fx-text-fill: white;" text="Login">
+        <TextField fx:id="txtUserName" layoutX="295.0" layoutY="154.0" promptText="Username" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
+        <PasswordField fx:id="pwdPassword" layoutX="295.0" layoutY="212.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
+        <Button fx:id="login_btn" layoutX="184.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="Login">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font></Button>
         <Label layoutX="402.0" layoutY="270.0" />
-        <Button fx:id="loginasadmin_btn" layoutX="322.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="115.0" style="-fx-background-color: black; -fx-text-fill: white; -fx-border-color: rgba(30,31,34,0.96); -fx-border-width: 2; -fx-border-radius: 10;" text="Login as Admin" textFill="#1e1f22" underline="true">
+        <Button fx:id="loginasadmin_btn" layoutX="301.0" layoutY="294.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="110.0" style="-fx-background-color: white; -fx-text-fill: black; -fx-border-width: 2; -fx-border-radius: 10;" text="Login as Admin" textFill="#1e1f22" underline="true">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>
@@ -52,12 +52,12 @@
                 <Image url="@../Images/lock-6-128.png" />
             </image>
         </ImageView>
-        <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="156.0" layoutY="166.0">
+        <ImageView fitHeight="30.0" fitWidth="33.0" layoutX="156.0" layoutY="153.0">
             <image>
                 <Image url="@../Images/Profile-user (2).png" />
             </image>
         </ImageView>
-        <Label layoutX="241.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="%lblCreatenewaccount" textFill="#2f0fe4" underline="true">
+        <Label layoutX="225.0" layoutY="260.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="%lblCreatenewaccount" textFill="#9992c9" underline="true">
             <font>
                 <Font size="14.0" />
             </font></Label>

@@ -15,8 +15,8 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminInsertController">
    <children>
-      <AnchorPane layoutX="-2.0" layoutY="-6.0" opacity="0.95" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #29465B; -fx-border-color: black;">
-         <children>
+      <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #29465B; -fx-border-color: #1e1f22;">
+      <children>
             <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
@@ -57,47 +57,47 @@
             <TableColumn fx:id="invColStatus" prefWidth="133.59991455078125" text="Status" />
         </columns>
       </TableView>
-      <Label layoutX="31.0" layoutY="538.0" prefHeight="27.0" prefWidth="57.0" text="Car ID:">
+      <Label layoutX="70.0" layoutY="538.0" prefHeight="27.0" prefWidth="57.0" text="Car ID:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCarID" layoutX="128.0" layoutY="531.0" prefHeight="31.0" prefWidth="120.0" />
-      <Label layoutX="30.0" layoutY="580.0" prefHeight="28.0" prefWidth="87.0" text="Car Name:">
+      <TextField fx:id="txtCarID" layoutX="137.0" layoutY="538.0" prefHeight="27.0" prefWidth="120.0" />
+      <Label layoutX="41.0" layoutY="577.0" prefHeight="28.0" prefWidth="87.0" text="Car Name:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCarName" layoutX="131.0" layoutY="578.0" prefHeight="32.0" prefWidth="137.0" />
-      <Label layoutX="32.0" layoutY="624.0" prefHeight="28.0" prefWidth="80.0" text="Car Type:">
+      <TextField fx:id="txtCarName" layoutX="137.0" layoutY="578.0" prefHeight="18.0" prefWidth="120.0" />
+      <Label layoutX="45.0" layoutY="612.0" prefHeight="28.0" prefWidth="80.0" text="Car Type:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <ComboBox fx:id="comboType" layoutX="132.0" layoutY="623.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
-      <Label layoutX="335.0" layoutY="536.0" prefHeight="28.0" prefWidth="80.0" text="Car Stock:">
+      <ComboBox fx:id="comboType" layoutX="137.0" layoutY="613.0" prefHeight="26.0" prefWidth="120.0" promptText="Choose.." />
+      <Label layoutX="309.0" layoutY="538.0" prefHeight="28.0" prefWidth="80.0" text="Car Stock:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="334.0" layoutY="583.0" prefHeight="28.0" prefWidth="76.0" text="Car Price:">
+      <Label layoutX="311.0" layoutY="577.0" prefHeight="28.0" prefWidth="76.0" text="Car Price:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="326.0" layoutY="626.0" prefHeight="28.0" prefWidth="87.0" text="Car Status:">
+      <Label layoutX="305.0" layoutY="611.0" prefHeight="28.0" prefWidth="87.0" text="Car Status:">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCarStock" layoutX="416.0" layoutY="535.0" prefHeight="32.0" prefWidth="137.0" />
-      <TextField fx:id="txtCarPrice" layoutX="418.0" layoutY="578.0" prefHeight="32.0" prefWidth="137.0" />
-      <Button layoutX="145.0" layoutY="693.0" mnemonicParsing="false" onAction="#handleAddClick" prefHeight="42.0" prefWidth="103.0" text="Add">
+      <TextField fx:id="txtCarStock" layoutX="401.0" layoutY="539.0" prefHeight="26.0" prefWidth="120.0" />
+      <TextField fx:id="txtCarPrice" layoutX="401.0" layoutY="577.0" prefHeight="26.0" prefWidth="120.0" />
+      <Button layoutX="197.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleAddClick" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #708090;" text="Add">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="286.0" layoutY="694.0" mnemonicParsing="false" onAction="#handleDeleteClick" prefHeight="42.0" prefWidth="103.0" text="Delete">
+      <Button layoutX="321.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleDeleteClick" prefHeight="37.0" prefWidth="95.0" style="-fx-background-color: #708090;" text="Delete">
          <font>
             <Font size="19.0" />
          </font>
@@ -110,12 +110,12 @@
             <ImageView fx:id="imageview" fitHeight="153.0" fitWidth="169.0" layoutX="18.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
          </children>
       </AnchorPane>
-      <Button fx:id="btnImportImage" layoutX="677.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleImportImageClick" prefHeight="32.0" prefWidth="103.0" text="Import">
+      <Button fx:id="btnImportImage" layoutX="677.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleImportImageClick" prefHeight="32.0" prefWidth="103.0" style="-fx-background-color: #708090;" text="Import">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <ComboBox fx:id="comboStatus" layoutX="415.0" layoutY="625.0" prefHeight="30.0" prefWidth="137.0" promptText="Choose.." />
+      <ComboBox fx:id="comboStatus" layoutX="401.0" layoutY="613.0" prefHeight="26.0" prefWidth="120.0" promptText="Choose.." />
       <Label fx:id="lblimagepath" layoutX="618.0" layoutY="761.0" prefHeight="18.0" prefWidth="197.0" />
       <Label fx:id="lblStatus" layoutX="215.0" layoutY="494.0" prefHeight="28.0" prefWidth="342.0">
          <font>

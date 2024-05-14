@@ -87,20 +87,20 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: grey;" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #29465B;" VBox.vgrow="ALWAYS">
             <children>
-            <AnchorPane layoutX="305.0" layoutY="-1.0" prefHeight="375.0" prefWidth="334.0" style="-fx-background-color: #e0e0e0;">
+            <AnchorPane layoutX="305.0" layoutY="-1.0" prefHeight="375.0" prefWidth="334.0" style="-fx-background-color: #708090;">
                <children>
                       <TextField fx:id="txtUserName" layoutX="171.0" layoutY="70.0" promptText="Username" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
                       <TextField fx:id="txtEmail" layoutX="169.0" layoutY="111.0" promptText="Email" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
                       <PasswordField fx:id="pwdPassword" layoutX="169.0" layoutY="159.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
                       <PasswordField fx:id="pwdConfirmPassword" layoutX="169.0" layoutY="209.0" promptText="Confirm Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
-                      <Button fx:id="cancel_btn" layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="18.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-color: black; -fx-border-radius: 10; -fx-background-color: black; -fx-border-width: 2;" text="Cancel" textFill="white">
+                      <Button fx:id="cancel_btn" layoutX="191.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: white; -fx-border-width: 2;" text="Cancel">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
-                  </Button>
-                      <Button fx:id="signup_btn" layoutX="41.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="26.0" prefWidth="127.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: black; -fx-border-width: 2; -fx-background-color: black;" text="Sign Up" textFill="white">
+                      </Button>
+                   <Button fx:id="signup_btn" layoutX="41.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="19.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2; -fx-background-color: white;" text="Sign Up">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
@@ -117,10 +117,10 @@
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="106.0" layoutY="255.0" onMouseClicked="#handleLoginAccountClick" text="%lblAlreadyhaveanaccount?" textFill="#2f0fe4" underline="true" />
+                  <Label layoutX="106.0" layoutY="255.0" onMouseClicked="#handleLoginAccountClick" text="%lblAlreadyhaveanaccount?" textFill="#352c6b" underline="true" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="312.0" fitWidth="284.0" layoutX="21.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="312.0" fitWidth="284.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/2.png" />
                </image>

@@ -1,17 +1,28 @@
 package controller;
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
+import java.util.Locale;
+import java.util.ResourceBundle;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.control.*;
+import java.util.ResourceBundle;
 import model.dto.LoginUserDto;
-import model.dto.UserDto;
+import javafx.scene.Node;
 import service.LoginResult;
 import service.UserService;
 
 import java.util.Locale;
-import java.util.ResourceBundle;
 
 public class LoginController {
     @FXML
@@ -86,21 +97,31 @@ public class LoginController {
 
     }
 
+
     @FXML
     private void handleCreateAccountClick(MouseEvent me) {
         Navigator.navigate(me, Navigator.CREATE_ACCOUNT_PAGE);
     }
     @FXML
     private void handleENClick(ActionEvent ae) {
-        Locale.setDefault(Locale.ENGLISH);
+        Locale.setDefault(new Locale("en"));
+        reloadPage(ae);
     }
 
     @FXML
     private void handleSQClick(ActionEvent ae) {
-        Locale.setDefault(new Locale("sq"));
+        Locale.setDefault(new Locale("sq", "AL"));
+        reloadPage(ae);
     }
 
+    private void reloadPage(ActionEvent ae) {
+        // Get the current stage
+        Stage stage = (Stage) ((Node) ae.getSource()).getScene().getWindow();
 
+        // Reload the stage
+        stage.close();
+        stage.show();
+    }
 }
 
 
