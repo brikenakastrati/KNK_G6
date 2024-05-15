@@ -67,10 +67,12 @@ public class CreateClientAndDeleteController implements Initializable{
         User user = UserRepository.getByUsername(this.txtusername.getText());
         if (user != null) {
             showAlert(Alert.AlertType.ERROR, "Creation error", "Username is already taken try another one");
+            return;
         }
         User user2 = UserRepository.getByEmail(this.txtemail.getText());
         if (user2 != null) {
             showAlert(Alert.AlertType.ERROR, "Creation error", "Email address is already taken try another one");
+            return;
         }
 
 
