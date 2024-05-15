@@ -9,6 +9,12 @@ Before running this code, ensure that you have the following prerequisites insta
 IntelliJ IDEA with Java and JavaFX support.
 Java Development Kit (JDK) installed on your machine.
 
+### Description
+This repository contains the development project for an Interactive System aimed at managing car sales within car dealerships. The system is designed to streamline the process of selling cars, providing both customers and dealership staff with a user-friendly interface for managing inventory, processing sales transactions, and providing necessary information.
+
+
+
+
 ### Setup Instructions
 1. **Clone the Repository:**
    ```bash
