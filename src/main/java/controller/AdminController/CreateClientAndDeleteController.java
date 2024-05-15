@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import model.User;
 import model.dto.UserDto;
 import service.Interface.UserServiceInterface;
@@ -15,11 +16,13 @@ import service.UserService;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class CreateClientAndDeleteController implements Initializable{
     private UserServiceInterface userService;
     private ObservableList<User> userlist;
+    private int id_to_delete;
 
     @FXML
     private TextField txtusername, txtemail;
@@ -28,7 +31,7 @@ public class CreateClientAndDeleteController implements Initializable{
     @FXML
     private Button deleteBtn, createclientbutton;
     @FXML
-    private TableView usertable;
+    private TableView<User> usertable;
     @FXML
     private TableColumn<User, Integer> id;
     @FXML
@@ -113,8 +116,42 @@ public class CreateClientAndDeleteController implements Initializable{
         alert.setContentText(content);
         alert.showAndWait();
     }
+    @FXML
+    public void getIdPressed(MouseEvent me) {
+        if (me.isPrimaryButtonDown() && me.getClickCount()==1) {
+            this.usertable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelect, newSelect)->{
+                if (newSelect != null) {
+                    this.id_to_delete = newSelect.getId();
+                }// ky mtha shto qata amo tani kur e ndrrova te tableview u hjek vet
+            });
+        }
+        System.out.println(this.id_to_delete);
+    }
+    @FXML
+    public void deleteUser(ActionEvent ae) throws SQLException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.getButtonTypes().clear();
+        alert.setTitle("Confirm deletion");
+        alert.setHeaderText("Are you sure you want to delete this user?");
+        alert.setContentText("This action cannot be undone");
+
+        ButtonType yes =new ButtonType("Yes");
+        ButtonType no = new ButtonType("No");
+
+        alert.getButtonTypes().addAll(yes,no);
+        Optional<ButtonType> result =alert.showAndWait();
+        if (result.get() == yes) {
+            this.userService.deleteUser(this.id_to_delete);
+            User selectedUser = (User) this.usertable.getSelectionModel().getSelectedItem();
+            this.userlist.remove(selectedUser);
+            this.usertable.refresh();
+        }else{
+            return;
+        }
+    }
+
     @Override
-public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle) {
         this.id.setCellValueFactory(new PropertyValueFactory<User, Integer>("id"));
         this.username.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
         this.salt.setCellValueFactory(new PropertyValueFactory<User, String>("salt"));

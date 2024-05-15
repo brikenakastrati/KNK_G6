@@ -88,5 +88,9 @@ public class UserService implements UserServiceInterface {
     public void fillUserTable(TableView<User> tbl, Boolean is_admin) throws SQLException {
         this.userRepository.getAllUsers(tbl, is_admin);
     }
+    @Override
+    public void deleteUser(int id) throws SQLException {
+        this.userRepository.deleteUser(id);
+    }
 }
 
