@@ -3,9 +3,13 @@ package app;
 import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+import javafx.scene.control.ScrollPane;
 
 import java.io.IOException;
 import java.util.Locale;
@@ -21,6 +25,7 @@ public class Navigator {
     public final static String CARS_PAGE = "Cars.fxml";
     public final static String CUSTOMIZE_PAGE = "costumize.fxml";
     public final static String MESSAGE_PAGE = "messages.fxml";
+    public final static String HELP_PAGE = "help.fxml";
 
     public static void navigate(Event event, String form) {
         Node eventNode = (Node) event.getSource();
@@ -45,7 +50,16 @@ public class Navigator {
         ResourceBundle bundle = ResourceBundle.getBundle("translations.content", Locale.getDefault());
         FXMLLoader loader = new FXMLLoader(Navigator.class.getResource(form), bundle);
         try {
-            return loader.load();
+            Parent root = loader.load();
+            if (root instanceof ScrollPane) {
+                ScrollPane scrollPane = (ScrollPane) root;
+                AnchorPane anchorPane = new AnchorPane(scrollPane.getContent());
+                return anchorPane;
+            } else {
+                Pane pane = new Pane();
+                pane.getChildren().add(root);
+                return pane;
+            }
         } catch (IOException ioe) {
             ioe.printStackTrace();
             return null;

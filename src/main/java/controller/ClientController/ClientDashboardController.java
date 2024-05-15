@@ -36,4 +36,8 @@ public class ClientDashboardController {
     public void handleCustomizeClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
     }
+
+    public void handleHelpClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.HELP_PAGE);
+    }
 }
