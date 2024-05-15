@@ -44,4 +44,7 @@ public class CostumizeController {
 
     public void handleCustomizeClick(ActionEvent actionEvent) {
     }
+    public void handleHelpClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.HELP_PAGE);
+    }
 }

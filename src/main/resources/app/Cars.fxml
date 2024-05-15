@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
+<AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
    <children>
       <AnchorPane prefHeight="109.0" prefWidth="1168.0" style="-fx-background-color: #29465B; -fx-border-color: black;">
          <children>
@@ -40,6 +40,11 @@
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
+            <Button fx:id="helpbtn" layoutX="479.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="41.0" style="-fx-background-radius: 20;" text="Help">
+               <effect>
+                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
+               </effect>
+            </Button>
          </children>
       </AnchorPane>
       <Button layoutX="48.0" layoutY="471.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="109.0" text="VOLVO" />
