@@ -18,29 +18,26 @@
    <children>
       <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #29465B; -fx-border-color: #1e1f22;">
       <children>
-            <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #708090;" text="LogOut" textFill="#1e1f22">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </Button>
-            <Button fx:id="btnInsert" layoutX="267.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnDashboard" layoutX="155.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
+         <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
+            <effect>
+               <InnerShadow height="11.0" radius="5.5" width="13.0" />
+            </effect>
+         </Button>
+         <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
+            <effect>
+               <InnerShadow height="11.0" radius="5.5" width="13.0" />
+            </effect>
+         </Button>
+         <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
+            <effect>
+               <InnerShadow height="11.0" radius="5.5" width="13.0" />
+            </effect>
+         </Button>
+         <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
+            <effect>
+               <InnerShadow height="11.0" radius="5.5" width="13.0" />
+            </effect>
+         </Button>
             <ImageView fitHeight="98.0" fitWidth="153.0" layoutX="-1.0" layoutY="4.0">
                <image>
                   <Image url="@../Images/2.png" />

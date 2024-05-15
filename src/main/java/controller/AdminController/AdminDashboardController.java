@@ -66,4 +66,8 @@ public class AdminDashboardController {
    private void handleDashboardClick(){
 
     }
+    @FXML
+    private void handleMessageClick(ActionEvent ae){
+        Navigator.navigate(ae,Navigator.MESSAGE_PAGE);
+    }
 }

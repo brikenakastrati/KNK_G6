@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AdminController.MessagesController"
+            prefHeight="400.0" prefWidth="600.0">
+    <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="373.0" prefWidth="572.0">
+        <columns>
+            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
+            <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="First Name"/>
+            <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="Last Name"/>
+            <TableColumn fx:id="messageColumn" prefWidth="200.0" text="Message"/>
+        </columns>
+    </TableView>
+</AnchorPane>

@@ -20,6 +20,7 @@ public class Navigator {
     public final static String ADMIN_CLIENTS_PAGE = "CreateandDeleteClient.fxml";
     public final static String CARS_PAGE = "Cars.fxml";
     public final static String CUSTOMIZE_PAGE = "costumize.fxml";
+    public final static String MESSAGE_PAGE = "messages.fxml";
 
     public static void navigate(Event event, String form) {
         Node eventNode = (Node) event.getSource();
