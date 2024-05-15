@@ -34,4 +34,8 @@ public class CarsController {
     public void handleCarsClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.CARS_PAGE);
     }
+
+    public void handleMessageClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent, Navigator.MESSAGE_PAGE);
+    }
 }

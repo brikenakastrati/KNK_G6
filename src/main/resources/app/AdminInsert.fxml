@@ -30,6 +30,11 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </Button>
+         <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
+            <effect>
+               <InnerShadow height="11.0" radius="5.5" width="13.0" />
+            </effect>
+         </Button>
             <Button fx:id="btnInsert" layoutX="267.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />

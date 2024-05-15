@@ -1,7 +1,9 @@
 package controller.AdminController;
 
+import app.Navigator;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
@@ -65,5 +67,24 @@ public class MessagesController {
         }
 
         return messages;
+    }
+
+    public void handleDashboardClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent,Navigator.ADMIN_DASHBOARD_PAGE);
+    }
+
+    public void handleInsertClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent,Navigator.ADMIN_INSERT_PAGE);
+    }
+
+    public void handleClientsClick(ActionEvent actionEvent) {
+
+    }
+
+    public void handleMessageClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent,Navigator.MESSAGE_PAGE);
+    }
+
+    public void handleLogoutClick(ActionEvent actionEvent) {
     }
 }
