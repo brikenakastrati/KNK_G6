@@ -105,23 +105,16 @@ public class LoginController {
     @FXML
     private void handleENClick(ActionEvent ae) {
         Locale.setDefault(new Locale("en"));
-        reloadPage(ae);
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
     @FXML
     private void handleSQClick(ActionEvent ae) {
         Locale.setDefault(new Locale("sq", "AL"));
-        reloadPage(ae);
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
-    private void reloadPage(ActionEvent ae) {
-        // Get the current stage
-        Stage stage = (Stage) ((Node) ae.getSource()).getScene().getWindow();
 
-        // Reload the stage
-        stage.close();
-        stage.show();
-    }
 }
 
 
