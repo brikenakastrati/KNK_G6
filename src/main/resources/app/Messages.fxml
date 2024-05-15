@@ -4,16 +4,60 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="controller.AdminController.MessagesController"
             prefHeight="400.0" prefWidth="600.0">
-    <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="373.0" prefWidth="572.0">
-        <columns>
-            <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
-            <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="First Name"/>
-            <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="Last Name"/>
-            <TableColumn fx:id="messageColumn" prefWidth="200.0" text="Message"/>
-        </columns>
-    </TableView>
+    <children>
+        <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="106.0" prefWidth="1003.0" style="-fx-background-color: #29465B; -fx-border-color: #1e1f22;">
+            <children>
+                <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
+                    <effect>
+                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
+                    </effect>
+                </Button>
+                <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
+                    <effect>
+                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
+                    </effect>
+                </Button>
+                <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
+                    <effect>
+                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
+                    </effect>
+                </Button>
+                <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
+                    <effect>
+                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
+                    </effect>
+                </Button>
+                <ImageView fitHeight="98.0" fitWidth="153.0" layoutX="-1.0" layoutY="4.0">
+                    <image>
+                        <Image url="@../Images/2.png" />
+                    </image>
+                </ImageView>
+                <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #708090;" text="LogOut" textFill="#1e1f22">
+                    <effect>
+                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
+                    </effect>
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </AnchorPane>
+        <TableView fx:id="tableView" layoutX="33.0" layoutY="150.0" prefHeight="373.0" prefWidth="572.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID"/>
+                <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="First Name"/>
+                <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="Last Name"/>
+                <TableColumn fx:id="messageColumn" prefWidth="200.0" text="Message"/>
+            </columns>
+        </TableView>
+    </children>
 </AnchorPane>

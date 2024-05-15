@@ -97,4 +97,8 @@ public class SignUpController {
         alert.setContentText(content);
         alert.showAndWait();
     }
+
+    public void handleMessageClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent, Navigator.MESSAGE_PAGE);
+    }
 }

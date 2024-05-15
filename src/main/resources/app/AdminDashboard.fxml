@@ -43,6 +43,14 @@
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
+         <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #708090;" text="LogOut" textFill="#1e1f22">
+            <effect>
+               <InnerShadow height="11.0" radius="5.5" width="13.0" />
+            </effect>
+            <font>
+               <Font name="System Bold" size="16.0" />
+            </font>
+         </Button>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="367.0" layoutY="132.0" prefHeight="183.0" prefWidth="298.0" style="-fx-border-color: black; -fx-background-color: #bebebe;">

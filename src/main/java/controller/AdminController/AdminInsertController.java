@@ -132,6 +132,9 @@ public class AdminInsertController {
     }
 
     public void handleInsertClick(ActionEvent actionEvent) {
-        // Handle insert click if needed
+
+    }
+    public void handleMessageClick(ActionEvent event){
+        Navigator.navigate(event, Navigator.MESSAGE_PAGE);
     }
 }
