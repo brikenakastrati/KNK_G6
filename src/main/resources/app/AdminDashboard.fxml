@@ -66,7 +66,7 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <Label fx:id="lblClientNumber" layoutX="244.0" layoutY="14.0" prefHeight="31.0" prefWidth="22.0">
+            <Label fx:id="lblClientNumber" layoutX="237.0" layoutY="46.0" prefHeight="31.0" prefWidth="29.0">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
@@ -101,16 +101,16 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="220.0" layoutY="19.0" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: transparent;" text="0">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </TextField>
             <ImageView fitHeight="66.0" fitWidth="69.0" layoutX="15.0" layoutY="43.0">
                <image>
                   <Image url="@../Images/car.png" />
                </image>
             </ImageView>
+            <Label fx:id="carsInStock" layoutX="220.0" layoutY="48.0" prefHeight="28.0" prefWidth="30.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="549.0" layoutY="380.0" prefHeight="330.0" prefWidth="402.0" style="-fx-background-color: #d3d3d3; -fx-border-color: black;">

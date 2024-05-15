@@ -1,26 +1,39 @@
 package controller.AdminController;
 
+import Repository.inventoryRepository;
 import app.Navigator;
 import controller.data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import model.carInventory;
 import service.Interface.UserServiceInterface;
 import service.UserService;
 
 
 public class AdminDashboardController {
     @FXML
-    public Label admUsername;
+    public Label admUsername, carsInStock;
     @FXML
     private Label lblClientNumber;
     private UserServiceInterface userService;
     public AdminDashboardController(){
         userService = new UserService();
     }
+    private inventoryRepository inventoryRepo = new inventoryRepository();
     public void initialize() {
-       UsernameDisplay();
-       updateClientNumber();
+        UsernameDisplay();
+        updateClientNumber();
+        updateCarsInStock();
+    }
+
+    private void updateCarsInStock(){
+        try{
+            int totalCarsinStock = inventoryRepo.countCarsInStock();
+            carsInStock.setText(String.valueOf(totalCarsinStock));
+        }catch (Exception e) {
+            System.out.println("Error " + e.getMessage());
+        }
     }
     private void updateClientNumber(){
         try {

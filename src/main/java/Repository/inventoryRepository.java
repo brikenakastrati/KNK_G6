@@ -86,6 +86,22 @@ public class inventoryRepository {
             e.printStackTrace();
         }
     }
+    public int countCarsInStock() throws SQLException {
+        String sql = "SELECT SUM(carstock) as totalStock FROM inventory";
+        Connection connection = DBConnector.getConnection();
+        try(
+                PreparedStatement pst = connection.prepareStatement(sql);
+                ResultSet rs =  pst.executeQuery()
+                ){
+            if (rs.next()) {
+                return rs.getInt("totalStock");
+            }
+
+        }catch (SQLException se) {
+            System.out.println("Error : " + se.getMessage());
+        }
+        return 0;
+    }
 }
 
 
