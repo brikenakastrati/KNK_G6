@@ -80,7 +80,7 @@
         <columns>
           <TableColumn fx:id="id" prefWidth="64.79998779296875" text="User ID:" />
           <TableColumn fx:id="username" prefWidth="105.599853515625" text="Username:" />
-            <TableColumn fx:id="salt" prefWidth="115.2000732421875" text="Date Registered:" />
+            <TableColumn fx:id="salt" prefWidth="115.2000732421875" text="Salt Password:" />
         </columns>
       </TableView>
       <TextField fx:id="txtemail" layoutX="56.0" layoutY="308.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #afc1db; -fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />

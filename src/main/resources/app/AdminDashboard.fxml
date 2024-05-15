@@ -66,11 +66,11 @@
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <TextField layoutX="237.0" layoutY="20.0" prefHeight="40.0" prefWidth="34.0" style="-fx-background-color: transparent;" text="0">
+            <Label fx:id="lblClientNumber" layoutX="244.0" layoutY="14.0" prefHeight="31.0" prefWidth="22.0">
                <font>
-                  <Font name="System Bold" size="18.0" />
+                  <Font name="System Bold" size="21.0" />
                </font>
-            </TextField>
+            </Label>
          </children>
       </AnchorPane>
       <AnchorPane layoutX="32.0" layoutY="132.0" prefHeight="183.0" prefWidth="310.0" style="-fx-border-color: black; -fx-background-color: #bebebe;">

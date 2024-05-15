@@ -5,15 +5,31 @@ import controller.data;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import service.Interface.UserServiceInterface;
+import service.UserService;
 
 
 public class AdminDashboardController {
     @FXML
     public Label admUsername;
+    @FXML
+    private Label lblClientNumber;
+    private UserServiceInterface userService;
+    public AdminDashboardController(){
+        userService = new UserService();
+    }
     public void initialize() {
        UsernameDisplay();
+       updateClientNumber();
     }
-
+    private void updateClientNumber(){
+        try {
+            int numberOfClients = userService.countUsers();
+            lblClientNumber.setText(String.valueOf(numberOfClients));
+        }catch (Exception e) {
+            System.out.println("Error : " + e.getMessage());
+        }
+    }
         private void UsernameDisplay() {
 
                 String user = data.getUsername();

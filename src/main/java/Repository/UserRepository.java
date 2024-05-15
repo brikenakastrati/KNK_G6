@@ -122,4 +122,21 @@ public class UserRepository implements UserRepositoryInterface {
         }
         return;
     }
+
+    @Override
+    public int countUsers() throws SQLException {
+        String sql = "Select COUNT(*) as total from user where isadmin = 0";
+        try(
+                Connection connection = DBConnector.getConnection();
+                PreparedStatement stmt = connection.prepareStatement(sql);
+                ResultSet rs = stmt.executeQuery()) {
+            if (rs.next()) {
+                return rs.getInt("total");
+            }
+            return 0;
+        }catch (SQLException e) {
+            System.out.println("Error me count usera : " + e.getMessage());
+        }
+        return 0;
+    }
 }

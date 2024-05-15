@@ -122,7 +122,7 @@ public class AdminInsertController {
 
     @FXML
     void handleClientsClick(ActionEvent event) {
-        // Clients page navigation
+        Navigator.navigate(event, Navigator.ADMIN_CLIENTS_PAGE);
     }
 
     @FXML

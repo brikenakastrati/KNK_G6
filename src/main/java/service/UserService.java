@@ -17,6 +17,9 @@ public class UserService implements UserServiceInterface {
     public UserService(){
     this.userRepository = new UserRepository();
     }
+    public int countUsers() throws SQLException{
+        return userRepository.countUsers();
+    }
     public static boolean signUp(UserDto userData){
         String password = userData.getPassword();
         String confirmPassword = userData.getConfirmPassword();
