@@ -1,6 +1,7 @@
 # Development of an Interactive System for Managing Car Sales in Car Dealerships
 
-#### This project is developed by students from the University of Prishtina - Faculty of Electrical and Computer Engineering, course: Human-Computer Interaction.
+#### This project is developed by students from the University of Prishtina - Faculty of Electrical and Computer Engineering
+Course: Human-Computer Interaction.
 
 ### How to Use
 Before running this code, ensure that you have the following prerequisites installed on your device:
