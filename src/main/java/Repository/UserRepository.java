@@ -1,7 +1,6 @@
 package Repository;
 
 import Repository.Interface.UserRepositoryInterface;
-import database.DatabaseUtil;
 import javafx.scene.control.TableView;
 import model.User;
 import model.dto.CreateUserDto;
@@ -111,12 +110,17 @@ public class UserRepository implements UserRepositoryInterface {
     }
     @Override
     public void deleteUser(int id) throws SQLException{
-        String sql = "Delete * from user where id = ?";
+        String sql = "DELETE FROM user WHERE id = ?";
         try(Connection connection = DBConnector.getConnection();
         PreparedStatement pst = connection.prepareStatement(sql);)
         {
             pst.setInt(1,id);
-            pst.executeUpdate();
+            int rowsAffected = pst.executeUpdate();
+            if (rowsAffected == 0) {
+                System.out.println("No user found with the provided id: " + id);
+            } else {
+                System.out.println("User with id " + id + " deleted successfully.");
+            }
         }catch (SQLException se) {
             System.out.println(se.getMessage());
         }

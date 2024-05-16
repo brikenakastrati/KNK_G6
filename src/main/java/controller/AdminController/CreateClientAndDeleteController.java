@@ -120,17 +120,27 @@ public class CreateClientAndDeleteController implements Initializable{
         alert.setContentText(content);
         alert.showAndWait();
     }
+
     @FXML
     public void getIdPressed(MouseEvent me) {
+        /*
         if (me.isPrimaryButtonDown() && me.getClickCount()==1) {
             this.usertable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelect, newSelect)->{
                 if (newSelect != null) {
                     this.id_to_delete = newSelect.getId();
-                }// ky mtha shto qata amo tani kur e ndrrova te tableview u hjek vet
+                }
             });
         }
         System.out.println(this.id_to_delete);
+         */
+        this.usertable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelect, newSelect) -> {
+            if (newSelect != null) {
+                this.id_to_delete = newSelect.getId();
+                System.out.println("Selected user ID: " + this.id_to_delete);
+            }
+        });
     }
+
     @FXML
     public void deleteUser(ActionEvent ae) throws SQLException {
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -139,19 +149,39 @@ public class CreateClientAndDeleteController implements Initializable{
         alert.setHeaderText("Are you sure you want to delete this user?");
         alert.setContentText("This action cannot be undone");
 
-        ButtonType yes =new ButtonType("Yes");
+        ButtonType yes = new ButtonType("Yes");
         ButtonType no = new ButtonType("No");
 
-        alert.getButtonTypes().addAll(yes,no);
-        Optional<ButtonType> result =alert.showAndWait();
-        if (result.get() == yes) {
-            this.userService.deleteUser(this.id_to_delete);
-            User selectedUser = (User) this.usertable.getSelectionModel().getSelectedItem();
-            this.userlist.remove(selectedUser);
-            this.usertable.refresh();
-        }else{
-            return;
+        alert.getButtonTypes().addAll(yes, no);
+        Optional<ButtonType> result = alert.showAndWait();
+        if (result.isPresent() && result.get() == yes) {
+            User selectedUser = this.usertable.getSelectionModel().getSelectedItem();
+            if (selectedUser != null) {
+                int userId = selectedUser.getId();
+                System.out.println("Attempting to delete user with ID: " + userId);
+                try {
+                    this.userService.deleteUser(userId);
+                    this.userlist.remove(selectedUser);
+                    this.usertable.refresh();
+                    System.out.println("User with ID " + userId + " removed from TableView.");
+                } catch (SQLException se) {
+                    se.printStackTrace();
+                }
+            } else {
+                System.out.println("No user selected for deletion.");
+            }
         }
+    }
+
+    @FXML
+    public void initialize() {
+        // Add a listener to the selection model of the table view
+        this.usertable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelect, newSelect) -> {
+            if (newSelect != null) {
+                this.id_to_delete = newSelect.getId();
+                System.out.println("Selected user ID: " + this.id_to_delete);
+            }
+        });
     }
 
     @Override
@@ -163,9 +193,9 @@ public class CreateClientAndDeleteController implements Initializable{
             this.userService.fillUserTable(this.usertable, false);
             this.userlist = this.usertable.getItems();
 
-            for (User u : userlist) {
-                System.out.println(u.getUsername()+ " - " +u.getPasswordHash());
-            }
+//            for (User u : userlist) {
+//                System.out.println(u.getUsername()+ " - " +u.getPasswordHash());
+//            }
         }catch (SQLException se) {
             System.out.println(se.getMessage());
         }

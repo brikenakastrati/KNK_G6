@@ -1,6 +1,5 @@
 package Repository;
 
-import database.DatabaseUtil;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
