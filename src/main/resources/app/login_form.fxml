@@ -12,11 +12,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #333;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginController">
     <children>
-        <Label blendMode="SCREEN" layoutX="171.0" layoutY="168.0" prefHeight="26.0" prefWidth="78.0" text="Username:" textFill="WHITE">
+        <Label blendMode="SCREEN" layoutX="171.0" layoutY="168.0" prefHeight="26.0" prefWidth="78.0" text="%lblUsername" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
-        <Label blendMode="SCREEN" layoutX="173.0" layoutY="215.0" text="Password:" textFill="WHITE">
+        <Label blendMode="SCREEN" layoutX="173.0" layoutY="215.0" text="%lblPassword" textFill="WHITE">
          <font>
             <Font name="System Bold" size="15.0" />
          </font></Label>
