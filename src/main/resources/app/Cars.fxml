@@ -51,15 +51,15 @@
       </AnchorPane>
       <AnchorPane layoutY="114.0" prefHeight="686.0" prefWidth="1169.0">
          <children>
-            <JFXButton contentDisplay="TOP" layoutX="101.0" layoutY="8.0" prefHeight="293.0" prefWidth="472.0" style="-fx-border-color: black; -fx-background-color: #708090;" text="Button" />
-            <JFXButton contentDisplay="BOTTOM" layoutX="105.0" layoutY="308.0" prefHeight="285.0" prefWidth="471.0" style="-fx-border-color: black; -fx-background-color: #708090;" text="Audi RS7" />
-            <JFXButton contentDisplay="BOTTOM" layoutX="585.0" layoutY="309.0" prefHeight="284.0" prefWidth="485.0" style="-fx-border-color: black; -fx-background-color: #708090;" text="Mercedes" />
+            <JFXButton contentDisplay="TOP" layoutX="101.0" layoutY="8.0" prefHeight="293.0" prefWidth="472.0" style="-fx-border-color: black; -fx-background-color: #999;" text="Button" />
+            <JFXButton contentDisplay="BOTTOM" layoutX="105.0" layoutY="308.0" prefHeight="285.0" prefWidth="471.0" style="-fx-border-color: black; -fx-background-color: #999;" text="Audi RS7" />
+            <JFXButton contentDisplay="BOTTOM" layoutX="585.0" layoutY="309.0" prefHeight="284.0" prefWidth="485.0" style="-fx-border-color: black; -fx-background-color: #999;" text="Mercedes" />
             <ImageView fitHeight="261.0" fitWidth="340.0" layoutX="178.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/BMW-M4-GTS-test-drive-review-65-750x500.jpg" />
                </image>
             </ImageView>
-            <JFXButton contentDisplay="BOTTOM" layoutX="585.0" layoutY="8.0" prefHeight="292.0" prefWidth="481.0" style="-fx-border-color: black; -fx-background-color: #708090;" text="Porsche 911" />
+            <JFXButton contentDisplay="BOTTOM" layoutX="585.0" layoutY="8.0" prefHeight="292.0" prefWidth="481.0" style="-fx-border-color: black; -fx-background-color:  #999;" text="Porsche 911" />
             <ImageView fitHeight="219.0" fitWidth="306.0" layoutX="669.0" layoutY="27.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/audi.jpeg" />

@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Fixed deleteUser method CreateClientAndDeleteController">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Library Added Again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,7 +284,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715863907538</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Library Added Again">
+      <option name="closed" value="true" />
+      <created>1715885521150</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1715885521150</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +323,8 @@
     <MESSAGE value="Added delete function on AdminCLient page" />
     <MESSAGE value="New Login UI" />
     <MESSAGE value="Fixed deleteUser method CreateClientAndDeleteController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed deleteUser method CreateClientAndDeleteController" />
+    <MESSAGE value="Library Added Again" />
+    <option name="LAST_COMMIT_MESSAGE" value="Library Added Again" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
