@@ -46,7 +46,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0"  xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SignUpController">
     <children>
         <MenuBar VBox.vgrow="NEVER">
             <menus>
@@ -87,9 +87,9 @@
                 </Menu>
             </menus>
         </MenuBar>
-        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #29465B;" VBox.vgrow="ALWAYS">
+        <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" style="-fx-background-color: #333;" VBox.vgrow="ALWAYS">
             <children>
-            <AnchorPane layoutX="305.0" layoutY="-1.0" prefHeight="375.0" prefWidth="334.0" style="-fx-background-color: #708090;">
+            <AnchorPane layoutX="305.0" prefHeight="374.0" prefWidth="334.0" style="-fx-background-color: #666;">
                <children>
                       <TextField fx:id="txtUserName" layoutX="171.0" layoutY="70.0" promptText="Username" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
                       <TextField fx:id="txtEmail" layoutX="169.0" layoutY="111.0" promptText="Email" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 2px 0px;" />
@@ -105,24 +105,24 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                   </Button>
-                      <Label layoutX="81.0" layoutY="75.0" text="%lblUsername">
+                      <Label blendMode="COLOR_BURN" layoutX="81.0" layoutY="75.0" text="%lblUsername">
                      <font>
                         <Font size="13.0" />
                      </font></Label>
-                      <Label layoutX="105.0" layoutY="116.0" text="%lblEmail" />
-                      <Label layoutX="83.0" layoutY="164.0" text="%lblPassword" />
-                      <Label layoutX="46.0" layoutY="214.0" text="%lblConfirmPassword" />
-                  <Label layoutX="123.0" layoutY="24.0" prefHeight="18.0" prefWidth="96.0" text="Register" textAlignment="CENTER">
+                      <Label blendMode="COLOR_BURN" layoutX="105.0" layoutY="116.0" text="%lblEmail" />
+                      <Label blendMode="COLOR_BURN" layoutX="83.0" layoutY="164.0" text="%lblPassword" />
+                      <Label blendMode="COLOR_BURN" layoutX="46.0" layoutY="214.0" text="%lblConfirmPassword" />
+                  <Label blendMode="COLOR_BURN" layoutX="123.0" layoutY="24.0" prefHeight="18.0" prefWidth="96.0" text="Register" textAlignment="CENTER">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label layoutX="106.0" layoutY="255.0" onMouseClicked="#handleLoginAccountClick" text="%lblAlreadyhaveanaccount?" textFill="#352c6b" underline="true" />
+                  <Label layoutX="106.0" layoutY="255.0" onMouseClicked="#handleLoginAccountClick" text="%lblAlreadyhaveanaccount?" textFill="#a6a5ae" underline="true" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="312.0" fitWidth="284.0" layoutX="14.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="250.0" fitWidth="318.0" layoutY="50.0">
                <image>
-                  <Image url="@../Images/2.png" />
+                  <Image url="@../Images/2SignUp.png" />
                </image>
             </ImageView>
             </children>

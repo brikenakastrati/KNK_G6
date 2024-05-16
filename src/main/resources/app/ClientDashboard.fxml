@@ -18,7 +18,7 @@
 
 <AnchorPane prefHeight="746.0" prefWidth="1084.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.ClientDashboardController">
    <children>
-      <AnchorPane layoutX="25.0" layoutY="119.0" prefHeight="114.0" prefWidth="191.0" style="-fx-background-color: #708090; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2;">
+      <AnchorPane layoutX="25.0" layoutY="119.0" prefHeight="114.0" prefWidth="191.0" style="-fx-background-color: #777; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2;">
          <effect>
             <DropShadow />
          </effect>
@@ -61,20 +61,12 @@
             <TableColumn prefWidth="87.33333333333331" text="Car Price" />
         </columns>
       </TableView>
-      <AnchorPane layoutX="-9.0" prefHeight="111.0" prefWidth="1166.0" style="-fx-background-color: #29465B; -fx-border-color: black;">
+      <AnchorPane layoutX="-9.0" prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
             <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="Contact">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
-            </Button>
-            <Button fx:id="btnLogout" layoutX="1048.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="#384a80">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
             </Button>
             <Button fx:id="btnBuynow" layoutX="267.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="Cars">
                <effect>
@@ -86,7 +78,7 @@
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <ImageView fitHeight="90.0" fitWidth="145.0" layoutX="7.0" layoutY="12.0">
+            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
                <image>
                   <Image url="@../Images/2.png" />
                </image>
@@ -94,6 +86,14 @@
             <Button fx:id="helpbtn" layoutX="484.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="41.0" style="-fx-background-radius: 20;" text="Help">
                <effect>
                   <InnerShadow height="12.5" radius="5.875" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnLogout1" layoutX="1059.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
                </effect>
             </Button>
          </children>
