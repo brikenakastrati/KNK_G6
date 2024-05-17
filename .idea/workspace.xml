@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="added table.css">
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="modified cars2.fxml">
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,7 +167,7 @@
       <workItem from="1715946489976" duration="2089000" />
       <workItem from="1715948993428" duration="7403000" />
       <workItem from="1715961469600" duration="671000" />
-      <workItem from="1715962390640" duration="2639000" />
+      <workItem from="1715962390640" duration="2917000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -377,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715968250914</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="modified cars2.fxml">
+      <option name="closed" value="true" />
+      <created>1715968329305</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1715968329305</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +425,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="test" />
     <MESSAGE value="added table.css" />
-    <option name="LAST_COMMIT_MESSAGE" value="added table.css" />
+    <MESSAGE value="modified cars2.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="modified cars2.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
