@@ -26,7 +26,7 @@ public class ClientDashboardController {
     }
 
     public void handleCarsClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.CARS_PAGE);
+        Navigator.navigate(ae, Navigator.CARS2_PAGE);
     }
 
     public void handleDashboardClick(ActionEvent ae) {
