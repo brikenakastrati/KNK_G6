@@ -16,6 +16,7 @@ import model.carInventory;
 
 import java.io.File;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 
 public class AdminInsertController {
     @FXML private Button btnClients, btnDashboard, btnInsert, btnLogout;
@@ -23,6 +24,7 @@ public class AdminInsertController {
     @FXML private TableColumn<carInventory, Double> invColPrice;
     @FXML private TableColumn<carInventory, Integer> invColStock;
     @FXML private TableView<carInventory> inventoryTable;
+    @FXML private TableColumn<carInventory, Timestamp> invColDateAdded;
     @FXML private Label lblimagepath, lblStatus;
     @FXML private TextField txtCarID, txtCarName, txtCarStock, txtCarPrice;
     @FXML private ComboBox<String> comboType, comboStatus;
@@ -43,6 +45,7 @@ public class AdminInsertController {
         invColStock.setCellValueFactory(new PropertyValueFactory<>("carstock"));
         invColPrice.setCellValueFactory(new PropertyValueFactory<>("carprice"));
         invColStatus.setCellValueFactory(new PropertyValueFactory<>("carstatus"));
+        invColDateAdded.setCellValueFactory(new PropertyValueFactory<>("dateAdded"));
     }
 
     private void loadTableData() throws SQLException {
@@ -87,7 +90,8 @@ public class AdminInsertController {
                 return;
             }
             imageview.setImage(null);
-            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, carImage);
+            Timestamp dateAdded = new Timestamp(System.currentTimeMillis());
+            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, carImage, dateAdded);
             repo.addCar(newCar);
             loadTableData();
             clearFields();
@@ -115,10 +119,21 @@ public class AdminInsertController {
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
-    @FXML
-    void handleDeleteClick(ActionEvent ae) {
-        // Delete logic to be implemented
+    @FXML void handleDeleteClick(ActionEvent ae) {
+        carInventory selectedCar = inventoryTable.getSelectionModel().getSelectedItem();
+        if (selectedCar != null) {
+            try {
+                repo.deleteCar(selectedCar.getCarid());
+                loadTableData();
+                lblStatus.setText("Car deleted successfully!");
+            } catch (SQLException e) {
+                lblStatus.setText("Error deleting car: " + e.getMessage());
+            }
+        } else {
+            lblStatus.setText("Please select a car to delete.");
+        }
     }
+
 
     @FXML
     void handleClientsClick(ActionEvent event) {

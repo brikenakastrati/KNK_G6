@@ -16,44 +16,68 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminDashboardController">
    <children>
+      <!-- Top Pane -->
       <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="98.0" prefWidth="900.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;">
-      <children>
-         <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
-            <effect>
-               <InnerShadow height="11.0" radius="5.5" width="13.0" />
-            </effect>
-         </Button>
-         <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
-            <effect>
-               <InnerShadow height="11.0" radius="5.5" width="13.0" />
-            </effect>
-         </Button>
-         <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
-            <effect>
-               <InnerShadow height="11.0" radius="5.5" width="13.0" />
-            </effect>
-         </Button>
-         <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
-            <effect>
-               <InnerShadow height="11.0" radius="5.5" width="13.0" />
-            </effect>
-         </Button>
+         <children>
+            <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
             <ImageView fitHeight="84.0" fitWidth="136.0" layoutY="13.0">
                <image>
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
-         <Button fx:id="btnLogout" layoutX="789.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="LogOut">
-            <font>
-               <Font name="System Bold" size="16.0" />
-            </font>
+            <Button fx:id="btnLogout" layoutX="789.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="LogOut">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
                <effect>
                   <DropShadow height="28.02" radius="13.51" width="28.02" />
                </effect>
-         </Button>
+            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="338.0" layoutY="134.0" prefHeight="148.0" prefWidth="269.0" style="-fx-border-color: black; -fx-background-color: #777;">
+      <!-- User Info Pane -->
+      <AnchorPane layoutX="14.0" layoutY="134.0" prefHeight="148.0" prefWidth="282.0" style="-fx-border-color: black; -fx-background-color: #777;">
+         <effect>
+            <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
+         </effect>
+         <children>
+            <TextField blendMode="COLOR_BURN" layoutX="80.0" layoutY="106.0" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: transparent;" text="%lblWelcome">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="58.0" fitWidth="54.0" layoutX="15.0" layoutY="47.0">
+               <image>
+                  <Image url="@../Images/user.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="admUsername" blendMode="COLOR_BURN" layoutX="176.0" layoutY="112.0" prefHeight="28.0" prefWidth="62.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Label>
+         </children>
+      </AnchorPane>
+      <!-- Client Number Pane -->
+      <AnchorPane layoutX="333.0" layoutY="134.0" prefHeight="148.0" prefWidth="269.0" style="-fx-border-color: black; -fx-background-color: #777;">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
@@ -66,42 +90,25 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </ImageView>
-            <TextField layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%clientnr">
+            <TextField blendMode="COLOR_BURN" layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%clientnr">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
             </TextField>
-            <Label fx:id="lblClientNumber" layoutX="237.0" layoutY="46.0" prefHeight="31.0" prefWidth="29.0">
+            <Label fx:id="lblClientNumber" blendMode="COLOR_BURN" layoutX="237.0" layoutY="46.0" prefHeight="31.0" prefWidth="29.0">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="14.0" layoutY="134.0" prefHeight="144.0" prefWidth="274.0" style="-fx-border-color: black; -fx-background-color: #777;">
-         <effect>
-            <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
-         </effect>
-         <children>
-            <TextField layoutX="69.0" layoutY="106.0" prefHeight="28.0" prefWidth="102.0" style="-fx-background-color: transparent;" text="%lblWelcome">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </TextField>
-            <ImageView fitHeight="58.0" fitWidth="54.0" layoutX="15.0" layoutY="47.0">
-               <image>
-                  <Image url="@../Images/user.png" />
-               </image>
-            </ImageView>
-            <Label fx:id="admUsername" layoutX="194.0" layoutY="112.0" prefHeight="28.0" prefWidth="102.0" />
-         </children>
-      </AnchorPane>
+      <!-- Cars in Stock Pane -->
       <AnchorPane layoutX="634.0" layoutY="134.0" prefHeight="148.0" prefWidth="252.0" style="-fx-border-color: black; -fx-background-color: #777;">
          <effect>
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
          <children>
-            <TextField layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%lblmakinat">
+            <TextField blendMode="COLOR_BURN" layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%lblmakinat">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -111,33 +118,35 @@
                   <Image url="@../Images/car.png" />
                </image>
             </ImageView>
-            <Label fx:id="carsInStock" layoutX="220.0" layoutY="48.0" prefHeight="28.0" prefWidth="30.0">
+            <Label fx:id="carsInStock" blendMode="COLOR_BURN" layoutX="220.0" layoutY="48.0" prefHeight="28.0" prefWidth="30.0">
                <font>
                   <Font name="System Bold" size="21.0" />
                </font>
             </Label>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="483.0" layoutY="440.0" prefHeight="330.0" prefWidth="402.0" style="-fx-background-color: #999; -fx-border-color: black;">
+      <!-- Income Graph Pane -->
+      <AnchorPane layoutX="14.0" layoutY="439.0" prefHeight="326.0" prefWidth="413.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
-            <TextField layoutX="27.0" layoutY="1.0" prefHeight="50.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="%lblmakinatsot">
+            <LineChart fx:id="incomeGraph" layoutX="0.0" layoutY="43.0" prefHeight="287.0" prefWidth="400.0">
+               <xAxis>
+                  <CategoryAxis label="Month" side="BOTTOM" fx:id="xAxis" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yAxis" label="Income" side="LEFT" />
+               </yAxis>
+            </LineChart>
+            <TextField layoutX="72.0" layoutY="1.0" prefHeight="50.0" prefWidth="270.0" style="-fx-background-color: transparent;" text="%lblgrafiku">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </TextField>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="14.0" layoutY="439.0" prefHeight="326.0" prefWidth="413.0" style="-fx-background-color: #999; -fx-border-color: black;">
+      <!-- Cars Sold Today Pane -->
+      <AnchorPane layoutX="483.0" layoutY="440.0" prefHeight="330.0" prefWidth="402.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
-            <LineChart layoutX="-10.0" layoutY="43.0" prefHeight="287.0" prefWidth="420.0">
-              <xAxis>
-                <CategoryAxis side="BOTTOM" />
-              </xAxis>
-              <yAxis>
-                <NumberAxis side="LEFT" />
-              </yAxis>
-            </LineChart>
-            <TextField layoutX="72.0" layoutY="1.0" prefHeight="50.0" prefWidth="224.0" style="-fx-background-color: transparent;" text="%lblgrafiku">
+            <TextField layoutX="27.0" layoutY="1.0" prefHeight="50.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="%lblmakinatsot">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
