@@ -15,7 +15,7 @@
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="#384a80">
+            <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut" textFill="RED">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
@@ -60,7 +60,7 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <TextField fx:id="txtusername" layoutX="56.0" layoutY="221.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: grey; -fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtusername" layoutX="56.0" layoutY="221.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #a9a9a9; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
       <Label layoutX="57.0" layoutY="271.0" prefHeight="26.0" prefWidth="106.0" text="%lblClientEmail">
          <font>
             <Font size="16.0" />
@@ -88,8 +88,8 @@
             <TableColumn fx:id="salt" prefWidth="115.2000732421875" text="%lblSaltPassword" />
         </columns>
       </TableView>
-      <TextField fx:id="txtemail" layoutX="56.0" layoutY="308.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: grey; -fx-border-color: red; -fx-border-width: 0px 0px 2px 0px;" />
-      <PasswordField fx:id="txtpassword" layoutX="56.0" layoutY="394.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: grey; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: red;" />
-      <PasswordField fx:id="txtconfirmpassword" layoutX="56.0" layoutY="480.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: grey; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: red;" />
+      <TextField fx:id="txtemail" layoutX="56.0" layoutY="308.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #a9a9a9; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
+      <PasswordField fx:id="txtpassword" layoutX="56.0" layoutY="394.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #a9a9a9; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" />
+      <PasswordField fx:id="txtconfirmpassword" layoutX="56.0" layoutY="480.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #a9a9a9; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: black;" />
    </children>
 </AnchorPane>

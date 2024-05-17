@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="added style to cars.fxml">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="style">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/table.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +34,7 @@
   }
 }</component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="511e73d3-caa0-4fa8-bc07-bda6087d9c89" />
+    <option name="defaultAccountId" value="2ee2acf9-cd02-4d59-92bd-9585ac24941d" />
   </component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
@@ -171,7 +170,7 @@
       <workItem from="1715948993428" duration="7403000" />
       <workItem from="1715961469600" duration="671000" />
       <workItem from="1715962390640" duration="4204000" />
-      <workItem from="1715969898975" duration="235000" />
+      <workItem from="1715969898975" duration="4060000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -413,7 +412,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715969343857</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="style">
+      <option name="closed" value="true" />
+      <created>1715970156408</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1715970156408</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -431,7 +438,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial Commit" />
     <MESSAGE value="Redirecting to home page after successfull login" />
     <MESSAGE value="Login and register page design" />
     <MESSAGE value="Admin Dashboard Created Sign up Controller fixed" />
@@ -456,7 +462,8 @@
     <MESSAGE value="modified CreateandDeleteClient.fxml.fxml" />
     <MESSAGE value="added style to CreateandDeleteClient.fxml" />
     <MESSAGE value="added style to cars.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="added style to cars.fxml" />
+    <MESSAGE value="style" />
+    <option name="LAST_COMMIT_MESSAGE" value="style" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

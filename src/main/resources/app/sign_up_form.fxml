@@ -131,7 +131,7 @@
             </AnchorPane>
             <ImageView fitHeight="199.0" fitWidth="264.0" layoutX="-32.0" layoutY="70.0">
                <image>
-                  <Image url="@../Images/2SignUp.png" />
+                  <Image url="@../Images/2.png" />
                </image>
             </ImageView>
             </children>
