@@ -9,6 +9,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import model.User;
 import model.carInventory;
 import service.CarsService;
 import service.Interface.inventoryServiceInterface;
@@ -30,7 +31,7 @@ public class CarsController implements Initializable {
 //        comboType1.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
 //    }
 
-
+    //test
     private inventoryServiceInterface inventoryService;
     private ObservableList<carInventory> carlist;
 
