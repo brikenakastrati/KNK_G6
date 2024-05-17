@@ -23,7 +23,7 @@
         <TextField fx:id="txtUserName" layoutX="255.0" layoutY="167.0" promptText="Username" style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" />
         <PasswordField fx:id="pwdPassword" layoutX="255.0" layoutY="212.0" promptText="Password" style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" />
       <Label layoutX="402.0" layoutY="270.0" />
-      <Label layoutX="253.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="Create new account" textFill="#979699" underline="true">
+      <Label layoutX="253.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="%lblCreatenewaccount" textFill="#979699" underline="true">
          <font>
             <Font size="14.0" />
          </font></Label>

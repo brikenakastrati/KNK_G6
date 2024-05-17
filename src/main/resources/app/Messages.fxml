@@ -16,9 +16,9 @@
         <TableView fx:id="tableView" layoutX="33.0" layoutY="150.0" prefHeight="373.0" prefWidth="572.0">
             <columns>
                 <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-                <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="First Name" />
-                <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="Last Name" />
-                <TableColumn fx:id="messageColumn" prefWidth="200.0" text="Message" />
+                <TableColumn fx:id="firstNameColumn" prefWidth="150.0" text="%FirstName" />
+                <TableColumn fx:id="lastNameColumn" prefWidth="150.0" text="%LastName" />
+                <TableColumn fx:id="messageColumn" prefWidth="200.0" text="%Message" />
             </columns>
         </TableView>
       <AnchorPane layoutX="-1.0" layoutY="-1.0" opacity="0.98" prefHeight="110.0" prefWidth="916.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;">
