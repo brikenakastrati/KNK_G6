@@ -1,5 +1,6 @@
 package Repository;
 
+import Repository.Interface.inventoryRepositoryInterface;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,7 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-public class inventoryRepository {
+public class inventoryRepository implements inventoryRepositoryInterface {
     @FXML
     private TableColumn<carInventory, String> invColCarID;
 
@@ -113,6 +114,29 @@ public class inventoryRepository {
             statement.setString(1, carId);
             statement.executeUpdate();
         }
+    }
+
+    public carInventory getAllCars(TableView<carInventory> cartbl) throws SQLException {
+        String sql = "SELECT carid, carname, cartype, carstock, carprice, carstatus, carimage, dateAdded FROM inventory";
+        try (Connection conn = DBConnector.getConnection();
+             PreparedStatement pst = conn.prepareStatement(sql)) {
+            ResultSet resultSet = pst.executeQuery();
+            while (resultSet.next()) {
+                String carid = resultSet.getString("carid");
+                String carname = resultSet.getString("carname");
+                String cartype = resultSet.getString("cartype");
+                int stock = resultSet.getInt("carstock");
+                double carprice = resultSet.getDouble("carprice");
+                String carstatus = resultSet.getString("carstatus");
+                String carimage = resultSet.getString("carimage");
+                Timestamp dateAdded = resultSet.getTimestamp("dateAdded");
+                carInventory carinv = new carInventory(carid, carname, cartype, stock, carprice, carstatus, carimage,dateAdded);
+                cartbl.getItems().add(carinv);
+            }
+        } catch (SQLException se) {
+            System.out.println("Error me i marr qeto: " + se.getMessage());
+        }
+        return null;
     }
 }
 

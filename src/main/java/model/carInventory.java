@@ -1,5 +1,6 @@
 package model;
 
+import java.sql.Date;
 import java.sql.Timestamp;
 
 public class carInventory {
@@ -22,6 +23,7 @@ public class carInventory {
         this.carimage = carimage;
         this.dateAdded = dateAdded;
     }
+
 
     // Getters and setters for all fields including dateAdded
 
