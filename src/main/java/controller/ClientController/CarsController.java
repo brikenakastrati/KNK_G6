@@ -15,6 +15,7 @@ import service.Interface.inventoryServiceInterface;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -29,6 +30,7 @@ public class CarsController implements Initializable {
 //        comboType1.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
 //    }
 
+    //test
     private inventoryServiceInterface inventoryService;
     private ObservableList<carInventory> carlist;
 
@@ -63,6 +65,17 @@ public class CarsController implements Initializable {
         });
 
     }
+    private List<String> carImages; // List to hold multiple image URLs or paths
+
+    public List<String> getCarImages() {
+        return carImages;
+    }
+
+    public void setCarImages(List<String> carImages) {
+        this.carImages = carImages;
+    }
+    @FXML
+    private Pagination imagePagination;
     private void updateCarDetails(carInventory car) {
         carNameLabel.setText(car.getCarname());
         carTypeLabel.setText(car.getCartype());
