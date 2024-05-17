@@ -9,7 +9,7 @@ public class MessageSaver {
 
     private static final String URL = "jdbc:mysql://localhost:3306/knk2024";
     private static final String USER = "root";
-    private static final String PASSWORD = "afrimymeri12";
+    private static final String PASSWORD = "2302";
 
     public static void saveMessage(String firstName, String lastName, String message) {
         String insertSQL = "INSERT INTO messages (first_name, last_name, message) VALUES (?, ?, ?)";

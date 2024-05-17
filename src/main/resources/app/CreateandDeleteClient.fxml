@@ -14,7 +14,7 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="900.0" style="-fx-background-color: #d3d3d3;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.CreateClientAndDeleteController">
    <children>
-      <AnchorPane layoutY="-1.0" prefHeight="117.0" prefWidth="1012.0" style="-fx-background-color: #29465B; -fx-border-color: black;">
+      <AnchorPane layoutY="-1.0" prefHeight="117.0" prefWidth="1012.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
             <Button fx:id="btnClients" layoutX="345.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
                <effect>

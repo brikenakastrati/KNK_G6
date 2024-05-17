@@ -48,7 +48,7 @@ public class MessagesController {
         // Database connection details
         String url = "jdbc:mysql://localhost:3306/knk2024";
         String user = "root";
-        String password = "afrimymeri12";
+        String password = "2302";
 
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             String query = "SELECT id, first_name, last_name, message FROM messages";
@@ -69,22 +69,28 @@ public class MessagesController {
         return messages;
     }
 
-    public void handleDashboardClick(ActionEvent actionEvent) {
-        Navigator.navigate(actionEvent,Navigator.ADMIN_DASHBOARD_PAGE);
+    @FXML
+    private void handleClientsClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_CLIENTS_PAGE);
     }
 
-    public void handleInsertClick(ActionEvent actionEvent) {
-        Navigator.navigate(actionEvent,Navigator.ADMIN_INSERT_PAGE);
+    @FXML
+    private void handleLogoutClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
-    public void handleClientsClick(ActionEvent actionEvent) {
-
+    @FXML
+    private void handleInsertClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);
     }
 
-    public void handleMessageClick(ActionEvent actionEvent) {
-        Navigator.navigate(actionEvent,Navigator.MESSAGE_PAGE);
+    @FXML
+    private void handleDashboardClick(ActionEvent ae) {
+        // This method seems redundant if it just navigates to the same page
     }
 
-    public void handleLogoutClick(ActionEvent actionEvent) {
+    @FXML
+    private void handleMessageClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
     }
 }

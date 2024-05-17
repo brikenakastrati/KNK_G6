@@ -52,19 +52,13 @@
       </AnchorPane>
 
         <!-- AnchorPane në të Djathtë -->
-        <AnchorPane layoutX="504.0" layoutY="102.0" prefHeight="798.0" prefWidth="673.0" style="-fx-background-color: #888;">
+        <AnchorPane layoutX="504.0" layoutY="102.0" prefHeight="766.0" prefWidth="673.0" style="-fx-background-color: #888;">
             <children>
-                <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="127.0" layoutY="283.0">
+                <ImageView fitHeight="300.0" fitWidth="400.0" layoutX="162.0" layoutY="191.0">
                     <image>
                         <Image url="@../Images/2.png" />
                     </image>
                 </ImageView>
-                <Label layoutX="120.0" layoutY="20.0" text="Additional Information">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                </Label>
-                <Label layoutX="168.0" layoutY="623.0" prefWidth="360.0" text="This is some additional text related to the image or other information you want to display on the right side." wrapText="true" />
             </children>
         </AnchorPane>
 
