@@ -52,12 +52,12 @@
                 </Button>
             </children>
         </AnchorPane>
-        <TableView layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0">
+        <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0">
             <columns>
                 <TableColumn fx:id="showCarsTable" prefWidth="199.19999313354492" text="Cars" />
             </columns>
         </TableView>
-        <ImageView fx:id="showCarPhoto" fitHeight="283.0" fitWidth="337.0" layoutX="599.0" layoutY="141.0" pickOnBounds="true" preserveRatio="true" />
+        <ImageView fx:id="showCarPhoto" fitHeight="283.0" fitWidth="337.0" layoutX="765.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
         <Label layoutX="237.0" layoutY="167.0" text="Car name : ">
             <font>
                 <Font name="System Bold" size="20.0" />
@@ -83,27 +83,27 @@
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-        <Label layoutX="346.0" layoutY="164.0" prefHeight="35.0" prefWidth="254.0">
+        <Label fx:id="carNameLabel" layoutX="346.0" layoutY="164.0" prefHeight="35.0" prefWidth="254.0">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="346.0" layoutY="218.0" prefHeight="35.0" prefWidth="254.0">
+        <Label fx:id="carTypeLabel" layoutX="346.0" layoutY="218.0" prefHeight="35.0" prefWidth="254.0">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="346.0" layoutY="272.0" prefHeight="35.0" prefWidth="254.0">
+        <Label fx:id="carPriceLabel" layoutX="346.0" layoutY="272.0" prefHeight="35.0" prefWidth="254.0">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="337.0" layoutY="334.0" prefHeight="35.0" prefWidth="254.0">
+        <Label fx:id="stockLabel" layoutX="337.0" layoutY="334.0" prefHeight="35.0" prefWidth="254.0">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="361.0" layoutY="382.0" prefHeight="35.0" prefWidth="254.0">
+        <Label fx:id="carStatusLabel" layoutX="361.0" layoutY="382.0" prefHeight="35.0" prefWidth="254.0">
             <font>
                 <Font size="18.0" />
             </font>
@@ -114,5 +114,6 @@
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
+        <Button fx:id="chooseCarButton" layoutX="76.0" layoutY="710.0" mnemonicParsing="false" onAction="#handleChooseCar" text="Choose car" />
     </children>
 </AnchorPane>
