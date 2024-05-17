@@ -66,7 +66,7 @@ public class CarsController implements Initializable {
         });
 
     }
-    private List<String> carImages; // List to hold multiple image URLs or paths
+    private List<String> carImages;
 
     public List<String> getCarImages() {
         return carImages;
@@ -102,21 +102,21 @@ public class CarsController implements Initializable {
     Navigator.navigate(ae, Navigator.HOME_PAGE);
     }
 
-    public void handleCustomizeClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
+    public void handleCustomizeClick(ActionEvent event) {
+        Navigator.navigate(event, Navigator.CUSTOMIZE_PAGE);
     }
-    public void handleLogoutClick(ActionEvent ae) {
-        Navigator.navigate(ae,Navigator.LOGIN_PAGE);
-    }
-
-    public void handleCarsClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.CARS_PAGE);
+    public void handleLogoutClick(ActionEvent event) {
+        Navigator.navigate(event,Navigator.LOGIN_PAGE);
     }
 
-    public void handleMessageClick(ActionEvent actionEvent) {
-        Navigator.navigate(actionEvent, Navigator.MESSAGE_PAGE);
+    public void handleCarsClick(ActionEvent event) {
+        Navigator.navigate(event, Navigator.CARS_PAGE);
     }
-    public void handleHelpClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.HELP_PAGE);
+
+    public void handleMessageClick(ActionEvent event) {
+        Navigator.navigate(event, Navigator.MESSAGE_PAGE);
+    }
+    public void handleHelpClick(ActionEvent event) {
+        Navigator.navigate(event, Navigator.HELP_PAGE);
     }
 }
