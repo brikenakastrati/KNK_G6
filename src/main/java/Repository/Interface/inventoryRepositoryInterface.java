@@ -7,6 +7,6 @@ import model.carInventory;
 import java.sql.SQLException;
 
 public interface inventoryRepositoryInterface {
-    public carInventory getAllCars(TableView<carInventory> cartbl) throws SQLException;
+    public carInventory getAllCars(TableView<carInventory> cartable) throws SQLException;
 
 }

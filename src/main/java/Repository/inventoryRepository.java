@@ -116,8 +116,8 @@ public class inventoryRepository implements inventoryRepositoryInterface {
         }
     }
 
-    public carInventory getAllCars(TableView<carInventory> cartbl) throws SQLException {
-        String sql = "SELECT carid, carname, cartype, carstock, carprice, carstatus, carimage, dateAdded FROM inventory";
+    public carInventory getAllCars(TableView<carInventory> cartable) throws SQLException {
+        String sql = "SELECT carid, carname, cartype, carstock, carprice, carstatus, carimage,dateAdded FROM inventory";
         try (Connection conn = DBConnector.getConnection();
              PreparedStatement pst = conn.prepareStatement(sql)) {
             ResultSet resultSet = pst.executeQuery();
@@ -131,7 +131,7 @@ public class inventoryRepository implements inventoryRepositoryInterface {
                 String carimage = resultSet.getString("carimage");
                 Timestamp dateAdded = resultSet.getTimestamp("dateAdded");
                 carInventory carinv = new carInventory(carid, carname, cartype, stock, carprice, carstatus, carimage,dateAdded);
-                cartbl.getItems().add(carinv);
+                cartable.getItems().add(carinv);
             }
         } catch (SQLException se) {
             System.out.println("Error me i marr qeto: " + se.getMessage());
