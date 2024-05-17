@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="modified CreateandDeleteClient.fxml.fxml">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/button.css" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="added style to CreateandDeleteClient.fxml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -169,7 +170,7 @@
       <workItem from="1715946489976" duration="2089000" />
       <workItem from="1715948993428" duration="7403000" />
       <workItem from="1715961469600" duration="671000" />
-      <workItem from="1715962390640" duration="3337000" />
+      <workItem from="1715962390640" duration="3640000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -395,7 +396,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715968609222</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="added style to CreateandDeleteClient.fxml">
+      <option name="closed" value="true" />
+      <created>1715969066938</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1715969066938</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -437,7 +446,8 @@
     <MESSAGE value="added table.css" />
     <MESSAGE value="modified cars2.fxml" />
     <MESSAGE value="modified CreateandDeleteClient.fxml.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="modified CreateandDeleteClient.fxml.fxml" />
+    <MESSAGE value="added style to CreateandDeleteClient.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added style to CreateandDeleteClient.fxml" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -45,7 +45,7 @@
                 </Button>
             </children>
         </AnchorPane>
-        <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0">
+        <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0" stylesheets="@../Styles/table.css">
             <columns>
                 <TableColumn fx:id="showCarsTable" prefWidth="199.19999313354492" text="Cars" />
             </columns>
