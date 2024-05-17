@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
     <children>
         <AnchorPane prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
             <children>
@@ -45,7 +45,7 @@
                 </Button>
             </children>
         </AnchorPane>
-        <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0" stylesheets="@../Styles/table.css">
+        <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #e0e0e0;" stylesheets="@../Styles/table.css">
             <columns>
                 <TableColumn fx:id="showCarsTable" prefWidth="199.19999313354492" text="Cars" />
             </columns>
