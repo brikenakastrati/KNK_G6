@@ -30,7 +30,7 @@ public class CarsController implements Initializable {
 //        comboType1.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
 //    }
 
-    //test
+
     private inventoryServiceInterface inventoryService;
     private ObservableList<carInventory> carlist;
 
