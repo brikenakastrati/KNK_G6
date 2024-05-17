@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Car display part1">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/Interface/inventoryRepositoryInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/Interface/inventoryServiceInterface.java" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Car display part2">
+      <change afterPath="$PROJECT_DIR$/src/main/java/service/CarsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/carInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/carInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Interface/inventoryRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Interface/inventoryRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Interface/inventoryServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Interface/inventoryServiceInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,9 +18,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -165,7 +163,7 @@
       <workItem from="1715941987764" duration="1251000" />
       <workItem from="1715945352332" duration="1001000" />
       <workItem from="1715946489976" duration="2089000" />
-      <workItem from="1715948993428" duration="2262000" />
+      <workItem from="1715948993428" duration="3018000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -303,7 +301,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715950081999</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Car display part2">
+      <option name="closed" value="true" />
+      <created>1715951455162</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1715951455162</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -336,7 +342,8 @@
     <MESSAGE value="Fixed deleteUser method CreateClientAndDeleteController" />
     <MESSAGE value="Library Added Again" />
     <MESSAGE value="Car display part1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Car display part1" />
+    <MESSAGE value="Car display part2" />
+    <option name="LAST_COMMIT_MESSAGE" value="Car display part2" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
