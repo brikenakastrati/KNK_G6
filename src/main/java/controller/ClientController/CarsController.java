@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import model.carInventory;
 import service.CarsService;
@@ -55,6 +56,31 @@ public class CarsController implements Initializable {
         }catch (SQLException se) {
             System.out.println("ERROR : " + se.getMessage());
         }
+        cartable.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                updateCarDetails(newSelection);
+            }
+        });
+
+    }
+    private void updateCarDetails(carInventory car) {
+        carNameLabel.setText(car.getCarname());
+        carTypeLabel.setText(car.getCartype());
+        carPriceLabel.setText(String.format("%.2f", car.getCarprice()));
+        stockLabel.setText(String.valueOf(car.getCarstock()));
+        carStatusLabel.setText(car.getCarstatus());
+
+        String imagePath = car.getCarimage();
+        if (!imagePath.startsWith("http://") && !imagePath.startsWith("https://") && !imagePath.startsWith("file:///")) {
+            imagePath = "file:///" + imagePath.replace("\\", "/"); // Replace backslashes for compatibility
+        }
+        try {
+            Image image = new Image(imagePath);
+            showCarPhoto.setImage(image);
+        } catch (IllegalArgumentException e) {
+            System.out.println("Failed to load image: " + e.getMessage());
+        }
+
     }
 
 
