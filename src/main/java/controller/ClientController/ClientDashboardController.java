@@ -1,10 +1,11 @@
 package controller.ClientController;
 
 import app.Navigator;
-import controller.data;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import service.UserService;
 
 public class ClientDashboardController {
     @FXML
@@ -16,7 +17,7 @@ public class ClientDashboardController {
 
     private void UsernameDisplay() {
 
-        String user = data.getUsername();
+        String user = UserService.getUsername();
         clientUsername.setText(user.substring(0, 1).toUpperCase() + user.substring(1));
     }
 

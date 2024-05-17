@@ -2,7 +2,7 @@ package controller.AdminController;
 
 import Repository.inventoryRepository;
 import app.Navigator;
-import controller.data;
+
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.chart.CategoryAxis;
@@ -79,7 +79,7 @@ public class AdminDashboardController {
     }
 
     private void UsernameDisplay() {
-        String user = data.getUsername();
+        String user = UserService.getUsername();
         admUsername.setText(user.substring(0, 1).toUpperCase() + user.substring(1));
     }
 

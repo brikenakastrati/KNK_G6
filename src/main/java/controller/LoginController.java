@@ -17,6 +17,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.control.*;
 import java.util.ResourceBundle;
+
+import model.User;
 import model.dto.LoginUserDto;
 import javafx.scene.Node;
 import service.LoginResult;
@@ -54,7 +56,7 @@ public class LoginController {
             alert.showAndWait();
         } else {
                 // Navigate to the home page for regular users
-                data.setUsername(this.txtUserName.getText());
+                UserService.setUsername(this.txtUserName.getText());
                 Navigator.navigate(ae, Navigator.HOME_PAGE);
 
         }
@@ -75,7 +77,7 @@ public class LoginController {
         // Check login success and admin status
         if (result.isSuccess() && result.isAdmin()) {
 
-            data.setUsername(this.txtUserName.getText());
+            UserService.setUsername(this.txtUserName.getText());
             Navigator.navigate(me, Navigator.ADMIN_DASHBOARD_PAGE);
 
 

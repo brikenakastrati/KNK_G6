@@ -20,6 +20,20 @@ public class UserService implements UserServiceInterface {
     public int countUsers() throws SQLException{
         return userRepository.countUsers();
     }
+
+
+    public static String username; //Getting the username for the admin and client display
+
+    public static String getUsername() {
+        return username;
+    }
+
+    public static void setUsername(String newUsername) {
+        username = newUsername;
+    }
+
+
+
     public static boolean signUp(UserDto userData){
         String password = userData.getPassword();
         String confirmPassword = userData.getConfirmPassword();
