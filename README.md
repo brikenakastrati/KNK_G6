@@ -6,7 +6,7 @@ Course: Human-Computer Interaction.
 ### How to Use
 Before running this code, ensure that you have the following prerequisites installed on your device:
 
-IntelliJ IDEA with Java and JavaFX support.
+IntelliJ IDEA Ultimate and
 Java Development Kit (JDK) installed on your machine.
 
 ### Description

@@ -10,7 +10,9 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
+import service.CarsService;
 import service.Interface.UserServiceInterface;
+import service.Interface.inventoryServiceInterface;
 import service.UserService;
 
 import java.sql.SQLException;
@@ -20,16 +22,18 @@ public class AdminDashboardController {
     @FXML
     private Label admUsername, carsInStock, lblClientNumber;
     @FXML
-    private LineChart<String, Number> incomeGraph;
+    private LineChart<String, Number> incomeGraph,customersGraph;
     @FXML
-    private CategoryAxis xAxis;
+    private CategoryAxis xAxis,xAxisCustomers;
     @FXML
-    private NumberAxis yAxis;
+    private NumberAxis yAxis,yAxisCustomers;
 
     private UserServiceInterface userService;
+    private inventoryServiceInterface carsService;
 
     public AdminDashboardController() {
         userService = new UserService();
+        carsService = new CarsService();
     }
 
     private inventoryRepository inventoryRepo = new inventoryRepository();
@@ -40,6 +44,7 @@ public class AdminDashboardController {
         updateCarsInStock();
         try {
             setupIncomeGraph();
+            setupCustomersGraph();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -52,14 +57,27 @@ public class AdminDashboardController {
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Monthly Income");
 
-        Map<String, Double> monthlyIncome = inventoryRepo.getMonthlyIncome();
+        Map<String, Double> monthlyIncome = carsService.getMonthlyIncome();
         for (Map.Entry<String, Double> entry : monthlyIncome.entrySet()) {
             series.getData().add(new XYChart.Data<>(entry.getKey(), entry.getValue()));
         }
 
         incomeGraph.getData().add(series);
     }
+    private void setupCustomersGraph() throws SQLException {
+        xAxisCustomers.setLabel("Month");
+        yAxisCustomers.setLabel("Customers");
 
+        XYChart.Series<String, Number> series = new XYChart.Series<>();
+        series.setName("Customers Registered");
+
+        Map<String, Integer> monthlyRegistrations = userService.getMonthlyRegistrations();
+        for (Map.Entry<String, Integer> entry : monthlyRegistrations.entrySet()) {
+            series.getData().add(new XYChart.Data<>(entry.getKey(), entry.getValue()));
+        }
+
+        customersGraph.getData().add(series);
+    }
     private void updateCarsInStock() {
         try {
             int totalCarsInStock = inventoryRepo.countCarsInStock();

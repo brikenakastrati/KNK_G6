@@ -50,7 +50,6 @@
                 <TableColumn fx:id="showCarsTable" prefWidth="199.19999313354492" text="Cars" />
             </columns>
         </TableView>
-        <ImageView fx:id="showCarPhoto" fitHeight="283.0" fitWidth="337.0" layoutX="765.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
         <Label layoutX="237.0" layoutY="167.0" text="Car name : ">
             <font>
                 <Font name="System Bold" size="20.0" />
@@ -101,11 +100,16 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TextArea layoutX="405.0" layoutY="475.0" prefHeight="200.0" prefWidth="528.0" />
+        <TextArea layoutX="405.0" layoutY="538.0" prefHeight="137.0" prefWidth="477.0" />
         <Label layoutX="233.0" layoutY="560.0" text="Description:">
             <font>
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
+      <VBox fx:id="imageContainer" layoutX="713.0" layoutY="127.0" alignment="CENTER" prefHeight="355.0" prefWidth="353.0">
+
+              <ImageView fx:id="showCarPhoto" fitHeight="283.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true" />
+              <Pagination fx:id="imagePagination" currentPageIndex="0" pageCount="0" />
+      </VBox>
     </children>
 </AnchorPane>

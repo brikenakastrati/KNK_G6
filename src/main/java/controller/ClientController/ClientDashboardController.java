@@ -41,4 +41,7 @@ public class ClientDashboardController {
     public void handleHelpClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
+
+    public void handleChangePasswordClick(ActionEvent actionEvent) {
+    }
 }

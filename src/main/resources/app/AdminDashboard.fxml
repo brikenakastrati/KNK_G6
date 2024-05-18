@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
@@ -13,7 +12,6 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminDashboardController">
    <children>
       <!-- Top Pane -->
@@ -73,7 +71,8 @@
             <Label fx:id="admUsername" blendMode="COLOR_BURN" layoutX="100.0" layoutY="106.0" prefHeight="28.0" prefWidth="154.0">
                <font>
                   <Font name="System Bold" size="18.0" />
-               </font></Label>
+               </font>
+            </Label>
          </children>
       </AnchorPane>
       <!-- Client Number Pane -->
@@ -143,14 +142,22 @@
             </TextField>
          </children>
       </AnchorPane>
-      <!-- Cars Sold Today Pane -->
+      <!-- Customers Registered Over Months Pane -->
       <AnchorPane layoutX="483.0" layoutY="440.0" prefHeight="330.0" prefWidth="402.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
-            <TextField layoutX="27.0" layoutY="1.0" prefHeight="50.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="%lblmakinatsot">
+            <TextField layoutX="27.0" layoutY="1.0" prefHeight="50.0" prefWidth="273.0" style="-fx-background-color: transparent;" text="%lblCustomersRegistered">
                <font>
                   <Font name="System Bold" size="20.0" />
                </font>
             </TextField>
+            <LineChart fx:id="customersGraph" layoutX="0.0" layoutY="43.0" prefHeight="287.0" prefWidth="400.0">
+               <xAxis>
+                  <CategoryAxis label="Month" side="BOTTOM" fx:id="xAxisCustomers" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis fx:id="yAxisCustomers" label="Customers" side="LEFT" />
+               </yAxis>
+            </LineChart>
          </children>
       </AnchorPane>
    </children>

@@ -5,10 +5,12 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.VBox;
 import model.User;
 import model.carInventory;
 import service.CarsService;
@@ -45,6 +47,9 @@ public class CarsController implements Initializable {
     private ImageView showCarPhoto;
     @FXML
     private TextArea descriptionText;
+
+    @FXML
+    private VBox imageContainer;
     public void handleChooseCar(ActionEvent ae) {
 
     }
@@ -66,17 +71,33 @@ public class CarsController implements Initializable {
         });
 
     }
-    private List<String> carImages;
 
-    public List<String> getCarImages() {
-        return carImages;
-    }
-
-    public void setCarImages(List<String> carImages) {
-        this.carImages = carImages;
-    }
     @FXML
     private Pagination imagePagination;
+
+
+    private Node createImageView(String imageUrl) {
+        if (!imageUrl.startsWith("http://") && !imageUrl.startsWith("https://") && !imageUrl.startsWith("file:/")) {
+            imageUrl = "file:///" + imageUrl.replace("\\", "/");
+        }
+
+        ImageView imageView = new ImageView();
+        try {
+            imageView.setImage(new Image(imageUrl));
+        } catch (Exception e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
+        imageView.setFitHeight(showCarPhoto.getFitHeight()); // me ndrru
+        imageView.setFitWidth(showCarPhoto.getFitWidth()); // me ndrru edhe kto
+        //imageView.setPreserveRatio(true);
+        imageView.setLayoutX(showCarPhoto.getLayoutX());
+        imageView.setLayoutY(showCarPhoto.getLayoutY());
+        imageView.setX(showCarPhoto.getX());
+        imageView.setY(showCarPhoto.getY());
+        imageView.setPreserveRatio(showCarPhoto.isPreserveRatio());
+        return imageView;
+    }
+
     private void updateCarDetails(carInventory car) {
         carNameLabel.setText(car.getCarname());
         carTypeLabel.setText(car.getCartype());
@@ -84,16 +105,25 @@ public class CarsController implements Initializable {
         stockLabel.setText(String.valueOf(car.getCarstock()));
         carStatusLabel.setText(car.getCarstatus());
 
-        String imagePath = car.getCarimage();
-        if (!imagePath.startsWith("http://") && !imagePath.startsWith("https://") && !imagePath.startsWith("file:///")) {
-            imagePath = "file:///" + imagePath.replace("\\", "/"); // Replace backslashes for compatibility
-        }
-        try {
-            Image image = new Image(imagePath);
-            showCarPhoto.setImage(image);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Failed to load image: " + e.getMessage());
-        }
+        List<String> imageUrls = car.getCarImages();
+        imagePagination.setPageCount(imageUrls.size());
+        imagePagination.setPageFactory(pageIndex -> createImageView(imageUrls.get(pageIndex)));
+        /*imagePagination.setPageCount(imageUrls.size());
+        imagePagination.setPageFactory(pageIndex -> createImageView(imageUrls.get(pageIndex)));
+
+        imagePagination.setLayoutX(845);
+        imagePagination.setLayoutY(465);
+          */
+//        String imagePath = car.getCarimage();
+//        if (!imagePath.startsWith("http://") && !imagePath.startsWith("https://") && !imagePath.startsWith("file:///")) {
+//            imagePath = "file:///" + imagePath.replace("\\", "/"); // Replace backslashes for compatibility
+//        }
+//        try {
+//            Image image = new Image(imagePath);
+//            showCarPhoto.setImage(image);
+//        } catch (IllegalArgumentException e) {
+//            System.out.println("Failed to load image: " + e.getMessage());
+//        }
 
     }
 

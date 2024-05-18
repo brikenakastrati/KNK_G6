@@ -1,0 +1,5 @@
+CREATE TABLE carimages (
+    carid VARCHAR(255) NOT NULL,
+    imagepath VARCHAR(255),
+    FOREIGN KEY (carid) REFERENCES inventory(carid)
+);
