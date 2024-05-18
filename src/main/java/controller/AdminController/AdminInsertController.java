@@ -17,6 +17,7 @@ import service.CarsService;
 import java.io.File;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 public class AdminInsertController {
@@ -113,7 +114,7 @@ public class AdminInsertController {
             }
 
             Timestamp dateAdded = new Timestamp(System.currentTimeMillis());
-            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, dateAdded);
+            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, dateAdded, new ArrayList<>());
             repo.addCar(newCar);
 
 

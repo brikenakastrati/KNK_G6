@@ -13,7 +13,9 @@ import model.carInventory;
 import service.DBConnector;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -52,7 +54,8 @@ public class inventoryRepository implements inventoryRepositoryInterface {
                         resultSet.getInt("carstock"),
                         resultSet.getDouble("carprice"),
                         resultSet.getString("carstatus"),
-                        resultSet.getTimestamp("dateAdded")
+                        resultSet.getTimestamp("dateAdded"),
+                        new ArrayList<>()
                 );
                 carList.add(car);
             }
@@ -140,28 +143,37 @@ public class inventoryRepository implements inventoryRepositoryInterface {
     }
 
     public carInventory getAllCars(TableView<carInventory> cartable) throws SQLException {
-        String sql = "SELECT carid, carname, cartype, carstock, carprice, carstatus,dateAdded FROM inventory";
+        String sql = "SELECT i.*, ci.imagepath FROM inventory i LEFT JOIN carimages ci ON i.carid = ci.carid";
         try (Connection conn = DBConnector.getConnection();
              PreparedStatement pst = conn.prepareStatement(sql)) {
             ResultSet resultSet = pst.executeQuery();
+            Map<String, carInventory> cars = new HashMap<>();
             while (resultSet.next()) {
                 String carid = resultSet.getString("carid");
-                String carname = resultSet.getString("carname");
-                String cartype = resultSet.getString("cartype");
-                int stock = resultSet.getInt("carstock");
-                double carprice = resultSet.getDouble("carprice");
-                String carstatus = resultSet.getString("carstatus");
-                Timestamp dateAdded = resultSet.getTimestamp("dateAdded");
-                carInventory carinv = new carInventory(carid, carname, cartype, stock, carprice, carstatus,dateAdded);
-                cartable.getItems().add(carinv);
+                carInventory car = cars.get(carid);
+                if (car == null) {
+                    car = new carInventory(
+                            resultSet.getString("carid"),
+                            resultSet.getString("carname"),
+                            resultSet.getString("cartype"),
+                            resultSet.getInt("carstock"),
+                            resultSet.getDouble("carprice"),
+                            resultSet.getString("carstatus"),
+                            resultSet.getTimestamp("dateAdded"),
+                            new ArrayList<>()
+                    );
+                    cars.put(carid, car);
+                    cartable.getItems().add(car);
+                }
+                String imageUrl = resultSet.getString("imagepath");
+                if (imageUrl != null) {
+                    car.getCarImages().add(imageUrl);
+                }
             }
         } catch (SQLException se) {
             System.out.println("Error me i marr qeto: " + se.getMessage());
         }
         return null;
-
-
-
     }
 
     public void insertPhotoPaths(ObservableList<Photo> photos, String carId) throws SQLException {

@@ -97,7 +97,7 @@ public class CreateClientAndDeleteController implements Initializable{
         }
 
     }
-    //s
+
     @FXML
     private void handleClientsClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.ADMIN_CLIENTS_PAGE);

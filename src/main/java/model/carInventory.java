@@ -2,6 +2,7 @@ package model;
 
 import java.sql.Date;
 import java.sql.Timestamp;
+import java.util.List;
 
 public class carInventory {
     private String carid;
@@ -12,8 +13,9 @@ public class carInventory {
     private String carstatus;
 
     private Timestamp dateAdded;
+    private List<String> carImages;
 
-    public carInventory(String carid, String carname, String cartype, int carstock, double carprice, String carstatus, Timestamp dateAdded) {
+    public carInventory(String carid, String carname, String cartype, int carstock, double carprice, String carstatus, Timestamp dateAdded, List<String> carImages) {
         this.carid = carid;
         this.carname = carname;
         this.cartype = cartype;
@@ -21,6 +23,7 @@ public class carInventory {
         this.carprice = carprice;
         this.carstatus = carstatus;
         this.dateAdded = dateAdded;
+        this.carImages = carImages;
     }
 
 
@@ -66,5 +69,13 @@ public class carInventory {
 
     public void setDateAdded(Timestamp dateAdded) {
         this.dateAdded = dateAdded;
+    }
+
+
+    public List<String> getCarImages() {
+        return carImages;
+    }
+    public void setCarImages(List<String> carImages){
+        this.carImages = carImages;
     }
 }
