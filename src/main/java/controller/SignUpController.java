@@ -8,10 +8,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import model.User;
@@ -32,6 +31,41 @@ public class SignUpController {
     private PasswordField pwdConfirmPassword;
     private Stage stage;
     private Scene scene;
+    @FXML
+    private Button cancel_btn;
+    @FXML
+    private Button signup_btn;
+    @FXML
+    public void initialize() {
+        // Shtoni dëgjues për shtypjet e tastierës
+        txtUserName.setOnKeyPressed(this::handleKeyPressed);
+        txtEmail.setOnKeyPressed(this::handleKeyPressed);
+        pwdPassword.setOnKeyPressed(this::handleKeyPressed);
+        pwdConfirmPassword.setOnKeyPressed(this::handleKeyPressed);
+        cancel_btn.setOnKeyPressed(this::handleKeyPressed);
+        signup_btn.setOnKeyPressed(this::handleKeyPressed);
+    }
+    @FXML
+    private void handleKeyPressed(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            Node node = (Node) event.getSource();
+            if (node.equals(pwdConfirmPassword)) {
+                signup_btn.fire();
+            } else {
+                KeyEvent newEvent = new KeyEvent(
+                        KeyEvent.KEY_PRESSED,
+                        "",
+                        "",
+                        KeyCode.TAB,
+                        false,
+                        false,
+                        false,
+                        false
+                );
+                node.fireEvent(newEvent);
+            }
+        }
+    }
     @FXML
     private void handleSignUp(ActionEvent ae){
 

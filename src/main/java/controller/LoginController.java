@@ -3,6 +3,8 @@ package controller;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Locale;
@@ -35,7 +37,7 @@ public class LoginController {
     private TextField txtUserName;
     @FXML
     private PasswordField pwdPassword;
-
+    
     @FXML
     private void handleLoginClick(ActionEvent ae) {
         LoginUserDto loginUserData = new LoginUserDto(
