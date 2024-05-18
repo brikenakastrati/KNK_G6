@@ -4,7 +4,12 @@ import app.Navigator;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
 import service.UserService;
 
 public class ClientDashboardController {
@@ -42,6 +47,17 @@ public class ClientDashboardController {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
 
-    public void handleChangePasswordClick(ActionEvent actionEvent) {
+    public void handleChangePasswordClick() {
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("ChangePassword.fxml"));
+            Parent root = fxmlLoader.load();
+            Stage stage = new Stage();
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setTitle("Change Password");
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

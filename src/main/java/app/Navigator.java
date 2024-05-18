@@ -27,7 +27,9 @@ public class Navigator {
     public final static String MESSAGE_PAGE = "messages.fxml";
     public final static String HELP_PAGE = "help.fxml";
     public final static String CARS2_PAGE = "cars2.fxml";
+    public final static String CHANGE_PWD="ChangePwd.fxml";
     private final static String TABLE_STYLE = "Styles/table.css";
+
 
     public static void navigate(Event event, String form) {
         Node eventNode = (Node) event.getSource();

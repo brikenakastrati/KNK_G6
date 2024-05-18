@@ -1,5 +1,6 @@
 package controller.ClientController;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
@@ -57,6 +58,9 @@ public class ChangePasswordController {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+
+    public void handleChangePasswordClick(ActionEvent actionEvent) {
     }
 }
 

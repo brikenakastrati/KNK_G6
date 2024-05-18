@@ -98,7 +98,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Button layoutX="184.0" layoutY="254.0" mnemonicParsing="false" text="Click me!" />
+      <Button fx:id="btnChangePassword" layoutX="184.0" layoutY="254.0" mnemonicParsing="false" text="Click me!" />
       <Label layoutX="25.0" layoutY="258.0" text="Want to change ur password?" />
    </children>
 </AnchorPane>
