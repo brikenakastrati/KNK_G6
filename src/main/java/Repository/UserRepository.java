@@ -6,36 +6,35 @@ import model.User;
 import model.dto.CreateUserDto;
 import service.DBConnector;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class UserRepository implements UserRepositoryInterface {
 
-    public static boolean create(CreateUserDto userData){
+    public static boolean create(CreateUserDto userData) {
         Connection conn = DBConnector.getConnection();
         String query = """
-                INSERT INTO USER (username, email, salt, passwordHash,isAdmin)
-                VALUE (?, ?, ?, ?,?)
-                """;
-        //String query = "INSERT INTO USER VALUE (?, ?, ?, ?, ?)";
-        try{
+            INSERT INTO USER (username, email, salt, passwordHash, isAdmin, dateJoined)
+            VALUES (?, ?, ?, ?, ?, ?)
+            """;
+        try {
             PreparedStatement pst = conn.prepareStatement(query);
             pst.setString(1, userData.getUsername());
             pst.setString(2, userData.getEmail());
             pst.setString(3, userData.getSalt());
             pst.setString(4, userData.getPasswordHash());
-            pst.setBoolean(5,userData.get_admin_status());
+            pst.setBoolean(5, userData.get_admin_status());
+            pst.setTimestamp(6, new Timestamp(System.currentTimeMillis()));
+
             pst.execute();
             pst.close();
             conn.close();
             return true;
-        }catch (Exception e){
+        } catch (Exception e) {
+            e.printStackTrace();
             return false;
         }
-
     }
+
 
 
     public static User getByUsername(String username){
@@ -71,21 +70,22 @@ public class UserRepository implements UserRepositoryInterface {
     }
 
 
-    private static User getFromResultSet(ResultSet result){
-        try{
+    private static User getFromResultSet(ResultSet result) {
+        try {
             int id = result.getInt("id");
             String username = result.getString("username");
             String email = result.getString("email");
             String salt = result.getString("salt");
             String passwordHash = result.getString("passwordHash");
-            boolean isAdmin=result.getBoolean("isAdmin");
-            return new User(
-                    id, username, email, salt, passwordHash,isAdmin
-            );
-        }catch (Exception e){
+            boolean isAdmin = result.getBoolean("isAdmin");
+            Timestamp dateJoined = result.getTimestamp("dateJoined");  // New column
+            return new User(id, username, email, salt, passwordHash, isAdmin, dateJoined);
+        } catch (Exception e) {
+            e.printStackTrace();
             return null;
         }
     }
+
     @Override
     public User getAllUsers(TableView<User> tbl, Boolean is_admin) throws SQLException{
         String sql ="Select * from user where isadmin = ?";
@@ -100,10 +100,11 @@ public class UserRepository implements UserRepositoryInterface {
                 String salt = resultSet.getString("salt");
                 String passwordHash = resultSet.getString("passwordHash");
                 Boolean is_admins = resultSet.getBoolean("isadmin");
-                User user =new User(id, username,email,salt,passwordHash, is_admins);
+                Timestamp dateJoined = resultSet.getTimestamp("dateJoined");  // New column
+                User user = new User(id, username, email, salt, passwordHash, is_admins, dateJoined);
                 tbl.getItems().add(user);
             }
-        }catch (SQLException e) {
+        } catch (SQLException e) {
             System.out.println("Error" + e.getMessage());
         }
         return null;
