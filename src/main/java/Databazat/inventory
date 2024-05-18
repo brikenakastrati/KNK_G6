@@ -6,5 +6,5 @@ carstock int,
 carprice varchar(100),
 carstatus varchar(100),
 carimage varchar(100));
-
-alter table inventory add column dateAdded TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
+ALTER TABLE inventory
+ADD dateAdded TIMESTAMP DEFAULT CURRENT_TIMESTAMP;
