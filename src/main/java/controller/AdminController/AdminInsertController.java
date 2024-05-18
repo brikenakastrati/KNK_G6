@@ -2,40 +2,63 @@ package controller.AdminController;
 
 import Repository.inventoryRepository;
 import app.Navigator;
-import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
+import model.Photo;
 import model.carInventory;
+import service.CarsService;
 
 import java.io.File;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.util.List;
 
 public class AdminInsertController {
-    @FXML private Button btnClients, btnDashboard, btnInsert, btnLogout;
-    @FXML private TableColumn<carInventory, String> invColCarID, invColCarName, invColCarType, invColStatus;
-    @FXML private TableColumn<carInventory, Double> invColPrice;
-    @FXML private TableColumn<carInventory, Integer> invColStock;
-    @FXML private TableView<carInventory> inventoryTable;
-    @FXML private TableColumn<carInventory, Timestamp> invColDateAdded;
-    @FXML private Label lblimagepath, lblStatus;
-    @FXML private TextField txtCarID, txtCarName, txtCarStock, txtCarPrice;
-    @FXML private ComboBox<String> comboType, comboStatus;
-    @FXML private ImageView imageview;
+    @FXML
+    private Button btnImportPhotos;
+    @FXML
+    private TableColumn<Photo, String> columnPhotoPath;
+    @FXML
+    private TableView<Photo> tableViewPhotos;
+    @FXML
+    private TableColumn<carInventory, String> invColCarID, invColCarName, invColCarType, invColStatus;
+    @FXML
+    private TableColumn<carInventory, Double> invColPrice;
+    @FXML
+    private TableColumn<carInventory, Integer> invColStock;
+    @FXML
+    private TableView<carInventory> inventoryTable;
+    @FXML
+    private TableColumn<carInventory, Timestamp> invColDateAdded;
+    @FXML
+    private Label lblimagepath, lblStatus;
+    @FXML
+    private TextField txtCarID, txtCarName, txtCarStock, txtCarPrice;
+    @FXML
+    private ComboBox<String> comboType, comboStatus;
 
     private inventoryRepository repo = new inventoryRepository();
+    private CarsService carsService;
+    private ObservableList<Photo> photos;
 
+    public AdminInsertController() {
+        carsService = new CarsService();
+        photos = FXCollections.observableArrayList();
+    }
+
+    @FXML
     public void initialize() throws SQLException {
         setupTableColumns();
         loadTableData();
         setupComboBoxes();
+        columnPhotoPath.setCellValueFactory(new PropertyValueFactory<>("path"));
+        tableViewPhotos.setItems(photos);
     }
 
     private void setupTableColumns() {
@@ -59,18 +82,18 @@ public class AdminInsertController {
     }
 
     @FXML
-    private void handleImportImageClick(ActionEvent event) {
+    private void handleImportPhotos(ActionEvent event) {
         FileChooser fileChooser = new FileChooser();
-        FileChooser.ExtensionFilter imageFilter = new FileChooser.ExtensionFilter("Image Files", "*.jpg", "*.png");
-        fileChooser.getExtensionFilters().add(imageFilter);
-        File file = fileChooser.showOpenDialog(null);
+        fileChooser.setTitle("Select Photos");
+        fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Image Files", "*.png", "*.jpg", "*.jpeg"));
 
-        if (file != null) {
-            Image image = new Image(file.toURI().toString());
-            imageview.setImage(image);
-            lblimagepath.setText(file.getAbsolutePath());
-        } else {
-            lblimagepath.setText("No image selected");
+        Stage stage = (Stage) btnImportPhotos.getScene().getWindow();
+        List<File> selectedFiles = fileChooser.showOpenMultipleDialog(stage);
+
+        if (selectedFiles != null) {
+            for (File file : selectedFiles) {
+                photos.add(new Photo(file.getAbsolutePath()));
+            }
         }
     }
 
@@ -83,19 +106,24 @@ public class AdminInsertController {
             int carStock = Integer.parseInt(txtCarStock.getText().trim());
             double carPrice = Double.parseDouble(txtCarPrice.getText().trim());
             String carStatus = comboStatus.getValue();
-            String carImage = lblimagepath.getText();
 
-            if (carID.isEmpty() || carName.isEmpty() || carType == null || carStatus == null || carImage.isEmpty()) {
+            if (carID.isEmpty() || carName.isEmpty() || carType == null || carStatus == null) {
                 lblStatus.setText("Please fill all fields and select an image.");
                 return;
             }
-            imageview.setImage(null);
+
             Timestamp dateAdded = new Timestamp(System.currentTimeMillis());
-            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, carImage, dateAdded);
+            carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, dateAdded);
             repo.addCar(newCar);
+
+
+
+            // Save photos after adding the car
+            carsService.savePhotos(photos, carID);
+
             loadTableData();
             clearFields();
-            lblStatus.setText("New car added successfully!");
+            lblStatus.setText("New car and photos added successfully!");
         } catch (NumberFormatException e) {
             lblStatus.setText("Invalid number format in stock or price.");
         } catch (Exception e) {
@@ -112,6 +140,7 @@ public class AdminInsertController {
         comboStatus.getSelectionModel().clearSelection();
         lblimagepath.setText("No image selected");
         lblStatus.setText("");
+        photos.clear();
     }
 
     @FXML
@@ -119,13 +148,14 @@ public class AdminInsertController {
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
-    @FXML void handleDeleteClick(ActionEvent ae) {
+    @FXML
+    void handleDeleteClick(ActionEvent ae) {
         carInventory selectedCar = inventoryTable.getSelectionModel().getSelectedItem();
         if (selectedCar != null) {
             try {
-                repo.deleteCar(selectedCar.getCarid());
+                carsService.deleteCarAndPhotos(selectedCar.getCarid());
                 loadTableData();
-                lblStatus.setText("Car deleted successfully!");
+                lblStatus.setText("Car and associated photos deleted successfully!");
             } catch (SQLException e) {
                 lblStatus.setText("Error deleting car: " + e.getMessage());
             }
@@ -133,7 +163,6 @@ public class AdminInsertController {
             lblStatus.setText("Please select a car to delete.");
         }
     }
-
 
     @FXML
     void handleClientsClick(ActionEvent event) {
@@ -143,13 +172,15 @@ public class AdminInsertController {
     @FXML
     void handleDashboardClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.ADMIN_DASHBOARD_PAGE);
-
     }
 
+    @FXML
     public void handleInsertClick(ActionEvent actionEvent) {
-
+        Navigator.navigate(actionEvent, Navigator.ADMIN_INSERT_PAGE);
     }
-    public void handleMessageClick(ActionEvent event){
+
+    @FXML
+    public void handleMessageClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.MESSAGE_PAGE);
     }
 }

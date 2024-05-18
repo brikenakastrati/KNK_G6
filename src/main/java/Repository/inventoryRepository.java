@@ -8,6 +8,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import model.Photo;
 import model.carInventory;
 import service.DBConnector;
 
@@ -51,7 +52,6 @@ public class inventoryRepository implements inventoryRepositoryInterface {
                         resultSet.getInt("carstock"),
                         resultSet.getDouble("carprice"),
                         resultSet.getString("carstatus"),
-                        resultSet.getString("carimage"),
                         resultSet.getTimestamp("dateAdded")
                 );
                 carList.add(car);
@@ -61,7 +61,7 @@ public class inventoryRepository implements inventoryRepositoryInterface {
     }
 
     public void addCar(carInventory car) throws SQLException {
-        String query = "INSERT INTO inventory (carid, carname, cartype, carstock, carprice, carstatus, carimage, dateAdded) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        String query = "INSERT INTO inventory (carid, carname, cartype, carstock, carprice, carstatus, dateAdded) VALUES (?, ?, ?, ?, ?, ?, ?)";
         Connection connection = DBConnector.getConnection();
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, car.getCarid());
@@ -70,12 +70,11 @@ public class inventoryRepository implements inventoryRepositoryInterface {
             statement.setInt(4, car.getCarstock());
             statement.setDouble(5, car.getCarprice());
             statement.setString(6, car.getCarstatus());
-            statement.setString(7, car.getCarimage());
-            statement.setTimestamp(8, new Timestamp(System.currentTimeMillis()));
+            statement.setTimestamp(7, new Timestamp(System.currentTimeMillis()));
             statement.executeUpdate();
         }
     }
-    public Map<String, Double> getMonthlyIncome() throws SQLException {
+    public Map<String, Double> getMonthlyIncome()  {
         Map<String, Double> monthlyIncome = new HashMap<>();
         Connection connection = DBConnector.getConnection();
 
@@ -87,6 +86,8 @@ public class inventoryRepository implements inventoryRepositoryInterface {
                 double income = resultSet.getDouble("income");
                 monthlyIncome.put(month, income);
             }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
 
         return monthlyIncome;
@@ -107,8 +108,9 @@ public class inventoryRepository implements inventoryRepositoryInterface {
         }
         return 0;
     }
-    public void deleteCar(String carId) throws SQLException {
-        String query = "DELETE FROM inventory WHERE carid = ?";
+
+    public void deleteCarPhotos(String carId) throws SQLException {
+        String query = "DELETE FROM carimages WHERE carid = ?";
         Connection connection = DBConnector.getConnection();
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, carId);
@@ -116,8 +118,29 @@ public class inventoryRepository implements inventoryRepositoryInterface {
         }
     }
 
+    public void deleteCar(String carId) throws SQLException {
+        Connection connection = DBConnector.getConnection();
+        try {
+            connection.setAutoCommit(false);  // Start transaction
+
+            deleteCarPhotos(carId);  // Delete photos first
+            String query = "DELETE FROM inventory WHERE carid = ?";
+            try (PreparedStatement statement = connection.prepareStatement(query)) {
+                statement.setString(1, carId);
+                statement.executeUpdate();
+            }
+
+            connection.commit();  // Commit transaction
+        } catch (SQLException e) {
+            connection.rollback();  // Rollback transaction on error
+            throw e;
+        } finally {
+            connection.setAutoCommit(true);  // Restore auto-commit
+        }
+    }
+
     public carInventory getAllCars(TableView<carInventory> cartable) throws SQLException {
-        String sql = "SELECT carid, carname, cartype, carstock, carprice, carstatus, carimage,dateAdded FROM inventory";
+        String sql = "SELECT carid, carname, cartype, carstock, carprice, carstatus,dateAdded FROM inventory";
         try (Connection conn = DBConnector.getConnection();
              PreparedStatement pst = conn.prepareStatement(sql)) {
             ResultSet resultSet = pst.executeQuery();
@@ -128,15 +151,30 @@ public class inventoryRepository implements inventoryRepositoryInterface {
                 int stock = resultSet.getInt("carstock");
                 double carprice = resultSet.getDouble("carprice");
                 String carstatus = resultSet.getString("carstatus");
-                String carimage = resultSet.getString("carimage");
                 Timestamp dateAdded = resultSet.getTimestamp("dateAdded");
-                carInventory carinv = new carInventory(carid, carname, cartype, stock, carprice, carstatus, carimage,dateAdded);
+                carInventory carinv = new carInventory(carid, carname, cartype, stock, carprice, carstatus,dateAdded);
                 cartable.getItems().add(carinv);
             }
         } catch (SQLException se) {
             System.out.println("Error me i marr qeto: " + se.getMessage());
         }
         return null;
+
+
+
+    }
+
+    public void insertPhotoPaths(ObservableList<Photo> photos, String carId) throws SQLException {
+        Connection conn=DBConnector.getConnection();
+        String query = "INSERT INTO carimages (carid, imagepath) VALUES (?, ?)";
+        try (PreparedStatement statement = conn.prepareStatement(query)) {
+            for (Photo photo : photos) {
+                statement.setString(1, carId); // Use the car ID
+                statement.setString(2, photo.getPath());
+                statement.addBatch();
+            }
+            statement.executeBatch();
+        }
     }
 }
 

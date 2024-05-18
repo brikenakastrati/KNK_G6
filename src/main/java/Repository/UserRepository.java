@@ -7,6 +7,8 @@ import model.dto.CreateUserDto;
 import service.DBConnector;
 
 import java.sql.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserRepository implements UserRepositoryInterface {
 
@@ -143,5 +145,27 @@ public class UserRepository implements UserRepositoryInterface {
             System.out.println("Error me count usera : " + e.getMessage());
         }
         return 0;
+    }
+
+    public Map<String, Integer> getMonthlyRegistrations() {
+        String query = "SELECT DATE_FORMAT(dateJoined, '%Y-%m') AS month, COUNT(*) AS registrations " +
+                "FROM user " +
+                "GROUP BY month";
+        Map<String, Integer> monthlyRegistrations = new HashMap<>();
+Connection conn=DBConnector.getConnection();
+        try (PreparedStatement statement = conn.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                String month = resultSet.getString("month");
+                int registrations = resultSet.getInt("registrations");
+                if (month != null && !month.isEmpty()) {
+                    monthlyRegistrations.put(month, registrations);
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return monthlyRegistrations;
     }
 }

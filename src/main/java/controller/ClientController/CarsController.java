@@ -84,16 +84,16 @@ public class CarsController implements Initializable {
         stockLabel.setText(String.valueOf(car.getCarstock()));
         carStatusLabel.setText(car.getCarstatus());
 
-        String imagePath = car.getCarimage();
-        if (!imagePath.startsWith("http://") && !imagePath.startsWith("https://") && !imagePath.startsWith("file:///")) {
-            imagePath = "file:///" + imagePath.replace("\\", "/"); // Replace backslashes for compatibility
-        }
-        try {
-            Image image = new Image(imagePath);
-            showCarPhoto.setImage(image);
-        } catch (IllegalArgumentException e) {
-            System.out.println("Failed to load image: " + e.getMessage());
-        }
+//        String imagePath = car.getCarimage();
+//        if (!imagePath.startsWith("http://") && !imagePath.startsWith("https://") && !imagePath.startsWith("file:///")) {
+//            imagePath = "file:///" + imagePath.replace("\\", "/"); // Replace backslashes for compatibility
+//        }
+//        try {
+//            Image image = new Image(imagePath);
+//            showCarPhoto.setImage(image);
+//        } catch (IllegalArgumentException e) {
+//            System.out.println("Failed to load image: " + e.getMessage());
+//        }
 
     }
 

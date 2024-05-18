@@ -10,17 +10,26 @@ import model.dto.UserDto;
 import Repository.UserRepository;
 import service.Interface.UserServiceInterface;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 public class UserService implements UserServiceInterface {
-    private UserRepositoryInterface userRepository;
+    private UserRepositoryInterface userRepo;
+
     public UserService(){
-    this.userRepository = new UserRepository();
+    this.userRepo = new UserRepository();
     }
     public int countUsers() throws SQLException{
-        return userRepository.countUsers();
+        return userRepo.countUsers();
     }
-
+    @Override
+    public Map<String, Integer> getMonthlyRegistrations()  {
+        return userRepo.getMonthlyRegistrations();
+    }
 
     public static String username; //Getting the username for the admin and client display
 
@@ -100,11 +109,16 @@ public class UserService implements UserServiceInterface {
 
     @Override
     public void fillUserTable(TableView<User> tbl, Boolean is_admin) throws SQLException {
-        this.userRepository.getAllUsers(tbl, is_admin);
+        this.userRepo.getAllUsers(tbl, is_admin);
     }
     @Override
     public void deleteUser(int id) throws SQLException {
-        this.userRepository.deleteUser(id);
+        this.userRepo.deleteUser(id);
     }
+
+
+
+
 }
+
 
