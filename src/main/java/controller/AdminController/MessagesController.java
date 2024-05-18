@@ -48,7 +48,7 @@ public class MessagesController {
         // Database connection details
         String url = "jdbc:mysql://localhost:3306/knk2024";
         String user = "root";
-        String password = "afrimymeri12";
+        String password = "2302";
 
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             String query = "SELECT id, first_name, last_name, message FROM messages";
@@ -86,7 +86,7 @@ public class MessagesController {
 
     @FXML
     private void handleDashboardClick(ActionEvent ae) {
-        // This method seems redundant if it just navigates to the same page
+        Navigator.navigate(ae, Navigator.ADMIN_DASHBOARD_PAGE);
     }
 
     @FXML

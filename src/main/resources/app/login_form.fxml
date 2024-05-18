@@ -27,7 +27,7 @@
          <font>
             <Font size="14.0" />
          </font></Label>
-      <Button fx:id="login_btn" layoutX="204.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="Login">
+      <Button fx:id="login_btn" layoutX="204.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%login_btn">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -35,7 +35,7 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button fx:id="signupbtn" layoutX="323.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="Login As Admin" underline="true">
+      <Button fx:id="loginasadmin_btn" layoutX="323.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%loginasadmin_btn"  underline="true">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>

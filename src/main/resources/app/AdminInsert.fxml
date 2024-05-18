@@ -19,35 +19,35 @@
             <TableColumn fx:id="invColDateAdded" prefWidth="112.7999267578125" text="Date Added" />
          </columns>
       </TableView>
-      <Label layoutX="70.0" layoutY="538.0" prefHeight="27.0" prefWidth="57.0" text="Car ID:">
+      <Label layoutX="70.0" layoutY="538.0" prefHeight="27.0" prefWidth="57.0" text="%CarID">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="txtCarID" layoutX="137.0" layoutY="538.0" prefHeight="27.0" prefWidth="120.0" />
-      <Label layoutX="41.0" layoutY="577.0" prefHeight="28.0" prefWidth="87.0" text="Car Name:">
+      <Label layoutX="41.0" layoutY="577.0" prefHeight="28.0" prefWidth="87.0" text="%CarName">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <TextField fx:id="txtCarName" layoutX="137.0" layoutY="578.0" prefHeight="18.0" prefWidth="120.0" />
-      <Label layoutX="45.0" layoutY="612.0" prefHeight="28.0" prefWidth="80.0" text="Car Type:">
+      <Label layoutX="45.0" layoutY="612.0" prefHeight="28.0" prefWidth="80.0" text="%CarType">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
       <ComboBox fx:id="comboType" layoutX="137.0" layoutY="613.0" prefHeight="26.0" prefWidth="120.0" promptText="Choose.." />
-      <Label layoutX="309.0" layoutY="538.0" prefHeight="28.0" prefWidth="80.0" text="Car Stock:">
+      <Label layoutX="309.0" layoutY="538.0" prefHeight="28.0" prefWidth="80.0" text="%CarStock">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="311.0" layoutY="577.0" prefHeight="28.0" prefWidth="76.0" text="Car Price:">
+      <Label layoutX="311.0" layoutY="577.0" prefHeight="28.0" prefWidth="76.0" text="%CarPrice">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Label layoutX="305.0" layoutY="611.0" prefHeight="28.0" prefWidth="87.0" text="Car Status:">
+      <Label layoutX="305.0" layoutY="611.0" prefHeight="28.0" prefWidth="87.0" text="%CarStatus">
          <font>
             <Font size="18.0" />
          </font>
@@ -86,22 +86,22 @@
       </Label>
       <AnchorPane layoutY="-6.0" opacity="0.98" prefHeight="98.0" prefWidth="900.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;">
          <children>
-            <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
+            <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="%btnDashboard">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
+            <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="%btnInsert">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
+            <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="%btnClients">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
+            <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="%btnMessages">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
@@ -111,7 +111,7 @@
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnLogout" layoutX="793.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="LogOut">
+            <Button fx:id="btnLogout" layoutX="793.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="%btnLogOut">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>

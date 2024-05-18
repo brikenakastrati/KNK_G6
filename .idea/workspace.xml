@@ -5,15 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="style">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM_[Changes]/shelved.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM_[Changes]/shelved.patch" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM_[Changes]/shelved.patch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databazat/inventory" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databazat/inventory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databazat/messages" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databazat/messages" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Databazat/user" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Databazat/user" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Interface/UserRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Interface/UserRepositoryInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/Interface/inventoryRepositoryInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/Interface/inventoryRepositoryInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/knk_g6/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/knk_g6/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/knk_g6/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/knk_g6/HelloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/MessagesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MessageSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MessageSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/carInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/carInventory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/LoginUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/LoginUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/UpdateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/UpdateUserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/filter/UserFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/filter/UserFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/CarsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CarsService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Interface/UserServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Interface/UserServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/Interface/inventoryServiceInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/Interface/inventoryServiceInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/LoginResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/LoginResult.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/PasswordHasher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PasswordHasher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/button.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/table.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/table.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/create_user_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/create_user_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/knk_g6/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/knk_g6/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -177,6 +234,8 @@
       <workItem from="1715961469600" duration="671000" />
       <workItem from="1715962390640" duration="4204000" />
       <workItem from="1715969898975" duration="4060000" />
+      <workItem from="1716046755468" duration="1966000" />
+      <workItem from="1716053440921" duration="3789000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
