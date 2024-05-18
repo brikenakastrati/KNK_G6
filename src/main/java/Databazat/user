@@ -7,3 +7,5 @@ CREATE TABLE user (
     isadmin boolean-- 0 for false, 1 for true
 
 );
+
+alter table user add column dateJoined TIMESTAMP DEFAULT CURRENT_TIMESTAMP;

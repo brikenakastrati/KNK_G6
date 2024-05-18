@@ -48,7 +48,7 @@ public class MessagesController {
         // Database connection details
         String url = "jdbc:mysql://localhost:3306/knk2024";
         String user = "root";
-        String password = "2302";
+        String password = "afrimymeri12";
 
         try (Connection connection = DriverManager.getConnection(url, user, password)) {
             String query = "SELECT id, first_name, last_name, message FROM messages";

@@ -16,6 +16,7 @@ import service.UserService;
 
 import java.net.URL;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -38,6 +39,8 @@ public class CreateClientAndDeleteController implements Initializable{
     private TableColumn<User, String> username;
     @FXML
     private TableColumn<User, String> salt;
+    @FXML
+    private TableColumn<User, Timestamp> datejoined;
 
     public CreateClientAndDeleteController() {
         this.userService = new UserService();
@@ -189,6 +192,7 @@ public class CreateClientAndDeleteController implements Initializable{
         this.id.setCellValueFactory(new PropertyValueFactory<User, Integer>("id"));
         this.username.setCellValueFactory(new PropertyValueFactory<User, String>("username"));
         this.salt.setCellValueFactory(new PropertyValueFactory<User, String>("salt"));
+        this.datejoined.setCellValueFactory(new PropertyValueFactory<User, Timestamp>("dateJoined"));
         try {
             this.userService.fillUserTable(this.usertable, false);
             this.userlist = this.usertable.getItems();

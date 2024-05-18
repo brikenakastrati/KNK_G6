@@ -56,7 +56,7 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <Button fx:id="deleteBtn" layoutX="698.0" layoutY="612.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="36.0" prefWidth="112.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 2px; -fx-border-width: 2px; -fx-border-color: #A9A9A9; -fx-border-radius: 2px;" stylesheets="@../Styles/button.css" text="DELETE">
+      <Button fx:id="deleteBtn" layoutX="625.0" layoutY="612.0" mnemonicParsing="false" onAction="#deleteUser" prefHeight="36.0" prefWidth="112.0" style="-fx-background-color: #D3D3D3; -fx-background-radius: 2px; -fx-border-width: 2px; -fx-border-color: #A9A9A9; -fx-border-radius: 2px;" stylesheets="@../Styles/button.css" text="DELETE">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
@@ -82,16 +82,17 @@
             <Font size="16.0" />
          </font>
       </Label>
-      <Button fx:id="createclientbutton" layoutX="66.0" layoutY="550.0" mnemonicParsing="false" onAction="#handleCreateClient" prefHeight="38.0" prefWidth="175.0" style="-fx-background-color: #D3D3D3; -fx-text-fill: #333333; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-color: #A9A9A9; -fx-border-width: 2px;" stylesheets="@../Styles/button.css" text="Create New Client:">
+      <Button fx:id="createclientbutton" layoutX="65.0" layoutY="612.0" mnemonicParsing="false" onAction="#handleCreateClient" prefHeight="38.0" prefWidth="175.0" style="-fx-background-color: #D3D3D3; -fx-text-fill: #333333; -fx-border-radius: 5px; -fx-background-radius: 5px; -fx-border-color: #A9A9A9; -fx-border-width: 2px;" stylesheets="@../Styles/button.css" text="Create New Client:">
          <font>
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="usertable" layoutX="569.0" layoutY="153.0" onMousePressed="#getIdPressed" prefHeight="406.0" prefWidth="317.0" style="-fx-background-color: #f0f0f0; -fx-table-header-border-color: transparent; -fx-border-radius: 10;" stylesheets="@../Styles/table.css">
+      <TableView fx:id="usertable" layoutX="430.0" layoutY="150.0" onMousePressed="#getIdPressed" prefHeight="406.0" prefWidth="502.0" style="-fx-background-color: #f0f0f0; -fx-table-header-border-color: transparent; -fx-border-radius: 10;" stylesheets="@../Styles/table.css">
         <columns>
           <TableColumn fx:id="id" prefWidth="64.79998779296875" text="ID:" />
           <TableColumn fx:id="username" prefWidth="105.599853515625" text="%lblUsername" />
             <TableColumn fx:id="salt" prefWidth="131.19989013671875" text="%lblSaltPassword" />
+            <TableColumn fx:id="datejoined" prefWidth="176.0" text="Date joined" />
         </columns>
       </TableView>
       <TextField fx:id="txtemail" layoutX="56.0" layoutY="308.0" prefHeight="31.0" prefWidth="194.0" style="-fx-background-color: #a9a9a9; -fx-border-color: black; -fx-border-width: 0px 0px 2px 0px;" />
