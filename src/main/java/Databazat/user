@@ -7,3 +7,4 @@ CREATE TABLE user (
     isadmin boolean-- 0 for false, 1 for true
 
 );
+ALTER TABLE user ADD COLUMN dateJoined DATE;
