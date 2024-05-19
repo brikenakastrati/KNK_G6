@@ -88,6 +88,40 @@ public class UserRepository implements UserRepositoryInterface {
         }
     }
 
+    public static boolean updatePassword(int userId, String newSalt, String newHashedPassword) {
+        String query = "UPDATE USER SET salt = ?, passwordHash = ? WHERE id = ?";
+        try (Connection conn = DBConnector.getConnection();
+             PreparedStatement pst = conn.prepareStatement(query)) {
+            pst.setString(1, newSalt);
+            pst.setString(2, newHashedPassword);
+            pst.setInt(3, userId);
+
+            int rowsUpdated = pst.executeUpdate();
+            return rowsUpdated > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
+    public static User getById(int userId) {
+        String query = "SELECT * FROM USER WHERE id = ?";
+        Connection connection = DBConnector.getConnection();
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            pst.setInt(1, userId);
+            ResultSet result = pst.executeQuery();
+            if(result.next()) {
+                return getFromResultSet(result);
+            }
+            return null;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 
     @Override
     public User getAllUsers(TableView<User> tbl, Boolean is_admin) throws SQLException{

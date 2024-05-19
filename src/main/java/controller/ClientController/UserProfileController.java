@@ -26,5 +26,6 @@ public class UserProfileController {
         UserService userService = new UserService(); // Përveçojini në shërbimin tuaj të ndërfaqes së përdoruesit
 
     }
+
 }
 
