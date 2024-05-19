@@ -21,7 +21,7 @@ public class MessageSaver {
             pstmt.setString(3, message);
 
             pstmt.executeUpdate();
-        } catch (SQLException e) {
+        }    catch (SQLException e) {
             e.printStackTrace();
         }
     }
