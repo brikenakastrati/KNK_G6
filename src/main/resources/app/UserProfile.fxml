@@ -1,0 +1,28 @@
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="model.dto.ChangeUserPasswordDto"
+            prefHeight="400.0" prefWidth="600.0">
+
+
+    <Label text="Ndrysho Fjalëkalimin " layoutX="200" layoutY="50" />
+
+
+
+
+    <Label text="Fjalëkalimi Aktual:" layoutX="100" layoutY="150" />
+    <PasswordField fx:id="txtCurrentPassword" layoutX="200" layoutY="150" />
+
+
+    <Label text="Fjalëkalimi i Ri:" layoutX="100" layoutY="200" />
+    <PasswordField fx:id="txtNewPassword" layoutX="200" layoutY="200" />
+
+
+    <Button text="Ruaj Ndryshimet" layoutX="250" layoutY="250" onAction="#saveChanges" />
+
+</AnchorPane>

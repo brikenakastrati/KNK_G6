@@ -28,7 +28,7 @@ public class Navigator {
     public final static String HELP_PAGE = "help.fxml";
     public final static String CARS2_PAGE = "cars2.fxml";
     public final static String BUY_NOW_PAGE = "BuyNow.fxml";
-
+public final static String CLIENT_PROFILE_PAGE = "UserProfile.fxml";
     public static void navigate(Event event, String form) {
         Node eventNode = (Node) event.getSource();
         Stage stage = (Stage) eventNode.getScene().getWindow();

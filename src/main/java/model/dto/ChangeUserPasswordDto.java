@@ -1,5 +1,7 @@
 package model.dto;
 
+import javafx.event.ActionEvent;
+
 public class ChangeUserPasswordDto {
     private int id;
     private String currentPassword;
@@ -28,5 +30,8 @@ public class ChangeUserPasswordDto {
 
     public String getConfirmNewPassword() {
         return confirmNewPassword;
+    }
+
+    public void saveChanges(ActionEvent actionEvent) {
     }
 }

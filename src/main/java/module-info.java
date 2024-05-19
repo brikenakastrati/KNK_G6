@@ -14,5 +14,6 @@ module com.example.knk_g6 {
     opens controller to javafx.fxml;
     opens controller.AdminController to javafx.fxml;
     opens controller.ClientController to javafx.fxml;
+    exports model;
 
 }

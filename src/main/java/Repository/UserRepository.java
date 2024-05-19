@@ -88,6 +88,7 @@ public class UserRepository implements UserRepositoryInterface {
         }
     }
 
+
     @Override
     public User getAllUsers(TableView<User> tbl, Boolean is_admin) throws SQLException{
         String sql ="Select * from user where isadmin = ?";

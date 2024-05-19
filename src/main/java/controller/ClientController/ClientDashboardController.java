@@ -48,4 +48,7 @@ public class ClientDashboardController {
     }
 
 
+    public void handleProfileClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent, Navigator.CLIENT_PROFILE_PAGE);
+    }
 }

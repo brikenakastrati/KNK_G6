@@ -63,6 +63,16 @@
       </TableView>
       <AnchorPane layoutX="-8.0" layoutY="-6.0" prefHeight="111.0" prefWidth="987.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
+            <ImageView fx:id="btnProfileImage" layoutX="810.0" layoutY="56.0" fitHeight="35.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleProfileClick">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
+
+
             <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
