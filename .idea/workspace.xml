@@ -5,9 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Fixed image, pagination for cars photos and added gave form to the buy now page">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/MessageSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MessageSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/filter/UserFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,8 +136,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-a618e4d4" />
       </set>
     </attachedChunks>
   </component>
