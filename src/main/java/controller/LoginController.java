@@ -37,7 +37,28 @@ public class LoginController {
     private TextField txtUserName;
     @FXML
     private PasswordField pwdPassword;
-    
+
+
+    @FXML
+    public void initialize() {
+        // Add a key event handler to switch focus on Tab key press
+        txtUserName.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.TAB) {
+                pwdPassword.requestFocus();
+                event.consume(); // Prevent the default Tab behavior
+            }
+        });
+
+        pwdPassword.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
+            if (event.getCode() == KeyCode.ENTER) {
+                handleLoginClick(new ActionEvent(txtUserName, null)); // Provide correct source
+                event.consume(); // Prevent the default Enter behavior
+            }
+        });
+    }
+
+
+
     @FXML
     private void handleLoginClick(ActionEvent ae) {
         LoginUserDto loginUserData = new LoginUserDto(
