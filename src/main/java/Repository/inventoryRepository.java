@@ -188,6 +188,19 @@ public class inventoryRepository implements inventoryRepositoryInterface {
             statement.executeBatch();
         }
     }
+    public void decreaseStock(String carid) throws SQLException {
+        String sql = "UPDATE inventory SET carstock = carstock - 1 WHERE carid = ? and carstock > 0";
+        Connection connection = DBConnector.getConnection();
+        try(PreparedStatement pst = connection.prepareStatement(sql)) {
+            pst.setString(1,carid);
+            int affectedRows = pst.executeUpdate();
+            if (affectedRows ==0 ){
+                throw new SQLException("UPDATEING STOCK FAILEDDD!!!");
+            }
+        }catch (SQLException se) {
+            throw new RuntimeException("Failed to update car stock: "+ se.getMessage(), se);
+        }
+    }
 }
 
 

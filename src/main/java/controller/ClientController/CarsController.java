@@ -131,10 +131,26 @@ public class CarsController implements Initializable {
     }
 
     public void handleBuynow(ActionEvent ae) {
-        if (BuyNowService.getInstance().getSelectedCar() == null) {
-            System.out.println("Please select a car.");
+        carInventory selectedCar = BuyNowService.getInstance().getSelectedCar();
+        if (selectedCar == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Selection Missing");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a car first.");
+            alert.showAndWait();
             return;
         }
+
+        String status = selectedCar.getCarstatus();
+        if ("Sold".equals(status) || "Out of Stock".equals(status)) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Unavailable Car");
+            alert.setHeaderText(null);
+            alert.setContentText("This car is " + status + " and cannot be purchased.");
+            alert.showAndWait();
+            return;
+        }
+
         Navigator.navigate(ae, Navigator.BUY_NOW_PAGE);
     }
 
