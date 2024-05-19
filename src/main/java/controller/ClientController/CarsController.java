@@ -11,10 +11,10 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import model.User;
 import model.carInventory;
 import service.CarsService;
 import service.Interface.inventoryServiceInterface;
+import service.BuyNowService;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -47,7 +47,8 @@ public class CarsController implements Initializable {
     private ImageView showCarPhoto;
     @FXML
     private TextArea descriptionText;
-
+    @FXML
+    private Button buynowbutton;
     @FXML
     private VBox imageContainer;
     public void handleChooseCar(ActionEvent ae) {
@@ -105,6 +106,8 @@ public class CarsController implements Initializable {
         stockLabel.setText(String.valueOf(car.getCarstock()));
         carStatusLabel.setText(car.getCarstatus());
 
+        BuyNowService.getInstance().setSelectedCar(car);
+
         List<String> imageUrls = car.getCarImages();
         imagePagination.setPageCount(imageUrls.size());
         imagePagination.setPageFactory(pageIndex -> createImageView(imageUrls.get(pageIndex)));
@@ -127,6 +130,13 @@ public class CarsController implements Initializable {
 
     }
 
+    public void handleBuynow(ActionEvent ae) {
+        if (BuyNowService.getInstance().getSelectedCar() == null) {
+            System.out.println("Please select a car.");
+            return;
+        }
+        Navigator.navigate(ae, Navigator.BUY_NOW_PAGE);
+    }
 
     public void handleDashboardClick(ActionEvent ae) {
     Navigator.navigate(ae, Navigator.HOME_PAGE);

@@ -9,6 +9,8 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import model.Message;
+import service.DBConnector;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -45,12 +47,7 @@ public class MessagesController {
     private ObservableList<Message> getMessages() {
         ObservableList<Message> messages = FXCollections.observableArrayList();
 
-        // Database connection details
-        String url = "jdbc:mysql://localhost:3306/knk2024";
-        String user = "root";
-        String password = "2302";
-
-        try (Connection connection = DriverManager.getConnection(url, user, password)) {
+        try (Connection connection = DBConnector.getConnection()) {
             String query = "SELECT id, first_name, last_name, message FROM messages";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);

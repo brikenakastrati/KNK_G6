@@ -106,10 +106,11 @@
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-      <VBox fx:id="imageContainer" layoutX="713.0" layoutY="127.0" alignment="CENTER" prefHeight="355.0" prefWidth="353.0">
+      <VBox fx:id="imageContainer" alignment="CENTER" layoutX="713.0" layoutY="127.0" prefHeight="355.0" prefWidth="353.0">
 
               <ImageView fx:id="showCarPhoto" fitHeight="283.0" fitWidth="337.0" pickOnBounds="true" preserveRatio="true" />
               <Pagination fx:id="imagePagination" currentPageIndex="0" pageCount="0" />
       </VBox>
+      <Button fx:id="buynowbutton" layoutX="88.0" layoutY="702.0" mnemonicParsing="false" onAction="#handleBuynow" prefHeight="37.0" prefWidth="83.0" text="Buy now" />
     </children>
 </AnchorPane>

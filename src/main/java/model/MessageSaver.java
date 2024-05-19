@@ -1,5 +1,7 @@
 package model;
 
+import service.DBConnector;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -7,14 +9,11 @@ import java.sql.SQLException;
 
 public class MessageSaver {
 
-    private static final String URL = "jdbc:mysql://localhost:3306/knk2024";
-    private static final String USER = "root";
-    private static final String PASSWORD = "2302";
 
     public static void saveMessage(String firstName, String lastName, String message) {
         String insertSQL = "INSERT INTO messages (first_name, last_name, message) VALUES (?, ?, ?)";
 
-        try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
+        try (Connection conn = DBConnector.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(insertSQL)) {
 
             pstmt.setString(1, firstName);
