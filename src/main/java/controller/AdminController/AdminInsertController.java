@@ -79,7 +79,7 @@ public class AdminInsertController {
 
     private void setupComboBoxes() {
         comboType.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
-        comboStatus.getItems().addAll("Available", "Sold", "Out of Stock");
+        comboStatus.getItems().addAll("Available");
     }
 
     @FXML

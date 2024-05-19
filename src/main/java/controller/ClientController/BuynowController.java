@@ -96,13 +96,11 @@ public class BuynowController implements Initializable {
 
             try {
                 DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/yy");
-                YearMonth expYearMonth = YearMonth.parse(dateExpire, formatter);  // Parse the year and month directly
-                LocalDate expDate = expYearMonth.atEndOfMonth();  // Get the last day of the month for the expiration date
+                YearMonth expYearMonth = YearMonth.parse(dateExpire, formatter);
+                LocalDate expDate = expYearMonth.atEndOfMonth();
 
-                // Get the last day of the current month
                 LocalDate today = LocalDate.now();
                 LocalDate endOfMonthToday = today.withDayOfMonth(today.getMonth().length(today.isLeapYear()));
-
 
                 if (expDate.isBefore(endOfMonthToday)) {
                     return false;

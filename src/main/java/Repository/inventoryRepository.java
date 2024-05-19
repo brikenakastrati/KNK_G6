@@ -189,16 +189,44 @@ public class inventoryRepository implements inventoryRepositoryInterface {
         }
     }
     public void decreaseStock(String carid) throws SQLException {
-        String sql = "UPDATE inventory SET carstock = carstock - 1 WHERE carid = ? and carstock > 0";
         Connection connection = DBConnector.getConnection();
-        try(PreparedStatement pst = connection.prepareStatement(sql)) {
-            pst.setString(1,carid);
-            int affectedRows = pst.executeUpdate();
-            if (affectedRows ==0 ){
-                throw new SQLException("UPDATEING STOCK FAILEDDD!!!");
+        try {
+            // Qekjo osht tu u perdor per faktin qe me e ekzekutu dy queryit si ni single transaction
+            connection.setAutoCommit(false);
+
+            // Maspari e kqyr stokun aktual
+            String checkStockSql = "SELECT carstock FROM inventory WHERE carid = ?";
+            try (PreparedStatement checkStockStmt = connection.prepareStatement(checkStockSql)) {
+                checkStockStmt.setString(1, carid);
+                ResultSet rs = checkStockStmt.executeQuery();
+                if (rs.next() && rs.getInt("carstock") == 1) {
+                    //Arsyja se pse o ka e merr kur tosht 1 osht se kur t dekrementohet tani i bjen 0 kshtuqe i duhet me e ndrru statusin etvoaila
+                    String updateStatusSql = "UPDATE inventory SET carstatus = 'Sold', carstock = carstock - 1 WHERE carid = ? AND carstock > 0";
+                    try (PreparedStatement updateStatusStmt = connection.prepareStatement(updateStatusSql)) {
+                        updateStatusStmt.setString(1, carid);
+                        int affectedRows = updateStatusStmt.executeUpdate();
+                        if (affectedRows == 0) {
+                            throw new SQLException("Updating status to 'Sold' failed, no rows affected.");
+                        }
+                    }
+                } else {
+                    // Ktu tasht nese sosht 1 veq e zbret per njo normal qysh u kan ma perpara
+                    String updateStockSql = "UPDATE inventory SET carstock = carstock - 1 WHERE carid = ? AND carstock > 0";
+                    try (PreparedStatement updateStockStmt = connection.prepareStatement(updateStockSql)) {
+                        updateStockStmt.setString(1, carid);
+                        updateStockStmt.executeUpdate();
+                    }
+                }
             }
-        }catch (SQLException se) {
-            throw new RuntimeException("Failed to update car stock: "+ se.getMessage(), se);
+            // Qetu nese nevojitet dmth nese osht 1 i decrease te dyjat n 0 dmth me mundsu qe dy ndryshimet me u kry nt njejten koh
+            connection.commit();
+        } catch (SQLException e) {
+            // Qysh po shihet ktu rollbacki perdoret qe nese ka ndodh naj error athere me i undo veprimet puna qe mos mja pshtill databazes
+            connection.rollback();
+            throw new RuntimeException("Failed to update car stock or status: " + e.getMessage(), e);
+        } finally {
+            // Qetu tasht kjo kthehet apet true puna qe masi qe u kry qiky 'single-transactioni' duhet me u kthy n gjendje normale
+            connection.setAutoCommit(true);
         }
     }
 }
