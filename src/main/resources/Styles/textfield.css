@@ -1,0 +1,81 @@
+.custom-text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: #333;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #888;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.custom-text-field:focused {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #005cbf;
+    -fx-border-width: 2px;
+}
+
+.custom-text-field:hover {
+    -fx-background-color: #e8e8e8;
+}
+
+.custom-text-field:disabled {
+    -fx-background-color: #d3d3d3;
+    -fx-border-color: #aaaaaa;
+    -fx-text-fill: #666;
+}
+/*pagination style*/
+
+.custom-pagination .control-box {
+    -fx-background-color: #f9f9f9;
+    -fx-padding: 10px;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.custom-pagination .pagination-control {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px 10px;
+    -fx-cursor: hand;
+}
+
+.custom-pagination .pagination-control:armed,
+.custom-pagination .pagination-control:hover {
+    -fx-background-color: #d0d0d0;
+}
+
+.custom-pagination .pagination-control:selected {
+    -fx-background-color: #005cbf;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #005cbf;
+}
+
+.custom-pagination .page-information {
+    -fx-font-size: 14px;
+    -fx-text-fill: #555;
+    -fx-padding: 5px 10px;
+}
+
+.custom-pagination .increment-arrow,
+.custom-pagination .decrement-arrow {
+    -fx-background-color: #e0e0e0;
+    -fx-border-color: #cccccc;
+    -fx-border-width: 1px;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+    -fx-padding: 5px;
+}
+
+.custom-pagination .increment-arrow:armed,
+.custom-pagination .decrement-arrow:armed,
+.custom-pagination .increment-arrow:hover,
+.custom-pagination .decrement-arrow:hover {
+    -fx-background-color: #d0d0d0;
+}

@@ -7,6 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import model.carInventory;
 import service.BuyNowService;
+import service.UserService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -18,6 +19,8 @@ public class BuynowController implements Initializable {
     private Label priceLabel;
     @FXML
     private Label stockLabel;
+    @FXML
+    private Label usernameLabel;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -25,9 +28,13 @@ public class BuynowController implements Initializable {
         nameLabel.setText(car.getCarname());
         priceLabel.setText(String.format("%.2f", car.getCarprice()));
         stockLabel.setText(String.valueOf(car.getCarstock()));
+        String user = UserService.getUsername();
+        usernameLabel.setText(user.substring(0, 1).toUpperCase() + user.substring(1));
     }
 
+    public void handleBuyCarButton() {
 
+    }
 
 
     public void handleDashboardClick(ActionEvent ae) {
