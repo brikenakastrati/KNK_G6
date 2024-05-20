@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added only a half of the functionality of the buy now feature(missing changeing the car status when carstock=0)">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added status change after (carstock=0)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/inventoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/BuynowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/BuynowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,7 +179,8 @@
       <workItem from="1716049354752" duration="5612000" />
       <workItem from="1716078479815" duration="2629000" />
       <workItem from="1716117486307" duration="4321000" />
-      <workItem from="1716158947664" duration="2646000" />
+      <workItem from="1716158947664" duration="10143000" />
+      <workItem from="1716217027688" duration="2832000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -440,7 +446,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716159532532</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Added status change after (carstock=0)">
+      <option name="closed" value="true" />
+      <created>1716161969251</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1716161969251</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -458,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Admin Dashboard Created Sign up Controller fixed" />
     <MESSAGE value="AdminDashboard Edit" />
     <MESSAGE value="ClientDashboar Edited" />
     <MESSAGE value="Cars Created and Edited, ClientDashboard Edited" />
@@ -483,7 +496,8 @@
     <MESSAGE value="style" />
     <MESSAGE value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
     <MESSAGE value="Added only a half of the functionality of the buy now feature(missing changeing the car status when carstock=0)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added only a half of the functionality of the buy now feature(missing changeing the car status when carstock=0)" />
+    <MESSAGE value="Added status change after (carstock=0)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added status change after (carstock=0)" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

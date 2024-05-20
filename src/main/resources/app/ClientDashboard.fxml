@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.PointLight?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.effect.Lighting?>
-<?import javafx.scene.effect.Shadow?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.ClientDashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="976.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.ClientDashboardController">
    <children>
       <AnchorPane layoutX="25.0" layoutY="119.0" prefHeight="114.0" prefWidth="191.0" style="-fx-background-color: #777; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2;">
          <effect>
@@ -53,17 +45,9 @@
             </Label>
          </children>
       </AnchorPane>
-      <TableView layoutX="269.0" layoutY="128.0" prefHeight="237.0" prefWidth="351.0">
-         <columns>
-            <TableColumn prefWidth="90.00006103515625" text="%CarName" />
-            <TableColumn prefWidth="82.00006103515625" text="%CarModel" />
-            <TableColumn prefWidth="88.66668701171875" text="%CarYear" />
-            <TableColumn prefWidth="87.33333333333331" text="%CarPrice" />
-         </columns>
-      </TableView>
       <AnchorPane layoutX="-8.0" layoutY="-6.0" prefHeight="111.0" prefWidth="987.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
-            <ImageView fx:id="btnProfileImage" layoutX="810.0" layoutY="56.0" fitHeight="35.0" fitWidth="83.0" pickOnBounds="true" preserveRatio="true" onMouseClicked="#handleProfileClick">
+            <ImageView fx:id="btnProfileImage" fitHeight="35.0" fitWidth="83.0" layoutX="810.0" layoutY="56.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../Images/profile.png" />
                </image>

@@ -33,7 +33,7 @@ public class CarsController implements Initializable {
 //        comboType1.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
 //    }
 
-    //test
+
     private inventoryServiceInterface inventoryService;
     private ObservableList<carInventory> carlist;
 
@@ -175,4 +175,5 @@ public class CarsController implements Initializable {
     public void handleHelpClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.HELP_PAGE);
     }
+
 }

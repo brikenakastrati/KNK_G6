@@ -47,4 +47,8 @@ public class CostumizeController {
     public void handleHelpClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
+
+    public void handleProfileClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent, Navigator.CLIENT_PROFILE_PAGE);
+    }
 }

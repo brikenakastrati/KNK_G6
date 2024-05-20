@@ -1,29 +1,29 @@
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="model.dto.ChangeUserPasswordDto"
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController">
 
 
-    <Label text="Ndrysho Fjalëkalimin " layoutX="200" layoutY="50" />
+    <Label layoutX="200" layoutY="50" text="Ndrysho Fjalëkalimin " />
 
 
 
 
-    <Label text="Fjalëkalimi Aktual:" layoutX="100" layoutY="150" />
+    <Label layoutX="80.0" layoutY="154.0" text="Actual Password" />
     <PasswordField fx:id="txtCurrentPassword" layoutX="200" layoutY="150" />
 
 
-    <Label text="Fjalëkalimi i Ri:" layoutX="100" layoutY="200" />
+    <Label layoutX="78.0" layoutY="204.0" text="New password" />
     <PasswordField fx:id="txtNewPassword" layoutX="200" layoutY="200" />
 
+    
+    <PasswordField fx:id="txtConfirmNewPassword" layoutX="200" layoutY="250" />
 
-    <Button text="Ruaj Ndryshimet" layoutX="250" layoutY="250" onAction="#saveChanges" />
+    <Label fx:id="lblStatus" layoutX="200" layoutY="300" textFill="red" />
+
+    <Button layoutX="230.0" layoutY="296.0" onAction="#saveChanges" text="Ruaj Ndryshimet" />
+   <Label layoutX="67.0" layoutY="254.0" text="Confirm new password" />
 
 </AnchorPane>

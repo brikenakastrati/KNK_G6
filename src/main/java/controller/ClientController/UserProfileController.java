@@ -2,9 +2,13 @@ package controller.ClientController;
 
 
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import model.dto.ChangeUserPasswordDto;
 import service.UserService;
 
 public class UserProfileController {
@@ -14,18 +18,14 @@ public class UserProfileController {
     private PasswordField txtCurrentPassword;
     @FXML
     private PasswordField txtNewPassword;
+    @FXML
+    private PasswordField txtConfirmNewPassword;
+    @FXML
+    private Label lblStatus;
+
 
     @FXML
-    public void saveChanges() {
-        String name = txtName.getText();
-        String currentPassword = txtCurrentPassword.getText();
-        String newPassword = txtNewPassword.getText();
-
-        // Implementoni kodin për të ruajtur ndryshimet
-        // Për shembull, mund të thirrni një metodë në një shërbim të ndërfaqes së përdoruesit për të kryer veprimet e nevojshme.
-        UserService userService = new UserService(); // Përveçojini në shërbimin tuaj të ndërfaqes së përdoruesit
-
+    public void saveChanges(ActionEvent event) {
     }
-
 }
 
