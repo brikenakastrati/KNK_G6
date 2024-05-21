@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CostumizeController">
+<AnchorPane prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CostumizeController" onKeyPressed="#handleEnterKeyPressed" >
     <children>
       <AnchorPane prefHeight="102.0" prefWidth="1176.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
@@ -74,9 +74,9 @@
       </Label>
       <Label layoutX="88.0" layoutY="360.0" text="Lastname:" />
       <Label layoutX="108.0" layoutY="322.0" text="Name:" />
-      <TextField fx:id="txtFirstName" layoutX="151.0" layoutY="318.0" />
-      <TextField fx:id="txtLastName" layoutX="151.0" layoutY="356.0" />
+      <TextField    fx:id="txtFirstName" layoutX="151.0" layoutY="318.0" />
+      <TextField   fx:id="txtLastName" layoutX="151.0" layoutY="356.0" />
       <Label layoutX="83.0" layoutY="417.0" text="Message:" />
-      <TextArea fx:id="txtMessage" layoutX="150.0" layoutY="407.0" prefHeight="123.0" prefWidth="213.0" />
+      <TextArea   fx:id="txtMessage" layoutX="150.0" layoutY="407.0" prefHeight="123.0" prefWidth="213.0" />
     </children>
 </AnchorPane>
