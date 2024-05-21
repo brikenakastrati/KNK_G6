@@ -8,11 +8,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.TextField;
 import model.Message;
 import service.DBConnector;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
@@ -34,23 +34,36 @@ public class MessagesController {
     private TableColumn<Message, String> messageColumn;
 
     @FXML
+    private TextField firstNameFilterField;
+
+    @FXML
+    private TextField lastNameFilterField;
+
+    @FXML
     public void initialize() {
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
-
         messageColumn.setCellValueFactory(new PropertyValueFactory<>("message"));
 
-        tableView.setItems(getMessages());
+        tableView.setItems(getMessages(null, null));
     }
 
-    private ObservableList<Message> getMessages() {
+    private ObservableList<Message> getMessages(String firstNameFilter, String lastNameFilter) {
         ObservableList<Message> messages = FXCollections.observableArrayList();
 
         try (Connection connection = DBConnector.getConnection()) {
-            String query = "SELECT id, first_name, last_name, message FROM messages";
+            StringBuilder queryBuilder = new StringBuilder("SELECT id, first_name, last_name, message FROM messages WHERE 1=1");
+
+            if (firstNameFilter != null && !firstNameFilter.isEmpty()) {
+                queryBuilder.append(" AND first_name LIKE '%").append(firstNameFilter).append("%'");
+            }
+            if (lastNameFilter != null && !lastNameFilter.isEmpty()) {
+                queryBuilder.append(" AND last_name LIKE '%").append(lastNameFilter).append("%'");
+            }
+
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(query);
+            ResultSet resultSet = statement.executeQuery(queryBuilder.toString());
 
             while (resultSet.next()) {
                 int id = resultSet.getInt("id");
@@ -64,6 +77,12 @@ public class MessagesController {
         }
 
         return messages;
+    }
+    @FXML
+    private void handleResetClick(ActionEvent ae) {
+        firstNameFilterField.clear();
+        lastNameFilterField.clear();
+        tableView.setItems(getMessages(null, null));
     }
 
     @FXML
@@ -88,6 +107,6 @@ public class MessagesController {
 
     @FXML
     private void handleMessageClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
+        tableView.setItems(getMessages(firstNameFilterField.getText(), lastNameFilterField.getText()));
     }
 }
