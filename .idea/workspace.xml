@@ -4,16 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added status change after (carstock=0)">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_14_2024_4_22_PM__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added changepw functionality">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/app/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Navigator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/textfield.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/textfield.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -41,7 +35,7 @@
   }
 }</component>
   <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="2ee2acf9-cd02-4d59-92bd-9585ac24941d" />
+    <option name="defaultAccountId" value="6d12cf87-4269-42e4-a9d7-642d7995a5db" />
   </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
@@ -183,7 +177,7 @@
       <workItem from="1716158947664" duration="10143000" />
       <workItem from="1716217027688" duration="2832000" />
       <workItem from="1716247408332" duration="1911000" />
-      <workItem from="1716292917082" duration="1122000" />
+      <workItem from="1716292917082" duration="2295000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -457,7 +451,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716161969251</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Added changepw functionality">
+      <option name="closed" value="true" />
+      <created>1716294127836</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1716294127836</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,7 +477,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="AdminDashboard Edit" />
     <MESSAGE value="ClientDashboar Edited" />
     <MESSAGE value="Cars Created and Edited, ClientDashboard Edited" />
     <MESSAGE value="navigate cars fix" />
@@ -500,7 +501,8 @@
     <MESSAGE value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
     <MESSAGE value="Added only a half of the functionality of the buy now feature(missing changeing the car status when carstock=0)" />
     <MESSAGE value="Added status change after (carstock=0)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added status change after (carstock=0)" />
+    <MESSAGE value="Added changepw functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added changepw functionality" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

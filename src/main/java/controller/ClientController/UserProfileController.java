@@ -2,6 +2,7 @@ package controller.ClientController;
 
 
 
+import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -67,6 +68,30 @@ public class UserProfileController implements Initializable {
         } else {
             lblStatus.setText("Current password is incorrect.");
         }
+    }
+
+    public void handleLogoutClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
+    }
+
+    public void handleCarsClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.CARS2_PAGE);
+    }
+
+    public void handleDashboardClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.HOME_PAGE);
+    }
+
+    public void handleCustomizeClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
+    }
+
+    public void handleHelpClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.HELP_PAGE);
+    }
+
+    public void handleProfileClick(MouseEvent me) {
+
     }
 
 }
