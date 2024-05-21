@@ -11,11 +11,14 @@ import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import model.User;
 import service.UserService;
 
 public class ClientDashboardController {
     @FXML
     public Label clientUsername;
+
+    private UserService userService = new UserService();
 
     public void initialize() {
         UsernameDisplay();
@@ -50,6 +53,12 @@ public class ClientDashboardController {
 
 
     public void handleProfileClick(MouseEvent me) {
-        Navigator.navigate(me, Navigator.CLIENT_PROFILE_PAGE);
+        try {
+            User currentUser = userService.getUserByUsername(UserService.getUsername());
+            UserService.setCurrentUser(currentUser);
+            Navigator.navigate(me, Navigator.CLIENT_PROFILE_PAGE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

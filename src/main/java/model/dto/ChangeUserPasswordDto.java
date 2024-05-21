@@ -17,7 +17,6 @@ public class    ChangeUserPasswordDto {
     }
 
     public int getId() {
-
         return id;
     }
 
