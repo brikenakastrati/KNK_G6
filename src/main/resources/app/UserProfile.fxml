@@ -14,32 +14,32 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController">
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController" onKeyPressed="#handleKeyPressed">
 
 
-    <Label layoutX="529.0" layoutY="176.0" text="Change Password" />
-    <Label layoutX="434.0" layoutY="272.0" text="Actual Password">
+   <Label layoutX="529.0" layoutY="176.0" text="Change Password" />
+   <Label layoutX="434.0" layoutY="272.0" text="Actual Password">
       <font>
          <Font size="14.0" />
       </font></Label>
-    <PasswordField fx:id="txtCurrentPassword" layoutX="593.0" layoutY="269.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
+   <PasswordField fx:id="txtCurrentPassword" layoutX="593.0" layoutY="269.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
 
 
-    <Label layoutX="438.0" layoutY="334.0" text="New password">
+   <Label layoutX="438.0" layoutY="334.0" text="New password">
       <font>
          <Font size="14.0" />
       </font></Label>
-    <PasswordField fx:id="txtNewPassword" layoutX="593.0" layoutY="328.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
+   <PasswordField fx:id="txtNewPassword" layoutX="593.0" layoutY="328.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
 
-    
-    <PasswordField fx:id="txtConfirmNewPassword" layoutX="593.0" layoutY="383.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
 
-    <Label fx:id="lblStatus" layoutX="501.0" layoutY="213.0" prefHeight="27.0" prefWidth="213.0" textFill="red">
+   <PasswordField fx:id="txtConfirmNewPassword" layoutX="593.0" layoutY="383.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
+
+   <Label fx:id="lblStatus" layoutX="501.0" layoutY="213.0" prefHeight="27.0" prefWidth="213.0" textFill="red">
       <font>
          <Font name="System Bold" size="14.0" />
       </font></Label>
 
-    <Button layoutX="511.0" layoutY="470.0" onAction="#saveChanges" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Save Changes" />
+   <Button layoutX="511.0" layoutY="470.0" onAction="#saveChanges" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Save Changes" />
    <Label layoutX="415.0" layoutY="389.0" text="Confirm new password">
       <font>
          <Font size="14.0" />
@@ -66,10 +66,10 @@
                </Lighting>
             </effect>
          </PointLight>
-      
-      
-      
-          <Label fx:id="txtName" layoutX="45.0" layoutY="82.0" prefHeight="27.0" prefWidth="150.0">
+
+
+
+         <Label fx:id="txtName" layoutX="45.0" layoutY="82.0" prefHeight="27.0" prefWidth="150.0">
             <font>
                <Font name="System Bold" size="18.0" />
             </font>

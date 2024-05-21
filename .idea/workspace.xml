@@ -42,16 +42,20 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/data.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/data.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/MessageSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/MessageSaver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Photo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Photo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/UserClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/UserClient.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/carInventory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/carInventory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/ChangeUserPasswordDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/CreateUserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/LoginUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/LoginUserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/UpdateUserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/UpdateUserDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dto/UserDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/filter/UserFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/filter/UserFilter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/BuyNowService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/BuyNowService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/CarsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/CarsService.java" afterDir="false" />
@@ -72,7 +76,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Messages.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Messages.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/create_user_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/create_user_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" afterDir="false" />
@@ -123,36 +126,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.app.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_directory_selection": "C:/Users/Lenovo/IdeaProjects/KNK_G65/src/main/resources/com",
-    "last_opened_file_path": "C:/Users/HJEM/Downloads/jfoenix-9.0.10.jar",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.app.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/Lenovo/IdeaProjects/KNK_G65/src/main/resources/com&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HJEM/Downloads/jfoenix-9.0.10.jar&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Lenovo\IdeaProjects\KNK_G65\src\main\resources\Images" />
@@ -200,7 +203,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-249ae16d76d6-a618e4d4" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -246,6 +250,7 @@
       <workItem from="1716217027688" duration="2832000" />
       <workItem from="1716247408332" duration="1911000" />
       <workItem from="1716292917082" duration="2295000" />
+      <workItem from="1716296885396" duration="1239000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

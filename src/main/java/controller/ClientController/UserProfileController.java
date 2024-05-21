@@ -8,14 +8,15 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
-import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import model.User;
-import model.dto.ChangeUserPasswordDto;
 import service.UserService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
 
 public class UserProfileController implements Initializable {
     @FXML
@@ -39,6 +40,10 @@ public class UserProfileController implements Initializable {
         if (currentUser != null) {
             txtName.setText(currentUser.getUsername());
         }
+        // Set event handler for key pressed
+        txtCurrentPassword.setOnKeyPressed(this::handleKeyPressed);
+        txtNewPassword.setOnKeyPressed(this::handleKeyPressed);
+        txtConfirmNewPassword.setOnKeyPressed(this::handleKeyPressed);
     }
 
     @FXML
@@ -92,6 +97,22 @@ public class UserProfileController implements Initializable {
 
     public void handleProfileClick(MouseEvent me) {
 
+    }
+    @FXML
+    private void handleKeyPressed(KeyEvent event) {
+        if (event.getCode() == KeyCode.ENTER) {
+            System.out.println("Enter key pressed");
+            if (event.getSource() instanceof PasswordField) {
+                PasswordField source = (PasswordField) event.getSource();
+                if (source.equals(txtCurrentPassword)) {
+                    txtNewPassword.requestFocus(); // Move focus to the next field (txtNewPassword)
+                } else if (source.equals(txtNewPassword)) {
+                    txtConfirmNewPassword.requestFocus(); // Move focus to the next field (txtConfirmNewPassword)
+                } else if (source.equals(txtConfirmNewPassword)) {
+                    saveChanges(null); // Trigger saveChanges action
+                }
+            }
+        }
     }
 
 }

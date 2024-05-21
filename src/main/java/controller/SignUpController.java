@@ -117,7 +117,7 @@ public class SignUpController {
 
     }
     @FXML
-    private void handleCancel(ActionEvent ae) throws IOException {
+    private void handleCancel(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
 
     }
