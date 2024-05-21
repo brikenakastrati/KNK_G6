@@ -10,7 +10,7 @@
 
 
 
-
+    <Label fx:id="txtName"/>
     <Label layoutX="80.0" layoutY="154.0" text="Actual Password" />
     <PasswordField fx:id="txtCurrentPassword" layoutX="200" layoutY="150" />
 
@@ -21,9 +21,9 @@
     
     <PasswordField fx:id="txtConfirmNewPassword" layoutX="200" layoutY="250" />
 
-    <Label fx:id="lblStatus" layoutX="200" layoutY="300" textFill="red" />
+    <Label fx:id="lblStatus" layoutX="135.0" layoutY="300" prefHeight="18.0" prefWidth="65.0" textFill="red" />
 
-    <Button layoutX="230.0" layoutY="296.0" onAction="#saveChanges" text="Ruaj Ndryshimet" />
+    <Button layoutX="230.0" layoutY="296.0" onAction="#saveChanges" text="Save Changes" />
    <Label layoutX="67.0" layoutY="254.0" text="Confirm new password" />
 
 </AnchorPane>

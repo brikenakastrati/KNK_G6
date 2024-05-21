@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
@@ -48,6 +49,7 @@ public class Navigator {
         pane.getChildren().add(formPane);
     }
 
+
     private static Pane loadPane(String form) {
         ResourceBundle bundle = ResourceBundle.getBundle("translations.content", Locale.getDefault());
         FXMLLoader loader = new FXMLLoader(Navigator.class.getResource(form), bundle);
@@ -67,4 +69,5 @@ public class Navigator {
             return null;
         }
     }
+
 }

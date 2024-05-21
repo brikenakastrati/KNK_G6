@@ -41,7 +41,17 @@ public class UserService implements UserServiceInterface {
         username = newUsername;
     }
 
+    private static User currentUser;
+    public static User getCurrentUser() {
+        return currentUser;
+    }
 
+    public static void setCurrentUser(User user) {
+        currentUser = user;
+    }
+    public User getUserByUsername(String username) {
+        return UserRepository.getByUsername(username);
+    }
 
     public static boolean signUp(UserDto userData){
         String password = userData.getPassword();
@@ -118,31 +128,23 @@ public class UserService implements UserServiceInterface {
 
 
     public boolean changePassword(String currentPassword, String newPassword, int userId) {
-        // Gjej përdoruesin në bazën e të dhënave duke përdorur ID
         User user = UserRepository.getById(userId);
         if (user == null) {
-            // Nëse nuk gjendet përdoruesi me ID e dhënë, kthe false
             return false;
         }
 
-        // Marrja e të dhënave të nevojshme nga përdoruesi
         String salt = user.getSalt();
         String passwordHash = user.getPasswordHash();
 
-        // Kontrolloni nëse fjalëkalimi aktual përputhet me atë në bazën e të dhënave
         boolean currentPasswordMatches = PasswordHasher.compareSaltedHash(currentPassword, salt, passwordHash);
         if (!currentPasswordMatches) {
-            // Nëse fjalëkalimi aktual nuk përputhet, kthe false
             return false;
         }
 
-        // Ndryshimi i fjalëkalimit
         String newSalt = PasswordHasher.generateSalt();
         String newHashedPassword = PasswordHasher.generateSaltedHash(newPassword, newSalt);
 
-        // Përditësoni fjalëkalimin e përdoruesit në bazën e të dhënave
-        boolean updated = UserRepository.updatePassword(userId, newSalt, newHashedPassword);
-        return updated;
+        return UserRepository.updatePassword(userId, newSalt, newHashedPassword);
     }
 
 }
