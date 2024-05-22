@@ -2,20 +2,26 @@ package controller.ClientController;
 
 
 
+import Repository.PurchasesRepository;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
+import model.Purchase;
 import model.User;
 import service.UserService;
 import service.UserSession;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
 
 
@@ -30,10 +36,21 @@ public class UserProfileController implements Initializable {
     private PasswordField txtConfirmNewPassword;
     @FXML
     private Label lblStatus;
+    @FXML
+    private TableView<Purchase> buytable;
+    @FXML
+    private TableColumn<Purchase, String> carname;
+    @FXML
+    private TableColumn<Purchase, Double> carprice;
+    @FXML
+    private TableColumn<Purchase, String> buyername;
+    @FXML
+    private TableColumn<Purchase, String> purchasedate;
+
 
     private UserService userService = new UserService();
     private User currentUser;
-
+    private PurchasesRepository purchasesRepository = PurchasesRepository.getInstance();
 
     @FXML
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -41,6 +58,14 @@ public class UserProfileController implements Initializable {
         if (currentUser != null) {
             txtName.setText(currentUser.getUsername());
         }
+
+        carname.setCellValueFactory(new PropertyValueFactory<>("carName"));
+        carprice.setCellValueFactory(new PropertyValueFactory<>("carPrice"));
+        buyername.setCellValueFactory(new PropertyValueFactory<>("buyerName"));
+        purchasedate.setCellValueFactory(new PropertyValueFactory<>("purchaseDate"));
+
+        purchaseHistory();
+
         // Set event handler for key pressed
         txtCurrentPassword.setOnKeyPressed(this::handleKeyPressed);
         txtNewPassword.setOnKeyPressed(this::handleKeyPressed);
@@ -120,5 +145,10 @@ public class UserProfileController implements Initializable {
         }
     }
 
+
+    private void purchaseHistory(){
+        List<Purchase> purchases = purchasesRepository.getPurchasesByUserId(currentUser.getId());
+        buytable.getItems().setAll(purchases);
+    }
 }
 

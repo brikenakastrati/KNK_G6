@@ -1,5 +1,6 @@
 package controller.ClientController;
 
+import Repository.PurchasesRepository;
 import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -45,6 +46,9 @@ public class BuynowController implements Initializable {
 
     private UserService userService = new UserService();
 
+    private PurchasesRepository purchasesRepository = PurchasesRepository.getInstance();
+
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         car = BuyNowService.getInstance().getSelectedCar();
@@ -79,6 +83,7 @@ public class BuynowController implements Initializable {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == yes) {
                 BuyNowService.getInstance().decreaseStock(carId);
+                purchasesRepository.storePurchaseDetails(car, account, bank_nr, cvv, dateExpire);
                 Navigator.navigate(ae, Navigator.CARS2_PAGE);
             }else{
                 Navigator.navigate(ae, Navigator.CARS2_PAGE);

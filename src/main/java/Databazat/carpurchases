@@ -1,0 +1,14 @@
+CREATE TABLE CarPurchases (
+    id SERIAL PRIMARY KEY,
+    car_id VARCHAR(50),
+    car_name VARCHAR(100),
+    car_price DECIMAL(10, 2),
+    purchase_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    buyer_id INT,
+    buyer_name VARCHAR(100),
+    card_number VARCHAR(16),
+    cvv VARCHAR(3),
+    expiration_date VARCHAR(5),
+    foreign key (car_id) references inventory(carid),
+    FOREIGN KEY (buyer_id) REFERENCES User(id)
+);

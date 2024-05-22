@@ -4,6 +4,8 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.effect.Lighting?>
@@ -124,5 +126,18 @@
          </Button>
       </children>
    </AnchorPane>
+   <TableView fx:id="buytable" layoutX="552.0" layoutY="205.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
+     <columns>
+       <TableColumn fx:id="carname" prefWidth="75.0" text="Car name" />
+       <TableColumn fx:id="carprice" prefWidth="75.0" text="Car price" />
+         <TableColumn fx:id="buyername" prefWidth="109.0" text="Buyer name" />
+         <TableColumn fx:id="purchasedate" prefWidth="123.0" text="Purchase date" />
+     </columns>
+   </TableView>
+   <Label layoutX="706.0" layoutY="148.0" text="Buying History">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
 
 </AnchorPane>
