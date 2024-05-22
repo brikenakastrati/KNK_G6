@@ -13,6 +13,7 @@ import model.User;
 import model.dto.UserDto;
 import service.Interface.UserServiceInterface;
 import service.UserService;
+import service.UserSession;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -104,6 +105,7 @@ public class CreateClientAndDeleteController implements Initializable{
     }
     @FXML
     private void handleLogoutClick(ActionEvent ae){
+        UserSession.clearUserSession();
         Navigator.navigate(ae,Navigator.LOGIN_PAGE);
     }
     @FXML

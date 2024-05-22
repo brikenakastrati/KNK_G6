@@ -8,7 +8,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="700.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.RequestController">
    <children>
       <AnchorPane layoutX="-10.0" prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
@@ -25,10 +24,10 @@
             </Button>
             <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
                <image>
-                  <Image url="@../../../../../KNK_G6-32/src/main/resources/Images/2.png" />
+                  <Image url="@../Images/2.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnLogout1" layoutX="1061.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
+            <Button fx:id="btnLogout1" layoutX="1061.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -41,6 +40,14 @@
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
+            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="984.0" layoutY="43.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

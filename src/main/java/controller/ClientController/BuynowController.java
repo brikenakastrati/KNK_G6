@@ -8,9 +8,12 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
+import model.User;
 import model.carInventory;
 import service.BuyNowService;
 import service.UserService;
+import service.UserSession;
 
 import java.net.URL;
 import java.time.LocalDate;
@@ -39,6 +42,8 @@ public class BuynowController implements Initializable {
     private TextField dateExpirationtxt;
 
     private carInventory car;
+
+    private UserService userService = new UserService();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -120,9 +125,6 @@ public class BuynowController implements Initializable {
 
 
 
-    public void handleDashboardClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.HOME_PAGE);
-    }
     public void handleCarsClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.CARS2_PAGE);
     }
@@ -130,9 +132,23 @@ public class BuynowController implements Initializable {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
     public void handleLogoutClick(ActionEvent ae) {
+        UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
     public void handleCustomizeClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
+    }
+
+    public void handleProfileClick(MouseEvent me) {
+        try {
+            User currentUser = userService.getUserByUsername(UserService.getUsername());
+            UserService.setCurrentUser(currentUser);
+            Navigator.navigate(me, Navigator.CLIENT_PROFILE_PAGE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void handleRequestCarClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }
 }

@@ -9,6 +9,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import Repository.MessageRepository;
+import javafx.scene.input.MouseEvent;
+import model.User;
+import service.UserService;
+import service.UserSession;
 
 public class CostumizeController {
 
@@ -20,6 +24,8 @@ public class CostumizeController {
     private TextArea txtMessage;
     @FXML
     private Button sendButton;
+
+    private UserService userService = new UserService();
 
     @FXML
     private void sendMessage() {
@@ -59,6 +65,7 @@ public class CostumizeController {
 
     @FXML
     public void handleLogoutClick(ActionEvent ae) {
+        UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
@@ -69,7 +76,7 @@ public class CostumizeController {
 
     @FXML
     public void handleRequestCarClick(ActionEvent actionEvent) {
-        // Add your customization logic here
+        Navigator.navigate(actionEvent, Navigator.REQUEST_CAR_PAGE);
     }
 
     @FXML
@@ -77,8 +84,14 @@ public class CostumizeController {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
 
-    @FXML
-    public void handleProfileClick(ActionEvent actionEvent) {
-        Navigator.navigate(actionEvent, Navigator.CLIENT_PROFILE_PAGE);
+
+    public void handleProfileClick(MouseEvent me) {
+        try {
+            User currentUser = userService.getUserByUsername(UserService.getUsername());
+            UserService.setCurrentUser(currentUser);
+            Navigator.navigate(me, Navigator.CLIENT_PROFILE_PAGE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

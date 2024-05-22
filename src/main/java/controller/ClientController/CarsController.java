@@ -18,6 +18,7 @@ import service.CarsService;
 import service.Interface.inventoryServiceInterface;
 import service.BuyNowService;
 import service.UserService;
+import service.UserSession;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -165,11 +166,12 @@ public class CarsController implements Initializable {
         Navigator.navigate(event, Navigator.CUSTOMIZE_PAGE);
     }
     public void handleLogoutClick(ActionEvent event) {
+        UserSession.clearUserSession();
         Navigator.navigate(event,Navigator.LOGIN_PAGE);
     }
 
     public void handleCarsClick(ActionEvent event) {
-        Navigator.navigate(event, Navigator.CARS_PAGE);
+        Navigator.navigate(event, Navigator.CARS2_PAGE);
     }
 
     public void handleMessageClick(ActionEvent event) {
@@ -191,7 +193,7 @@ public class CarsController implements Initializable {
     }
 
     public void handleRequestCarClick(ActionEvent ae) {
-
+        Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }
 
 }

@@ -13,6 +13,7 @@ import javafx.stage.Stage;
 import model.Photo;
 import model.carInventory;
 import service.CarsService;
+import service.UserSession;
 
 import java.io.File;
 import java.sql.SQLException;
@@ -145,11 +146,6 @@ public class AdminInsertController {
     }
 
     @FXML
-    void handleLogoutClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
-    }
-
-    @FXML
     void handleDeleteClick(ActionEvent ae) {
         carInventory selectedCar = inventoryTable.getSelectionModel().getSelectedItem();
         if (selectedCar != null) {
@@ -163,6 +159,12 @@ public class AdminInsertController {
         } else {
             lblStatus.setText("Please select a car to delete.");
         }
+    }
+
+    @FXML
+    void handleLogoutClick(ActionEvent ae) {
+        UserSession.clearUserSession();
+        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
     @FXML

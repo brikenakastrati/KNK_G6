@@ -14,6 +14,7 @@ import service.CarsService;
 import service.Interface.UserServiceInterface;
 import service.Interface.inventoryServiceInterface;
 import service.UserService;
+import service.UserSession;
 
 import java.sql.SQLException;
 import java.util.Map;
@@ -108,6 +109,7 @@ public class AdminDashboardController {
 
     @FXML
     private void handleLogoutClick(ActionEvent ae) {
+        UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 

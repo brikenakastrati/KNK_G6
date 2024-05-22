@@ -17,7 +17,7 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.Map;
 
-public class UserService implements UserServiceInterface {
+public class    UserService implements UserServiceInterface {
     private UserRepositoryInterface userRepo;
 
     public UserService(){
@@ -113,6 +113,7 @@ public class UserService implements UserServiceInterface {
             String passwordHash = user.getPasswordHash();
 
             boolean passwordMatches = PasswordHasher.compareSaltedHash(password, salt, passwordHash);
+            UserSession.setUserSession(user);
             return new LoginResult(passwordMatches, passwordMatches && user.isAdmin());
 
     }

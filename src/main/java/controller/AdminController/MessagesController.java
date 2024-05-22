@@ -11,6 +11,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.TextField;
 import model.Message;
 import service.DBConnector;
+import service.UserSession;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -92,6 +93,7 @@ public class MessagesController {
 
     @FXML
     private void handleLogoutClick(ActionEvent ae) {
+        UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 

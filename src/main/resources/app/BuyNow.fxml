@@ -11,14 +11,14 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1000.0" stylesheets="@../Styles/textfield.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.BuynowController">
     <children>
-        <AnchorPane layoutX="2.0" layoutY="4.0" prefHeight="111.0" prefWidth="1000.0" style="-fx-background-color: #999; -fx-border-color: black;">
+        <AnchorPane layoutX="-3.0" prefHeight="111.0" prefWidth="1007.0" style="-fx-background-color: #999; -fx-border-color: black;">
             <children>
-                <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
+                <Button fx:id="btnClients" layoutX="377.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
                 </Button>
-                <Button fx:id="btnLogout" layoutX="882.0" layoutY="58.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
+                <Button fx:id="btnLogout" layoutX="881.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
@@ -26,12 +26,7 @@
                         <Font name="System Bold" size="16.0" />
                     </font>
                 </Button>
-                <Button fx:id="btnBuynow" layoutX="267.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
-                    <effect>
-                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
-                    </effect>
-                </Button>
-                <Button fx:id="btnDashboard" layoutX="155.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="%btnDashboard">
+                <Button fx:id="btnBuynow" layoutX="152.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
@@ -41,11 +36,24 @@
                         <Image url="@../Images/2.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
+                <Button fx:id="helpbtn" layoutX="487.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
                     <effect>
                         <InnerShadow height="12.5" radius="5.875" width="13.0" />
                     </effect>
                 </Button>
+            <Button fx:id="btnrequestcar" layoutX="264.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="Request Car">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="817.0" layoutY="50.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
             </children>
         </AnchorPane>
         <Label fx:id="bn" layoutX="708.0" layoutY="157.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="118.0" text="Buy Now">

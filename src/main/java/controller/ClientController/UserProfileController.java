@@ -13,6 +13,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import model.User;
 import service.UserService;
+import service.UserSession;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -76,6 +77,7 @@ public class UserProfileController implements Initializable {
     }
 
     public void handleLogoutClick(ActionEvent ae) {
+        UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
 
@@ -97,6 +99,9 @@ public class UserProfileController implements Initializable {
 
     public void handleProfileClick(MouseEvent me) {
 
+    }
+    public void handleRequestCarClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }
     @FXML
     private void handleKeyPressed(KeyEvent event) {
