@@ -26,7 +26,7 @@ import javafx.scene.text.TextFlow;
 
 
         public void handleGoBackClick(ActionEvent ae) {
-            Navigator.navigate(ae, Navigator.HOME_PAGE);
+            Navigator.navigate(ae, Navigator.CARS2_PAGE);
         }
     }
 

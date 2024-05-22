@@ -52,13 +52,9 @@ public class CostumizeController {
 
 
 
-
-
-
-
     @FXML
-    public void handleDashboardClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.HOME_PAGE);
+    public void handleCustomizeClick(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
     }
 
     @FXML
@@ -72,7 +68,7 @@ public class CostumizeController {
     }
 
     @FXML
-    public void handleCustomizeClick(ActionEvent actionEvent) {
+    public void handleRequestCarClick(ActionEvent actionEvent) {
         // Add your customization logic here
     }
 
