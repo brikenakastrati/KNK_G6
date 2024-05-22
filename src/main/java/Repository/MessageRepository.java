@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class MessageSaver {
+public class MessageRepository {
 
 
     public static void saveMessage(String firstName, String lastName, String message) {

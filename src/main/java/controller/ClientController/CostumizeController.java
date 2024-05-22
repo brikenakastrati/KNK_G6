@@ -8,7 +8,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import model.MessageSaver;
+import model.MessageRepository;
 
 public class CostumizeController {
 
@@ -27,7 +27,7 @@ public class CostumizeController {
         String lastName = txtLastName.getText();
         String message = txtMessage.getText();
 
-        MessageSaver.saveMessage(firstName, lastName, message);
+        MessageRepository.saveMessage(firstName, lastName, message);
 
         // Clear the text fields after saving the message
         txtFirstName.clear();
