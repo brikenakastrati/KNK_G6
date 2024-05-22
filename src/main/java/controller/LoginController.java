@@ -80,7 +80,7 @@ public class LoginController {
         } else {
                 // Navigate to the home page for regular users
                 UserService.setUsername(this.txtUserName.getText());
-                Navigator.navigate(ae, Navigator.HOME_PAGE);
+                Navigator.navigate(ae, Navigator.CARS2_PAGE);
 
         }
     }

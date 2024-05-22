@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Fixed image, pagination for cars photos and added gave form to the buy now page">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Repository/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Replaced message saver to MessageRepository">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Repository/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CostumizeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/database/DatabaseUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,9 +37,6 @@
     &quot;assignee&quot;: &quot;afrimymeri&quot;
   }
 }</component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="2ee2acf9-cd02-4d59-92bd-9585ac24941d" />
-  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/brikenakastrati/KNK_G6.git&quot;,
@@ -178,7 +176,7 @@
       <workItem from="1716078479815" duration="2629000" />
       <workItem from="1716117486307" duration="4321000" />
       <workItem from="1716150857095" duration="392000" />
-      <workItem from="1716362479376" duration="156000" />
+      <workItem from="1716362479376" duration="2365000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -436,7 +434,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716119317984</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Replaced message saver to MessageRepository">
+      <option name="closed" value="true" />
+      <created>1716362743265</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1716362743265</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -454,7 +460,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Login and register page design" />
     <MESSAGE value="Admin Dashboard Created Sign up Controller fixed" />
     <MESSAGE value="AdminDashboard Edit" />
     <MESSAGE value="ClientDashboar Edited" />
@@ -479,7 +484,8 @@
     <MESSAGE value="added style to cars.fxml" />
     <MESSAGE value="style" />
     <MESSAGE value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
+    <MESSAGE value="Replaced message saver to MessageRepository" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced message saver to MessageRepository" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

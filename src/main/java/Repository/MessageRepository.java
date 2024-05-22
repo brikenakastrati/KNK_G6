@@ -1,4 +1,4 @@
-package model;
+package Repository;
 
 import service.DBConnector;
 

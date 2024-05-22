@@ -10,11 +10,14 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.VBox;
+import model.User;
 import model.carInventory;
 import service.CarsService;
 import service.Interface.inventoryServiceInterface;
 import service.BuyNowService;
+import service.UserService;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -33,7 +36,7 @@ public class CarsController implements Initializable {
 //        comboType1.getItems().addAll("Sedan", "SUV", "Coupe", "Hatchback");
 //    }
 
-
+    private UserService userService = new UserService();
     private inventoryServiceInterface inventoryService;
     private ObservableList<carInventory> carlist;
 
@@ -174,6 +177,21 @@ public class CarsController implements Initializable {
     }
     public void handleHelpClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.HELP_PAGE);
+    }
+
+
+    public void handleProfileClick(MouseEvent me) {
+        try {
+            User currentUser = userService.getUserByUsername(UserService.getUsername());
+            UserService.setCurrentUser(currentUser);
+            Navigator.navigate(me, Navigator.CLIENT_PROFILE_PAGE);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void handleRequestCarClick(ActionEvent ae) {
+
     }
 
 }

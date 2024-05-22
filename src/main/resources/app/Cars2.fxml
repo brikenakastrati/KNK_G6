@@ -24,12 +24,7 @@
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
                 </Button>
-                <Button fx:id="btnCars" layoutX="267.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="Cars">
-                    <effect>
-                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
-                    </effect>
-                </Button>
-                <Button fx:id="btnDashboard" layoutX="155.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
+                <Button fx:id="btnCars" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="Cars">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
@@ -44,7 +39,7 @@
                         <InnerShadow height="12.5" radius="5.875" width="13.0" />
                     </effect>
                 </Button>
-                <Button fx:id="btnLogout1" layoutX="1059.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
+                <Button fx:id="btnLogout1" layoutX="1061.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
@@ -52,6 +47,19 @@
                         <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
                     </effect>
                 </Button>
+            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="997.0" layoutY="39.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
+            <Button fx:id="btnrequestcar" layoutX="258.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="Request Car">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
             </children>
         </AnchorPane>
         <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #e0e0e0;" stylesheets="@../Styles/table.css">
@@ -115,9 +123,9 @@
                 <Font name="System Bold" size="20.0" />
             </font>
         </Label>
-      <VBox fx:id="imageContainer" alignment="CENTER" layoutX="644.0" layoutY="-192.0" prefHeight="440.0" prefWidth="399.0">
-
-                          <ImageView fx:id="showCarPhoto" fitHeight="372.0" fitWidth="406.0" pickOnBounds="true" preserveRatio="true" />
+      <VBox fx:id="imageContainer" alignment="CENTER" layoutX="583.0" layoutY="-214.0" prefHeight="440.0" prefWidth="399.0">
+   
+                                <ImageView fx:id="showCarPhoto" fitHeight="372.0" fitWidth="406.0" pickOnBounds="true" preserveRatio="true" />
               <Pagination fx:id="imagePagination" currentPageIndex="0" pageCount="0" prefHeight="0.0" prefWidth="216.0" stylesheets="@../Styles/textfield.css">
             <styleClass>
                <String fx:value="custom-pagination" />
