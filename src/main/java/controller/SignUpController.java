@@ -138,6 +138,8 @@ public class SignUpController {
         Navigator.navigate(actionEvent, Navigator.MESSAGE_PAGE);
     }
 
-
+    public void suggestPassword(ActionEvent actionEvent){
+        //add this later
+    }
 
 }
