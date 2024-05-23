@@ -40,4 +40,7 @@ public class RequestController {
         }
     }
 
+    public void handleHelpClick(ActionEvent actionEvent) {
+        Navigator.navigate(actionEvent,Navigator.HELP_PAGE);
+    }
 }

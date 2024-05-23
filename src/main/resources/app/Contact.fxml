@@ -36,11 +36,11 @@
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
-            <Button fx:id="helpbtn" layoutX="484.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="62.0" text="%helpbtn">
-               <effect>
-                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
-               </effect>
-            </Button>
+             <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
+                 <effect>
+                     <InnerShadow height="12.5" radius="5.875" width="13.0" />
+                 </effect>
+             </Button>
             <Button fx:id="btnLogout" layoutX="1059.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
                <font>
                   <Font name="System Bold" size="16.0" />

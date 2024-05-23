@@ -22,6 +22,11 @@
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
+            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
+               <effect>
+                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
+               </effect>
+            </Button>
             <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
                <image>
                   <Image url="@../Images/2.png" />
