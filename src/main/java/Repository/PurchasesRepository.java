@@ -3,6 +3,7 @@ package Repository;
 import model.Purchase;
 import model.User;
 import model.carInventory;
+import model.filter.highPriceFilter;
 import service.DBConnector;
 import service.UserService;
 
@@ -71,4 +72,29 @@ public class PurchasesRepository {
         }
     return purchases;
     }
+
+    public List<Purchase> getPurchasesByFilter(highPriceFilter filter , int userId) {
+        List<Purchase> purchases = new ArrayList<>();
+        String sql1 = "SELECT car_name, car_price, buyer_name, purchase_date FROM CarPurchases WHERE buyer_id = ?";
+        String sql = sql1 + " " + filter.buildQuery();
+        try(Connection conn = DBConnector.getConnection();
+            PreparedStatement pst = conn.prepareStatement(sql)){
+            pst.setInt(1,userId);
+            ResultSet rs = pst.executeQuery();
+
+            while(rs.next()) {
+                Purchase purchase = new Purchase();
+                purchase.setCarName(rs.getString("car_name"));
+                purchase.setCarPrice(rs.getDouble("car_price"));
+                purchase.setBuyerName(rs.getString("buyer_name"));
+                purchase.setPurchaseDate(rs.getTimestamp("purchase_date").toLocalDateTime());
+                purchases.add(purchase);
+            }
+
+        }catch (SQLException se) {
+            se.getMessage();
+        }
+        return purchases;
+    }
+
 }

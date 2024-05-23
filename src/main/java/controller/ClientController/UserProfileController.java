@@ -7,20 +7,19 @@ import app.Navigator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Label;
-import javafx.scene.control.PasswordField;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import model.Purchase;
 import model.User;
+import model.filter.highPriceFilter;
 import service.UserService;
 import service.UserSession;
 
 import java.net.URL;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -46,6 +45,10 @@ public class UserProfileController implements Initializable {
     private TableColumn<Purchase, String> buyername;
     @FXML
     private TableColumn<Purchase, String> purchasedate;
+    @FXML
+    private TextField txtMinPrice, txtMaxPrice;
+    @FXML
+    private DatePicker dpFromDate, dpToDate;
 
 
     private UserService userService = new UserService();
@@ -149,6 +152,18 @@ public class UserProfileController implements Initializable {
     private void purchaseHistory(){
         List<Purchase> purchases = purchasesRepository.getPurchasesByUserId(currentUser.getId());
         buytable.getItems().setAll(purchases);
+    }
+
+    @FXML
+    public void applyFilter() {
+        Double minPrice = txtMinPrice.getText().isEmpty() ? null : Double.parseDouble(txtMinPrice.getText());
+        Double maxPrice = txtMaxPrice.getText().isEmpty() ? null : Double.parseDouble(txtMaxPrice.getText());
+        LocalDateTime from = dpFromDate.getValue() == null ? null : dpFromDate.getValue().atStartOfDay();
+        LocalDateTime to = dpToDate.getValue() == null ? null : dpToDate.getValue().atStartOfDay();
+
+        highPriceFilter filter = new highPriceFilter(minPrice, maxPrice, currentUser.getUsername(), from, to);
+        List<Purchase> filteredPurchases = purchasesRepository.getPurchasesByFilter(filter, currentUser.getId());
+        buytable.getItems().setAll(filteredPurchases);
     }
 }
 
