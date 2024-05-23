@@ -4,7 +4,6 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
@@ -16,7 +15,7 @@
     <children>
         <AnchorPane opacity="0.98" prefHeight="716.0" prefWidth="916.0" style="-fx-background-color: #CCC; -fx-border-color: #1e1f22;">
             <children>
-                <TableView fx:id="messageTableView" layoutX="14.0" layoutY="243.0" prefHeight="310.0" prefWidth="469.0">
+                <TableView fx:id="messageTableView" layoutX="14.0" layoutY="243.0" prefHeight="310.0" prefWidth="469.0" stylesheets="@../Styles/table.css">
                     <columns>
                         <TableColumn fx:id="idColumn" prefWidth="50.399993896484375" text="ID" />
                         <TableColumn fx:id="firstNameColumn" prefWidth="99.20001220703125" text="%FirstName" />
@@ -24,11 +23,7 @@
                         <TableColumn fx:id="messageColumn" prefWidth="210.4000244140625" text="%Message" />
                     </columns>
                 </TableView>
-                <TextField fx:id="firstNameFilterField" layoutX="25.0" layoutY="206.0" prefWidth="150.0" promptText="Enter First Name" />
-                <TextField fx:id="lastNameFilterField" layoutX="194.0" layoutY="206.0" prefWidth="150.0" promptText="Enter Last Name" />
-                <Button layoutX="375.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleMessageClick" text="Filter" />
-                <Button layoutX="427.0" layoutY="206.0" mnemonicParsing="false" onAction="#handleResetClick" text="Reset" />
-                <TableView fx:id="stockRequestTableView" layoutX="507.0" layoutY="243.0" prefHeight="256.0" prefWidth="364.0">
+                <TableView fx:id="stockRequestTableView" layoutX="507.0" layoutY="243.0" prefHeight="256.0" prefWidth="364.0" stylesheets="@../Styles/table.css">
                     <columns>
                         <TableColumn fx:id="stockRequestIdColumn" prefWidth="62.4000244140625" text="ID" />
                         <TableColumn fx:id="stockRequestUserColumn" prefWidth="88.0" text="User" />
@@ -41,7 +36,7 @@
                         <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
-            <Label blendMode="COLOR_BURN" layoutX="143.0" layoutY="155.0" prefHeight="38.0" prefWidth="194.0" text="%lblMessages">
+            <Label blendMode="COLOR_BURN" layoutX="152.0" layoutY="167.0" prefHeight="38.0" prefWidth="194.0" text="%lblMessages">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
