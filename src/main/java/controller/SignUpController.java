@@ -137,4 +137,7 @@ public class SignUpController {
     public void handleMessageClick(ActionEvent actionEvent) {
         Navigator.navigate(actionEvent, Navigator.MESSAGE_PAGE);
     }
+
+
+
 }

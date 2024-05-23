@@ -95,12 +95,17 @@
                       <TextField fx:id="txtEmail" layoutX="204.0" layoutY="110.0" promptText="Email" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
                       <PasswordField fx:id="pwdPassword" layoutX="204.0" layoutY="158.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
                       <PasswordField fx:id="pwdConfirmPassword" layoutX="204.0" layoutY="208.0" promptText="Confirm Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
-                      <Button fx:id="cancel_btn" layoutX="239.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: white; -fx-border-width: 2;" text="%cancel_btn">
+                      <Button fx:id="cancel_btn" layoutX="239.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: white; -fx-border-width: 2;" text="%cancel_btn">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>
                       </Button>
-                   <Button fx:id="signup_btn" layoutX="98.0" layoutY="297.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="19.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2; -fx-background-color: white;" text="%signup_btn">
+                   <Button fx:id="suggestPassword_btn" layoutX="155.0" layoutY="280.0" mnemonicParsing="false" onAction="#suggestPassword" prefHeight="19.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2; -fx-background-color: white;" text="Suggest Password">
+                       <font>
+                           <Font name="System Bold" size="12.0" />
+                       </font>
+                   </Button>
+                   <Button fx:id="signup_btn" layoutX="98.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleSignUp" prefHeight="19.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2; -fx-background-color: white;" text="%signup_btn">
                      <font>
                         <Font name="System Bold" size="12.0" />
                      </font>

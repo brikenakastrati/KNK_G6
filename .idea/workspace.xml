@@ -4,12 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added sessions, (-clientdashboard) and added the UserProfile.fxml to every client page">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Fixed image, pagination for cars photos and added gave form to the buy now page">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Images/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Images/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -21,10 +18,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="CSS File" />
         <option value="FxmlFile" />
-        <option value="Kotlin Class" />
         <option value="Class" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -37,10 +33,13 @@
     &quot;assignee&quot;: &quot;afrimymeri&quot;
   }
 }</component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="2ee2acf9-cd02-4d59-92bd-9585ac24941d" />
+  </component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/brikenakastrati/KNK_G6.git&quot;,
-    &quot;accountId&quot;: &quot;55b1374a-00ca-413c-8bac-065625fbc6ae&quot;
+    &quot;accountId&quot;: &quot;3ba280b0-ff9c-4b11-9004-14d521640175&quot;
   }
 }</component>
   <component name="MarkdownSettingsMigration">
@@ -81,7 +80,7 @@
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;org.jetbrains.plugins.github.ui.GithubSettingsConfigurable&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -176,12 +175,6 @@
       <workItem from="1716078479815" duration="2629000" />
       <workItem from="1716117486307" duration="4321000" />
       <workItem from="1716150857095" duration="392000" />
-      <workItem from="1716362479376" duration="2365000" />
-      <workItem from="1716373254829" duration="1408000" />
-      <workItem from="1716381124093" duration="18207000" />
-      <workItem from="1716471702379" duration="232000" />
-      <workItem from="1716471963310" duration="4070000" />
-      <workItem from="1716478707567" duration="158000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -439,23 +432,7 @@
       <option name="project" value="LOCAL" />
       <updated>1716119317984</updated>
     </task>
-    <task id="LOCAL-00033" summary="Replaced message saver to MessageRepository">
-      <option name="closed" value="true" />
-      <created>1716362743265</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1716362743265</updated>
-    </task>
-    <task id="LOCAL-00034" summary="Added sessions, (-clientdashboard) and added the UserProfile.fxml to every client page">
-      <option name="closed" value="true" />
-      <created>1716400511433</created>
-      <option name="number" value="00034" />
-      <option name="presentableId" value="LOCAL-00034" />
-      <option name="project" value="LOCAL" />
-      <updated>1716400511433</updated>
-    </task>
-    <option name="localTasksCounter" value="35" />
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,6 +450,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <MESSAGE value="Login and register page design" />
+    <MESSAGE value="Admin Dashboard Created Sign up Controller fixed" />
     <MESSAGE value="AdminDashboard Edit" />
     <MESSAGE value="ClientDashboar Edited" />
     <MESSAGE value="Cars Created and Edited, ClientDashboard Edited" />
@@ -496,9 +475,7 @@
     <MESSAGE value="added style to cars.fxml" />
     <MESSAGE value="style" />
     <MESSAGE value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
-    <MESSAGE value="Replaced message saver to MessageRepository" />
-    <MESSAGE value="Added sessions, (-clientdashboard) and added the UserProfile.fxml to every client page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added sessions, (-clientdashboard) and added the UserProfile.fxml to every client page" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
