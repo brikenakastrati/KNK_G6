@@ -21,22 +21,22 @@
                      </font></Button>
                </children>
             </AnchorPane>
-            <TextFlow layoutX="76.0" layoutY="96.0" prefHeight="200.0" prefWidth="200.0">
+            <TextFlow layoutX="39.0" layoutY="115.0" prefHeight="217.0" prefWidth="295.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The dashboard interface for clients has the following features: Displaying the client's username. Navigation options to different pages such as the login page, cars page, home page, and contact  page." />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblDashboard-help" wrappingWidth="245.6851806640625" />
                </children>
             </TextFlow>
-            <Label layoutX="141.0" layoutY="78.0" text="DASHBOARD" />
-            <Label layoutX="149.0" layoutY="413.0" text="CONTACT" />
-            <TextFlow layoutX="87.0" layoutY="439.0" prefHeight="200.0" prefWidth="200.0">
+            <Label layoutX="141.0" layoutY="78.0" text="%lblDASHBOARD" />
+            <Label layoutX="149.0" layoutY="413.0" text="%lblCONTACT" />
+            <TextFlow layoutX="76.0" layoutY="448.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="In this page you can conntact us. You can send us messages after filling out the contact form, just by clicking the &quot;Send Button&quot;." />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblContact-help" wrappingWidth="212.2476806640625" />
                </children>
             </TextFlow>
-            <Label layoutX="711.0" layoutY="250.0" text="CARS" />
+            <Label layoutX="711.0" layoutY="250.0" text="%lblCARS" />
             <TextFlow layoutX="640.0" layoutY="277.0" prefHeight="200.0" prefWidth="200.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="The car page offers a car selection interface with the following features: A ComboBox allowing the user to select different types of cars. You can select the model of cars you like and see the cars of that model you wanna buy." wrappingWidth="212.2476806640625" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblCars-help" wrappingWidth="212.2476806640625" />
                </children>
             </TextFlow>
          </children></AnchorPane>
