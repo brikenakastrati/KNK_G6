@@ -71,7 +71,7 @@
             </children>
         </AnchorPane>
 
-         <Button layoutX="196.0" layoutY="547.0" onAction="#sendMessage" prefHeight="26.0" prefWidth="83.0" text="Send">
+         <Button layoutX="196.0" layoutY="547.0" onAction="#sendMessage" prefHeight="26.0" prefWidth="83.0" style="-fx-border-radius: 10px;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Send">
          <font>
             <Font size="14.0" />
          </font>
