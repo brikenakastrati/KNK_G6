@@ -161,10 +161,10 @@
          <DatePicker fx:id="dpFromDate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          <Label text="To Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          <DatePicker fx:id="dpToDate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-         <Button onAction="#applyFilter" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="79.0" text="MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-         <Button fx:id="minprice" onAction="#handleMinPrice" prefHeight="34.0" prefWidth="66.0" text="Min Price" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-         <Button fx:id="resetfields" mnemonicParsing="false" onAction="#handleResetFields" text="Reset fields" GridPane.rowIndex="2" />
+         <Button onAction="#applyFilter" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="79.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         <Button fx:id="minprice" onAction="#handleMinPrice" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Min Price" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         <Button fx:id="resetfields" mnemonicParsing="false" onAction="#handleResetFields" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Reset fields" GridPane.rowIndex="2" />
       </children>
    </GridPane>
    <TableView fx:id="buytable" layoutX="539.0" layoutY="277.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
