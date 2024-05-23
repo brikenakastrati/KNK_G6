@@ -33,6 +33,9 @@ public class SignUpController {
     private  TextField pwdPasswordVisible;
     @FXML
     private  TextField  pwdConfirmPasswordVisible;
+    @FXML
+    private MenuItem helpMenuItem;
+    @FXML
     private Stage stage;
     private Scene scene;
     @FXML
@@ -68,6 +71,21 @@ public class SignUpController {
                 );
                 node.fireEvent(newEvent);
             }
+        }
+    }
+    @FXML
+    private void handleHelp(ActionEvent event) {
+        try {
+            MenuItem menuItem = (MenuItem) event.getSource();
+            Scene scene = menuItem.getParentPopup().getOwnerNode().getScene();
+            Stage stage = (Stage) scene.getWindow();
+
+            // Navigate to the help page
+            Navigator.navigate(stage, Navigator.HELP1_PAGE);
+        } catch (Exception e) {
+            e.printStackTrace();
+            // Handle the exception or show an error message
+            showAlert(Alert.AlertType.ERROR, "Error", "Failed to open help page.");
         }
     }
     @FXML
@@ -125,6 +143,11 @@ public class SignUpController {
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
 
     }
+    @FXML
+    private void suggestPassword (MouseEvent me) {
+    }
+
+
     @FXML
     private void handleLoginAccountClick(MouseEvent me) {
         Navigator.navigate(me, Navigator.LOGIN_PAGE);

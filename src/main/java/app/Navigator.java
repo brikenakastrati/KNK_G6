@@ -27,6 +27,7 @@ public class Navigator {
     public final static String CUSTOMIZE_PAGE = "Contact.fxml";
     public final static String MESSAGE_PAGE = "messages.fxml";
     public final static String HELP_PAGE = "help.fxml";
+    public final static String HELP1_PAGE = "help1.fxml";
     public final static String CARS2_PAGE = "cars2.fxml";
     public final static String BUY_NOW_PAGE = "BuyNow.fxml";
     public final static String CLIENT_PROFILE_PAGE = "UserProfile.fxml";
