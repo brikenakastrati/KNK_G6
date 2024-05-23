@@ -55,12 +55,12 @@
       <font>
          <Font size="14.0" />
       </font></Label>
-   <AnchorPane layoutX="102.0" layoutY="148.0" prefHeight="130.0" prefWidth="191.0" style="-fx-background-color: #777; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2;">
+   <AnchorPane layoutX="102.0" layoutY="148.0" prefHeight="137.0" prefWidth="231.0" style="-fx-background-color: #777; -fx-border-color: black; -fx-border-width: 2; -fx-border-radius: 2;">
       <effect>
          <DropShadow />
       </effect>
       <children>
-         <ImageView fitHeight="52.0" fitWidth="50.0" layoutX="70.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <ImageView fitHeight="52.0" fitWidth="50.0" layoutX="20.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../Images/user.png" />
             </image>
@@ -132,48 +132,43 @@
          </Button>
       </children>
    </AnchorPane>
-
-   <AnchorPane onKeyPressed="#handleKeyPressed" prefHeight="800.0" prefWidth="1000.0">
+   <GridPane hgap="10" layoutX="510.0" layoutY="170.0" vgap="10">
+      <columnConstraints>
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+         <ColumnConstraints />
+      </columnConstraints>
+      <rowConstraints>
+         <RowConstraints />
+         <RowConstraints />
+         <RowConstraints />
+      </rowConstraints>
       <children>
-         <!-- GridPane for Filter Inputs -->
-         <GridPane hgap="10" layoutX="500.0" layoutY="160.0" vgap="10">
-            <Label text="Min Price:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-            <TextField fx:id="txtMinPrice" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-            <Label text="Max Price:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-            <TextField fx:id="txtMaxPrice" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-            <Label text="From Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-            <DatePicker fx:id="dpFromDate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Label text="To Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <DatePicker fx:id="dpToDate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Button onAction="#applyFilter" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-            <columnConstraints>
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-               <ColumnConstraints />
-            </columnConstraints>
-            <rowConstraints>
-               <RowConstraints />
-               <RowConstraints />
-               <RowConstraints />
-            </rowConstraints>
-         </GridPane>
-
-         <TableView fx:id="buytable" layoutX="529.0" layoutY="267.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
-            <columns>
-               <TableColumn fx:id="carname" prefWidth="75.0" text="Car name" />
-               <TableColumn fx:id="carprice" prefWidth="75.0" text="Car price" />
-               <TableColumn fx:id="buyername" prefWidth="109.0" text="Buyer name" />
-               <TableColumn fx:id="purchasedate" prefWidth="150.0" text="Purchase date" />
-            </columns>
-         </TableView>
-         <Label layoutX="672.0" layoutY="121.0" text="Buying History">
-            <font>
-               <Font name="System Bold" size="18.0" />
-            </font>
-         </Label>
+         <Label text="Min Price:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+         <TextField fx:id="txtMinPrice" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+         <Label text="Max Price:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+         <TextField fx:id="txtMaxPrice" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+         <Label text="From Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <DatePicker fx:id="dpFromDate" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         <Label text="To Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         <DatePicker fx:id="dpToDate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+         <Button onAction="#applyFilter" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
       </children>
-   </AnchorPane>
-   <Line endX="65.0" endY="567.0" layoutX="427.0" layoutY="233.0" startX="65.0" startY="-126.0" />
+   </GridPane>
+   <TableView fx:id="buytable" layoutX="539.0" layoutY="277.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
+      <columns>
+         <TableColumn fx:id="carname" prefWidth="75.0" text="Car name" />
+         <TableColumn fx:id="carprice" prefWidth="75.0" text="Car price" />
+         <TableColumn fx:id="buyername" prefWidth="109.0" text="Buyer name" />
+         <TableColumn fx:id="purchasedate" prefWidth="150.0" text="Purchase date" />
+      </columns>
+   </TableView>
+   <Label layoutX="682.0" layoutY="131.0" text="Buying History">
+      <font>
+         <Font name="System Bold" size="18.0" />
+      </font>
+   </Label>
+   <Line endX="65.0" endY="567.0" layoutX="423.0" layoutY="242.0" startX="65.0" startY="-130.8000030517578" />
 
 </AnchorPane>
