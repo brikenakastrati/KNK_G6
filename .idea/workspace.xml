@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added resetfield button to UserProfile.fxml">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added style to buttons on userprofile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
     </list>
@@ -185,7 +185,7 @@
       <workItem from="1716478707567" duration="158000" />
       <workItem from="1716500752236" duration="1511000" />
       <workItem from="1716502398188" duration="1050000" />
-      <workItem from="1716504592971" duration="1613000" />
+      <workItem from="1716504592971" duration="1927000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -491,7 +491,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716507036013</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added style to buttons on userprofile">
+      <option name="closed" value="true" />
+      <created>1716507495464</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1716507495464</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +518,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Displaying the number of clients on the AdminDashboard.fxml" />
     <MESSAGE value="Added delete function on AdminCLient page" />
     <MESSAGE value="New Login UI" />
     <MESSAGE value="Fixed deleteUser method CreateClientAndDeleteController" />
@@ -535,7 +542,8 @@
     <MESSAGE value="Added the asc, desc ordering in the highPriceFilter" />
     <MESSAGE value="Added the dbstructure as a SQL file" />
     <MESSAGE value="Added resetfield button to UserProfile.fxml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added resetfield button to UserProfile.fxml" />
+    <MESSAGE value="Added style to buttons on userprofile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added style to buttons on userprofile" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
