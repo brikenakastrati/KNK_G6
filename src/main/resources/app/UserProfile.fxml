@@ -140,7 +140,7 @@
          </Button>
       </children>
    </AnchorPane>
-   <GridPane hgap="10" layoutX="510.0" layoutY="170.0" vgap="10">
+   <GridPane hgap="10" layoutX="510.0" layoutY="170.0" maxWidth="490.0" vgap="10">
       <columnConstraints>
          <ColumnConstraints />
          <ColumnConstraints />
@@ -162,8 +162,9 @@
          <Label text="To Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          <DatePicker fx:id="dpToDate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
          <Button onAction="#applyFilter" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="65.0" text="MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="79.0" text="MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          <Button fx:id="minprice" onAction="#handleMinPrice" prefHeight="34.0" prefWidth="66.0" text="Min Price" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         <Button fx:id="resetfields" mnemonicParsing="false" onAction="#handleResetFields" text="Reset fields" GridPane.rowIndex="2" />
       </children>
    </GridPane>
    <TableView fx:id="buytable" layoutX="539.0" layoutY="277.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">

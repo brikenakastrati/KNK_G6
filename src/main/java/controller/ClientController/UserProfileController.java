@@ -234,4 +234,9 @@ public class UserProfileController implements Initializable {
         applyPriceFilter("ASC");
     }
 
+
+    @FXML
+    public void handleResetFields(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.CLIENT_PROFILE_PAGE);
+    }
 }
