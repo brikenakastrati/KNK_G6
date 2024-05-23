@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Minor changes">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Small changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Contact.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Contact.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/app/Navigator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/app/Navigator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +186,7 @@
       <workItem from="1716478707567" duration="158000" />
       <workItem from="1716500752236" duration="1511000" />
       <workItem from="1716502398188" duration="1050000" />
-      <workItem from="1716504592971" duration="2259000" />
+      <workItem from="1716504592971" duration="2719000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -507,7 +508,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716507863547</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Small changes">
+      <option name="closed" value="true" />
+      <created>1716508161260</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1716508161260</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -526,7 +535,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="New Login UI" />
     <MESSAGE value="Fixed deleteUser method CreateClientAndDeleteController" />
     <MESSAGE value="Library Added Again" />
     <MESSAGE value="Car display part1" />
@@ -551,7 +559,8 @@
     <MESSAGE value="Added resetfield button to UserProfile.fxml" />
     <MESSAGE value="Added style to buttons on userprofile" />
     <MESSAGE value="Minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor changes" />
+    <MESSAGE value="Small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Small changes" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

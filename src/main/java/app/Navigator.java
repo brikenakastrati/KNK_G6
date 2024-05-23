@@ -23,7 +23,6 @@ public class Navigator {
     public final static String ADMIN_DASHBOARD_PAGE = "AdminDashboard.fxml";
     public final static String ADMIN_INSERT_PAGE = "AdminInsert.fxml";
     public final static String ADMIN_CLIENTS_PAGE = "CreateandDeleteClient.fxml";
-    public final static String CARS_PAGE = "Cars.fxml";
     public final static String CUSTOMIZE_PAGE = "Contact.fxml";
     public final static String MESSAGE_PAGE = "messages.fxml";
     public final static String HELP_PAGE = "help.fxml";
