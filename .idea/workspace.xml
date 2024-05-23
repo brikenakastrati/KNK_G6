@@ -43,6 +43,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ContactController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/RequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/Help1Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/Help1Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/HelpController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
@@ -266,7 +267,8 @@
       <workItem from="1716471702379" duration="232000" />
       <workItem from="1716471963310" duration="4070000" />
       <workItem from="1716478707567" duration="158000" />
-      <workItem from="1716500752236" duration="450000" />
+      <workItem from="1716500752236" duration="1511000" />
+      <workItem from="1716502398188" duration="1050000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />

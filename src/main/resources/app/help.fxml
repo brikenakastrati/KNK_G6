@@ -8,35 +8,53 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelpController">
+<ScrollPane hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelpController">
    <content>
-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="997.0" prefWidth="999.0" style="-fx-background-color: #777;">
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="900.0" style="-fx-background-color: white;">
          <children>
             <AnchorPane prefHeight="51.0" prefWidth="1000.0" style="-fx-background-color: #999;">
                <children>
-                  <Label layoutX="480.0" layoutY="16.0" prefHeight="18.0" prefWidth="40.0" text="HELP" textFill="WHITE" />
+                  <Label layoutX="434.0" layoutY="16.0" prefHeight="18.0" prefWidth="40.0" text="HELP" textFill="WHITE" />
                   <Button fx:id="gobackBtn" layoutX="24.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleGoBackClick" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #999; -fx-border-color: white; -fx-border-radius: 5;" text="Go back" textFill="WHITE">
                      <font>
                         <Font size="10.0" />
                      </font></Button>
                </children>
             </AnchorPane>
-            <TextFlow layoutX="39.0" layoutY="115.0" prefHeight="217.0" prefWidth="295.0">
+            <TextFlow layoutX="54.0" layoutY="617.0" prefHeight="217.0" prefWidth="295.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblDashboard-help" wrappingWidth="245.6851806640625" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblDashboard-help" wrappingWidth="245.6851806640625">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
                </children>
             </TextFlow>
-            <Label layoutX="141.0" layoutY="78.0" text="%lblDASHBOARD" />
-            <Label layoutX="149.0" layoutY="413.0" text="%lblCONTACT" />
-            <TextFlow layoutX="76.0" layoutY="448.0" prefHeight="200.0" prefWidth="200.0">
+            <Label layoutX="109.0" layoutY="584.0" text="%lblOthers">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="131.0" layoutY="341.0" text="%lblCONTACT">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextFlow layoutX="59.0" layoutY="374.0" prefHeight="200.0" prefWidth="286.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblContact-help" wrappingWidth="212.2476806640625" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblContact-help" wrappingWidth="212.2476806640625">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
                </children>
             </TextFlow>
-            <Label layoutX="711.0" layoutY="250.0" text="%lblCARS" />
-            <TextFlow layoutX="640.0" layoutY="277.0" prefHeight="200.0" prefWidth="200.0">
+            <Label layoutX="148.0" layoutY="106.0" text="%lblCARS">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <TextFlow layoutX="54.0" layoutY="141.0" prefHeight="200.0" prefWidth="306.0">
                <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblCars-help" wrappingWidth="212.2476806640625" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblCars-help" wrappingWidth="212.2476806640625">
+                     <font>
+                        <Font size="14.0" />
+                     </font></Text>
                </children>
             </TextFlow>
          </children></AnchorPane>
