@@ -1,14 +1,14 @@
 package Repository;
 
 import service.DBConnector;
+import model.Message;
+import model.RestockRequest;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class MessageRepository {
-
 
     public static void saveMessage(String firstName, String lastName, String message) {
         String insertSQL = "INSERT INTO messages (first_name, last_name, message) VALUES (?, ?, ?)";
@@ -21,8 +21,80 @@ public class MessageRepository {
             pstmt.setString(3, message);
 
             pstmt.executeUpdate();
-        }    catch (SQLException e) {
+        } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void saveRestockRequest(String user, String carName, String date) {
+        String insertRequestSQL = "INSERT INTO restock_requests (user, car_name, date) VALUES (?, ?, ?)";
+
+        try (Connection connection = DBConnector.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(insertRequestSQL)) {
+
+            preparedStatement.setString(1, user);
+            preparedStatement.setString(2, carName);
+            preparedStatement.setString(3, date);
+
+            preparedStatement.executeUpdate();
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+            System.out.println("Error saving restock request: " + e.getMessage());
+        }
+    }
+
+    public List<Message> getMessages(String firstNameFilter, String lastNameFilter) {
+        List<Message> messages = new ArrayList<>();
+
+        try (Connection connection = DBConnector.getConnection()) {
+            StringBuilder queryBuilder = new StringBuilder("SELECT id, first_name, last_name, message FROM messages WHERE 1=1");
+
+            if (firstNameFilter != null && !firstNameFilter.isEmpty()) {
+                queryBuilder.append(" AND first_name LIKE '%").append(firstNameFilter).append("%'");
+            }
+            if (lastNameFilter != null && !lastNameFilter.isEmpty()) {
+                queryBuilder.append(" AND last_name LIKE '%").append(lastNameFilter).append("%'");
+            }
+
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(queryBuilder.toString());
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String firstName = resultSet.getString("first_name");
+                String lastName = resultSet.getString("last_name");
+                String message = resultSet.getString("message");
+                messages.add(new Message(id, firstName, lastName, message));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return messages;
+    }
+
+    public List<RestockRequest> getRestockRequests() {
+        List<RestockRequest> requests = new ArrayList<>();
+
+        try (Connection connection = DBConnector.getConnection()) {
+            String query = "SELECT id, user, car_name, date FROM restock_requests";
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(query);
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String user = resultSet.getString("user");
+                String carName = resultSet.getString("car_name");
+                Date date = resultSet.getDate("date");
+
+                requests.add(new RestockRequest(id, user, carName, date.toString()));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return requests;
     }
 }

@@ -7,20 +7,17 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.TextField;
+import javafx.scene.control.cell.PropertyValueFactory;
 import model.Message;
-import service.DBConnector;
+import model.RestockRequest;
+import service.RestockRequestService;
 import service.UserSession;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.Statement;
 
 public class MessagesController {
 
     @FXML
-    private TableView<Message> tableView;
+    private TableView<Message> messageTableView;
 
     @FXML
     private TableColumn<Message, Integer> idColumn;
@@ -41,49 +38,45 @@ public class MessagesController {
     private TextField lastNameFilterField;
 
     @FXML
+    private TableView<RestockRequest> stockRequestTableView;
+
+    @FXML
+    private TableColumn<RestockRequest, Integer> stockRequestIdColumn;
+
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestUserColumn;
+
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestCarNameColumn;
+
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestDateSentColumn;
+
+    private final RestockRequestService restockRequestService = new RestockRequestService();
+
+    @FXML
     public void initialize() {
+        // Initialize message table columns
         idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
         lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
         messageColumn.setCellValueFactory(new PropertyValueFactory<>("message"));
+        messageTableView.setItems(FXCollections.observableArrayList(restockRequestService.getMessages(null, null)));
 
-        tableView.setItems(getMessages(null, null));
+        // Initialize restock request table columns
+        stockRequestIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
+        stockRequestUserColumn.setCellValueFactory(new PropertyValueFactory<>("user"));
+        stockRequestCarNameColumn.setCellValueFactory(new PropertyValueFactory<>("carName"));
+        stockRequestDateSentColumn.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
+        stockRequestTableView.setItems(FXCollections.observableArrayList(restockRequestService.getRestockRequests()));
     }
 
-    private ObservableList<Message> getMessages(String firstNameFilter, String lastNameFilter) {
-        ObservableList<Message> messages = FXCollections.observableArrayList();
-
-        try (Connection connection = DBConnector.getConnection()) {
-            StringBuilder queryBuilder = new StringBuilder("SELECT id, first_name, last_name, message FROM messages WHERE 1=1");
-
-            if (firstNameFilter != null && !firstNameFilter.isEmpty()) {
-                queryBuilder.append(" AND first_name LIKE '%").append(firstNameFilter).append("%'");
-            }
-            if (lastNameFilter != null && !lastNameFilter.isEmpty()) {
-                queryBuilder.append(" AND last_name LIKE '%").append(lastNameFilter).append("%'");
-            }
-
-            Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery(queryBuilder.toString());
-
-            while (resultSet.next()) {
-                int id = resultSet.getInt("id");
-                String first_name = resultSet.getString("first_name");
-                String last_name = resultSet.getString("last_name");
-                String message = resultSet.getString("message");
-                messages.add(new Message(id, first_name, last_name, message));
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return messages;
-    }
     @FXML
     private void handleResetClick(ActionEvent ae) {
         firstNameFilterField.clear();
         lastNameFilterField.clear();
-        tableView.setItems(getMessages(null, null));
+        messageTableView.setItems(FXCollections.observableArrayList(restockRequestService.getMessages(null, null)));
+        stockRequestTableView.setItems(FXCollections.observableArrayList(restockRequestService.getRestockRequests()));
     }
 
     @FXML
@@ -109,6 +102,9 @@ public class MessagesController {
 
     @FXML
     private void handleMessageClick(ActionEvent ae) {
-        tableView.setItems(getMessages(firstNameFilterField.getText(), lastNameFilterField.getText()));
+        messageTableView.setItems(FXCollections.observableArrayList(
+                restockRequestService.getMessages(firstNameFilterField.getText(), lastNameFilterField.getText())
+        ));
+        stockRequestTableView.setItems(FXCollections.observableArrayList(restockRequestService.getRestockRequests()));
     }
 }

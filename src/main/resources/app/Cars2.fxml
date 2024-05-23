@@ -6,7 +6,6 @@
 <?import javafx.scene.control.Pagination?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
@@ -117,12 +116,6 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TextArea layoutX="405.0" layoutY="573.0" prefHeight="137.0" prefWidth="477.0" />
-        <Label layoutX="233.0" layoutY="626.0" text="Description:">
-            <font>
-                <Font name="System Bold" size="20.0" />
-            </font>
-        </Label>
       <VBox fx:id="imageContainer" alignment="CENTER" layoutX="583.0" layoutY="-214.0" prefHeight="440.0" prefWidth="399.0">
    
                                 <ImageView fx:id="showCarPhoto" fitHeight="372.0" fitWidth="406.0" pickOnBounds="true" preserveRatio="true" />
@@ -137,5 +130,6 @@
          </Pagination>
       </VBox>
       <Button fx:id="buynowbutton" layoutX="245.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleBuynow" prefHeight="44.0" prefWidth="106.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Buy now" />
+      <Button fx:id="reqforcarbtn" layoutX="245.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleRequestForCar" prefHeight="44.0" prefWidth="148.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Request for Car" />
     </children>
 </AnchorPane>

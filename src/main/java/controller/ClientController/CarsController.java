@@ -19,7 +19,7 @@ import service.Interface.inventoryServiceInterface;
 import service.BuyNowService;
 import service.UserService;
 import service.UserSession;
-
+import service.RestockRequestService;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
@@ -40,6 +40,8 @@ public class CarsController implements Initializable {
     private UserService userService = new UserService();
     private inventoryServiceInterface inventoryService;
     private ObservableList<carInventory> carlist;
+    private RestockRequestService restockRequestService = new RestockRequestService();
+
 
     @FXML
     private Label carNameLabel, carTypeLabel,carPriceLabel,stockLabel,carStatusLabel;
@@ -55,6 +57,8 @@ public class CarsController implements Initializable {
     private Button buynowbutton;
     @FXML
     private VBox imageContainer;
+    @FXML
+    private Button reqforcarbtn;
     public void handleChooseCar(ActionEvent ae) {
 
     }
@@ -113,27 +117,21 @@ public class CarsController implements Initializable {
         BuyNowService.getInstance().setSelectedCar(car);
 
         List<String> imageUrls = car.getCarImages();
-        imagePagination.setPageCount(imageUrls.size());
-        imagePagination.setPageFactory(pageIndex -> createImageView(imageUrls.get(pageIndex)));
-        /*imagePagination.setPageCount(imageUrls.size());
-        imagePagination.setPageFactory(pageIndex -> createImageView(imageUrls.get(pageIndex)));
+        if (imageUrls != null && !imageUrls.isEmpty()) {
+            imagePagination.setPageCount(imageUrls.size());
+            imagePagination.setPageFactory(pageIndex -> createImageView(imageUrls.get(pageIndex)));
+        } else {
+            imagePagination.setPageCount(1);
+            imagePagination.setPageFactory(pageIndex -> new ImageView());
+        }
 
-        imagePagination.setLayoutX(845);
-        imagePagination.setLayoutY(465);
-          */
-//        String imagePath = car.getCarimage();
-//        if (!imagePath.startsWith("http://") && !imagePath.startsWith("https://") && !imagePath.startsWith("file:///")) {
-//            imagePath = "file:///" + imagePath.replace("\\", "/"); // Replace backslashes for compatibility
-//        }
-//        try {
-//            Image image = new Image(imagePath);
-//            showCarPhoto.setImage(image);
-//        } catch (IllegalArgumentException e) {
-//            System.out.println("Failed to load image: " + e.getMessage());
-//        }
-
+        // Enable or disable the request for car button based on stock status
+        if (car.getCarstock() == 0) {
+            reqforcarbtn.setDisable(false);
+        } else {
+            reqforcarbtn.setDisable(true);
+        }
     }
-
     public void handleBuynow(ActionEvent ae) {
         carInventory selectedCar = BuyNowService.getInstance().getSelectedCar();
         if (selectedCar == null) {
@@ -156,6 +154,28 @@ public class CarsController implements Initializable {
         }
 
         Navigator.navigate(ae, Navigator.BUY_NOW_PAGE);
+    }
+
+
+    public void handleRequestForCar(ActionEvent ae) {
+        carInventory selectedCar = BuyNowService.getInstance().getSelectedCar();
+        if (selectedCar == null) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Selection Missing");
+            alert.setHeaderText(null);
+            alert.setContentText("Please select a car first.");
+            alert.showAndWait();
+            return;
+        }
+        String user = UserService.getUsername();
+        String carName = selectedCar.getCarname();
+
+        restockRequestService.requestRestock(user, carName);
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Request Sent");
+        alert.setHeaderText(null);
+        alert.setContentText("A request has been sent to the admin to restock the car: " + selectedCar.getCarname());
+        alert.showAndWait();
     }
 
     public void handleDashboardClick(ActionEvent ae) {

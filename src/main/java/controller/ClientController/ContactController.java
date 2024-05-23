@@ -11,10 +11,11 @@ import javafx.scene.input.KeyEvent;
 import Repository.MessageRepository;
 import javafx.scene.input.MouseEvent;
 import model.User;
+
 import service.UserService;
 import service.UserSession;
 
-public class CostumizeController {
+public class ContactController {
 
     @FXML
     private TextField txtFirstName;
@@ -26,6 +27,7 @@ public class CostumizeController {
     private Button sendButton;
 
     private UserService userService = new UserService();
+
 
     @FXML
     private void sendMessage() {
