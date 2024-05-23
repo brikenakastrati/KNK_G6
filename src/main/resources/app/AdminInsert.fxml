@@ -18,13 +18,13 @@
    <children>
       <TableView fx:id="inventoryTable" layoutX="41.0" layoutY="138.0" prefHeight="348.0" prefWidth="814.0" style="-fx-border-color: black;" stylesheets="@../Styles/table.css">
          <columns>
-            <TableColumn fx:id="invColCarID" prefWidth="118.40006637573242" text="Car ID" />
-            <TableColumn fx:id="invColCarName" prefWidth="112.79995727539062" text="Car Name" />
-            <TableColumn fx:id="invColCarType" prefWidth="93.33328247070312" text="Type" />
-            <TableColumn fx:id="invColStock" prefWidth="116.53329467773438" text="Stock" />
-            <TableColumn fx:id="invColPrice" prefWidth="129.60000610351562" text="Price" />
-            <TableColumn fx:id="invColStatus" prefWidth="113.60003662109375" text="Status" />
-            <TableColumn fx:id="invColDateAdded" prefWidth="112.7999267578125" text="Date Added" />
+            <TableColumn fx:id="invColCarID" prefWidth="118.40006637573242" text="%CarID" />
+            <TableColumn fx:id="invColCarName" prefWidth="112.79995727539062" text="%CarName" />
+            <TableColumn fx:id="invColCarType" prefWidth="93.33328247070312" text="%lblType" />
+            <TableColumn fx:id="invColStock" prefWidth="116.53329467773438" text="%lblStock" />
+            <TableColumn fx:id="invColPrice" prefWidth="129.60000610351562" text="%lblPrice" />
+            <TableColumn fx:id="invColStatus" prefWidth="113.60003662109375" text="%lblStatus" />
+            <TableColumn fx:id="invColDateAdded" prefWidth="112.7999267578125" text="%lblDateAdded" />
          </columns>
       </TableView>
       <Label layoutX="70.0" layoutY="538.0" prefHeight="27.0" prefWidth="57.0" text="%CarID">
@@ -62,19 +62,19 @@
       </Label>
       <TextField fx:id="txtCarStock" layoutX="401.0" layoutY="539.0" prefHeight="26.0" prefWidth="120.0" />
       <TextField fx:id="txtCarPrice" layoutX="401.0" layoutY="577.0" prefHeight="26.0" prefWidth="120.0" />
-      <Button layoutX="197.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleAddClick" prefHeight="37.0" prefWidth="95.0" text="Add" textAlignment="CENTER">
+      <Button layoutX="197.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleAddClick" prefHeight="37.0" prefWidth="95.0" text="%btnAdd" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="321.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleDeleteClick" prefHeight="37.0" prefWidth="95.0" text="Delete" textAlignment="CENTER">
+      <Button layoutX="321.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleDeleteClick" prefHeight="37.0" prefWidth="95.0" text="%btnDelete" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
       <TableView fx:id="tableViewPhotos" layoutX="529.0" layoutY="534.0" prefHeight="183.0" prefWidth="342.0" stylesheets="@../Styles/table.css">
          <columns>
-            <TableColumn fx:id="columnPhotoPath" prefWidth="350.0" text="Photo Path">
+            <TableColumn fx:id="columnPhotoPath" prefWidth="350.0" text="%PhotoPath">
                <cellValueFactory>
                   <PropertyValueFactory property="path" />
                </cellValueFactory>
@@ -125,7 +125,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="btnImportPhotos" layoutX="653.0" layoutY="725.0" mnemonicParsing="false" onAction="#handleImportPhotos" prefHeight="37.0" prefWidth="95.0" text="Import" textAlignment="CENTER">
+      <Button fx:id="btnImportPhotos" layoutX="653.0" layoutY="725.0" mnemonicParsing="false" onAction="#handleImportPhotos" prefHeight="37.0" prefWidth="95.0" text="%btnImportPhotos" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>

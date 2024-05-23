@@ -19,9 +19,9 @@
                 <TableView fx:id="messageTableView" layoutX="14.0" layoutY="243.0" prefHeight="310.0" prefWidth="469.0">
                     <columns>
                         <TableColumn fx:id="idColumn" prefWidth="50.399993896484375" text="ID" />
-                        <TableColumn fx:id="firstNameColumn" prefWidth="99.20001220703125" text="FirstName" />
-                        <TableColumn fx:id="lastNameColumn" prefWidth="110.39997863769531" text="LastName" />
-                        <TableColumn fx:id="messageColumn" prefWidth="210.4000244140625" text="Message" />
+                        <TableColumn fx:id="firstNameColumn" prefWidth="99.20001220703125" text="%FirstName" />
+                        <TableColumn fx:id="lastNameColumn" prefWidth="110.39997863769531" text="%LastName" />
+                        <TableColumn fx:id="messageColumn" prefWidth="210.4000244140625" text="%Message" />
                     </columns>
                 </TableView>
                 <TextField fx:id="firstNameFilterField" layoutX="25.0" layoutY="206.0" prefWidth="150.0" promptText="Enter First Name" />
@@ -41,7 +41,7 @@
                         <Font name="System Bold" size="25.0" />
                     </font>
                 </Label>
-            <Label blendMode="COLOR_BURN" layoutX="143.0" layoutY="155.0" prefHeight="38.0" prefWidth="194.0" text="Messages">
+            <Label blendMode="COLOR_BURN" layoutX="143.0" layoutY="155.0" prefHeight="38.0" prefWidth="194.0" text="%lblMessages">
                <font>
                   <Font name="System Bold" size="25.0" />
                </font>
@@ -50,22 +50,22 @@
         </AnchorPane>
         <AnchorPane layoutX="-1.0" layoutY="-1.0" opacity="0.98" prefHeight="110.0" prefWidth="916.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;">
             <children>
-                <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="Dashboard">
+                <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="%btnDashboard">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
                 </Button>
-                <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="Insert">
+                <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="%btnInsert">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
                 </Button>
-                <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="Clients">
+                <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="%btnClients">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
                 </Button>
-                <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="Messages">
+                <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="%btnMessages">
                     <effect>
                         <InnerShadow height="11.0" radius="5.5" width="13.0" />
                     </effect>
@@ -75,7 +75,7 @@
                         <Image url="@../Images/2.png" />
                     </image>
                 </ImageView>
-                <Button fx:id="btnLogout" layoutX="789.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="LogOut">
+                <Button fx:id="btnLogout" layoutX="789.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="%btnLogOut">
                     <font>
                         <Font name="System Bold" size="16.0" />
                     </font>
