@@ -54,7 +54,7 @@ public class PurchasesRepository {
         List<Purchase> purchases = new ArrayList<>();
         String sql = "SELECT car_name, car_price, buyer_name, purchase_date FROM CarPurchases WHERE buyer_id = ?";
         try(Connection conn = DBConnector.getConnection();
-        PreparedStatement pst = conn.prepareStatement(sql)){
+            PreparedStatement pst = conn.prepareStatement(sql)){
             pst.setInt(1,userId);
             ResultSet rs = pst.executeQuery();
 
@@ -70,7 +70,7 @@ public class PurchasesRepository {
         }catch (SQLException se) {
             se.getMessage();
         }
-    return purchases;
+        return purchases;
     }
 
     public List<Purchase> getPurchasesByFilter(highPriceFilter filter , int userId) {

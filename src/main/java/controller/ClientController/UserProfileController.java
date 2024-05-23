@@ -61,8 +61,7 @@ public class UserProfileController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.currentUser = UserService.getCurrentUser();
         if (currentUser != null) {
-            txtName.setText(currentUser.getUsername().substring(0, 1).toUpperCase() + currentUser.getUsername().substring(1));
-
+            txtName.setText(currentUser.getUsername());
         }
 
         carname.setCellValueFactory(new PropertyValueFactory<>("carName"));
@@ -211,8 +210,28 @@ public class UserProfileController implements Initializable {
         LocalDateTime from = dpFromDate.getValue() == null ? null : dpFromDate.getValue().atStartOfDay();
         LocalDateTime to = dpToDate.getValue() == null ? null : dpToDate.getValue().atStartOfDay();
 
-        highPriceFilter filter = new highPriceFilter(minPrice, maxPrice, currentUser.getUsername(), from, to);
+        highPriceFilter filter = new highPriceFilter(minPrice,maxPrice,currentUser.getUsername(),from,to,null);
         List<Purchase> filteredPurchases = purchasesRepository.getPurchasesByFilter(filter, currentUser.getId());
         buytable.getItems().setAll(filteredPurchases);
     }
+    private void applyPriceFilter(String order) {
+        Double minPrice = txtMinPrice.getText().isEmpty() ? null : Double.parseDouble(txtMinPrice.getText());
+        Double maxPrice = txtMaxPrice.getText().isEmpty() ? null : Double.parseDouble(txtMaxPrice.getText());
+        LocalDateTime from = dpFromDate.getValue() == null ? null : dpFromDate.getValue().atStartOfDay();
+        LocalDateTime to = dpToDate.getValue() == null ? null : dpToDate.getValue().atStartOfDay();
+
+        highPriceFilter filter = new highPriceFilter(minPrice, maxPrice, currentUser.getUsername(), from, to, order);
+        List<Purchase> filteredPurchases = purchasesRepository.getPurchasesByFilter(filter, currentUser.getId());
+        buytable.getItems().setAll(filteredPurchases);
+    }
+    @FXML
+    public void handleMaxPrice(ActionEvent event) {
+        applyPriceFilter("DESC");
+    }
+
+    @FXML
+    public void handleMinPrice(ActionEvent event) {
+        applyPriceFilter("ASC");
+    }
+
 }

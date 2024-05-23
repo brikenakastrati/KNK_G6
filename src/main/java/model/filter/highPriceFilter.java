@@ -9,14 +9,16 @@ public class highPriceFilter extends Filter {
     private String buyerName;
     private LocalDateTime from;
     private LocalDateTime to;
+    private String sort;
 
 
-    public highPriceFilter(Double minPrice, Double maxPrice, String buyerName, LocalDateTime from, LocalDateTime to) {
+    public highPriceFilter(Double minPrice, Double maxPrice, String buyerName, LocalDateTime from, LocalDateTime to, String sort) {
         this.minPrice = minPrice;
         this.maxPrice = maxPrice;
         this.buyerName = buyerName;
         this.from = from;
         this.to = to;
+        this.sort = sort;
 
     }
 
@@ -34,6 +36,9 @@ public class highPriceFilter extends Filter {
         }
         if (to != null) {
             query.append(" AND purchase_date <= '").append(to.format(DateTimeFormatter.ISO_LOCAL_DATE)).append("'");
+        }
+        if (sort != null) {
+            query.append(" ORDER BY car_price ").append(sort);
         }
 
         return query.toString();

@@ -22,7 +22,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane onKeyPressed="#handleKeyPressed" prefHeight="800.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController">
+<AnchorPane onKeyPressed="#handleKeyPressed" prefHeight="800.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController">
 
 
    <Label layoutX="131.0" layoutY="304.0" text="Change Password">
@@ -37,7 +37,7 @@
    </Label>
    <PasswordField fx:id="txtCurrentPassword" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtCurrentPasswordVisible" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="369.0" layoutY="380.0" onAction="#toggleCurrentPasswordVisibility" text="Show" />
+   <Button layoutX="361.0" layoutY="378.0" onAction="#toggleCurrentPasswordVisibility" text="Show" />
 
    <Label layoutX="40.0" layoutY="426.0" text="New password">
       <font>
@@ -46,11 +46,11 @@
    </Label>
    <PasswordField fx:id="txtNewPassword" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtNewPasswordVisible" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="369.0" layoutY="423.0" onAction="#toggleNewPasswordVisibility" text="Show" />
+   <Button layoutX="361.0" layoutY="421.0" onAction="#toggleNewPasswordVisibility" text="Show" />
 
    <PasswordField fx:id="txtConfirmNewPassword" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtConfirmNewPasswordVisible" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="369.0" layoutY="468.0" onAction="#toggleConfirmPasswordVisibility" text="Show" />
+   <Button layoutX="361.0" layoutY="465.0" onAction="#toggleConfirmPasswordVisibility" text="Show" />
 
    <Label fx:id="lblStatus" layoutX="95.0" layoutY="339.0" prefHeight="27.0" prefWidth="213.0" textFill="red">
       <font>
@@ -162,6 +162,8 @@
          <Label text="To Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          <DatePicker fx:id="dpToDate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
          <Button onAction="#applyFilter" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="65.0" text="MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         <Button fx:id="minprice" onAction="#handleMinPrice" prefHeight="34.0" prefWidth="66.0" text="Min Price" GridPane.columnIndex="3" GridPane.rowIndex="2" />
       </children>
    </GridPane>
    <TableView fx:id="buytable" layoutX="539.0" layoutY="277.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
