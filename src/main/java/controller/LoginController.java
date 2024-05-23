@@ -37,6 +37,8 @@ public class LoginController {
     private TextField txtUserName;
     @FXML
     private PasswordField pwdPassword;
+    @FXML
+    private TextField pwdPasswordVisible;
 
 
     @FXML
@@ -140,7 +142,17 @@ public class LoginController {
     }
 
 
-}
+    public void togglePasswordVisibility(ActionEvent actionEvent) {
+        if (pwdPassword.isVisible()) {
+            pwdPasswordVisible.setText(pwdPassword.getText());
+            pwdPasswordVisible.setVisible(true);
+            pwdPassword.setVisible(false);
+        } else {
+            pwdPassword.setText(pwdPasswordVisible.getText());
+            pwdPassword.setVisible(true);
+            pwdPasswordVisible.setVisible(false);
+        }
+    }}
 
 
 

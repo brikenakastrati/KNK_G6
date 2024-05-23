@@ -93,6 +93,8 @@
                <children>
                       <TextField fx:id="txtUserName" layoutX="204.0" layoutY="69.0" promptText="Username" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
                       <TextField fx:id="txtEmail" layoutX="204.0" layoutY="110.0" promptText="Email" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
+                  <TextField fx:id="pwdPasswordVisible" layoutX="204.0" layoutY="158.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
+                  <TextField fx:id="pwdConfirmPasswordVisible" layoutX="204.0" layoutY="208.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
                       <PasswordField fx:id="pwdPassword" layoutX="204.0" layoutY="158.0" promptText="Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
                       <PasswordField fx:id="pwdConfirmPassword" layoutX="204.0" layoutY="208.0" promptText="Confirm Password" style="-fx-border-color: #1e1f22; -fx-border-width: 0px 0px 4px 0px;" />
                       <Button fx:id="cancel_btn" layoutX="239.0" layoutY="320.0" mnemonicParsing="false" onAction="#handleCancel" prefHeight="26.0" prefWidth="115.0" style="-fx-background-radius: 10; -fx-border-color: white; -fx-border-radius: 10; -fx-background-color: white; -fx-border-width: 2;" text="%cancel_btn">
@@ -132,9 +134,11 @@
                      </font>
                   </Label>
                   <Label layoutX="156.0" layoutY="257.0" onMouseClicked="#handleLoginAccountClick" text="%lblAlreadyhaveanaccount?" textFill="#a6a5ae" underline="true" />
+                  <Button layoutX="362.0" layoutY="160.0" onAction="#togglePasswordVisibility" text="Show" />
+                  <Button layoutX="362.0" layoutY="210.0" onAction="#toggleConfirmPasswordVisibility" text="Show" />
                </children>
             </AnchorPane>
-            <ImageView fitHeight="170.0" fitWidth="264.0" layoutX="-32.0" layoutY="70.0">
+            <ImageView fitHeight="151.0" fitWidth="220.0" layoutY="79.0">
                <image>
                   <Image url="@../Images/2.png" />
                </image>

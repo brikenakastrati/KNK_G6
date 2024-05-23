@@ -29,6 +29,10 @@ public class SignUpController {
     private PasswordField pwdPassword;
     @FXML
     private PasswordField pwdConfirmPassword;
+    @FXML
+    private  TextField pwdPasswordVisible;
+    @FXML
+    private  TextField  pwdConfirmPasswordVisible;
     private Stage stage;
     private Scene scene;
     @FXML
@@ -137,9 +141,28 @@ public class SignUpController {
     public void handleMessageClick(ActionEvent actionEvent) {
         Navigator.navigate(actionEvent, Navigator.MESSAGE_PAGE);
     }
-
-    public void suggestPassword(ActionEvent actionEvent){
-        //add this later
+@FXML
+    public void togglePasswordVisibility(ActionEvent actionEvent) {
+        if (pwdPassword.isVisible()) {
+            pwdPasswordVisible.setText(pwdPassword.getText());
+            pwdPasswordVisible.setVisible(true);
+            pwdPassword.setVisible(false);
+        } else {
+            pwdPassword.setText(pwdPasswordVisible.getText());
+            pwdPassword.setVisible(true);
+            pwdPasswordVisible.setVisible(false);
+        }
     }
 
+    public void toggleConfirmPasswordVisibility(ActionEvent actionEvent) {
+        if (pwdConfirmPassword.isVisible()) {
+            pwdConfirmPasswordVisible.setText(pwdConfirmPassword.getText());
+            pwdConfirmPasswordVisible.setVisible(true);
+            pwdConfirmPassword.setVisible(false);
+        } else {
+            pwdConfirmPassword.setText(pwdConfirmPasswordVisible.getText());
+            pwdConfirmPassword.setVisible(true);
+            pwdConfirmPasswordVisible.setVisible(false);
+        }
+    }
 }

@@ -36,8 +36,8 @@
       </font>
    </Label>
    <PasswordField fx:id="txtCurrentPassword" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
-   <TextField fx:id="txtCurrentPasswordVisible" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false"/>
-   <Button layoutX="361.0" layoutY="378.0" onAction="#toggleCurrentPasswordVisibility" text="Show" />
+   <TextField fx:id="txtCurrentPasswordVisible" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
+   <Button layoutX="369.0" layoutY="380.0" onAction="#toggleCurrentPasswordVisibility" text="Show" />
 
    <Label layoutX="40.0" layoutY="426.0" text="New password">
       <font>
@@ -45,12 +45,12 @@
       </font>
    </Label>
    <PasswordField fx:id="txtNewPassword" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
-   <TextField fx:id="txtNewPasswordVisible" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false"/>
-   <Button layoutX="361.0" layoutY="421.0" onAction="#toggleNewPasswordVisibility" text="Show" />
+   <TextField fx:id="txtNewPasswordVisible" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
+   <Button layoutX="369.0" layoutY="423.0" onAction="#toggleNewPasswordVisibility" text="Show" />
 
    <PasswordField fx:id="txtConfirmNewPassword" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
-   <TextField fx:id="txtConfirmNewPasswordVisible" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false"/>
-   <Button layoutX="361.0" layoutY="465.0" onAction="#toggleConfirmPasswordVisibility" text="Show" />
+   <TextField fx:id="txtConfirmNewPasswordVisible" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
+   <Button layoutX="369.0" layoutY="468.0" onAction="#toggleConfirmPasswordVisibility" text="Show" />
 
    <Label fx:id="lblStatus" layoutX="95.0" layoutY="339.0" prefHeight="27.0" prefWidth="213.0" textFill="red">
       <font>

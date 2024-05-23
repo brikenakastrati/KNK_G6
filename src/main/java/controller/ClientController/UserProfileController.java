@@ -61,7 +61,8 @@ public class UserProfileController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.currentUser = UserService.getCurrentUser();
         if (currentUser != null) {
-            txtName.setText(currentUser.getUsername());
+            txtName.setText(currentUser.getUsername().substring(0, 1).toUpperCase() + currentUser.getUsername().substring(1));
+
         }
 
         carname.setCellValueFactory(new PropertyValueFactory<>("carName"));
