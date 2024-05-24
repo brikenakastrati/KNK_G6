@@ -90,7 +90,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/RequestCar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/RequestCar.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/create_user_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/create_user_form.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/help.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/help.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/knk_g6/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/knk_g6/hello-view.fxml" afterDir="false" />
@@ -274,7 +273,7 @@
       <workItem from="1716500752236" duration="1511000" />
       <workItem from="1716502398188" duration="1050000" />
       <workItem from="1716504592971" duration="7227000" />
-      <workItem from="1716544879764" duration="5746000" />
+      <workItem from="1716544879764" duration="8398000" />
     </task>
     <task id="LOCAL-00003" summary="Redirecting to home page after successfull login">
       <option name="closed" value="true" />

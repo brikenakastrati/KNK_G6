@@ -26,19 +26,19 @@
 <AnchorPane onKeyPressed="#handleKeyPressed" prefHeight="800.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController">
 
 
-   <Label layoutX="131.0" layoutY="304.0" text="Change Password">
+   <Label layoutX="131.0" layoutY="304.0" text="%lblChangePassword">
       <font>
          <Font name="System Bold" size="18.0" />
       </font>
    </Label>
-   <Label layoutX="35.0" layoutY="383.0" text="Actual Password">
+   <Label layoutX="35.0" layoutY="383.0" text="%lblActualPassword">
       <font>
          <Font size="14.0" />
       </font>
    </Label>
    <PasswordField fx:id="txtCurrentPassword" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtCurrentPasswordVisible" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="367.0" layoutY="381.0" onAction="#toggleCurrentPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Show" />
+   <Button layoutX="367.0" layoutY="381.0" onAction="#toggleCurrentPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%btnShow" />
 
    <Label layoutX="40.0" layoutY="426.0" text="New password">
       <font>
@@ -47,19 +47,19 @@
    </Label>
    <PasswordField fx:id="txtNewPassword" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtNewPasswordVisible" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="367.0" layoutY="424.0" onAction="#toggleNewPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Show" />
+   <Button layoutX="367.0" layoutY="424.0" onAction="#toggleNewPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%btnShow" />
 
    <PasswordField fx:id="txtConfirmNewPassword" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtConfirmNewPasswordVisible" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="367.0" layoutY="468.0" onAction="#toggleConfirmPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Show" />
+   <Button layoutX="367.0" layoutY="468.0" onAction="#toggleConfirmPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%btnShow" />
 
    <Label fx:id="lblStatus" layoutX="95.0" layoutY="339.0" prefHeight="27.0" prefWidth="315.0" textFill="red">
       <font>
          <Font name="System Bold" size="14.0" />  
       </font>
    </Label>
-   <Button layoutX="216.0" layoutY="525.0" onAction="#saveChanges" style="-fx-border-width: 1.2px; -fx-border-color: black;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Save Changes" />
-   <Label layoutX="14.0" layoutY="470.0" text="Confirm new password">
+   <Button layoutX="216.0" layoutY="525.0" onAction="#saveChanges" style="-fx-border-width: 1.2px; -fx-border-color: black;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%SaveChanges" />
+   <Label layoutX="14.0" layoutY="470.0" text="%Confirmnewpassword">
       <font>
          <Font size="14.0" />
       </font>
@@ -111,7 +111,7 @@
                <InnerShadow height="11.0" radius="5.5" width="13.0" />
             </effect>
          </Button>
-         <Button fx:id="btnLogout" layoutX="893.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
+         <Button fx:id="btnLogout" layoutX="893.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
             <effect>
                <InnerShadow height="11.0" radius="5.5" width="13.0" />
             </effect>
@@ -134,7 +134,7 @@
                <InnerShadow height="12.5" radius="5.875" width="13.0" />
             </effect>
          </Button>
-         <Button fx:id="btnrequestcar" layoutX="264.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="Request Car">
+         <Button fx:id="btnrequestcar" layoutX="264.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%btnRequestCar">
             <effect>
                <InnerShadow height="11.0" radius="5.5" width="13.0" />
             </effect>
@@ -154,11 +154,11 @@
          <RowConstraints />
       </rowConstraints>
       <children>
-         <Label text="Min Price:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+         <Label text="%MinPrice" GridPane.columnIndex="0" GridPane.rowIndex="0" />
          <TextField fx:id="txtMinPrice" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-         <Label prefHeight="17.0" prefWidth="73.0" text="Max Price:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+         <Label prefHeight="17.0" prefWidth="73.0" text="%MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="0" />
          <TextField fx:id="txtMaxPrice" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-         <Label prefHeight="17.0" prefWidth="60.0" text="From Date:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+         <Label prefHeight="17.0" prefWidth="60.0" text="%FromDate" GridPane.columnIndex="0" GridPane.rowIndex="1" />
          <DatePicker fx:id="dpFromDate" stylesheets="@../Styles/Datepicker.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <styleClass>
                <String fx:value="month-year-pane" />
@@ -168,7 +168,7 @@
                <String fx:value="date-picker" />
                <String fx:value="arrow" />
             </styleClass></DatePicker>
-         <Label prefHeight="17.0" prefWidth="99.0" text="To Date:" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         <Label prefHeight="17.0" prefWidth="99.0" text="%ToDate" GridPane.columnIndex="2" GridPane.rowIndex="1" />
          <DatePicker fx:id="dpToDate" stylesheets="@../Styles/Datepicker.css" GridPane.columnIndex="3" GridPane.rowIndex="1">
             <styleClass>
                <String fx:value="arrow" />
@@ -178,21 +178,21 @@
                <String fx:value="label" />
                <String fx:value="month-year-pane" />
             </styleClass></DatePicker>
-         <Button onAction="#applyFilter" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Apply Filter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
-         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-         <Button fx:id="minprice" onAction="#handleMinPrice" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Min Price" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-         <Button fx:id="resetfields" mnemonicParsing="false" onAction="#handleResetFields" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="Reset fields" GridPane.rowIndex="2" />
+         <Button onAction="#applyFilter" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%ApplyFilter" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2" />
+         <Button fx:id="maxprice" onAction="#handleMaxPrice" prefHeight="32.0" prefWidth="108.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%MaxPrice" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         <Button fx:id="minprice" onAction="#handleMinPrice" prefHeight="34.0" prefWidth="77.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%MinPrice" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         <Button fx:id="resetfields" mnemonicParsing="false" onAction="#handleResetFields" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%Resetfields" GridPane.rowIndex="2" />
       </children>
    </GridPane>
    <TableView fx:id="buytable" layoutX="538.0" layoutY="292.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
       <columns>
-         <TableColumn fx:id="carname" prefWidth="75.0" text="Car name" />
-         <TableColumn fx:id="carprice" prefWidth="75.0" text="Car price" />
-         <TableColumn fx:id="buyername" prefWidth="109.0" text="Buyer name" />
-         <TableColumn fx:id="purchasedate" prefWidth="150.0" text="Purchase date" />
+         <TableColumn fx:id="carname" prefWidth="75.0" text="%CarName" />
+         <TableColumn fx:id="carprice" prefWidth="75.0" text="%CarPrice" />
+         <TableColumn fx:id="buyername" prefWidth="109.0" text="%BuyerName" />
+         <TableColumn fx:id="purchasedate" prefWidth="150.0" text="%Purchasedate" />
       </columns>
    </TableView>
-   <Label layoutX="682.0" layoutY="131.0" text="Buying History">
+   <Label layoutX="682.0" layoutY="131.0" text="%BuyingHistory">
       <font>
          <Font name="System Bold" size="18.0" />
       </font>

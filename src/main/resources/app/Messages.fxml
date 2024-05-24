@@ -26,12 +26,12 @@
                 <TableView fx:id="stockRequestTableView" layoutX="507.0" layoutY="243.0" prefHeight="256.0" prefWidth="364.0" stylesheets="@../Styles/table.css">
                     <columns>
                         <TableColumn fx:id="stockRequestIdColumn" prefWidth="62.4000244140625" text="ID" />
-                        <TableColumn fx:id="stockRequestUserColumn" prefWidth="88.0" text="User" />
-                        <TableColumn fx:id="stockRequestCarNameColumn" prefWidth="103.199951171875" text="Car Name" />
-                        <TableColumn fx:id="stockRequestDateSentColumn" prefWidth="102.4000244140625" text="Date Sent" />
+                        <TableColumn fx:id="stockRequestUserColumn" prefWidth="88.0" text="%lblUser" />
+                        <TableColumn fx:id="stockRequestCarNameColumn" prefWidth="103.199951171875" text="%CarName" />
+                        <TableColumn fx:id="stockRequestDateSentColumn" prefWidth="102.4000244140625" text="%DateSent" />
                     </columns>
                 </TableView>
-                <Label blendMode="COLOR_BURN" layoutX="583.0" layoutY="167.0" prefHeight="38.0" prefWidth="194.0" text="Stock Requests">
+                <Label blendMode="COLOR_BURN" layoutX="583.0" layoutY="167.0" prefHeight="38.0" prefWidth="194.0" text="%StockRequests">
                     <font>
                         <Font name="System Bold" size="25.0" />
                     </font>
