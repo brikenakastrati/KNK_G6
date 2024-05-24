@@ -64,13 +64,13 @@
                   </Text>
                </children>
             </TextFlow>
-            <Label layoutX="139.0" layoutY="332.0" text="Request Car">
+            <Label layoutX="139.0" layoutY="332.0" text="%lblRequestCar">
                <font>
                   <Font size="16.0" />
                </font>
             </Label>
             <TextFlow layoutX="54.0" layoutY="819.0" prefHeight="200.0" prefWidth="306.0" />
-            <Text layoutX="41.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To request a car, fill in all the fields with the car's brand, model, name, type, and a description. Once all fields are filled, click the 'Submit Request' button to submit your car suggestion. Ensure all fields are completed to avoid errors. Your request will be reviewed and considered for restocking." wrappingWidth="282.64764404296875">
+            <Text layoutX="41.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="%RequestCar-help" wrappingWidth="282.64764404296875">
                <font>
                   <Font size="14.0" />
                </font>

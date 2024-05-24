@@ -26,7 +26,7 @@
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnDashboard" layoutX="265.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="Request Car">
+            <Button fx:id="btnDashboard" layoutX="265.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%btnRequestCar">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
@@ -71,18 +71,18 @@
             </children>
         </AnchorPane>
 
-         <Button layoutX="196.0" layoutY="547.0" onAction="#sendMessage" prefHeight="26.0" prefWidth="83.0" style="-fx-border-radius: 10px;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Send">
+         <Button layoutX="196.0" layoutY="547.0" onAction="#sendMessage" prefHeight="26.0" prefWidth="83.0" style="-fx-border-radius: 10px;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%lblSend">
          <font>
             <Font size="14.0" />
          </font>
       </Button>
-      <Label layoutX="125.0" layoutY="273.0" text="Do not hesitate to send us a message.">
+      <Label layoutX="125.0" layoutY="273.0" text="%lblMessagesend">
          <font>
             <Font size="16.0" />
          </font>
       </Label>
-      <Label layoutX="88.0" layoutY="360.0" text="Lastname:" />
-      <Label layoutX="108.0" layoutY="322.0" text="Name:" />
+      <Label layoutX="88.0" layoutY="360.0" text="%lblLastName" />
+      <Label layoutX="108.0" layoutY="322.0" text="%lblFirstName" />
       <TextField fx:id="txtFirstName" layoutX="151.0" layoutY="318.0" stylesheets="@../Styles/textfield.css">
          <styleClass>
             <String fx:value="control-box" />
@@ -90,7 +90,7 @@
             <String fx:value="custom-text-field" />
          </styleClass></TextField>
       <TextField fx:id="txtLastName" layoutX="151.0" layoutY="356.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
-      <Label layoutX="83.0" layoutY="417.0" text="Message:" />
+      <Label layoutX="83.0" layoutY="417.0" text="%Message" />
       <TextArea fx:id="txtMessage" layoutX="150.0" layoutY="407.0" prefHeight="123.0" prefWidth="213.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
     </children>
 </AnchorPane>

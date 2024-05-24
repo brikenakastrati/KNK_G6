@@ -15,17 +15,17 @@
    <children>
       <AnchorPane layoutX="-10.0" prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
          <children>
-            <Button fx:id="btnClients" layoutX="389.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="Contact">
+            <Button fx:id="btnClients" layoutX="389.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnCars" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="Cars">
+            <Button fx:id="btnCars" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="Help">
+            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
                <effect>
                   <InnerShadow height="12.5" radius="5.875" width="13.0" />
                </effect>
@@ -35,7 +35,7 @@
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnLogout1" layoutX="1061.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
+            <Button fx:id="btnLogout" layoutX="1061.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -43,7 +43,7 @@
                   <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
                </effect>
             </Button>
-            <Button fx:id="btnrequestcar" layoutX="272.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="Request Car">
+            <Button fx:id="btnrequestcar" layoutX="272.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%lblRequestCar">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
@@ -58,23 +58,23 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Label layoutX="439.0" layoutY="189.0" text="Request a Car:">
+      <Label layoutX="439.0" layoutY="189.0" text="%lblRequest">
          <font>
             <Font size="34.0" />
          </font></Label>
-      <TextField fx:id="txtCarBrand" layoutX="348.0" layoutY="309.0" promptText="Car Brand" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextField fx:id="txtCarBrand" layoutX="348.0" layoutY="309.0" promptText="%CarBrand" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font></TextField>
-      <TextField fx:id="txtCarModel" layoutX="619.0" layoutY="309.0" promptText="Car Model" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextField fx:id="txtCarModel" layoutX="619.0" layoutY="309.0" promptText="%CarModel" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font></TextField>
-      <TextField fx:id="txtCarName" layoutX="621.0" layoutY="383.0" promptText="Car Name" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextField fx:id="txtCarName" layoutX="621.0" layoutY="383.0" promptText="%CarName" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font></TextField>
-      <TextField fx:id="txtCarType" layoutX="348.0" layoutY="383.0" promptText="Car Type" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextField fx:id="txtCarType" layoutX="348.0" layoutY="383.0" promptText="%CarType" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font></TextField>
@@ -82,7 +82,7 @@
          <font>
             <Font size="17.0" />
          </font></TextArea>
-      <Button layoutX="691.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleSubmitRequest" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Submit Request">
+      <Button layoutX="691.0" layoutY="526.0" mnemonicParsing="false" onAction="#handleSubmitRequest" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnSubmitRequest">
          <font>
             <Font size="17.0" />
          </font></Button>
