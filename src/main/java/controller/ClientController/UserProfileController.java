@@ -19,6 +19,7 @@ import service.UserSession;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class UserProfileController implements Initializable {
@@ -242,6 +243,17 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void handleResetFields(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.CLIENT_PROFILE_PAGE);
+    }
+
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.CLIENT_PROFILE_PAGE);
+    }
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
         Navigator.navigate(ae, Navigator.CLIENT_PROFILE_PAGE);
     }
 }

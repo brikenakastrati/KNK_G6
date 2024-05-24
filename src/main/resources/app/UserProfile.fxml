@@ -199,4 +199,16 @@
    </Label>
    <Line endX="65.0" endY="567.5" layoutX="402.0" layoutY="233.0" startX="65.0" startY="-122.0" />
 
+   <Button layoutX="876.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #BBB;" text="EN">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Button>
+   <Button layoutX="924.0" layoutY="111.0" mnemonicParsing="false" onAction="#handleSQClick" opacity="0.8" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #BBB;" text="SQ">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Button>
+
+
 </AnchorPane>
