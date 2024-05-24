@@ -18,6 +18,7 @@ import model.dto.UserDto;
 import service.UserService;
 
 import java.io.IOException;
+import java.security.SecureRandom;
 import java.util.Objects;
 
 public class SignUpController {
@@ -144,7 +145,26 @@ public class SignUpController {
 
     }
     @FXML
-    private void suggestPassword (MouseEvent me) {
+    private void suggestPassword(ActionEvent event) {
+        String suggestedPassword = generateRandomPassword(12); // Specify the length
+        pwdPassword.setText(suggestedPassword);
+        pwdConfirmPassword.setText(suggestedPassword);
+    }
+
+    private static final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!@#$%^&*()-_=+";
+
+    private String generateRandomPassword(int length) {
+        SecureRandom random = new SecureRandom();
+        StringBuilder password = new StringBuilder(length);
+        for (int i = 0; i < length; i++) {
+            password.append(CHARACTERS.charAt(random.nextInt(CHARACTERS.length())));
+        }
+        return password.toString();
+    }
+
+    // Overloaded method to generate a password with a default length
+    private String generateRandomPassword() {
+        return generateRandomPassword(12); // Default length
     }
 
 
