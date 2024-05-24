@@ -55,7 +55,7 @@
 
    <Label fx:id="lblStatus" layoutX="95.0" layoutY="339.0" prefHeight="27.0" prefWidth="315.0" textFill="red">
       <font>
-         <Font name="System Bold" size="14.0" />  
+         <Font name="System Bold" size="14.0" />
       </font>
    </Label>
    <Button layoutX="216.0" layoutY="525.0" onAction="#saveChanges" style="-fx-border-width: 1.2px; -fx-border-color: black;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%SaveChanges" prefWidth="150.0"/>

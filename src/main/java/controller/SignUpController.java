@@ -52,8 +52,9 @@ public class SignUpController {
         pwdConfirmPassword.setOnKeyPressed(this::handleKeyPressed);
         cancel_btn.setOnKeyPressed(this::handleKeyPressed);
         signup_btn.setOnKeyPressed(this::handleKeyPressed);
-       
+
     }
+
     @FXML
     private void handleKeyPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
