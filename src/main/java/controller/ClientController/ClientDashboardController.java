@@ -39,9 +39,9 @@ public class ClientDashboardController {
         Navigator.navigate(ae, Navigator.CARS2_PAGE);
     }
 
-    public void handleDashboardClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.HOME_PAGE);
-    }
+//    public void handleDashboardClick(ActionEvent ae) {
+//        Navigator.navigate(ae, Navigator.HOME_PAGE);
+//    }
 
     public void handleCustomizeClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);

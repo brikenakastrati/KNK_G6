@@ -18,7 +18,6 @@ import java.util.ResourceBundle;
 
 public class Navigator {
     public final static String LOGIN_PAGE = "login_form.fxml";
-    public final static String HOME_PAGE = "ClientDashboard.fxml";
     public final static String CREATE_ACCOUNT_PAGE = "sign_up_form.fxml";
     public final static String ADMIN_DASHBOARD_PAGE = "AdminDashboard.fxml";
     public final static String ADMIN_INSERT_PAGE = "AdminInsert.fxml";

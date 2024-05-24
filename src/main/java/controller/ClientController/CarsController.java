@@ -178,9 +178,9 @@ public class CarsController implements Initializable {
         alert.showAndWait();
     }
 
-    public void handleDashboardClick(ActionEvent ae) {
-    Navigator.navigate(ae, Navigator.HOME_PAGE);
-    }
+    //public void handleDashboardClick(ActionEvent ae) {
+    //Navigator.navigate(ae, Navigator.HOME_PAGE);
+    //}
 
     public void handleCustomizeClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.CUSTOMIZE_PAGE);
