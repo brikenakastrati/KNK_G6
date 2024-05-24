@@ -13,51 +13,6 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.RequestController">
    <children>
-      <AnchorPane layoutX="-10.0" prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
-         <children>
-            <Button fx:id="btnClients" layoutX="389.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnCars" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
-               <effect>
-                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
-               </effect>
-            </Button>
-            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
-               <image>
-                  <Image url="@../Images/2.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnLogout" layoutX="1061.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <effect>
-                  <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
-               </effect>
-            </Button>
-            <Button fx:id="btnrequestcar" layoutX="272.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%lblRequestCar">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="984.0" layoutY="43.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/profile.png" />
-               </image>
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </ImageView>
-         </children>
-      </AnchorPane>
       <Label layoutX="439.0" layoutY="189.0" text="%lblRequest">
          <font>
             <Font size="34.0" />
@@ -86,5 +41,50 @@
          <font>
             <Font size="17.0" />
          </font></Button>
+      <AnchorPane prefHeight="102.0" prefWidth="1181.0" style="-fx-background-color: #999; -fx-border-color: black;">
+         <children>
+            <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnBuynow" layoutX="151.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnDashboard" layoutX="265.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%btnRequestCar">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
+               <image>
+                  <Image url="@../Images/2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
+               <effect>
+                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnLogout" layoutX="1059.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
+               </effect>
+            </Button>
+            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="1000.0" layoutY="52.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

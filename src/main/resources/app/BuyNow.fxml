@@ -56,7 +56,7 @@
             </ImageView>
             </children>
         </AnchorPane>
-        <Label fx:id="bn" layoutX="708.0" layoutY="157.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="118.0" text="Buy Now">
+        <Label fx:id="bn" layoutX="708.0" layoutY="157.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="118.0" text="%lblBuyNow">
             <font>
                 <Font name="System Bold" size="21.0" />
             </font></Label>
@@ -78,37 +78,37 @@
                 <Font size="15.0" />
             </font>
         </Label>
-        <TextField fx:id="fullnametxt" layoutX="663.0" layoutY="253.0" prefHeight="43.0" prefWidth="178.0" promptText="Name and Surname" styleClass="custom-text-field" />
+        <TextField fx:id="fullnametxt" layoutX="663.0" layoutY="253.0" prefHeight="43.0" prefWidth="178.0" promptText="%lblNS" styleClass="custom-text-field" />
         <TextField fx:id="cardnumbertxt" layoutX="663.0" layoutY="328.0" prefHeight="43.0" prefWidth="178.0" promptText="XXXX-YYYY-ZZZZ-VVVV" styleClass="custom-text-field" />
         <TextField fx:id="cvvtxt" layoutX="664.0" layoutY="400.0" prefHeight="43.0" prefWidth="178.0" promptText="                    XYZ" styleClass="custom-text-field" />
         <TextField fx:id="dateExpirationtxt" layoutX="665.0" layoutY="477.0" prefHeight="43.0" prefWidth="178.0" promptText="                 MM-YY" styleClass="custom-text-field" />
-        <Label layoutX="707.0" layoutY="220.0" text="Account name">
+        <Label layoutX="707.0" layoutY="220.0" text="%lblAccName">
             <font>
                 <Font name="Calibri" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="710.0" layoutY="301.0" text="Card-number">
+        <Label layoutX="710.0" layoutY="301.0" text="%lblCard-number">
             <font>
                 <Font name="Calibri" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="740.0" layoutY="374.0" text="CVV">
+        <Label layoutX="740.0" layoutY="374.0" text="%CVV">
             <font>
                 <Font name="Calibri" size="16.0" />
             </font>
         </Label>
-        <Label layoutX="702.0" layoutY="450.0" text="Date of expiration">
+        <Label layoutX="702.0" layoutY="450.0" text="%Dateofexpiration">
             <font>
                 <Font name="Calibri" size="16.0" />
             </font>
         </Label>
-        <Label fx:id="bn1" layoutX="45.0" layoutY="157.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="118.0" text="Car details">
+        <Label fx:id="bn1" layoutX="45.0" layoutY="157.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="118.0" text="%Cardetails">
             <font>
                 <Font name="System Bold" size="21.0" />
             </font>
         </Label>
-        <Button fx:id="buycarButton" layoutX="710.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleBuyCarButton" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Buy now" />
-        <Label fx:id="bn11" layoutX="27.0" layoutY="491.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="377.0" text="You're buying under the account of">
+        <Button fx:id="buycarButton" layoutX="710.0" layoutY="557.0" mnemonicParsing="false" onAction="#handleBuyCarButton" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnBuynow" />
+        <Label fx:id="bn11" layoutX="27.0" layoutY="491.0" lineSpacing="1.0" prefHeight="43.0" prefWidth="377.0" text="%lblteksti">
             <font>
                 <Font name="System Bold" size="21.0" />
             </font>

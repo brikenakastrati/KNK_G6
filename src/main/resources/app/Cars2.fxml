@@ -14,54 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1000.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
+<AnchorPane prefHeight="790.0" prefWidth="1167.0" style="-fx-background-color: #e0e0e0;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.CarsController">
     <children>
-        <AnchorPane prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
-            <children>
-                <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
-                    <effect>
-                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
-                    </effect>
-                </Button>
-                <Button fx:id="btnCars" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
-                    <effect>
-                        <InnerShadow height="11.0" radius="5.5" width="13.0" />
-                    </effect>
-                </Button>
-                <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
-                    <image>
-                        <Image url="@../Images/2.png" />
-                    </image>
-                </ImageView>
-                <Button fx:id="helpbtn" layoutX="484.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="41.0" style="-fx-background-radius: 20;" text="%helpbtn">
-                    <effect>
-                        <InnerShadow height="12.5" radius="5.875" width="13.0" />
-                    </effect>
-                </Button>
-                <Button fx:id="btnLogout1" layoutX="1061.0" layoutY="47.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
-                    <font>
-                        <Font name="System Bold" size="16.0" />
-                    </font>
-                    <effect>
-                        <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
-                    </effect>
-                </Button>
-            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="997.0" layoutY="39.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../Images/profile.png" />
-               </image>
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </ImageView>
-            <Button fx:id="btnrequestcar" layoutX="258.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%btnRequestCar">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            </children>
-        </AnchorPane>
-        <TableView fx:id="cartable" layoutX="14.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #e0e0e0;" stylesheets="@../Styles/table.css">
+        <TableView fx:id="cartable" layoutX="26.0" layoutY="123.0" prefHeight="554.0" prefWidth="200.0" style="-fx-background-color: #e0e0e0;" stylesheets="@../Styles/table.css">
             <columns>
                 <TableColumn fx:id="showCarsTable" prefWidth="199.19999313354492" text="%lblCARS" />
             </columns>
@@ -131,5 +86,50 @@
       </VBox>
       <Button fx:id="buynowbutton" layoutX="245.0" layoutY="491.0" mnemonicParsing="false" onAction="#handleBuynow" prefHeight="44.0" prefWidth="106.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnBuynow" />
       <Button fx:id="reqforcarbtn" layoutX="245.0" layoutY="556.0" mnemonicParsing="false" onAction="#handleRequestForCar" prefHeight="44.0" prefWidth="148.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnRequestforCar" />
+      <AnchorPane prefHeight="102.0" prefWidth="1179.0" style="-fx-background-color: #999; -fx-border-color: black;">
+         <children>
+            <Button fx:id="btnClients" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnBuynow" layoutX="151.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnDashboard" layoutX="265.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%btnRequestCar">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
+               <image>
+                  <Image url="@../Images/2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
+               <effect>
+                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnLogout" layoutX="1059.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
+               </effect>
+            </Button>
+            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="1000.0" layoutY="52.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
     </children>
 </AnchorPane>
