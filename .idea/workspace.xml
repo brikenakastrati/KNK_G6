@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added en,sq buttons to UserProfileController">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Removed Login as admin to only login">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/login_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -195,14 +194,6 @@
       <workItem from="1716554261484" duration="1820000" />
       <workItem from="1716557400876" duration="2922000" />
       <workItem from="1716568688835" duration="658000" />
-    </task>
-    <task id="LOCAL-00003" summary="Redirecting to home page after successfull login">
-      <option name="closed" value="true" />
-      <created>1714855239124</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1714855239124</updated>
     </task>
     <task id="LOCAL-00004" summary="Login and register page design">
       <option name="closed" value="true" />
@@ -588,7 +579,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716513182100</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Removed Login as admin to only login">
+      <option name="closed" value="true" />
+      <created>1716587213243</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1716587213243</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -607,7 +606,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="modified cars2.fxml" />
     <MESSAGE value="modified CreateandDeleteClient.fxml.fxml" />
     <MESSAGE value="added style to CreateandDeleteClient.fxml" />
     <MESSAGE value="added style to cars.fxml" />
@@ -632,7 +630,8 @@
     <MESSAGE value="Deleted ClientDashboard no longer used" />
     <MESSAGE value="Deleted ClientDashboardController no longer used" />
     <MESSAGE value="Added en,sq buttons to UserProfileController" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added en,sq buttons to UserProfileController" />
+    <MESSAGE value="Removed Login as admin to only login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed Login as admin to only login" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

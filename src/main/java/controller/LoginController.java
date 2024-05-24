@@ -133,7 +133,7 @@ public class LoginController {
 
 
     @FXML
-    private void handleCreateAccountClick(MouseEvent me) {
+    private void handleSignUpClick(ActionEvent me) {
         Navigator.navigate(me, Navigator.CREATE_ACCOUNT_PAGE);
     }
     @FXML
@@ -159,7 +159,10 @@ public class LoginController {
             pwdPassword.setVisible(true);
             pwdPasswordVisible.setVisible(false);
         }
-    }}
+    }
+
+
+}
 
 
 

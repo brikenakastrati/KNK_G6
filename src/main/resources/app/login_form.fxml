@@ -24,11 +24,7 @@
       <TextField fx:id="pwdPasswordVisible" layoutX="255.0" layoutY="211.0" promptText="Username" style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" />
         <PasswordField fx:id="pwdPassword" layoutX="255.0" layoutY="211.0" promptText="Password" style="-fx-border-color: black; -fx-border-width: 0px 0px 3px 0px;" />
       <Label layoutX="402.0" layoutY="270.0" />
-      <Label layoutX="253.0" layoutY="250.0" onMouseClicked="#handleCreateAccountClick" prefHeight="18.0" prefWidth="139.0" text="%lblCreatenewaccount" textFill="#979699" underline="true">
-         <font>
-            <Font size="14.0" />
-         </font></Label>
-      <Button fx:id="login_btn" layoutX="204.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%login_btn">
+      <Button fx:id="login_btn" layoutX="206.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleLoginClick" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%login_btn">
          <font>
             <Font name="System Bold" size="12.0" />
          </font>
@@ -66,15 +62,23 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-        <Button layoutX="410.0" layoutY="209.0" onAction="#togglePasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+        <Button layoutX="410.0" layoutY="209.0" onAction="#togglePasswordVisibility" prefHeight="20.0" prefWidth="20.0">
             <graphic>
-                <ImageView fitWidth="20" fitHeight="20">
+                <ImageView fitHeight="20" fitWidth="20">
                     <image>
                         <Image url="@../Images/showicon.png" />
                     </image>
                 </ImageView>
             </graphic>
         </Button>
+      <Button fx:id="signupbtn" layoutX="330.0" layoutY="263.0" mnemonicParsing="false" onAction="#handleSignUpClick" prefHeight="28.0" prefWidth="98.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%signup">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </Button>
     </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
