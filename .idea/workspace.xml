@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Deleted ClientDashboardController no longer used">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added en,sq buttons to UserProfileController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,15 +187,7 @@
       <workItem from="1716478707567" duration="158000" />
       <workItem from="1716500752236" duration="1511000" />
       <workItem from="1716502398188" duration="1050000" />
-      <workItem from="1716504592971" duration="7056000" />
-    </task>
-    <task id="LOCAL-00002" summary="Initial Commit">
-      <option name="closed" value="true" />
-      <created>1714754356729</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1714754356729</updated>
+      <workItem from="1716504592971" duration="7227000" />
     </task>
     <task id="LOCAL-00003" summary="Redirecting to home page after successfull login">
       <option name="closed" value="true" />
@@ -581,7 +573,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716512140374</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Added en,sq buttons to UserProfileController">
+      <option name="closed" value="true" />
+      <created>1716513182100</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1716513182100</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +600,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="added table.css" />
     <MESSAGE value="modified cars2.fxml" />
     <MESSAGE value="modified CreateandDeleteClient.fxml.fxml" />
     <MESSAGE value="added style to CreateandDeleteClient.fxml" />
@@ -625,7 +624,8 @@
     <MESSAGE value="Added the 8 character validation for password in UserProfileController" />
     <MESSAGE value="Deleted ClientDashboard no longer used" />
     <MESSAGE value="Deleted ClientDashboardController no longer used" />
-    <option name="LAST_COMMIT_MESSAGE" value="Deleted ClientDashboardController no longer used" />
+    <MESSAGE value="Added en,sq buttons to UserProfileController" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added en,sq buttons to UserProfileController" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -20,6 +20,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class AdminInsertController {
     @FXML
@@ -186,4 +187,16 @@ public class AdminInsertController {
     public void handleMessageClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.MESSAGE_PAGE);
     }
+
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);
+    }
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);
+    }
+
 }
