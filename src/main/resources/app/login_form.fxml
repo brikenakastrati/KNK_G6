@@ -36,11 +36,11 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </Button>
-      <Button fx:id="loginasadmin_btn" layoutX="323.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%loginasadmin_btn" underline="true">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
+<!--&lt;!&ndash;      <Button fx:id="loginasadmin_btn" layoutX="323.0" layoutY="279.0" mnemonicParsing="false" onAction="#handleLoginAsAdmin" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-width: 2; -fx-border-color: white; -fx-text-fill: black;" text="%loginasadmin_btn" underline="true">&ndash;&gt;-->
+<!--         <font>-->
+<!--            <Font name="System Bold" size="12.0" />-->
+<!--         </font>-->
+<!--      </Button>-->
       <ImageView fitHeight="143.0" fitWidth="232.0" layoutX="194.0" layoutY="14.0">
          <image>
             <Image url="@../Images/2.png" />

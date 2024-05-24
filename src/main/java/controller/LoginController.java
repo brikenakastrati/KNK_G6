@@ -80,49 +80,56 @@ public class LoginController {
             alert.setContentText("Incorrect username or password.");
             alert.showAndWait();
         } else {
+            // Check if the user is an admin
+            if (result.isAdmin()) {
+                // Navigate to the admin dashboard
+                UserService.setUsername(this.txtUserName.getText());
+                Navigator.navigate(ae, Navigator.ADMIN_DASHBOARD_PAGE);
+            } else {
                 // Navigate to the home page for regular users
                 UserService.setUsername(this.txtUserName.getText());
                 Navigator.navigate(ae, Navigator.CARS2_PAGE);
-
-        }
-    }
-
-
-    @FXML
-    private void handleLoginAsAdmin(ActionEvent me) {
-        LoginUserDto loginUserData = new LoginUserDto(
-                this.txtUserName.getText(),
-                this.pwdPassword.getText()
-        );
-
-        // Attempt to log in
-        LoginResult result = UserService.login(loginUserData);
-
-
-        // Check login success and admin status
-        if (result.isSuccess() && result.isAdmin()) {
-
-            UserService.setUsername(this.txtUserName.getText());
-            Navigator.navigate(me, Navigator.ADMIN_DASHBOARD_PAGE);
-
-
-
-        } else {
-
-            Alert alert = new Alert(Alert.AlertType.ERROR);
-            if (!result.isSuccess()) {
-                alert.setTitle("Login Error");
-                alert.setHeaderText(null);
-                alert.setContentText("Incorrect email or password.");
-            } else if (!result.isAdmin()) {
-                alert.setTitle("Access Denied");
-                alert.setHeaderText(null);
-                alert.setContentText("You do not have administrator access.");
             }
-            alert.showAndWait();
-        }
 
+        }
     }
+
+
+//    @FXML
+//    private void handleLoginAsAdmin(ActionEvent me) {
+//        LoginUserDto loginUserData = new LoginUserDto(
+//                this.txtUserName.getText(),
+//                this.pwdPassword.getText()
+//        );
+//
+//        // Attempt to log in
+//        LoginResult result = UserService.login(loginUserData);
+//
+//
+//        // Check login success and admin status
+//        if (result.isSuccess() && result.isAdmin()) {
+//
+//            UserService.setUsername(this.txtUserName.getText());
+//            Navigator.navigate(me, Navigator.ADMIN_DASHBOARD_PAGE);
+//
+//
+//
+//        } else {
+//
+//            Alert alert = new Alert(Alert.AlertType.ERROR);
+//            if (!result.isSuccess()) {
+//                alert.setTitle("Login Error");
+//                alert.setHeaderText(null);
+//                alert.setContentText("Incorrect email or password.");
+//            } else if (!result.isAdmin()) {
+//                alert.setTitle("Access Denied");
+//                alert.setHeaderText(null);
+//                alert.setContentText("You do not have administrator access.");
+//            }
+//            alert.showAndWait();
+//        }
+//
+//    }
 
 
     @FXML
