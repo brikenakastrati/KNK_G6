@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added en,sq buttons to UserProfileController">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/SignUpController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/sign_up_form.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +67,7 @@
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "Application.Main.executor": "Run",
-    "Application.app.Main.executor": "Debug",
+    "Application.app.Main.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
     "Repository.Attach.Annotations": "false",
     "Repository.Attach.JavaDocs": "false",
@@ -198,7 +199,7 @@
       <workItem from="1716504592971" duration="7227000" />
       <workItem from="1716544879764" duration="8921000" />
       <workItem from="1716554261484" duration="1820000" />
-      <workItem from="1716557400876" duration="1297000" />
+      <workItem from="1716557400876" duration="1573000" />
     </task>
     <task id="LOCAL-00003" summary="Redirecting to home page after successfull login">
       <option name="closed" value="true" />

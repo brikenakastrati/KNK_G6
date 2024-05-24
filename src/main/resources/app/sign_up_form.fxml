@@ -102,7 +102,7 @@
                         <Font name="System Bold" size="12.0" />
                      </font>
                       </Button>
-                   <Button fx:id="suggestPassword_btn" layoutX="155.0" layoutY="280.0" mnemonicParsing="false" onAction="#suggestPassword" prefHeight="19.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2; -fx-background-color: white;" text="Suggest Password">
+                   <Button fx:id="suggestPassword_btn" layoutX="155.0" layoutY="280.0" mnemonicParsing="false" onAction="#suggestPassword" prefHeight="19.0" prefWidth="140.0" style="-fx-background-radius: 10; -fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 2; -fx-background-color: white;" text="%SuggestPassword">
                        <font>
                            <Font name="System Bold" size="12.0" />
                        </font>
