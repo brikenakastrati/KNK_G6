@@ -127,4 +127,8 @@ public class AdminDashboardController {
     private void handleMessageClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
     }
+    @FXML
+    public void handleBuyHistory(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
 }

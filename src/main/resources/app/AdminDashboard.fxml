@@ -50,6 +50,7 @@
                   <DropShadow height="28.02" radius="13.51" width="28.02" />
                </effect>
             </Button>
+            <Button layoutX="578.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleBuyHistory" text="BuyHistory" />
          </children>
       </AnchorPane>
       <!-- User Info Pane -->

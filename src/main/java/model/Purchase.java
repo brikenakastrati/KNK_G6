@@ -7,6 +7,14 @@ public class Purchase {
     private double carPrice;
     private String buyerName;
     private LocalDateTime purchaseDate;
+    private int carStock;
+
+    public int getCarStock() {
+        return carStock;
+    }
+    public void setCarStock(int carStock) {
+        this.carStock = carStock;
+    }
 
     public String getCarName() {
         return carName;

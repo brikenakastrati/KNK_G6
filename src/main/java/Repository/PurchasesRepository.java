@@ -96,5 +96,28 @@ public class PurchasesRepository {
         }
         return purchases;
     }
+    public List<Purchase> getAllPurchases(){
+        List<Purchase> purchases = new ArrayList<>();
+        String sql = "SELECT p.car_name, p.car_price, p.buyer_name, p.purchase_date, i.carstock " + "FROM CarPurchases p JOIN Inventory i ON p.car_id = i.carid";
+        try(Connection conn = DBConnector.getConnection();
+            PreparedStatement pst = conn.prepareStatement(sql)
+        ){
+            ResultSet rst = pst.executeQuery();
+
+            while(rst.next()) {
+                Purchase purchase = new Purchase();
+                purchase.setCarName(rst.getString("car_name"));
+                purchase.setCarPrice(rst.getDouble("car_price"));
+                purchase.setBuyerName(rst.getString("buyer_name"));
+                purchase.setPurchaseDate(rst.getTimestamp("purchase_date").toLocalDateTime());
+                purchase.setCarStock(rst.getInt("carstock"));
+                purchases.add(purchase);
+            }
+
+        }catch (SQLException se) {
+            se.printStackTrace();
+        }
+        return purchases;
+    }
 
 }
