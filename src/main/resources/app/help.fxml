@@ -2,61 +2,80 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.text.TextFlow?>
 
-<ScrollPane hbarPolicy="AS_NEEDED" vbarPolicy="AS_NEEDED" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" pannable="true" prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelpController">
-   <content>
-      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1000.0" prefWidth="900.0" style="-fx-background-color: white;">
+<Pane prefHeight="682.0" prefWidth="853.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HelpController">
+   <children>
+      <AnchorPane minHeight="430.0" minWidth="854.0" prefHeight="1028.0" prefWidth="854.0" style="-fx-background-color: white;">
          <children>
-            <AnchorPane prefHeight="51.0" prefWidth="1000.0" style="-fx-background-color: #999;">
+            <AnchorPane prefHeight="51.0" prefWidth="853.0" style="-fx-background-color: #999;">
                <children>
                   <Label layoutX="434.0" layoutY="16.0" prefHeight="18.0" prefWidth="40.0" text="HELP" textFill="WHITE" />
                   <Button fx:id="gobackBtn" layoutX="24.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleGoBackClick" prefHeight="26.0" prefWidth="57.0" style="-fx-background-color: #999; -fx-border-color: white; -fx-border-radius: 5;" text="Go back" textFill="WHITE">
                      <font>
                         <Font size="10.0" />
-                     </font></Button>
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
-            <TextFlow layoutX="54.0" layoutY="617.0" prefHeight="217.0" prefWidth="295.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblDashboard-help" wrappingWidth="245.6851806640625">
-                     <font>
-                        <Font size="14.0" />
-                     </font></Text>
-               </children>
-            </TextFlow>
-            <Label layoutX="109.0" layoutY="584.0" text="%lblOthers">
+            <Label layoutX="148.0" layoutY="80.0" text="%lblCARS">
                <font>
                   <Font size="16.0" />
-               </font></Label>
-            <Label layoutX="131.0" layoutY="341.0" text="%lblCONTACT">
-               <font>
-                  <Font size="16.0" />
-               </font></Label>
-            <TextFlow layoutX="59.0" layoutY="374.0" prefHeight="200.0" prefWidth="286.0">
-               <children>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblContact-help" wrappingWidth="212.2476806640625">
-                     <font>
-                        <Font size="14.0" />
-                     </font></Text>
-               </children>
-            </TextFlow>
-            <Label layoutX="148.0" layoutY="106.0" text="%lblCARS">
-               <font>
-                  <Font size="16.0" />
-               </font></Label>
-            <TextFlow layoutX="54.0" layoutY="141.0" prefHeight="200.0" prefWidth="306.0">
+               </font>
+            </Label>
+            <TextFlow layoutX="41.0" layoutY="106.0" prefHeight="200.0" prefWidth="306.0">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblCars-help" wrappingWidth="212.2476806640625">
                      <font>
                         <Font size="14.0" />
-                     </font></Text>
+                     </font>
+                  </Text>
                </children>
             </TextFlow>
-         </children></AnchorPane>
-   </content>
-</ScrollPane>
+            <Label layoutX="642.0" layoutY="80.0" text="%lblCONTACT">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextFlow layoutX="541.0" layoutY="106.0" prefHeight="200.0" prefWidth="286.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblContact-help" wrappingWidth="212.2476806640625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Label layoutX="654.0" layoutY="332.0" text="%lblOthers">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextFlow layoutX="531.0" layoutY="364.0" prefHeight="217.0" prefWidth="295.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="%lblDashboard-help" wrappingWidth="245.6851806640625">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+               </children>
+            </TextFlow>
+            <Label layoutX="139.0" layoutY="332.0" text="Request Car">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextFlow layoutX="54.0" layoutY="819.0" prefHeight="200.0" prefWidth="306.0" />
+            <Text layoutX="41.0" layoutY="373.0" strokeType="OUTSIDE" strokeWidth="0.0" text="To request a car, fill in all the fields with the car's brand, model, name, type, and a description. Once all fields are filled, click the 'Submit Request' button to submit your car suggestion. Ensure all fields are completed to avoid errors. Your request will be reviewed and considered for restocking." wrappingWidth="282.64764404296875">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</Pane>
