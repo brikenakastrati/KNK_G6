@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added style for comboboxes">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Styles/Datepicker.css" afterDir="false" />
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Added style for datepickers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Styles/Datepicker.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Styles/Datepicker.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +186,7 @@
       <workItem from="1716478707567" duration="158000" />
       <workItem from="1716500752236" duration="1511000" />
       <workItem from="1716502398188" duration="1050000" />
-      <workItem from="1716504592971" duration="4116000" />
+      <workItem from="1716504592971" duration="4877000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <option name="closed" value="true" />
@@ -555,7 +556,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716509650413</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added style for datepickers">
+      <option name="closed" value="true" />
+      <created>1716510177927</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1716510177927</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -574,7 +583,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Car display part4 finished" />
     <MESSAGE value="SENI MA I FORT NBOT." />
     <MESSAGE value="Changes" />
     <MESSAGE value="test" />
@@ -599,7 +607,8 @@
     <MESSAGE value="Changed the style on the AdminInsert.fxml textfields" />
     <MESSAGE value="Changed the style on the AdminInsert.fxml buttons" />
     <MESSAGE value="Added style for comboboxes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added style for comboboxes" />
+    <MESSAGE value="Added style for datepickers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added style for datepickers" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

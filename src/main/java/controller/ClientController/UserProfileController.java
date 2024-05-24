@@ -97,6 +97,11 @@ public class UserProfileController implements Initializable {
             return;
         }
 
+        if (txtNewPassword.getText().length() < 8 && txtConfirmNewPassword.getText().length() < 8) {
+            lblStatus.setText("Password must be at least 8 characters long");
+            return;
+        }
+
         boolean success = userService.changePassword(currentPassword, newPassword, currentUser.getId());
 
         if (success) {

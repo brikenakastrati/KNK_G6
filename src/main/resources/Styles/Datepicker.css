@@ -1,4 +1,4 @@
-/* Style for the DatePicker field */
+
 .date-picker {
     -fx-background-color: white;
     -fx-border-color: #c0c0c0;
@@ -8,7 +8,7 @@
     -fx-font-family: "Arial";
 }
 
-/* Style for the date cell in the popup */
+
 .date-picker .day-cell {
     -fx-background-color: white;
     -fx-text-fill: #333;
@@ -16,51 +16,43 @@
     -fx-border-width: 0;
 }
 
-/* Hover effects for date cells */
 .date-picker .day-cell:hover {
     -fx-background-color: #eaeaea;
 }
 
-/* Style for the selected date */
 .date-picker .day-cell:selected {
     -fx-background-color: #A9A9A9;
     -fx-text-fill: white;
 }
 
-/*!* Style for today's date *!*/
-/*.date-picker .day-cell:today {*/
-/*    -fx-background-color: #b3d4fc;*/
-/*    -fx-text-fill: #333;*/
-/*}*/
 
-/* Disable dates styling */
 .date-picker .day-cell:disabled {
     -fx-background-color: #f4f4f4;
     -fx-text-fill: #d3d3d3;
 }
 
-/* Arrow button in the date picker */
+
 .date-picker .arrow-button {
     -fx-background-color: transparent;
 }
 
-/* Arrow shape */
+
 .date-picker .arrow {
     -fx-background-color: #666;
 }
 
-/* Style for the month-year navigation panel */
+
 .date-picker .month-year-pane {
     -fx-background-color: #f0f0f0;
 }
 
-/* Style for the month-year label */
+
 .date-picker .month-year-pane .label {
     -fx-text-fill: #333;
     -fx-font-weight: bold;
 }
 
-/* Hover effect on month-year arrows */
+
 .date-picker .month-year-pane .arrow-button:hover {
     -fx-background-color: #e0e0e0;
 }
