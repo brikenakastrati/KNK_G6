@@ -62,12 +62,12 @@
       </Label>
       <TextField fx:id="txtCarStock" layoutX="401.0" layoutY="539.0" prefHeight="26.0" prefWidth="120.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
       <TextField fx:id="txtCarPrice" layoutX="401.0" layoutY="577.0" prefHeight="26.0" prefWidth="120.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
-      <Button layoutX="197.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleAddClick" prefHeight="37.0" prefWidth="95.0" text="%btnAdd" textAlignment="CENTER">
+      <Button layoutX="197.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleAddClick" prefHeight="37.0" prefWidth="95.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnAdd" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button layoutX="321.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleDeleteClick" prefHeight="37.0" prefWidth="95.0" text="%btnDelete" textAlignment="CENTER">
+      <Button layoutX="321.0" layoutY="705.0" mnemonicParsing="false" onAction="#handleDeleteClick" prefHeight="37.0" prefWidth="95.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnDelete" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>
@@ -125,7 +125,7 @@
             </Button>
          </children>
       </AnchorPane>
-      <Button fx:id="btnImportPhotos" layoutX="653.0" layoutY="725.0" mnemonicParsing="false" onAction="#handleImportPhotos" prefHeight="37.0" prefWidth="95.0" text="%btnImportPhotos" textAlignment="CENTER">
+      <Button fx:id="btnImportPhotos" layoutX="653.0" layoutY="725.0" mnemonicParsing="false" onAction="#handleImportPhotos" prefHeight="37.0" prefWidth="95.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnImportPhotos" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>
