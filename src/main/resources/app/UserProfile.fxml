@@ -40,7 +40,7 @@
    <TextField fx:id="txtCurrentPasswordVisible" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
    <Button layoutX="367.0" layoutY="381.0" onAction="#toggleCurrentPasswordVisibility" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%btnShow" />
 
-   <Label layoutX="40.0" layoutY="426.0" text="New password">
+   <Label layoutX="40.0" layoutY="426.0" text="%Newpassword">
       <font>
          <Font size="14.0" />
       </font>
