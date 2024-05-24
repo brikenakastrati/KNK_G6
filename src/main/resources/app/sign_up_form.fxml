@@ -134,8 +134,26 @@
                      </font>
                   </Label>
                   <Label layoutX="156.0" layoutY="257.0" onMouseClicked="#handleLoginAccountClick" text="%lblAlreadyhaveanaccount?" textFill="#a6a5ae" underline="true" />
-                  <Button layoutX="362.0" layoutY="160.0" onAction="#togglePasswordVisibility" text="%btnShow" />
-                  <Button layoutX="362.0" layoutY="210.0" onAction="#toggleConfirmPasswordVisibility" text="%btnShow" />
+                   <Button layoutX="362.0" layoutY="159.0" onAction="#togglePasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+                       <graphic>
+                           <ImageView fitWidth="20" fitHeight="20">
+                               <image>
+                                   <Image url="@../Images/showicon.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+
+                   <Button layoutX="362.0" layoutY="209.0" onAction="#toggleConfirmPasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+                       <graphic>
+                           <ImageView fitWidth="20" fitHeight="20">
+                               <image>
+                                   <Image url="@../Images/showicon.png" />
+                               </image>
+                           </ImageView>
+                       </graphic>
+                   </Button>
+
                </children>
             </AnchorPane>
             <ImageView fitHeight="151.0" fitWidth="220.0" layoutY="79.0">

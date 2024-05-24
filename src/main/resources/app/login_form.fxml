@@ -66,7 +66,15 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
-      <Button layoutX="411.0" layoutY="213.0" onAction="#togglePasswordVisibility" text="%btnShow" />
+        <Button layoutX="410.0" layoutY="209.0" onAction="#togglePasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+            <graphic>
+                <ImageView fitWidth="20" fitHeight="20">
+                    <image>
+                        <Image url="@../Images/showicon.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Button>
     </children>
    <cursor>
       <Cursor fx:constant="DEFAULT" />
