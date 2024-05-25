@@ -105,7 +105,10 @@ public class MessagesController {
         UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
-
+    @FXML
+    public void handleBuyHistory(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
     @FXML
     private void handleInsertClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);

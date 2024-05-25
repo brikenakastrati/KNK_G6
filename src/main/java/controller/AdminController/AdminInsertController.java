@@ -199,4 +199,8 @@ public class AdminInsertController {
         Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);
     }
 
+    @FXML
+    public void handleBuyHistory(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
 }

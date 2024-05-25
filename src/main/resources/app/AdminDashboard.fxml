@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.LineChart?>
@@ -12,27 +13,28 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminDashboardController">
    <children>
       <!-- Top Pane -->
-      <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="98.0" prefWidth="900.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;">
+      <AnchorPane layoutX="-1.0" opacity="0.98" prefHeight="98.0" prefWidth="900.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;" stylesheets="@../Styles/style.css">
          <children>
-            <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="%btnDashboard">
+            <Button fx:id="btnDashboard" layoutX="150.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="37.0" prefWidth="102.0" text="%btnDashboard">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="%btnInsert">
+            <Button fx:id="btnInsert" layoutX="259.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="37.0" prefWidth="102.0" text="%btnInsert">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="%btnClients">
+            <Button fx:id="btnClients" layoutX="367.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="37.0" prefWidth="102.0" text="%btnClients">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="%btnMessages">
+            <Button fx:id="btnMessages" layoutX="475.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="37.0" prefWidth="102.0" text="%btnMessages">
                <effect>
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
@@ -42,7 +44,7 @@
                   <Image url="@../Images/2.png" />
                </image>
             </ImageView>
-            <Button fx:id="btnLogout" layoutX="789.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="%btnLogOut">
+            <Button fx:id="btnLogout" layoutX="790.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="45.0" prefWidth="102.0" text="%btnLogOut">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -50,7 +52,7 @@
                   <DropShadow height="28.02" radius="13.51" width="28.02" />
                </effect>
             </Button>
-            <Button layoutX="578.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleBuyHistory" text="BuyHistory" />
+            <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="BuyHistory" />
          </children>
       </AnchorPane>
       <!-- User Info Pane -->

@@ -116,9 +116,16 @@ public class CreateClientAndDeleteController implements Initializable{
     private void handleDashboardClick(ActionEvent ae){
         Navigator.navigate(ae, Navigator.ADMIN_INSERT_PAGE);
     }
+    @FXML
     public void handleMessageClick(ActionEvent ae){
         Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
     }
+
+    @FXML
+    public void handleBuyHistory(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
+
     private void showAlert(Alert.AlertType alertType, String title, String content) {
         Alert alert = new Alert(alertType);
         alert.setTitle(title);

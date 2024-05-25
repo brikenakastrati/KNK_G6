@@ -101,43 +101,6 @@
             <Font size="21.0" />
          </font>
       </Label>
-      <AnchorPane layoutY="-6.0" opacity="0.98" prefHeight="98.0" prefWidth="900.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;">
-         <children>
-            <Button fx:id="btnDashboard" layoutX="170.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="35.0" prefWidth="83.0" text="%btnDashboard">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnInsert" layoutX="270.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="35.0" prefWidth="83.0" text="%btnInsert">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnClients" layoutX="370.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="35.0" prefWidth="83.0" text="%btnClients">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnMessages" layoutX="470.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="35.0" prefWidth="83.0" text="%btnMessages">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <ImageView fitHeight="81.0" fitWidth="136.0" layoutY="13.0">
-               <image>
-                  <Image url="@../Images/2.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnLogout" layoutX="793.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" style="-fx-background-color: #FFF;" text="%btnLogOut">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <effect>
-                  <DropShadow height="28.02" radius="13.51" width="28.02" />
-               </effect>
-            </Button>
-         </children>
-      </AnchorPane>
       <Button fx:id="btnImportPhotos" layoutX="653.0" layoutY="725.0" mnemonicParsing="false" onAction="#handleImportPhotos" prefHeight="37.0" prefWidth="95.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnImportPhotos" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
@@ -153,5 +116,43 @@
             <Font name="System Bold" size="12.0" />
          </font>
       </Button>
+      <AnchorPane layoutY="-7.0" opacity="0.98" prefHeight="98.0" prefWidth="900.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;" stylesheets="@../Styles/style.css">
+         <children>
+            <Button fx:id="btnDashboard" layoutX="150.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleDashboardClick" prefHeight="37.0" prefWidth="102.0" text="%btnDashboard">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnInsert" layoutX="259.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleInsertClick" prefHeight="37.0" prefWidth="102.0" text="%btnInsert">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnClients" layoutX="367.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleClientsClick" prefHeight="37.0" prefWidth="102.0" text="%btnClients">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnMessages" layoutX="475.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleMessageClick" prefHeight="37.0" prefWidth="102.0" text="%btnMessages">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="84.0" fitWidth="136.0" layoutY="13.0">
+               <image>
+                  <Image url="@../Images/2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnLogout" layoutX="790.0" layoutY="40.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="45.0" prefWidth="102.0" text="%btnLogOut">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <effect>
+                  <DropShadow height="28.02" radius="13.51" width="28.02" />
+               </effect>
+            </Button>
+            <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="BuyHistory" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

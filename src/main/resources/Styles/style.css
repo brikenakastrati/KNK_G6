@@ -1,0 +1,85 @@
+.nav-button {
+    -fx-background-color: linear-gradient(#78909c, #546e7a);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    /*-fx-border-radius: 5; !* Corrected syntax *!*/
+    -fx-background-radius: 5;
+    -fx-padding: 10 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 5, 0.3, 0, 1);
+}
+
+.nav-button:hover {
+    -fx-background-color: linear-gradient(#546e7a, #455a64);
+}
+
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+}
+
+.button {
+    -fx-background-color: linear-gradient(#78909c, #546e7a);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    /*-fx-border-radius: 5; !* Corrected syntax *!*/
+    -fx-background-radius: 5;
+    -fx-padding: 10 20; /* Corrected syntax by changing comma to space */
+    -fx-effect: dropshadow(gaussian, rgba(120, 144, 156, 0.8), 5, 0.3, 0, 1);
+}
+
+.button:hover {
+    -fx-background-color: linear-gradient(#546e7a, #455a64);
+}
+
+.table-view {
+    -fx-background-color: #cfd8dc;
+    -fx-border-color: transparent;
+    /*-fx-border-radius: 5; !* Added border radius *!*/
+    -fx-padding: 5;
+    -fx-effect: dropshadow(gaussian, #b0bec5, 10, 0.5, 0, 0);
+}
+
+.table-column {
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #37474f;
+    -fx-background-color: #eceff1;
+}
+
+.image-view {
+    -fx-effect: dropshadow(gaussian, #616161, 20, 0.5, 0, 0);
+}
+
+#btnProfileImage1, #btnProfileImage {
+    -fx-effect: innershadow(gaussian, #78909c, 10, 0.5, 0, 0);
+}
+
+.vbox {
+    -fx-background-color: #fff;
+    -fx-padding: 20;
+    -fx-spacing: 10;
+    -fx-alignment: center;
+}
+
+.pagination {
+    -fx-border-color: transparent;
+    -fx-background-color: #fff;
+}
+
+.pagination .button {
+    /*-fx-background-radius: 15; !* Fixed background-radius value *!*/
+    -fx-background-color: #eee;
+    -fx-text-fill: #666;
+}
+
+.pagination .button:hover {
+    -fx-background-color: #ddd;
+}
+
+.pagination .number-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: normal;
+}
+
+.pagination .control-box {
+    -fx-padding: 5;
+}

@@ -25,7 +25,6 @@
 
 <AnchorPane onKeyPressed="#handleKeyPressed" prefHeight="800.0" prefWidth="1003.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.UserProfileController">
 
-
    <Label layoutX="131.0" layoutY="304.0" text="%lblChangePassword">
       <font>
          <Font name="System Bold" size="18.0" />
@@ -38,9 +37,9 @@
    </Label>
    <PasswordField fx:id="txtCurrentPassword" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtCurrentPasswordVisible" layoutX="201.0" layoutY="378.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="367.0" layoutY="378.0" onAction="#toggleCurrentPasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+   <Button layoutX="367.0" layoutY="378.0" onAction="#toggleCurrentPasswordVisibility" prefHeight="20.0" prefWidth="20.0">
       <graphic>
-         <ImageView fitWidth="20" fitHeight="20">
+         <ImageView fitHeight="20" fitWidth="20">
             <image>
                <Image url="@../Images/showicon.png" />
             </image>
@@ -54,9 +53,9 @@
    </Label>
    <PasswordField fx:id="txtNewPassword" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtNewPasswordVisible" layoutX="201.0" layoutY="421.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="367.0" layoutY="421.0" onAction="#toggleNewPasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+   <Button layoutX="367.0" layoutY="421.0" onAction="#toggleNewPasswordVisibility" prefHeight="20.0" prefWidth="20.0">
       <graphic>
-         <ImageView fitWidth="20" fitHeight="20">
+         <ImageView fitHeight="20" fitWidth="20">
             <image>
                <Image url="@../Images/showicon.png" />
             </image>
@@ -65,9 +64,9 @@
    </Button>
    <PasswordField fx:id="txtConfirmNewPassword" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" />
    <TextField fx:id="txtConfirmNewPasswordVisible" layoutX="201.0" layoutY="465.0" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css" visible="false" />
-   <Button layoutX="367.0" layoutY="465.0" onAction="#toggleConfirmPasswordVisibility" prefWidth="20.0" prefHeight="20.0">
+   <Button layoutX="367.0" layoutY="465.0" onAction="#toggleConfirmPasswordVisibility" prefHeight="20.0" prefWidth="20.0">
       <graphic>
-         <ImageView fitWidth="20" fitHeight="20">
+         <ImageView fitHeight="20" fitWidth="20">
             <image>
                <Image url="@../Images/showicon.png" />
             </image>
@@ -79,8 +78,8 @@
          <Font name="System Bold" size="14.0" />
       </font>
    </Label>
-   <Button layoutX="216.0" layoutY="525.0" onAction="#saveChanges" style="-fx-border-width: 1.2px; -fx-border-color: black;" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%SaveChanges" prefWidth="150.0"/>
-   <Button fx:id="suggestPassword_btn" layoutX="60.0" layoutY="525.0" mnemonicParsing="false" onAction="#suggestPassword" styleClass="createclientbutton" style="-fx-border-width: 1.2px; -fx-border-color: black;" text="%SuggestPassword" stylesheets="@../Styles/button.css">
+   <Button layoutX="237.0" layoutY="525.0" onAction="#saveChanges" prefWidth="150.0" style="-fx-border-width: 1.2px; -fx-border-color: black;" styleClass="createclientbutton" stylesheets="@../Styles/style.css" text="%SaveChanges" />
+   <Button fx:id="suggestPassword_btn" layoutX="40.0" layoutY="525.0" mnemonicParsing="false" onAction="#suggestPassword" style="-fx-border-width: 1.2px; -fx-border-color: black;" styleClass="createclientbutton" stylesheets="@../Styles/style.css" text="%SuggestPassword">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
@@ -168,7 +167,7 @@
          <Button fx:id="resetfields" mnemonicParsing="false" onAction="#handleResetFields" prefHeight="27.0" prefWidth="100.0" style="-fx-background-color: Transparent; -fx-border-width: 1px; -fx-border-color: black; -fx-border-radius: 10px;" text="%Resetfields" GridPane.rowIndex="2" />
       </children>
    </GridPane>
-   <TableView fx:id="buytable" layoutX="608.0" layoutY="309.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
+   <TableView fx:id="buytable" layoutX="608.0" layoutY="309.0" prefHeight="432.0" prefWidth="434.0" stylesheets="@../Styles/style.css">
       <columns>
          <TableColumn fx:id="carname" prefWidth="75.0" text="%CarName" />
          <TableColumn fx:id="carprice" prefWidth="75.0" text="%CarPrice" />
@@ -193,19 +192,19 @@
          <Font name="System Bold" size="12.0" />
       </font>
    </Button>
-   <AnchorPane prefHeight="102.0" prefWidth="1183.0" style="-fx-background-color: #999; -fx-border-color: black;">
+   <AnchorPane prefHeight="102.0" prefWidth="1183.0" style="-fx-background-color: #999; -fx-border-color: black;" stylesheets="@../Styles/style.css">
       <children>
-         <Button fx:id="btnClients1" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="%btnContact">
+         <Button fx:id="btnClients1" layoutX="378.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="37.0" prefWidth="108.0" text="%btnContact">
             <effect>
                <InnerShadow height="11.0" radius="5.5" width="13.0" />
             </effect>
          </Button>
-         <Button fx:id="btnBuynow1" layoutX="151.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="%btnCars">
+         <Button fx:id="btnBuynow1" layoutX="151.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="37.0" prefWidth="108.0" text="%btnCars">
             <effect>
                <InnerShadow height="11.0" radius="5.5" width="13.0" />
             </effect>
          </Button>
-         <Button fx:id="btnDashboard1" layoutX="265.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="%btnRequestCar">
+         <Button fx:id="btnDashboard1" layoutX="265.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="37.0" prefWidth="108.0" text="%btnRequestCar">
             <effect>
                <InnerShadow height="11.0" radius="5.5" width="13.0" />
             </effect>
@@ -215,12 +214,12 @@
                <Image url="@../Images/2.png" />
             </image>
          </ImageView>
-         <Button fx:id="helpbtn1" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="%helpbtn">
+         <Button fx:id="helpbtn1" layoutX="492.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="37.0" prefWidth="108.0" text="%helpbtn">
             <effect>
                <InnerShadow height="12.5" radius="5.875" width="13.0" />
             </effect>
          </Button>
-         <Button fx:id="btnLogout1" layoutX="1059.0" layoutY="55.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="%btnLogOut">
+         <Button fx:id="btnLogout1" layoutX="1053.0" layoutY="51.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="45.0" prefWidth="108.0" text="%btnLogOut">
             <font>
                <Font name="System Bold" size="16.0" />
             </font>
@@ -228,7 +227,7 @@
                <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
             </effect>
          </Button>
-         <ImageView fx:id="btnProfileImage1" fitHeight="44.0" fitWidth="52.0" layoutX="1000.0" layoutY="52.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+         <ImageView fx:id="btnProfileImage1" fitHeight="45.0" fitWidth="50.0" layoutX="1000.0" layoutY="51.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
             <image>
                <Image url="@../Images/profile.png" />
             </image>
