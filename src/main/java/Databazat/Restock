@@ -2,5 +2,7 @@ CREATE TABLE restock_requests (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user VARCHAR(255),
     car_name VARCHAR(255),
-    date DATE
+    car_type VARCHAR(255),
+    car_description TEXT, -- Added column for car description
+    request_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
