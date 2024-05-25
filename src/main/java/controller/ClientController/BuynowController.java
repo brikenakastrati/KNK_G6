@@ -156,4 +156,7 @@ public class BuynowController implements Initializable {
     public void handleRequestCarClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }
+    public void handleClientDashboardClick(MouseEvent me) {
+        Navigator.navigate(me, Navigator.HOME_PAGE);
+    }
 }

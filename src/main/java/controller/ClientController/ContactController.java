@@ -86,6 +86,10 @@ public class ContactController {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
 
+    @FXML
+    public void handleClientDashboardClick(MouseEvent me) {
+        Navigator.navigate(me, Navigator.HOME_PAGE);
+    }
 
     public void handleProfileClick(MouseEvent me) {
         try {

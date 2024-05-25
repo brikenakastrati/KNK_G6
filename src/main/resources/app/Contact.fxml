@@ -67,7 +67,7 @@
                   <InnerShadow height="11.0" radius="5.5" width="13.0" />
                </effect>
             </Button>
-            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
+            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0" onMouseClicked="#handleClientDashboardClick">
                <image>
                   <Image url="@../Images/2.png" />
                </image>

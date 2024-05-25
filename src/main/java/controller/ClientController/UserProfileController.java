@@ -179,6 +179,11 @@ public class UserProfileController implements Initializable {
     }
 
     @FXML
+    public void handleClientDashboardClick(MouseEvent me) {
+        Navigator.navigate(me, Navigator.HOME_PAGE);
+    }
+
+    @FXML
     public void handleRequestCarClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }

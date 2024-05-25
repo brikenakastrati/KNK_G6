@@ -46,6 +46,10 @@ public class RequestController {
         UserSession.clearUserSession();
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
+    @FXML
+    public void handleClientDashboardClick(MouseEvent me) {
+        Navigator.navigate(me, Navigator.HOME_PAGE);
+    }
 
     @FXML
     public void handleProfileClick(MouseEvent me) {
