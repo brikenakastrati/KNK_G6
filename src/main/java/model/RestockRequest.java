@@ -5,16 +5,20 @@ public class RestockRequest {
     private String user;
     private String carName;
     private String carType;
+    private String carDescription;
     private String requestDate;
 
-    public RestockRequest(int id, String user, String carName, String carType, String requestDate) {
+    // Constructor
+    public RestockRequest(int id, String user, String carName, String carType, String carDescription, String requestDate) {
         this.id = id;
         this.user = user;
         this.carName = carName;
         this.carType = carType;
+        this.carDescription = carDescription;
         this.requestDate = requestDate;
     }
 
+    // Getters
     public int getId() {
         return id;
     }
@@ -31,27 +35,11 @@ public class RestockRequest {
         return carType;
     }
 
+    public String getCarDescription() {
+        return carDescription;
+    }
+
     public String getRequestDate() {
         return requestDate;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    public void setCarName(String carName) {
-        this.carName = carName;
-    }
-
-    public void setCarType(String carType) {
-        this.carType = carType;
-    }
-
-    public void setRequestDate(String requestDate) {
-        this.requestDate = requestDate;
     }
 }

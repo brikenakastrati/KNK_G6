@@ -15,7 +15,7 @@
     <children>
         <AnchorPane opacity="0.98" prefHeight="716.0" prefWidth="916.0" style="-fx-background-color: #CCC; -fx-border-color: #1e1f22;">
             <children>
-                <TableView fx:id="messageTableView" layoutX="14.0" layoutY="243.0" prefHeight="293.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
+                <TableView fx:id="messageTableView" layoutX="14.0" layoutY="211.0" prefHeight="293.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
                     <columns>
                         <TableColumn fx:id="idColumn" prefWidth="50.399993896484375" text="ID" />
                         <TableColumn fx:id="firstNameColumn" prefWidth="99.20001220703125" text="%FirstName" />
@@ -25,11 +25,12 @@
                 </TableView>
                 <TableView fx:id="stockRequestTableView" layoutX="463.0" layoutY="248.0" prefHeight="283.0" prefWidth="434.0" stylesheets="@../Styles/table.css">
                     <columns>
-                        <TableColumn fx:id="stockRequestIdColumn" prefWidth="62.4000244140625" text="ID" />
-                        <TableColumn fx:id="stockRequestUserColumn" prefWidth="88.0" text="%lblUser" />
-                        <TableColumn fx:id="stockRequestCarNameColumn" minWidth="0.0" prefWidth="79.2000732421875" text="%CarName" />
-                        <TableColumn fx:id="stockRequestCarTypeColumn" prefWidth="75.0" text="%CarType" />
-                        <TableColumn fx:id="stockRequestDateSentColumn" prefWidth="85.5999755859375" text="%DateSent" />
+                        <TableColumn fx:id="stockRequestIdColumn" prefWidth="31.199951171875" text="ID" />
+                        <TableColumn fx:id="stockRequestUserColumn" prefWidth="63.20001220703125" text="%lblUser" />
+                        <TableColumn fx:id="stockRequestCarNameColumn" minWidth="0.0" prefWidth="86.4000244140625" text="%CarName" />
+                        <TableColumn fx:id="stockRequestCarTypeColumn" prefWidth="84.79998779296875" text="%CarType" />
+                        <TableColumn fx:id="stockRequestDateSentColumn" prefWidth="91.2000732421875" text="%DateSent" />
+                  <TableColumn fx:id="stockRequestCarDescriptionColumn" prefWidth="111.199951171875" text="Car Description" />
                     </columns>
                 </TableView>
                 <Label blendMode="COLOR_BURN" layoutX="583.0" layoutY="167.0" prefHeight="38.0" prefWidth="194.0" text="%StockRequests">

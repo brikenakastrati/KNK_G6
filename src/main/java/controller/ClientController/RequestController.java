@@ -18,10 +18,7 @@ public class RequestController {
     UserService userService = new UserService();
     RestockRequestService restockRequestService = new RestockRequestService();
 
-    @FXML
-    private TextField txtCarBrand;
-    @FXML
-    private TextField txtCarModel;
+
     @FXML
     private TextField txtCarName;
     @FXML
@@ -68,6 +65,7 @@ public class RequestController {
 
     @FXML
     public void handleSubmitRequest(ActionEvent actionEvent) {
+
         String carName = txtCarName.getText();
         String carType = txtCarType.getText();
         String carDescription = txtCarDescription.getText();
@@ -78,16 +76,19 @@ public class RequestController {
             return;
         }
 
-        restockRequestService.requestRestock(currentUser, carName,carType);
-
-        showAlert(Alert.AlertType.INFORMATION, "Request Submitted", "Your car suggestion has been submitted!");
-
-        clearFields();
+        try {
+            restockRequestService.requestRestockWithDescription(currentUser, carName, carType, carDescription);
+            showAlert(Alert.AlertType.INFORMATION, "Request Submitted", "Your car suggestion has been submitted!");
+            clearFields();
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Submission Error", "An error occurred while submitting your request. Please try again.");
+            e.printStackTrace();
+        }
     }
 
+
     private void clearFields() {
-        txtCarBrand.clear();
-        txtCarModel.clear();
+
         txtCarName.clear();
         txtCarType.clear();
         txtCarDescription.clear();

@@ -141,9 +141,15 @@ public class CarsController implements Initializable {
         String carName = selectedCar.getCarname();
         String carType = selectedCar.getCartype();
 
-        restockRequestService.requestRestock(user, carName, carType);
-        showAlert(Alert.AlertType.INFORMATION, "Request Sent", "A request has been sent to the admin to restock the car: " + selectedCar.getCarname());
+        try {
+            restockRequestService.requestRestock(user, carName, carType);
+            showAlert(Alert.AlertType.INFORMATION, "Request Sent", "A request has been sent to the admin to restock the car: " + selectedCar.getCarname());
+        } catch (Exception e) {
+            showAlert(Alert.AlertType.ERROR, "Submission Error", "An error occurred while submitting your request. Please try again.");
+            e.printStackTrace();
+        }
     }
+
 
     public void handleCustomizeClick(ActionEvent event) {
         Navigator.navigate(event, Navigator.CUSTOMIZE_PAGE);

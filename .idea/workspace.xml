@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Removed Login as admin to only login">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_5_6_2024_1_50_AM__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Repository/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Repository/MessageRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/MessagesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/RequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/RestockRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/RestockRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/service/RestockRequestService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/RestockRequestService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/Messages.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Messages.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/RequestCar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/RequestCar.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
