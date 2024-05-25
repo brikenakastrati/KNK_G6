@@ -96,9 +96,9 @@
             <String fx:value="list-cell" />
          </styleClass></ComboBox>
       <Label fx:id="lblimagepath" layoutX="618.0" layoutY="761.0" prefHeight="18.0" prefWidth="197.0" />
-      <Label fx:id="lblStatus" layoutX="110.0" layoutY="497.0" prefHeight="31.0" prefWidth="722.0">
+      <Label fx:id="lblStatus" layoutX="55.0" layoutY="495.0" prefHeight="31.0" prefWidth="794.0">
          <font>
-            <Font size="21.0" />
+            <Font size="10.0" />
          </font>
       </Label>
       <Button fx:id="btnImportPhotos" layoutX="653.0" layoutY="725.0" mnemonicParsing="false" onAction="#handleImportPhotos" prefHeight="37.0" prefWidth="95.0" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnImportPhotos" textAlignment="CENTER">

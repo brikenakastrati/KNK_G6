@@ -121,14 +121,39 @@ public class inventoryRepository implements inventoryRepositoryInterface {
         }
     }
 
+//    public void deleteCarPhotos(String carId) throws SQLException {
+//        String query = "DELETE FROM carimages WHERE carid = ?";
+//        Connection connection = DBConnector.getConnection();
+//        try (PreparedStatement statement = connection.prepareStatement(query)) {
+//            statement.setString(1, carId);
+//            statement.executeUpdate();
+//        }
+//    }
+
     public void deleteCar(String carId) throws SQLException {
         Connection connection = DBConnector.getConnection();
         try {
             connection.setAutoCommit(false);  // Start transaction
 
             deleteCarPhotos(carId);  // Delete photos first
-            String query = "DELETE FROM inventory WHERE carid = ?";
-            try (PreparedStatement statement = connection.prepareStatement(query)) {
+
+            // Delete from CarPurchases table
+            String deletePurchasesQuery = "DELETE FROM CarPurchases WHERE car_id = ?";
+            try (PreparedStatement statement = connection.prepareStatement(deletePurchasesQuery)) {
+                statement.setString(1, carId);
+                statement.executeUpdate();
+            }
+
+            // Delete from car_photos table
+            String deletePhotosQuery = "DELETE FROM car_photos WHERE carid = ?";
+            try (PreparedStatement statement = connection.prepareStatement(deletePhotosQuery)) {
+                statement.setString(1, carId);
+                statement.executeUpdate();
+            }
+
+            // Delete from inventory table
+            String deleteInventoryQuery = "DELETE FROM inventory WHERE carid = ?";
+            try (PreparedStatement statement = connection.prepareStatement(deleteInventoryQuery)) {
                 statement.setString(1, carId);
                 statement.executeUpdate();
             }
@@ -141,6 +166,7 @@ public class inventoryRepository implements inventoryRepositoryInterface {
             connection.setAutoCommit(true);  // Restore auto-commit
         }
     }
+
 
     public carInventory getAllCars(TableView<carInventory> cartable) throws SQLException {
         String sql = "SELECT i.*, ci.imagepath FROM inventory i LEFT JOIN carimages ci ON i.carid = ci.carid";

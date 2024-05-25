@@ -6,81 +6,35 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.RequestController">
+<AnchorPane prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #CCC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.RequestController">
    <children>
-      <AnchorPane layoutX="-10.0" prefHeight="102.0" prefWidth="1166.0" style="-fx-background-color: #999; -fx-border-color: black;">
-         <children>
-            <Button fx:id="btnClients" layoutX="389.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="35.0" prefWidth="83.0" text="Contact">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="btnCars" layoutX="153.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="35.0" prefWidth="83.0" text="Cars">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <Button fx:id="helpbtn" layoutX="475.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="35.0" prefWidth="65.0" style="-fx-background-radius: 20;" text="Help">
-               <effect>
-                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
-               </effect>
-            </Button>
-            <ImageView fitHeight="84.0" fitWidth="136.0" layoutX="7.0" layoutY="12.0">
-               <image>
-                  <Image url="@../../../../../KNK_G85/src/main/resources/Images/2.png" />
-               </image>
-            </ImageView>
-            <Button fx:id="btnLogout1" layoutX="1061.0" layoutY="48.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="30.0" prefWidth="83.0" text="LogOut">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <effect>
-                  <DropShadow height="35.04" radius="18.189999999999998" width="39.72" />
-               </effect>
-            </Button>
-            <Button fx:id="btnrequestcar" layoutX="272.0" layoutY="56.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="35.0" prefWidth="83.0" text="Request Car">
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </Button>
-            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="984.0" layoutY="43.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../KNK_G85/src/main/resources/Images/profile.png" />
-               </image>
-               <effect>
-                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
-               </effect>
-            </ImageView>
-         </children>
-      </AnchorPane>
       <Label layoutX="32.0" layoutY="187.0" text="Request a Car:">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCarName" layoutX="32.0" layoutY="266.0" promptText="Car Name" styleClass="custom-text-field" stylesheets="@../../../../../KNK_G85/src/main/resources/Styles/textfield.css">
+      <TextField fx:id="txtCarName" layoutX="32.0" layoutY="266.0" promptText="Car Name" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCarType" layoutX="32.0" layoutY="325.0" promptText="Car Type" styleClass="custom-text-field" stylesheets="@../../../../../KNK_G85/src/main/resources/Styles/textfield.css">
+      <TextField fx:id="txtCarType" layoutX="32.0" layoutY="325.0" promptText="Car Type" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextArea fx:id="txtCarDescription" layoutX="32.0" layoutY="393.0" prefHeight="119.0" prefWidth="254.0" promptText="Car Description" styleClass="custom-text-field" stylesheets="@../../../../../KNK_G85/src/main/resources/Styles/textfield.css">
+      <TextArea fx:id="txtCarDescription" layoutX="32.0" layoutY="393.0" prefHeight="119.0" prefWidth="254.0" promptText="Car Description" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font>
       </TextArea>
-      <Button layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleSubmitRequest" styleClass="createclientbutton" stylesheets="@../../../../../KNK_G85/src/main/resources/Styles/button.css" text="Submit Request">
+      <Button layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleSubmitRequest" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Submit Request">
          <font>
             <Font size="17.0" />
          </font>
@@ -94,5 +48,50 @@
             <TableColumn fx:id="stockRequestCarDescriptionColumn" prefWidth="180.7999267578125" text="Car Description" />
          </columns>
       </TableView>
+      <AnchorPane prefHeight="111.0" prefWidth="1007.0" style="-fx-background-color: #999; -fx-border-color: black;" stylesheets="@../Styles/style.css">
+         <children>
+            <Button fx:id="btnClients" layoutX="377.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCustomizeClick" prefHeight="37.0" prefWidth="107.0" text="%btnContact">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnLogout" layoutX="881.0" layoutY="50.0" mnemonicParsing="false" onAction="#handleLogoutClick" prefHeight="45.0" prefWidth="107.0" text="%btnLogOut">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnBuynow" layoutX="152.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleCarsClick" prefHeight="37.0" prefWidth="107.0" text="%btnCars">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <ImageView fitHeight="90.0" fitWidth="145.0" layoutX="7.0" layoutY="12.0" onMouseClicked="#handleClientDashboardClick">
+               <image>
+                  <Image url="@../Images/2.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="helpbtn" layoutX="487.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleHelpClick" prefHeight="37.0" prefWidth="107.0" text="%helpbtn">
+               <effect>
+                  <InnerShadow height="12.5" radius="5.875" width="13.0" />
+               </effect>
+            </Button>
+            <Button fx:id="btnrequestcar" layoutX="264.0" layoutY="54.0" mnemonicParsing="false" onAction="#handleRequestCarClick" prefHeight="37.0" prefWidth="107.0" text="%btnRequestCar">
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </Button>
+            <ImageView fx:id="btnProfileImage" fitHeight="44.0" fitWidth="52.0" layoutX="817.0" layoutY="50.0" onMouseClicked="#handleProfileClick" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/profile.png" />
+               </image>
+               <effect>
+                  <InnerShadow height="11.0" radius="5.5" width="13.0" />
+               </effect>
+            </ImageView>
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

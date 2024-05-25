@@ -61,17 +61,17 @@
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
          <children>
-            <TextField blendMode="COLOR_BURN" layoutX="102.0" layoutY="54.0" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: transparent;" text="%lblWelcome">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font>
-            </TextField>
-            <ImageView fitHeight="58.0" fitWidth="54.0" layoutX="15.0" layoutY="47.0">
+            <ImageView fitHeight="58.0" fitWidth="54.0" layoutX="14.0" layoutY="26.0">
                <image>
                   <Image url="@../Images/user.png" />
                </image>
             </ImageView>
-            <Label fx:id="admUsername" blendMode="COLOR_BURN" layoutX="100.0" layoutY="106.0" prefHeight="28.0" prefWidth="154.0">
+            <Label fx:id="admUsername" blendMode="COLOR_BURN" layoutX="145.0" layoutY="106.0" prefHeight="28.0" prefWidth="136.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="41.0" layoutY="106.0" prefHeight="28.0" prefWidth="122.0" text="%lblWelcome">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
@@ -92,14 +92,14 @@
                   <Cursor fx:constant="DEFAULT" />
                </cursor>
             </ImageView>
-            <TextField blendMode="COLOR_BURN" layoutX="103.0" layoutY="105.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%clientnr">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </TextField>
             <Label fx:id="lblClientNumber" blendMode="COLOR_BURN" layoutX="237.0" layoutY="46.0" prefHeight="31.0" prefWidth="29.0">
                <font>
                   <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="102.0" layoutY="106.0" prefHeight="27.0" prefWidth="154.0" text="%clientnr">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>
@@ -110,11 +110,6 @@
             <DropShadow blurType="TWO_PASS_BOX" height="11.09" radius="5.1975" spread="0.73" width="11.7" />
          </effect>
          <children>
-            <TextField blendMode="COLOR_BURN" layoutX="75.0" layoutY="109.0" prefHeight="37.0" prefWidth="164.0" style="-fx-background-color: transparent;" text="%lblmakinat">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-            </TextField>
             <ImageView fitHeight="50.0" fitWidth="54.0" layoutX="14.0" layoutY="54.0">
                <image>
                   <Image url="@../Images/car.png" />
@@ -123,6 +118,11 @@
             <Label fx:id="carsInStock" blendMode="COLOR_BURN" layoutX="220.0" layoutY="48.0" prefHeight="28.0" prefWidth="30.0">
                <font>
                   <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label blendMode="COLOR_BURN" layoutX="91.0" layoutY="104.0" prefHeight="27.0" prefWidth="136.0" text="%lblmakinat">
+               <font>
+                  <Font name="System Bold" size="18.0" />
                </font>
             </Label>
          </children>
