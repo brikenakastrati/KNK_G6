@@ -1,11 +1,12 @@
 package controller.ClientController;
 
 import app.Navigator;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import model.RestockRequest;
 import model.User;
@@ -26,6 +27,39 @@ public class RequestController {
     @FXML
     private TextArea txtCarDescription;
 
+
+    @FXML
+    private TableView<RestockRequest> stockRequestTableView;
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestUserColumn;
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestCarNameColumn;
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestCarTypeColumn;
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestDateSentColumn;
+    @FXML
+    private TableColumn<RestockRequest, String> stockRequestCarDescriptionColumn;
+    @FXML
+    public void initialize() {
+        String currentUser = UserService.getUsername();
+        stockRequestUserColumn.setCellValueFactory(new PropertyValueFactory<>("user"));
+        stockRequestCarNameColumn.setCellValueFactory(new PropertyValueFactory<>("carName"));
+        stockRequestCarTypeColumn.setCellValueFactory(new PropertyValueFactory<>("carType"));
+        stockRequestDateSentColumn.setCellValueFactory(new PropertyValueFactory<>("carDescription"));
+        stockRequestCarDescriptionColumn.setCellValueFactory(new PropertyValueFactory<>("requestDate"));
+        stockRequestTableView.setItems(FXCollections.observableArrayList(restockRequestService.getRestockRequestsForUser(currentUser)));
+
+
+    }
+
+//    private void loadUserRequests() {
+//        String currentUser = UserService.getUsername();
+//        ObservableList<RestockRequest> userRequests = FXCollections.observableArrayList(
+//                restockRequestService.getRestockRequestsForUser(currentUser)
+//        );
+//        stockRequestTableView.setItems(userRequests);
+//    }
     @FXML
     public void handleCarsClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.CARS2_PAGE);

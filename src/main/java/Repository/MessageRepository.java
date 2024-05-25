@@ -115,4 +115,29 @@ public class MessageRepository {
 
         return requests;
     }
+    public List<RestockRequest> getRestockRequestsForUser(String user) {
+        List<RestockRequest> requests = new ArrayList<>();
+
+        try (Connection connection = DBConnector.getConnection()) {
+            String query = "SELECT id, user, car_name, car_type, request_date, car_description FROM restock_requests WHERE user = ?";
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, user);
+            ResultSet resultSet = preparedStatement.executeQuery();
+
+            while (resultSet.next()) {
+                int id = resultSet.getInt("id");
+                String carName = resultSet.getString("car_name");
+                String carType = resultSet.getString("car_type");
+                String requestDate = resultSet.getString("request_date");
+                String carDescription = resultSet.getString("car_description");
+
+                requests.add(new RestockRequest(id, user, carName, carType, requestDate, carDescription));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+        return requests;
+    }
+
 }

@@ -29,4 +29,7 @@ public class RestockRequestService {
     public List<RestockRequest> getRestockRequests() {
         return messageRepository.getRestockRequests();
     }
+    public List<RestockRequest> getRestockRequestsForUser(String username) {
+        return messageRepository.getRestockRequestsForUser(username);
+    }
 }
