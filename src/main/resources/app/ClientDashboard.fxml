@@ -130,7 +130,7 @@
                 <Button layoutX="72.0" layoutY="144.0" mnemonicParsing="false" onAction="#handleViewDetails" stylesheets="@../Styles/style.css" text="View details" />
             </children>
         </AnchorPane>
-        <PieChart layoutX="443.0" layoutY="194.0" />
+        <PieChart fx:id="salesPieChart" layoutX="443.0" layoutY="194.0" prefHeight="200.0" prefWidth="200.0"/>
 
     </children>
 </AnchorPane>
