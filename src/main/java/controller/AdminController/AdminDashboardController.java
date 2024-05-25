@@ -10,9 +10,11 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
+import model.Purchase;
 import service.CarsService;
 import service.Interface.UserServiceInterface;
 import service.Interface.inventoryServiceInterface;
+import service.PurchasesService;
 import service.UserService;
 import service.UserSession;
 
@@ -31,10 +33,13 @@ public class AdminDashboardController {
 
     private UserServiceInterface userService;
     private inventoryServiceInterface carsService;
+    private PurchasesService purchasesService;
 
     public AdminDashboardController() {
         userService = new UserService();
         carsService = new CarsService();
+        purchasesService = new PurchasesService();
+
     }
 
     private inventoryRepository inventoryRepo = new inventoryRepository();
@@ -58,7 +63,7 @@ public class AdminDashboardController {
         XYChart.Series<String, Number> series = new XYChart.Series<>();
         series.setName("Monthly Income");
 
-        Map<String, Double> monthlyIncome = carsService.getMonthlyIncome();
+        Map<String, Double> monthlyIncome = purchasesService.getMonthlyCarSales();
         for (Map.Entry<String, Double> entry : monthlyIncome.entrySet()) {
             series.getData().add(new XYChart.Data<>(entry.getKey(), entry.getValue()));
         }

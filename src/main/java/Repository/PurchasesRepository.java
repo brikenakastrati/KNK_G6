@@ -12,7 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class PurchasesRepository {
     private static PurchasesRepository instance;
@@ -119,5 +121,22 @@ public class PurchasesRepository {
         }
         return purchases;
     }
+    public Map<String, Double> getMonthlyCarSales() {
+        Map<String, Double> monthlyIncome = new HashMap<>();
+        String query = "SELECT DATE_FORMAT(purchase_date, '%Y-%m') as month, SUM(car_price) as income FROM CarPurchases GROUP BY month ORDER BY month";
 
+        try (Connection connection = DBConnector.getConnection();
+             PreparedStatement statement = connection.prepareStatement(query);
+             ResultSet resultSet = statement.executeQuery()) {
+
+            while (resultSet.next()) {
+                String month = resultSet.getString("month");
+                double income = resultSet.getDouble("income");
+                monthlyIncome.put(month, income);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return monthlyIncome;
+    }
 }
