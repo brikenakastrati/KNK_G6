@@ -32,4 +32,7 @@ public class RestockRequestService {
     public List<RestockRequest> getRestockRequestsForUser(String username) {
         return messageRepository.getRestockRequestsForUser(username);
     }
+    public int getNumberOfCarRequestsFromUser(String username) {
+        return messageRepository.getNumberOfCarRequestsFromUser(username);
+    }
 }

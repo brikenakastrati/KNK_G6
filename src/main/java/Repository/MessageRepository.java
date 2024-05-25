@@ -140,4 +140,20 @@ public class MessageRepository {
         return requests;
     }
 
+    public int getNumberOfCarRequestsFromUser(String user) {
+        String query = "SELECT COUNT(*) AS request_count FROM restock_requests WHERE user = ?";
+        try (Connection connection = DBConnector.getConnection();
+             PreparedStatement preparedStatement = connection.prepareStatement(query)) {
+            preparedStatement.setString(1, user);
+            ResultSet resultSet = preparedStatement.executeQuery();
+            if (resultSet.next()) {
+                return resultSet.getInt("request_count");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching number of car requests: " + e.getMessage());
+        }
+        return 0;
+    }
+
+
 }

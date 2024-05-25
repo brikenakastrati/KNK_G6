@@ -15,4 +15,9 @@ public class PurchasesService {
     public Map<String, Double> getMonthlyCarSales() {
         return purchasesRepository.getMonthlyCarSales();
     }
+
+    public int getTotalNumberOfPurchases() {
+        return purchasesRepository.getTotalNumberOfPurchases();
+    }
+
 }

@@ -80,15 +80,12 @@ public class LoginController {
             alert.setContentText("Incorrect username or password.");
             alert.showAndWait();
         } else {
-            // Check if the user is an admin
             if (result.isAdmin()) {
-                // Navigate to the admin dashboard
                 UserService.setUsername(this.txtUserName.getText());
                 Navigator.navigate(ae, Navigator.ADMIN_DASHBOARD_PAGE);
             } else {
-                // Navigate to the home page for regular users
                 UserService.setUsername(this.txtUserName.getText());
-                Navigator.navigate(ae, Navigator.CARS2_PAGE);
+                Navigator.navigate(ae, Navigator.HOME_PAGE);
             }
 
         }

@@ -121,6 +121,19 @@ public class PurchasesRepository {
         }
         return purchases;
     }
+    public int getTotalNumberOfPurchases() {
+        String sql = "SELECT COUNT(*) AS total FROM CarPurchases";
+        try (Connection conn = DBConnector.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
+            if (rs.next()) {
+                return rs.getInt("total");
+            }
+        } catch (SQLException se) {
+            se.getMessage();
+        }
+        return 0;
+    }
     public Map<String, Double> getMonthlyCarSales() {
         Map<String, Double> monthlyIncome = new HashMap<>();
         String query = "SELECT DATE_FORMAT(purchase_date, '%Y-%m') as month, SUM(car_price) as income FROM CarPurchases GROUP BY month ORDER BY month";

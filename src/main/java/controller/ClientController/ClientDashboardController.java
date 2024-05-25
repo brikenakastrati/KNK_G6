@@ -1,5 +1,6 @@
 package controller.ClientController;
 
+import Repository.MessageRepository;
 import Repository.PurchasesRepository;
 import Repository.UserRepository;
 import app.Navigator;
@@ -9,8 +10,7 @@ import javafx.scene.chart.PieChart;
 import javafx.scene.control.Label;
 import javafx.scene.input.MouseEvent;
 import model.User;
-import service.UserService;
-import service.UserSession;
+import service.*;
 
 import java.util.Map;
 
@@ -18,14 +18,21 @@ public class ClientDashboardController {
     @FXML
     public Label clientUsername;
     @FXML
-    public PieChart salesPieChart;
-    PurchasesRepository purchasesRepository = PurchasesRepository.getInstance();
-
+    private PieChart salesPieChart;
+    @FXML
+    private Label allcarsSold;
+    @FXML
+    private Label carsRequested;
     UserService userService = new UserService();
+    private CarsService carsService = new CarsService();
+    private PurchasesService purchasesService = new PurchasesService();
+    private RestockRequestService restockRequestService = new RestockRequestService();
 
     public void initialize() {
         UsernameDisplay();
         loadPieChartData();
+        loadTotalCarsSold();
+        loadTotalRequestsPerUser();
     }
 
     public void UsernameDisplay() {
@@ -35,11 +42,24 @@ public class ClientDashboardController {
 
 
     private void loadPieChartData() {
-        Map<String, Double> monthlySales = purchasesRepository.getMonthlyCarSales();
+        Map<String, Double> monthlySales = purchasesService.getMonthlyCarSales(); // Fetch data from CarsService
+        if (monthlySales.isEmpty()) {
+            System.out.println("No sales data available.");
+            return;
+        }
         for (Map.Entry<String, Double> entry : monthlySales.entrySet()) {
             PieChart.Data slice = new PieChart.Data(entry.getKey(), entry.getValue());
             salesPieChart.getData().add(slice);
         }
+    }
+    private void loadTotalCarsSold(){
+        int blerjetTotale = purchasesService.getTotalNumberOfPurchases();
+        allcarsSold.setText(String.valueOf(blerjetTotale));
+    }
+    private void loadTotalRequestsPerUser(){
+        String user = UserService.getUsername();
+        int kerkesatTotale = restockRequestService.getNumberOfCarRequestsFromUser(user);
+        carsRequested.setText(String.valueOf(kerkesatTotale));
     }
 
     public void handleLogoutClick(ActionEvent ae) {
