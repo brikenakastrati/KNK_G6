@@ -14,27 +14,27 @@
 
 <AnchorPane prefHeight="800.0" prefWidth="900.0" style="-fx-background-color: #CCC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientController.RequestController">
    <children>
-      <Label layoutX="32.0" layoutY="187.0" text="Request a Car:">
+      <Label layoutX="32.0" layoutY="187.0" text="%lblRequest">
          <font>
             <Font size="31.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCarName" layoutX="32.0" layoutY="266.0" promptText="Car Name" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextField fx:id="txtCarName" layoutX="32.0" layoutY="266.0" promptText="%CarName" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextField fx:id="txtCarType" layoutX="32.0" layoutY="325.0" promptText="Car Type" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextField fx:id="txtCarType" layoutX="32.0" layoutY="325.0" promptText="%CarType" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font>
       </TextField>
-      <TextArea fx:id="txtCarDescription" layoutX="32.0" layoutY="393.0" prefHeight="119.0" prefWidth="254.0" promptText="Car Description" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
+      <TextArea fx:id="txtCarDescription" layoutX="32.0" layoutY="393.0" prefHeight="119.0" prefWidth="254.0" promptText="%CarDescription" styleClass="custom-text-field" stylesheets="@../Styles/textfield.css">
          <font>
             <Font size="17.0" />
          </font>
       </TextArea>
-      <Button layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleSubmitRequest" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="Submit Request">
+      <Button layoutX="32.0" layoutY="552.0" mnemonicParsing="false" onAction="#handleSubmitRequest" styleClass="createclientbutton" stylesheets="@../Styles/button.css" text="%btnSubmitRequest">
          <font>
             <Font size="17.0" />
          </font>
@@ -45,7 +45,7 @@
             <TableColumn fx:id="stockRequestCarNameColumn" minWidth="0.0" prefWidth="86.4000244140625" text="%CarName" />
             <TableColumn fx:id="stockRequestCarTypeColumn" prefWidth="98.4000244140625" text="%CarType" />
             <TableColumn fx:id="stockRequestDateSentColumn" prefWidth="107.99993896484375" text="%DateSent" />
-            <TableColumn fx:id="stockRequestCarDescriptionColumn" prefWidth="180.7999267578125" text="Car Description" />
+            <TableColumn fx:id="stockRequestCarDescriptionColumn" prefWidth="180.7999267578125" text="%CarDescription" />
          </columns>
       </TableView>
       <AnchorPane prefHeight="111.0" prefWidth="1007.0" style="-fx-background-color: #999; -fx-border-color: black;" stylesheets="@../Styles/style.css">

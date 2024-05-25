@@ -13,18 +13,18 @@
 
 <AnchorPane prefHeight="900.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController.AdminBuyHistoryController">
     <children>
-        <Label layoutX="373.0" layoutY="129.0" prefHeight="62.0" prefWidth="155.0" text="Buy History ">
+        <Label layoutX="373.0" layoutY="129.0" prefHeight="62.0" prefWidth="155.0" text="%BuyHistory">
             <font>
                 <Font name="System Bold" size="26.0" />
             </font>
         </Label>
         <TableView fx:id="buytable" layoutX="127.0" layoutY="219.0" prefHeight="386.0" prefWidth="647.0" stylesheets="@../Styles/style.css">
             <columns>
-                <TableColumn fx:id="buytblcarname" prefWidth="125.0" text="Car Name" />
-                <TableColumn fx:id="buytablecarprice" prefWidth="125.0" text="Car Price" />
-                <TableColumn fx:id="buytablebuyname" prefWidth="143.0" text="Buyer Name" />
-                <TableColumn fx:id="buytablepurchasedate" prefWidth="130.0" text="Purchase Date" />
-                <TableColumn fx:id="buytableleftinstock" prefWidth="123.0" text="Left in stock" />
+                <TableColumn fx:id="buytblcarname" prefWidth="125.0" text="%CarName" />
+                <TableColumn fx:id="buytablecarprice" prefWidth="125.0" text="%CarPrice" />
+                <TableColumn fx:id="buytablebuyname" prefWidth="143.0" text="%BuyerName" />
+                <TableColumn fx:id="buytablepurchasedate" prefWidth="130.0" text="%PurchaseDate" />
+                <TableColumn fx:id="buytableleftinstock" prefWidth="123.0" text="%Leftinstock" />
             </columns>
         </TableView>
       <AnchorPane opacity="0.98" prefHeight="99.0" prefWidth="901.0" style="-fx-background-color: #999; -fx-border-color: #1e1f22;" stylesheets="@../Styles/style.css">
@@ -62,7 +62,7 @@
                   <DropShadow height="28.02" radius="13.51" width="28.02" />
                </effect>
             </Button>
-            <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="BuyHistory" />
+            <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="%btnBuyHistory" />
          </children>
       </AnchorPane>
       <Button layoutX="774.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="38.0" prefWidth="56.0" stylesheets="@../Styles/style.css" text="EN">

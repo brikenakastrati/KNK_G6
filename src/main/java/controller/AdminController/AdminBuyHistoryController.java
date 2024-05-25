@@ -71,7 +71,7 @@ public class AdminBuyHistoryController implements Initializable {
 
     @FXML
     public void handleMessageClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.LOGIN_PAGE);
+        Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
     }
 
     @FXML

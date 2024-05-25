@@ -52,7 +52,7 @@
                   <DropShadow height="28.02" radius="13.51" width="28.02" />
                </effect>
             </Button>
-            <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="BuyHistory" />
+            <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="%btnBuyHistory" />
          </children>
       </AnchorPane>
       <!-- User Info Pane -->

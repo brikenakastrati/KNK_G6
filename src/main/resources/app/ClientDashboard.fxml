@@ -96,7 +96,7 @@
                         <DropShadow color="rgba(0, 0, 0, 0.3)" radius="5" spread="0.5" />
                     </effect>
                 </ImageView>
-                <Text layoutX="20.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #424242;" text="Number of all the cars Sold" wrappingWidth="128.59997177124023">
+                <Text layoutX="20.0" layoutY="115.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: #424242;" text="%lblNumber" wrappingWidth="128.59997177124023">
                     <font>
                         <Font name="System Bold" size="18.0" />
                     </font>
