@@ -256,7 +256,7 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void handleSQClick(ActionEvent ae) {
-        Locale.setDefault(new Locale("en"));
+        Locale.setDefault(new Locale("sq","AL"));
         Navigator.navigate(ae, Navigator.CLIENT_PROFILE_PAGE);
     }
 

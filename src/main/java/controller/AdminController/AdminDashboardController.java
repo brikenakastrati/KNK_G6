@@ -19,6 +19,7 @@ import service.UserService;
 import service.UserSession;
 
 import java.sql.SQLException;
+import java.util.Locale;
 import java.util.Map;
 
 public class AdminDashboardController {
@@ -135,5 +136,16 @@ public class AdminDashboardController {
     @FXML
     public void handleBuyHistory(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.ADMIN_DASHBOARD_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.ADMIN_DASHBOARD_PAGE);
     }
 }

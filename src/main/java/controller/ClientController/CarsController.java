@@ -23,6 +23,7 @@ import service.RestockRequestService;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class CarsController implements Initializable {
@@ -196,5 +197,16 @@ public class CarsController implements Initializable {
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
+    }
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.CARS2_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.CARS2_PAGE);
     }
 }

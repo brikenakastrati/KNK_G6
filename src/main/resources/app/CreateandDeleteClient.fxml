@@ -52,7 +52,7 @@
             <Font name="System Bold" size="16.0" />
          </font>
       </Button>
-      <TableView fx:id="usertable" layoutX="430.0" layoutY="150.0" onMousePressed="#getIdPressed" prefHeight="406.0" prefWidth="502.0" style="-fx-background-color: #f0f0f0; -fx-table-header-border-color: transparent; -fx-border-radius: 10;" stylesheets="@../Styles/style.css">
+      <TableView fx:id="usertable" layoutX="429.0" layoutY="176.0" onMousePressed="#getIdPressed" prefHeight="406.0" prefWidth="502.0" style="-fx-background-color: #f0f0f0; -fx-table-header-border-color: transparent; -fx-border-radius: 10;" stylesheets="@../Styles/style.css">
         <columns>
           <TableColumn fx:id="id" prefWidth="64.79998779296875" text="ID:" />
           <TableColumn fx:id="username" prefWidth="105.599853515625" text="%lblUsername" />
@@ -105,5 +105,15 @@
             <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="BuyHistory" />
          </children>
       </AnchorPane>
+      <Button layoutX="786.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="38.0" prefWidth="56.0" stylesheets="@../Styles/style.css" text="EN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="851.0" layoutY="121.0" mnemonicParsing="false" onAction="#handleSQClick" opacity="0.8" prefHeight="38.0" prefWidth="56.0" stylesheets="@../Styles/style.css" text="SQ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

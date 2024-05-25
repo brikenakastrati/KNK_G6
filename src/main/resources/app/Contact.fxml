@@ -26,6 +26,16 @@
                         <Image url="@../Images/2.png" />
                     </image>
                 </ImageView>
+            <Button layoutX="531.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="38.0" prefWidth="57.0" text="EN">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="599.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleSQClick" opacity="0.8" prefHeight="38.0" prefWidth="58.0" text="SQ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
             </children>
         </AnchorPane>
 

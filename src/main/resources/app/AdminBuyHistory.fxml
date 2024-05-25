@@ -65,5 +65,15 @@
             <Button layoutX="584.0" layoutY="44.0" mnemonicParsing="false" onAction="#handleBuyHistory" prefHeight="37.0" prefWidth="110.0" text="BuyHistory" />
          </children>
       </AnchorPane>
+      <Button layoutX="774.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="38.0" prefWidth="56.0" stylesheets="@../Styles/style.css" text="EN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="832.0" layoutY="110.0" mnemonicParsing="false" onAction="#handleSQClick" opacity="0.8" prefHeight="38.0" prefWidth="56.0" stylesheets="@../Styles/style.css" text="SQ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>

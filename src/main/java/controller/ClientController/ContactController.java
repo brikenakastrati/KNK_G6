@@ -15,6 +15,8 @@ import model.User;
 import service.UserService;
 import service.UserSession;
 
+import java.util.Locale;
+
 public class ContactController {
 
     @FXML
@@ -99,5 +101,16 @@ public class ContactController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
     }
 }

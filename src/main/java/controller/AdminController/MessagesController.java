@@ -14,6 +14,8 @@ import model.RestockRequest;
 import service.RestockRequestService;
 import service.UserSession;
 
+import java.util.Locale;
+
 public class MessagesController {
 
     @FXML
@@ -129,6 +131,18 @@ public class MessagesController {
         } catch (Exception e) {
             showAlert("Error", "Error fetching data: " + e.getMessage());
         }
+    }
+
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
     }
 
     private void showAlert(String title, String message) {

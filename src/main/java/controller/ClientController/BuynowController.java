@@ -22,6 +22,7 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.util.Locale;
 import java.util.Optional;
 import java.util.ResourceBundle;
 
@@ -141,7 +142,7 @@ public class BuynowController implements Initializable {
         Navigator.navigate(ae, Navigator.LOGIN_PAGE);
     }
     public void handleCustomizeClick(ActionEvent ae) {
-        Navigator.navigate(ae, Navigator.MESSAGE_PAGE);
+        Navigator.navigate(ae, Navigator.CUSTOMIZE_PAGE);
     }
 
     public void handleProfileClick(MouseEvent me) {
@@ -158,5 +159,16 @@ public class BuynowController implements Initializable {
     }
     public void handleClientDashboardClick(MouseEvent me) {
         Navigator.navigate(me, Navigator.HOME_PAGE);
+    }
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.BUY_NOW_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.BUY_NOW_PAGE);
     }
 }

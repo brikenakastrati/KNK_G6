@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import model.User;
 import service.*;
 
+import java.util.Locale;
 import java.util.Map;
 
 public class ClientDashboardController {
@@ -96,5 +97,16 @@ public class ClientDashboardController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.HOME_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.HOME_PAGE);
     }
 }

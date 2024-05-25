@@ -4,12 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Finalized ClientDashboard, changed redirect after login as client, and fixed piechart logic">
+    <list default="true" id="bde10d0f-5795-49cf-b3cd-222c3aa204d1" name="Changes" comment="Changed the wrong logic of communications between service,repostiory and controller on UserProfile">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminBuyHistoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminBuyHistoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/AdminInsertController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/CreateClientAndDeleteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/AdminController/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/AdminController/MessagesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/BuynowController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/BuynowController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/CarsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ClientDashboardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/ContactController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/RequestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/RequestController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/controller/ClientController/UserProfileController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/service/PurchasesService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/PurchasesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Translations/content_sq.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminBuyHistory.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminBuyHistory.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/AdminInsert.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/BuyNow.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/BuyNow.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Cars2.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/ClientDashboard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Contact.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Contact.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/CreateandDeleteClient.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/Messages.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/Messages.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/RequestCar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/RequestCar.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/app/UserProfile.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,15 +216,7 @@
       <workItem from="1716568688835" duration="658000" />
       <workItem from="1716600995941" duration="2737000" />
       <workItem from="1716646827407" duration="1333000" />
-      <workItem from="1716650914154" duration="4735000" />
-    </task>
-    <task id="LOCAL-00009" summary="ClientDashboar Edited">
-      <option name="closed" value="true" />
-      <created>1714953253264</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1714953253264</updated>
+      <workItem from="1716650914154" duration="6179000" />
     </task>
     <task id="LOCAL-00010" summary="navigate cars fix">
       <option name="closed" value="true" />
@@ -591,7 +602,15 @@
       <option name="project" value="LOCAL" />
       <updated>1716655288869</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="Changed the wrong logic of communications between service,repostiory and controller on UserProfile">
+      <option name="closed" value="true" />
+      <created>1716657325702</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1716657325702</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -610,7 +629,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Fixed image, pagination for cars photos and added gave form to the buy now page" />
     <MESSAGE value="Replaced message saver to MessageRepository" />
     <MESSAGE value="Added sessions, (-clientdashboard) and added the UserProfile.fxml to every client page" />
     <MESSAGE value="Added show button to show password on userprofile" />
@@ -635,7 +653,8 @@
     <MESSAGE value="Added car suggestions table on  request for car page" />
     <MESSAGE value="Changed ui on ClientDashboard.fxml" />
     <MESSAGE value="Finalized ClientDashboard, changed redirect after login as client, and fixed piechart logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finalized ClientDashboard, changed redirect after login as client, and fixed piechart logic" />
+    <MESSAGE value="Changed the wrong logic of communications between service,repostiory and controller on UserProfile" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed the wrong logic of communications between service,repostiory and controller on UserProfile" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

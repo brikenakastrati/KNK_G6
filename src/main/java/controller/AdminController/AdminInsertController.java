@@ -203,4 +203,5 @@ public class AdminInsertController {
     public void handleBuyHistory(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.ADMIN_BUY);
     }
+
 }

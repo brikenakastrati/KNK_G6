@@ -14,6 +14,7 @@ import service.UserSession;
 
 import java.net.URL;
 import java.util.List;
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 public class AdminBuyHistoryController implements Initializable {
@@ -75,6 +76,17 @@ public class AdminBuyHistoryController implements Initializable {
 
     @FXML
     public void handleBuyHistory(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.ADMIN_BUY);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
         Navigator.navigate(ae, Navigator.ADMIN_BUY);
     }
 }

@@ -140,6 +140,16 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
+      <Button layoutX="838.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleENClick" opacity="0.8" prefHeight="30.0" prefWidth="41.0" style="-fx-background-color: #BBB;" text="EN">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button layoutX="891.0" layoutY="119.0" mnemonicParsing="false" onAction="#handleSQClick" opacity="0.8" prefHeight="30.0" prefWidth="42.0" style="-fx-background-color: #BBB;" text="SQ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
 
     </children>
 </AnchorPane>

@@ -14,6 +14,8 @@ import service.RestockRequestService;
 import service.UserService;
 import service.UserSession;
 
+import java.util.Locale;
+
 public class RequestController {
 
     UserService userService = new UserService();
@@ -94,6 +96,18 @@ public class RequestController {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    public void handleENClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
+    }
+
+    @FXML
+    public void handleSQClick(ActionEvent ae) {
+        Locale.setDefault(new Locale("sq","AL"));
+        Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }
 
     @FXML
