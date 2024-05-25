@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import model.User;
 import model.carInventory;
 import service.BuyNowService;
+import service.PurchasesService;
 import service.UserService;
 import service.UserSession;
 
@@ -46,8 +47,7 @@ public class BuynowController implements Initializable {
 
     private UserService userService = new UserService();
 
-    private PurchasesRepository purchasesRepository = PurchasesRepository.getInstance();
-
+    private PurchasesService purchasesService = new PurchasesService();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -83,7 +83,7 @@ public class BuynowController implements Initializable {
             Optional<ButtonType> result = alert.showAndWait();
             if (result.isPresent() && result.get() == yes) {
                 BuyNowService.getInstance().decreaseStock(carId);
-                purchasesRepository.storePurchaseDetails(car, account, bank_nr, cvv, dateExpire);
+                purchasesService.storePurchaseDetails(car, account, bank_nr, cvv, dateExpire);
                 Navigator.navigate(ae, Navigator.CARS2_PAGE);
             }else{
                 Navigator.navigate(ae, Navigator.CARS2_PAGE);

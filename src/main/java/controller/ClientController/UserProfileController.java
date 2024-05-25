@@ -13,6 +13,7 @@ import javafx.scene.input.MouseEvent;
 import model.Purchase;
 import model.User;
 import model.filter.highPriceFilter;
+import service.PurchasesService;
 import service.UserService;
 import service.UserSession;
 
@@ -57,8 +58,7 @@ public class UserProfileController implements Initializable {
 
     private UserService userService = new UserService();
     private User currentUser;
-    private PurchasesRepository purchasesRepository = PurchasesRepository.getInstance();
-
+    private PurchasesService purchasesService = new PurchasesService();
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         this.currentUser = UserService.getCurrentUser();
@@ -206,7 +206,7 @@ public class UserProfileController implements Initializable {
     }
 
     private void purchaseHistory() {
-        List<Purchase> purchases = purchasesRepository.getPurchasesByUserId(currentUser.getId());
+        List<Purchase> purchases = purchasesService.getPurchasesByUserId(currentUser.getId());
         buytable.getItems().setAll(purchases);
     }
 
@@ -218,7 +218,7 @@ public class UserProfileController implements Initializable {
         LocalDateTime to = dpToDate.getValue() == null ? null : dpToDate.getValue().atStartOfDay();
 
         highPriceFilter filter = new highPriceFilter(minPrice, maxPrice, currentUser.getUsername(), from, to, null);
-        List<Purchase> filteredPurchases = purchasesRepository.getPurchasesByFilter(filter, currentUser.getId());
+        List<Purchase> filteredPurchases = purchasesService.getPurchasesByFilter(filter, currentUser.getId());
         buytable.getItems().setAll(filteredPurchases);
     }
 
@@ -229,7 +229,7 @@ public class UserProfileController implements Initializable {
         LocalDateTime to = dpToDate.getValue() == null ? null : dpToDate.getValue().atStartOfDay();
 
         highPriceFilter filter = new highPriceFilter(minPrice, maxPrice, currentUser.getUsername(), from, to, order);
-        List<Purchase> filteredPurchases = purchasesRepository.getPurchasesByFilter(filter, currentUser.getId());
+        List<Purchase> filteredPurchases = purchasesService.getPurchasesByFilter(filter, currentUser.getId());
         buytable.getItems().setAll(filteredPurchases);
     }
 
@@ -256,7 +256,8 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void handleSQClick(ActionEvent ae) {
-        // Implement language switch behavior if needed
+        Locale.setDefault(new Locale("en"));
+        Navigator.navigate(ae, Navigator.CLIENT_PROFILE_PAGE);
     }
 
     @FXML

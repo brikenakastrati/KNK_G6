@@ -135,7 +135,7 @@
             </children>
         </AnchorPane>
         <PieChart fx:id="salesPieChart" layoutX="452.0" layoutY="225.0" prefHeight="472.0" prefWidth="468.0" />
-      <Label layoutX="580.0" layoutY="195.0" text="Cars bought by month">
+      <Label layoutX="581.0" layoutY="194.0" text="All cars sold by month">
          <font>
             <Font name="System Bold" size="20.0" />
          </font>
