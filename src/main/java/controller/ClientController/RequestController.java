@@ -68,25 +68,22 @@ public class RequestController {
 
     @FXML
     public void handleSubmitRequest(ActionEvent actionEvent) {
-        String carBrand = txtCarBrand.getText();
-        String carModel = txtCarModel.getText();
         String carName = txtCarName.getText();
         String carType = txtCarType.getText();
         String carDescription = txtCarDescription.getText();
         String currentUser = UserService.getUsername();
 
-        if (carBrand.isEmpty() || carModel.isEmpty() || carName.isEmpty() || carType.isEmpty() || carDescription.isEmpty()) {
+        if ( carName.isEmpty() || carType.isEmpty() || carDescription.isEmpty()) {
             showAlert(Alert.AlertType.ERROR, "Form Error!", "Please fill in all fields");
             return;
         }
 
-        String combinedCarInfo = carBrand + " " + carModel + " +  (" + carType + "): " + carDescription;
-
-        restockRequestService.requestRestock(currentUser, combinedCarInfo);
+        restockRequestService.requestRestock(currentUser, carName,carType);
 
         showAlert(Alert.AlertType.INFORMATION, "Request Submitted", "Your car suggestion has been submitted!");
 
-        clearFields();}
+        clearFields();
+    }
 
     private void clearFields() {
         txtCarBrand.clear();

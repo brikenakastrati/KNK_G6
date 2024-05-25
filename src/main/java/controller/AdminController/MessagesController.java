@@ -2,7 +2,6 @@ package controller.AdminController;
 
 import app.Navigator;
 import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
@@ -50,6 +49,9 @@ public class MessagesController {
     private TableColumn<RestockRequest, String> stockRequestCarNameColumn;
 
     @FXML
+    private TableColumn<RestockRequest, String> stockRequestCarTypeColumn;
+
+    @FXML
     private TableColumn<RestockRequest, String> stockRequestDateSentColumn;
 
     private final RestockRequestService restockRequestService = new RestockRequestService();
@@ -63,11 +65,12 @@ public class MessagesController {
         messageColumn.setCellValueFactory(new PropertyValueFactory<>("message"));
         messageTableView.setItems(FXCollections.observableArrayList(restockRequestService.getMessages(null, null)));
 
-        // Initialize restock request table columns
+        // Initialize stock request table columns
         stockRequestIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
         stockRequestUserColumn.setCellValueFactory(new PropertyValueFactory<>("user"));
         stockRequestCarNameColumn.setCellValueFactory(new PropertyValueFactory<>("carName"));
-        stockRequestDateSentColumn.setCellValueFactory(new PropertyValueFactory<>("timestamp"));
+        stockRequestCarTypeColumn.setCellValueFactory(new PropertyValueFactory<>("carType"));
+        stockRequestDateSentColumn.setCellValueFactory(new PropertyValueFactory<>("requestDate"));
         stockRequestTableView.setItems(FXCollections.observableArrayList(restockRequestService.getRestockRequests()));
     }
 

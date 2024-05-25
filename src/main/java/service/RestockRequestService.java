@@ -17,11 +17,10 @@ public class RestockRequestService {
         this.messageRepository = new MessageRepository();
     }
 
-    public void requestRestock(String user, String carName) {
-        String date = LocalDate.now().format(DATE_FORMATTER);
-        String message = "User " + user + " has requested to restock the car: " + carName;
-        messageRepository.saveRestockRequest(user, carName, date);
+    public void requestRestock(String username, String carName, String carType) {
+        messageRepository.saveRestockRequest(username, carName, carType);
     }
+
 
     public List<Message> getMessages(String firstNameFilter, String lastNameFilter) {
         return messageRepository.getMessages(firstNameFilter, lastNameFilter);

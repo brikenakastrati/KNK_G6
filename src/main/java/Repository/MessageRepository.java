@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MessageRepository {
-
     public static void saveMessage(String firstName, String lastName, String message) {
         String insertSQL = "INSERT INTO messages (first_name, last_name, message) VALUES (?, ?, ?)";
 
@@ -25,25 +24,23 @@ public class MessageRepository {
             e.printStackTrace();
         }
     }
-
-    public void saveRestockRequest(String user, String carName, String date) {
-        String insertRequestSQL = "INSERT INTO restock_requests (user, car_name, date) VALUES (?, ?, ?)";
+    public void saveRestockRequest(String user, String carName, String carType) {
+        String insertRequestSQL = "INSERT INTO restock_requests (user, car_name, car_type, request_date) VALUES (?, ?, ?, CURRENT_TIMESTAMP)";
 
         try (Connection connection = DBConnector.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(insertRequestSQL)) {
 
             preparedStatement.setString(1, user);
             preparedStatement.setString(2, carName);
-            preparedStatement.setString(3, date);
+            preparedStatement.setString(3, carType);
 
             preparedStatement.executeUpdate();
-
-
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Error saving restock request: " + e.getMessage());
         }
     }
+
 
     public List<Message> getMessages(String firstNameFilter, String lastNameFilter) {
         List<Message> messages = new ArrayList<>();
@@ -79,7 +76,7 @@ public class MessageRepository {
         List<RestockRequest> requests = new ArrayList<>();
 
         try (Connection connection = DBConnector.getConnection()) {
-            String query = "SELECT id, user, car_name, date FROM restock_requests";
+            String query = "SELECT id, user, car_name, car_type, request_date FROM restock_requests";
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery(query);
 
@@ -87,9 +84,10 @@ public class MessageRepository {
                 int id = resultSet.getInt("id");
                 String user = resultSet.getString("user");
                 String carName = resultSet.getString("car_name");
-                Date date = resultSet.getDate("date");
+                String carType = resultSet.getString("car_type");
+                Timestamp requestDate = resultSet.getTimestamp("request_date");
 
-                requests.add(new RestockRequest(id, user, carName, date.toString()));
+                requests.add(new RestockRequest(id, user, carName, carType, requestDate.toString()));
             }
         } catch (SQLException e) {
             e.printStackTrace();
