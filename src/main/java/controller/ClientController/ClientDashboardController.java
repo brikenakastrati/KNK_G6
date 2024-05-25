@@ -47,6 +47,9 @@ public class ClientDashboardController {
         Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
     }
 
+    public void handleViewDetails(ActionEvent ae) {
+        Navigator.navigate(ae, Navigator.REQUEST_CAR_PAGE);
+    }
     public void handleHelpClick(ActionEvent ae) {
         Navigator.navigate(ae, Navigator.HELP_PAGE);
     }
