@@ -30,10 +30,6 @@ import java.util.Locale;
 
 public class LoginController {
     @FXML
-    public Label admUsername; //Prej fxml t admindashboard vyn per me shfaq username
-    @FXML
-    public Label clientUsername;
-    @FXML
     private TextField txtUserName;
     @FXML
     private PasswordField pwdPassword;
@@ -43,18 +39,18 @@ public class LoginController {
 
     @FXML
     public void initialize() {
-        // Add a key event handler to switch focus on Tab key press
+        // Add a key event handler to switch textfield on Tab key press
         txtUserName.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.TAB) {
                 pwdPassword.requestFocus();
-                event.consume(); // Prevent the default Tab behavior
+                event.consume();
             }
         });
 
         pwdPassword.addEventHandler(KeyEvent.KEY_PRESSED, event -> {
             if (event.getCode() == KeyCode.ENTER) {
-                handleLoginClick(new ActionEvent(txtUserName, null)); // Provide correct source
-                event.consume(); // Prevent the default Enter behavior
+                handleLoginClick(new ActionEvent(txtUserName, null));
+                event.consume();
             }
         });
     }
@@ -68,12 +64,9 @@ public class LoginController {
                 this.pwdPassword.getText()
         );
 
-        // Attempt to log in
         LoginResult result = UserService.login(loginUserData);
 
-        // Check login success
         if (!result.isSuccess()) {
-            //To show an error when there is one
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("Login Error");
             alert.setHeaderText(null);

@@ -39,4 +39,11 @@ public class CarsService implements inventoryServiceInterface {
     public void deleteCarAndPhotos(String carId) throws SQLException {
         inventoryRepo.deleteCar(carId);
     }
+    public int countCarsInStock() throws SQLException{
+        return inventoryRepo.countCarsInStock();
+    }
+    public ObservableList<carInventory> inventoryCarList() throws SQLException{
+        return inventoryRepo.inventoryCarList();
+    }
+
 }

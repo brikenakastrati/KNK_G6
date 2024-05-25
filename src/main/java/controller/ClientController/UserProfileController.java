@@ -73,7 +73,6 @@ public class UserProfileController implements Initializable {
 
         purchaseHistory();
 
-        // Set event handler for key pressed
         txtCurrentPassword.setOnKeyPressed(this::handleKeyPressed);
         txtNewPassword.setOnKeyPressed(this::handleKeyPressed);
         txtConfirmNewPassword.setOnKeyPressed(this::handleKeyPressed);
@@ -175,7 +174,6 @@ public class UserProfileController implements Initializable {
 
     @FXML
     public void handleProfileClick(MouseEvent me) {
-        // Implement profile click behavior if needed
     }
 
     @FXML
@@ -195,11 +193,11 @@ public class UserProfileController implements Initializable {
             if (event.getSource() instanceof PasswordField) {
                 PasswordField source = (PasswordField) event.getSource();
                 if (source.equals(txtCurrentPassword)) {
-                    txtNewPassword.requestFocus(); // Move focus to the next field (txtNewPassword)
+                    txtNewPassword.requestFocus();
                 } else if (source.equals(txtNewPassword)) {
-                    txtConfirmNewPassword.requestFocus(); // Move focus to the next field (txtConfirmNewPassword)
+                    txtConfirmNewPassword.requestFocus();
                 } else if (source.equals(txtConfirmNewPassword)) {
-                    saveChanges(null); // Trigger saveChanges action
+                    saveChanges(null);
                 }
             }
         }

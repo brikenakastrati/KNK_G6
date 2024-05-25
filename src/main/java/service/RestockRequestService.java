@@ -35,4 +35,7 @@ public class RestockRequestService {
     public int getNumberOfCarRequestsFromUser(String username) {
         return messageRepository.getNumberOfCarRequestsFromUser(username);
     }
+    public void saveMessage(String firstName, String lastName, String message){
+         messageRepository.saveMessage(firstName,lastName,message);
+    }
 }

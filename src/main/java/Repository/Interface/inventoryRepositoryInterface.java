@@ -19,4 +19,8 @@ public interface inventoryRepositoryInterface {
     void addCar(carInventory car) throws SQLException;
 
     void deleteCar(String carId) throws SQLException;
+
+    int countCarsInStock()throws SQLException;
+
+    ObservableList<carInventory> inventoryCarList()throws SQLException;
 }

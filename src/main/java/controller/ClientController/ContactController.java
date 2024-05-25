@@ -12,6 +12,7 @@ import Repository.MessageRepository;
 import javafx.scene.input.MouseEvent;
 import model.User;
 
+import service.RestockRequestService;
 import service.UserService;
 import service.UserSession;
 
@@ -29,6 +30,7 @@ public class ContactController {
     private Button sendButton;
 
     private UserService userService = new UserService();
+    private RestockRequestService requestService=new RestockRequestService();
 
 
     @FXML
@@ -37,9 +39,8 @@ public class ContactController {
         String lastName = txtLastName.getText();
         String message = txtMessage.getText();
 
-        MessageRepository.saveMessage(firstName, lastName, message);
+        requestService.saveMessage(firstName, lastName, message);
 
-        // Clear the text fields after saving the message
         txtFirstName.clear();
         txtLastName.clear();
         txtMessage.clear();
@@ -48,13 +49,13 @@ public class ContactController {
     @FXML
     private void handleEnterKeyPressed(KeyEvent event) {
         if (event.getCode() == KeyCode.ENTER) {
-            if (txtFirstName.isFocused()) {  // Nese jeni te fokusuar tek emri
-                txtLastName.requestFocus();  // Vendos fokusin tek fusha e mbiemrit
-            } else if (txtLastName.isFocused()) {  // Nese jeni te fokusuar tek mbiemri
-                txtMessage.requestFocus();  // Vendos fokusin tek fusha e mesazhit
-            } else {  // Nese jeni te fokusuar tek mesazhi
-                sendMessage();  // Dergo mesazhin
-                event.consume();  // Konsumo eventin (taste te shtypur)
+            if (txtFirstName.isFocused()) {
+                txtLastName.requestFocus();
+            } else if (txtLastName.isFocused()) {
+                txtMessage.requestFocus();
+            } else {
+                sendMessage();
+                event.consume();
             }
         }
     }

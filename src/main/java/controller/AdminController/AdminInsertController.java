@@ -46,7 +46,7 @@ public class AdminInsertController {
     @FXML
     private ComboBox<String> comboType, comboStatus;
 
-    private inventoryRepository repo = new inventoryRepository();
+//    private inventoryRepository repo = new inventoryRepository();
     private CarsService carsService;
     private ObservableList<Photo> photos;
 
@@ -75,7 +75,7 @@ public class AdminInsertController {
     }
 
     private void loadTableData() throws SQLException {
-        ObservableList<carInventory> inventoryData = repo.inventoryCarList();
+        ObservableList<carInventory> inventoryData = carsService.inventoryCarList();
         inventoryTable.setItems(inventoryData);
     }
 
@@ -117,7 +117,7 @@ public class AdminInsertController {
 
             Timestamp dateAdded = new Timestamp(System.currentTimeMillis());
             carInventory newCar = new carInventory(carID, carName, carType, carStock, carPrice, carStatus, dateAdded, new ArrayList<>());
-            repo.addCar(newCar);
+            carsService.addCar(newCar);
 
 
 

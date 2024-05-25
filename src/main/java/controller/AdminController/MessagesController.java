@@ -55,7 +55,7 @@ public class MessagesController {
     private TableColumn<RestockRequest, String> stockRequestCarTypeColumn;
 
     @FXML
-    private TableColumn<RestockRequest, String> stockRequestCarDescriptionColumn; // Added carDescription column
+    private TableColumn<RestockRequest, String> stockRequestCarDescriptionColumn;
 
     @FXML
     private TableColumn<RestockRequest, String> stockRequestDateSentColumn;
@@ -65,14 +65,12 @@ public class MessagesController {
     @FXML
     public void initialize() {
         try {
-            // Initialize message table columns
             idColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
             firstNameColumn.setCellValueFactory(new PropertyValueFactory<>("firstName"));
             lastNameColumn.setCellValueFactory(new PropertyValueFactory<>("lastName"));
             messageColumn.setCellValueFactory(new PropertyValueFactory<>("message"));
             messageTableView.setItems(FXCollections.observableArrayList(restockRequestService.getMessages(null, null)));
 
-            // Initialize stock request table columns
             stockRequestIdColumn.setCellValueFactory(new PropertyValueFactory<>("id"));
             stockRequestUserColumn.setCellValueFactory(new PropertyValueFactory<>("user"));
             stockRequestCarNameColumn.setCellValueFactory(new PropertyValueFactory<>("carName"));
@@ -85,17 +83,7 @@ public class MessagesController {
         }
     }
 
-    @FXML
-    private void handleResetClick(ActionEvent ae) {
-        firstNameFilterField.clear();
-        lastNameFilterField.clear();
-        try {
-            messageTableView.setItems(FXCollections.observableArrayList(restockRequestService.getMessages(null, null)));
-            stockRequestTableView.setItems(FXCollections.observableArrayList(restockRequestService.getRestockRequests()));
-        } catch (Exception e) {
-            showAlert("Error", "Error resetting data: " + e.getMessage());
-        }
-    }
+
 
     @FXML
     private void handleClientsClick(ActionEvent ae) {

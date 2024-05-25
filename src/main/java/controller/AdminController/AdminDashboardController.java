@@ -10,7 +10,6 @@ import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
-import model.Purchase;
 import service.CarsService;
 import service.Interface.UserServiceInterface;
 import service.Interface.inventoryServiceInterface;
@@ -43,7 +42,7 @@ public class AdminDashboardController {
 
     }
 
-    private inventoryRepository inventoryRepo = new inventoryRepository();
+
 
     public void initialize() {
         UsernameDisplay();
@@ -87,7 +86,7 @@ public class AdminDashboardController {
     }
     private void updateCarsInStock() {
         try {
-            int totalCarsInStock = inventoryRepo.countCarsInStock();
+            int totalCarsInStock = carsService.countCarsInStock();
             carsInStock.setText(String.valueOf(totalCarsInStock));
         } catch (Exception e) {
             System.out.println("Error " + e.getMessage());
@@ -126,7 +125,6 @@ public class AdminDashboardController {
 
     @FXML
     private void handleDashboardClick(ActionEvent ae) {
-        // This method seems redundant if it just navigates to the same page
     }
 
     @FXML

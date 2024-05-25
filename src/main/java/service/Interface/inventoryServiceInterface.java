@@ -14,4 +14,7 @@ public interface inventoryServiceInterface {
     public void savePhotos(ObservableList<Photo> photos, String carId) throws SQLException;
 
    public void addCar(carInventory car) throws SQLException;
+
+    int countCarsInStock()throws SQLException;
+    public ObservableList<carInventory> inventoryCarList() throws SQLException;
 }

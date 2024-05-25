@@ -133,7 +133,7 @@ public class inventoryRepository implements inventoryRepositoryInterface {
     public void deleteCar(String carId) throws SQLException {
         Connection connection = DBConnector.getConnection();
         try {
-            connection.setAutoCommit(false);  // Start transaction
+            connection.setAutoCommit(false);
 
             deleteCarPhotos(carId);  // Delete photos first
 
@@ -158,12 +158,12 @@ public class inventoryRepository implements inventoryRepositoryInterface {
                 statement.executeUpdate();
             }
 
-            connection.commit();  // Commit transaction
+            connection.commit();
         } catch (SQLException e) {
-            connection.rollback();  // Rollback transaction on error
+            connection.rollback();
             throw e;
         } finally {
-            connection.setAutoCommit(true);  // Restore auto-commit
+            connection.setAutoCommit(true);
         }
     }
 

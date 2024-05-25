@@ -34,11 +34,7 @@ public class SignUpController {
     private  TextField pwdPasswordVisible;
     @FXML
     private  TextField  pwdConfirmPasswordVisible;
-    @FXML
-    private MenuItem helpMenuItem;
-    @FXML
-    private Stage stage;
-    private Scene scene;
+
     @FXML
     private Button cancel_btn;
     @FXML
@@ -83,11 +79,9 @@ public class SignUpController {
             Scene scene = menuItem.getParentPopup().getOwnerNode().getScene();
             Stage stage = (Stage) scene.getWindow();
 
-            // Navigate to the help page
             Navigator.navigate(stage, Navigator.HELP1_PAGE);
         } catch (Exception e) {
             e.printStackTrace();
-            // Handle the exception or show an error message
             showAlert(Alert.AlertType.ERROR, "Error", "Failed to open help page.");
         }
     }
@@ -164,9 +158,8 @@ public class SignUpController {
         return password.toString();
     }
 
-    // Overloaded method to generate a password with a default length
     private String generateRandomPassword() {
-        return generateRandomPassword(12); // Default length
+        return generateRandomPassword(12);
     }
 
 
